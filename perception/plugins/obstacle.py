@@ -305,7 +305,7 @@ class LocalDistanceAdapter(DistanceAdapter):
         self._session = None
         self._input_name = "image"
         self._failure_logged = False
-        self._download_failed = False
+        self._download_failed_at = 0.0
 
     def _log_once(self, message: str):
         if not self._failure_logged:
@@ -396,7 +396,7 @@ class LocalDistanceAdapter(DistanceAdapter):
                 f"obstacle ONNX model not found at {target!r} and no model_url "
                 "or OBSTACLE_MODEL_URL configured"
             )
-        if self._download_failed:
+        if self._download_failed_at and time.time() - self._download_failed_at < 30.0:
             raise FileNotFoundError(f"obstacle ONNX model still missing at {target!r}")
         os.makedirs(os.path.dirname(target), exist_ok=True)
         log.info(f"[obstacle] downloading model from {self.model_url} -> {target}")
@@ -404,8 +404,9 @@ class LocalDistanceAdapter(DistanceAdapter):
             with urllib.request.urlopen(self.model_url, timeout=120) as response, \
                     open(target, "wb") as output:
                 shutil.copyfileobj(response, output)
-        except Exception:
-            self._download_failed = True
+        except Exception as exc:
+            self._download_failed_at = time.time()
+            log.error(f"[obstacle] model download failed: {exc}")
             raise
         self.model_path = target
         log.info(
@@ -543,6 +544,7 @@ class ObstacleDistancePlugin:
         self._key = plugin_cfg.get("key", "")
         self._model = plugin_cfg.get("model", "")
         self._model_path = plugin_cfg.get("model_path")
+        self._model_url = plugin_cfg.get("model_url", "")
         self._adapter = _build_distance_adapter(plugin_cfg)
         self._nodes: dict[str, _ObstacleNode] = {}
         self._instance_configs: dict[str, dict] = {}
@@ -650,6 +652,8 @@ class ObstacleDistancePlugin:
                     self._key = cfg["key"]
                 if "url" in cfg:
                     self._url = cfg["url"]
+                if "model_url" in cfg:
+                    self._model_url = cfg["model_url"]
                 # Rebuild global adapter
                 self._adapter = _build_distance_adapter({
                     "provider": self._provider,
@@ -657,6 +661,7 @@ class ObstacleDistancePlugin:
                     "key": self._key,
                     "model": self._model,
                     "model_path": self._model_path,
+                    "model_url": self._model_url,
                 })
                 return {"status": "configured", "config": cfg}
 

@@ -47,6 +47,7 @@ _install_ros_stubs()
 from perception.obstacle_model.data import preprocess_rgb  # noqa: E402
 from perception.plugins.obstacle import (  # noqa: E402
     LocalDistanceAdapter,
+    ObstacleDistancePlugin,
     _build_distance_adapter,
 )
 
@@ -96,6 +97,26 @@ def test_build_local_adapter_keeps_model_path() -> None:
     assert isinstance(adapter, LocalDistanceAdapter)
     assert adapter.model_path == "/models/obstacle.onnx"
     assert adapter.model_url == "http://example.invalid/obstacle.onnx"
+
+
+def test_config_rebuild_preserves_model_url() -> None:
+    executor = types.SimpleNamespace(add_node=lambda node: None, remove_node=lambda node: None)
+    plugin = ObstacleDistancePlugin(
+        {
+            "provider": "local",
+            "model_path": "/models/obstacle.onnx",
+            "model_url": "http://example.invalid/obstacle.onnx",
+        },
+        executor,
+    )
+    result = plugin.dispatch("obstacle", {"action": "config", "provider": "local"})
+    assert result["status"] == "configured"
+    assert plugin._adapter.model_path == "/models/obstacle.onnx"
+    assert plugin._adapter.model_url == "http://example.invalid/obstacle.onnx"
+    plugin.dispatch(
+        "obstacle", {"action": "config", "model_url": "http://example.invalid/new.onnx"}
+    )
+    assert plugin._adapter.model_url == "http://example.invalid/new.onnx"
 
 
 def test_estimate_falls_back_when_model_missing() -> None:
