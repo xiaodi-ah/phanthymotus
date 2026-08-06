@@ -110,3 +110,17 @@ Output JSON:
 Select `local`, `openai`, or `qwen` with `plugins.obstacle.provider` in
 `config.yaml`. API-backed providers also require their URL, key, and model
 configuration.
+
+### Local ONNX Model
+
+With `provider: local`, set `plugins.obstacle.model_path` (or the
+`OBSTACLE_MODEL_PATH` environment variable) to an exported ONNX file. If the
+file is missing, the adapter downloads it once from `plugins.obstacle.model_url`
+(or `OBSTACLE_MODEL_URL`) to `model_path` — the default target
+`/models/obstacle.onnx` maps to the host's `/opt/embodied/models` via
+`deploy/service.yml`. The adapter letterboxes the frame to 320x240, applies
+ImageNet normalization, adds normalized `(u, v)` coordinate channels, and runs
+the model through onnxruntime (TensorRT/CUDA providers preferred when
+available). The exported `distance` output is already calibrated by the model's
+`<1m` head; failures log once and publish a conservative 10.0 m fallback
+instead of dropping the frame.

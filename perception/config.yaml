@@ -60,3 +60,5 @@ plugins:
     url: ""
     key: ""
     model: ""
+    model_path: /models/obstacle.onnx   # local ONNX file (provider=local)
+    model_url: http://172.28.4.81:34567/i-wangaodi/embodied/obstacle.onnx  # downloaded when model_path is missing

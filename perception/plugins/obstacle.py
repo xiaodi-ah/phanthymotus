@@ -13,8 +13,10 @@ import json
 import logging
 import os
 import queue
+import shutil
 import threading
 import time
+import urllib.request
 from abc import ABC, abstractmethod
 from io import BytesIO
 from typing import Optional
@@ -70,6 +72,8 @@ TOOLS = [
                 "url":      {"type": "string", "description": "API URL (optional)", "scope": "shared"},
                 "key":      {"type": "string", "description": "API Key", "format": "password", "scope": "shared"},
                 "model":    {"type": "string", "description": "Model name", "scope": "instance"},
+                "model_path": {"type": "string", "description": "Local ONNX model file (provider=local)", "scope": "shared"},
+                "model_url": {"type": "string", "description": "Download URL for the local ONNX model (provider=local)", "scope": "shared"},
             },
             "required": ["provider"]
         },
@@ -281,22 +285,144 @@ class QwenVLDistanceAdapter(DistanceAdapter):
 
 
 class LocalDistanceAdapter(DistanceAdapter):
-    """本地距离估计（占位实现，可替换为实际模型）
+    """Local ONNX obstacle-distance model.
 
-    基于简单的图像特征进行粗略距离估计。
-    实际部署时应替换为深度学习模型（如 MiDaS、DPT 等）。
+    Input preprocessing mirrors `perception/obstacle_model/data.py`:
+    letterbox to 320x240, ImageNet normalization, plus normalized (u, v)
+    coordinate channels. The exported model returns `distance` already
+    calibrated against its dedicated <1m head, so no post-processing is
+    required beyond converting to a plain float.
     """
 
-    def __init__(self, model_path: Optional[str] = None):
-        self.model_path = model_path
-        self._model = None
+    _MODEL_WIDTH = 320
+    _MODEL_HEIGHT = 240
+    _RGB_MEAN = np.asarray((0.485, 0.456, 0.406), dtype=np.float32)
+    _RGB_STD = np.asarray((0.229, 0.224, 0.225), dtype=np.float32)
+
+    def __init__(self, model_path: Optional[str] = None, model_url: Optional[str] = None):
+        self.model_path = model_path or os.environ.get("OBSTACLE_MODEL_PATH", "")
+        self.model_url = model_url or os.environ.get("OBSTACLE_MODEL_URL", "")
+        self._session = None
+        self._input_name = "image"
+        self._failure_logged = False
+        self._download_failed = False
+
+    def _log_once(self, message: str):
+        if not self._failure_logged:
+            log.error(f"[obstacle] {message}")
+            self._failure_logged = True
+
+    @staticmethod
+    def _decode_rgb(image_bytes: bytes) -> np.ndarray:
+        """Decode JPEG/PNG bytes to an HWC RGB uint8 array."""
+        try:
+            import cv2
+            bgr = cv2.imdecode(
+                np.frombuffer(image_bytes, dtype=np.uint8), cv2.IMREAD_COLOR
+            )
+            if bgr is not None:
+                return cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        except ImportError:
+            pass
+        from PIL import Image
+        with Image.open(BytesIO(image_bytes)) as image:
+            return np.asarray(image.convert("RGB"), dtype=np.uint8)
+
+    @classmethod
+    def _letterbox(cls, rgb: np.ndarray) -> np.ndarray:
+        """Resize preserving aspect ratio and pad to 320x240 with black."""
+        scale = min(cls._MODEL_HEIGHT / rgb.shape[0], cls._MODEL_WIDTH / rgb.shape[1])
+        new_w = max(1, round(rgb.shape[1] * scale))
+        new_h = max(1, round(rgb.shape[0] * scale))
+        try:
+            import cv2
+            resized = cv2.resize(rgb, (new_w, new_h), interpolation=cv2.INTER_AREA)
+        except ImportError:
+            from PIL import Image
+            resized = np.asarray(
+                Image.fromarray(rgb).resize((new_w, new_h), Image.Resampling.BILINEAR),
+                dtype=np.uint8,
+            )
+        canvas = np.zeros((cls._MODEL_HEIGHT, cls._MODEL_WIDTH, 3), dtype=np.uint8)
+        y0 = (cls._MODEL_HEIGHT - new_h) // 2
+        x0 = (cls._MODEL_WIDTH - new_w) // 2
+        canvas[y0 : y0 + new_h, x0 : x0 + new_w] = resized
+        return canvas
+
+    @classmethod
+    def preprocess(cls, rgb: np.ndarray) -> np.ndarray:
+        """Build the model input tensor: (1, 5, 240, 320) float32."""
+        image = cls._letterbox(rgb).astype(np.float32) / 255.0
+        image = (image - cls._RGB_MEAN) / cls._RGB_STD
+        height, width = image.shape[:2]
+        u = np.linspace(-1.0, 1.0, width, dtype=np.float32)
+        v = np.linspace(-1.0, 1.0, height, dtype=np.float32)
+        uu, vv = np.meshgrid(u, v)
+        features = np.concatenate((image, uu[..., None], vv[..., None]), axis=2)
+        return features.transpose(2, 0, 1)[None].astype(np.float32)
+
+    def _ensure_session(self):
+        if self._session is not None:
+            return
+        self._ensure_model_file()
+        if not self.model_path or not os.path.isfile(self.model_path):
+            raise FileNotFoundError(
+                f"obstacle ONNX model not found: {self.model_path!r}"
+            )
+        import onnxruntime as ort
+        available = ort.get_available_providers()
+        providers = [
+            name
+            for name in (
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider",
+            )
+            if name in available
+        ]
+        self._session = ort.InferenceSession(
+            self.model_path, providers=providers or None
+        )
+        self._input_name = self._session.get_inputs()[0].name
+
+    def _ensure_model_file(self):
+        """Download the ONNX model from `model_url` when the local file is missing."""
+        target = self.model_path or "/models/obstacle.onnx"
+        if os.path.isfile(target):
+            self.model_path = target
+            return
+        if not self.model_url:
+            raise FileNotFoundError(
+                f"obstacle ONNX model not found at {target!r} and no model_url "
+                "or OBSTACLE_MODEL_URL configured"
+            )
+        if self._download_failed:
+            raise FileNotFoundError(f"obstacle ONNX model still missing at {target!r}")
+        os.makedirs(os.path.dirname(target), exist_ok=True)
+        log.info(f"[obstacle] downloading model from {self.model_url} -> {target}")
+        try:
+            with urllib.request.urlopen(self.model_url, timeout=120) as response, \
+                    open(target, "wb") as output:
+                shutil.copyfileobj(response, output)
+        except Exception:
+            self._download_failed = True
+            raise
+        self.model_path = target
+        log.info(
+            f"[obstacle] model downloaded ({os.path.getsize(target)} bytes): {target}"
+        )
 
     def estimate(self, image_bytes: bytes) -> dict:
-        """返回随机距离值（占位实现，后续替换为真实深度模型）"""
-        import random
-        return {
-            "pred_distance": round(random.uniform(0.0, 2.0), 2),
-        }
+        """Run the ONNX model and return the calibrated distance in meters."""
+        try:
+            self._ensure_session()
+            tensor = self.preprocess(self._decode_rgb(image_bytes))
+            outputs = self._session.run(["distance"], {self._input_name: tensor})
+            distance = float(outputs[0][0])
+            return {"pred_distance": round(distance, 3)}
+        except Exception as exc:  # keep the camera pipeline alive on model failure
+            self._log_once(f"local inference failed: {exc}")
+            return {"pred_distance": 10.0}
 
 
 def _build_distance_adapter(cfg: dict) -> Optional[DistanceAdapter]:
@@ -316,7 +442,7 @@ def _build_distance_adapter(cfg: dict) -> Optional[DistanceAdapter]:
         return QwenVLDistanceAdapter(url, key, cfg.get('model', ''))
 
     elif provider == 'local':
-        return LocalDistanceAdapter(cfg.get('model_path'))
+        return LocalDistanceAdapter(cfg.get('model_path'), cfg.get('model_url'))
 
     return None
 
