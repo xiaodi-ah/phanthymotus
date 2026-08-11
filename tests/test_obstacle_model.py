@@ -108,10 +108,10 @@ def test_point_to_axis_aligned_obb() -> None:
 
 
 def test_near_threshold_calibration() -> None:
-    distance = torch.tensor([2.0, 0.5, 0.5, 2.0])
+    distance = torch.tensor([3.0, 0.5, 0.5, 3.0])
     near_logit = torch.tensor([1.0, 1.0, -1.0, -1.0])
     calibrated = calibrate_near_threshold(distance, near_logit)
-    torch.testing.assert_close(calibrated, torch.tensor([0.99, 0.5, 1.01, 2.0]))
+    torch.testing.assert_close(calibrated, torch.tensor([1.99, 0.5, 2.01, 3.0]))
 
 
 def test_model_and_loss_smoke() -> None:

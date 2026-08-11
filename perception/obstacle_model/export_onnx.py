@@ -25,7 +25,9 @@ def main() -> None:
     checkpoint = torch.load(args.checkpoint, map_location="cpu", weights_only=True)
     model = ConvNeXtFemto(max_distance=checkpoint.get("max_distance", 655.0))
     model.load_state_dict(checkpoint["model"])
-    model = ObstacleInferenceModel(model).eval()
+    model = ObstacleInferenceModel(
+        model, near_threshold=checkpoint.get("near_threshold", 2.0)
+    ).eval()
     example = torch.randn(1, 5, 240, 320)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     torch.onnx.export(

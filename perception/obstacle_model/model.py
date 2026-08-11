@@ -40,11 +40,18 @@ def decode_distance(logits: Tensor, centers: Tensor) -> Tensor:
 
 
 def calibrate_near_threshold(
-    distance: Tensor, near_logit: Tensor, margin: float = 0.01
+    distance: Tensor,
+    near_logit: Tensor,
+    threshold: float = 2.0,
+    margin: float = 0.01,
 ) -> Tensor:
-    """Make the published distance agree with the dedicated one-meter head."""
-    near_value = torch.minimum(distance, torch.full_like(distance, 1.0 - margin))
-    far_value = torch.maximum(distance, torch.full_like(distance, 1.0 + margin))
+    """Make the published distance agree with the dedicated near-obstacle head."""
+    near_value = torch.minimum(
+        distance, torch.full_like(distance, threshold - margin)
+    )
+    far_value = torch.maximum(
+        distance, torch.full_like(distance, threshold + margin)
+    )
     return torch.where(near_logit > 0.0, near_value, far_value)
 
 
@@ -164,13 +171,14 @@ class ConvNeXtFemto(nn.Module):
 
 
 class ObstacleInferenceModel(nn.Module):
-    """Deployment wrapper that applies the leaderboard threshold calibration."""
+    """Deployment wrapper that applies the leaderboard F1 threshold calibration."""
 
-    def __init__(self, model: ConvNeXtFemto) -> None:
+    def __init__(self, model: ConvNeXtFemto, near_threshold: float = 2.0) -> None:
         super().__init__()
         self.model = model
+        self.near_threshold = near_threshold
 
     def forward(self, x: Tensor) -> tuple[Tensor, Tensor, Tensor]:
         distance, bin_logits, near_logit = self.model(x)
-        distance = calibrate_near_threshold(distance, near_logit)
+        distance = calibrate_near_threshold(distance, near_logit, self.near_threshold)
         return distance, bin_logits, near_logit

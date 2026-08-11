@@ -13,7 +13,8 @@ EI_dataset/
 Input preprocessing letterboxes RGB to a fixed `320x240` tensor while keeping
 the aspect ratio, then appends normalized `(u, v)` coordinate channels. The
 model is a five-channel ConvNeXt-Femto with 64 distance bins (5 cm bins to
-1.5 m, then logarithmic bins to 50 m) and an auxiliary `<1m` head.
+1.5 m, then logarithmic bins to 50 m) and an auxiliary `<2m` head aligned with
+the leaderboard F1@2m metric.
 
 Labels:
 

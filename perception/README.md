@@ -122,5 +122,5 @@ file is missing, the adapter downloads it once from `plugins.obstacle.model_url`
 ImageNet normalization, adds normalized `(u, v)` coordinate channels, and runs
 the model through onnxruntime (TensorRT/CUDA providers preferred when
 available). The exported `distance` output is already calibrated by the model's
-`<1m` head; failures log once and publish a conservative 10.0 m fallback
-instead of dropping the frame.
+`<2m` head (the leaderboard F1@2m threshold); failures log once and publish a
+conservative 10.0 m fallback instead of dropping the frame.

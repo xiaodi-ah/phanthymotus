@@ -40,6 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--weight-decay", type=float, default=0.05)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-distance", type=float, default=50.0)
+    parser.add_argument("--near-threshold", type=float, default=2.0)
     parser.add_argument("--smoke-samples", type=int, default=0)
     return parser.parse_args()
 
@@ -101,12 +102,19 @@ def build_datasets(
 
 
 @torch.no_grad()
-def evaluate(model: nn.Module, loader: DataLoader, device: torch.device) -> dict[str, float]:
+def evaluate(
+    model: nn.Module,
+    loader: DataLoader,
+    device: torch.device,
+    near_threshold: float = 2.0,
+) -> dict[str, float]:
     model.eval()
     predictions, targets = [], []
     for images, target, _domain in loader:
         prediction, _, near_logit = model(images.to(device, non_blocking=True))
-        predictions.append(calibrate_near_threshold(prediction, near_logit).cpu())
+        predictions.append(
+            calibrate_near_threshold(prediction, near_logit, near_threshold).cpu()
+        )
         targets.append(target)
     return obstacle_metrics(torch.cat(predictions), torch.cat(targets))
 
@@ -153,6 +161,7 @@ def main() -> None:
                     near_logit,
                     target,
                     model.bin_edges,
+                    near_threshold=args.near_threshold,
                 )
             scaler.scale(loss).backward()
             scaler.unscale_(optimizer)
@@ -162,7 +171,9 @@ def main() -> None:
             running_loss += loss.item()
         scheduler.step()
 
-        metrics = evaluate(model, validation_loader, device)
+        metrics = evaluate(
+            model, validation_loader, device, args.near_threshold
+        )
         summary = {
             "epoch": epoch,
             "loss": running_loss / max(len(train_loader), 1),
@@ -175,6 +186,7 @@ def main() -> None:
             "epoch": epoch,
             "metrics": metrics,
             "max_distance": args.max_distance,
+            "near_threshold": args.near_threshold,
         }
         torch.save(checkpoint, args.output / "last.pt")
         if metrics["f1"] > best_f1:

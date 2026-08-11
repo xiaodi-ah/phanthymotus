@@ -290,7 +290,7 @@ class LocalDistanceAdapter(DistanceAdapter):
     Input preprocessing mirrors `perception/obstacle_model/data.py`:
     letterbox to 320x240, ImageNet normalization, plus normalized (u, v)
     coordinate channels. The exported model returns `distance` already
-    calibrated against its dedicated <1m head, so no post-processing is
+    calibrated against its dedicated <2m head, so no post-processing is
     required beyond converting to a plain float.
     """
 

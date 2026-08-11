@@ -1,4 +1,4 @@
-"""Losses for distance regression and the leaderboard's one-meter decision."""
+"""Losses for distance regression and the leaderboard's F1@2m decision."""
 
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ def obstacle_loss(
     near_logit: Tensor,
     target: Tensor,
     bin_edges: Tensor,
+    near_threshold: float = 2.0,
     near_weight: float = 8.0,
     regression_weight: float = 1.0,
 ) -> tuple[Tensor, dict[str, Tensor]]:
@@ -42,7 +43,7 @@ def obstacle_loss(
     ).sum() / count
     near = (
         F.binary_cross_entropy_with_logits(
-            near_logit, (target < 1.0).float(), reduction="none"
+            near_logit, (target < near_threshold).float(), reduction="none"
         )
         * valid
     ).sum() / count
