@@ -116,7 +116,9 @@ def evaluate(
             calibrate_near_threshold(prediction, near_logit, near_threshold).cpu()
         )
         targets.append(target)
-    return obstacle_metrics(torch.cat(predictions), torch.cat(targets))
+    return obstacle_metrics(
+        torch.cat(predictions), torch.cat(targets), threshold=near_threshold
+    )
 
 
 def main() -> None:

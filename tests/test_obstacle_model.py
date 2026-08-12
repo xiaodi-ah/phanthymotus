@@ -14,6 +14,7 @@ from perception.obstacle_model.data import (
     vkitti_seg_obstacle_mask,
 )
 from perception.obstacle_model.losses import obstacle_loss
+from perception.obstacle_model.metrics import obstacle_metrics
 from perception.obstacle_model.model import (
     ConvNeXtFemto,
     build_bin_edges,
@@ -128,3 +129,12 @@ def test_model_and_loss_smoke() -> None:
     )
     assert torch.isfinite(loss)
     assert set(parts) == {"ordinal", "regression", "near"}
+
+
+def test_obstacle_metrics_uses_two_meter_threshold() -> None:
+    prediction = torch.tensor([1.5, 2.5])
+    target = torch.tensor([1.5, 1.5])
+    metrics = obstacle_metrics(prediction, target, threshold=2.0)
+    assert metrics["f1"] == pytest.approx(2.0 / 3.0)
+    assert metrics["precision"] == pytest.approx(1.0)
+    assert metrics["recall"] == pytest.approx(0.5)

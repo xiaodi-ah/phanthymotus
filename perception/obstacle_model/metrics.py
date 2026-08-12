@@ -8,9 +8,11 @@ import torch
 from torch import Tensor
 
 
-def obstacle_metrics(prediction: Tensor, target: Tensor) -> dict[str, float]:
-    predicted_near = prediction < 1.0
-    actual_near = target < 1.0
+def obstacle_metrics(
+    prediction: Tensor, target: Tensor, threshold: float = 2.0
+) -> dict[str, float]:
+    predicted_near = prediction < threshold
+    actual_near = target < threshold
     true_positive = (predicted_near & actual_near).sum().item()
     false_positive = (predicted_near & ~actual_near).sum().item()
     false_negative = (~predicted_near & actual_near).sum().item()
