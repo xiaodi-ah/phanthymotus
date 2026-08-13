@@ -19,6 +19,7 @@ from perception.obstacle_model.losses import obstacle_loss
 from perception.obstacle_model.metrics import obstacle_metrics
 from perception.obstacle_model.model import (
     ConvNeXtFemto,
+    build_convnext,
     build_bin_edges,
     calibrate_near_threshold,
 )
@@ -147,6 +148,12 @@ def test_model_and_loss_smoke() -> None:
     )
     assert torch.isfinite(loss)
     assert set(parts) == {"ordinal", "regression", "near"}
+
+
+def test_nano_variant_fits_model_budget() -> None:
+    model = build_convnext("nano", drop_path_rate=0.0)
+    parameter_count = sum(parameter.numel() for parameter in model.parameters())
+    assert 7_000_000 < parameter_count < 30_000_000
 
 
 def test_obstacle_metrics_uses_two_meter_threshold() -> None:

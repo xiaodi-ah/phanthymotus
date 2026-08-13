@@ -170,6 +170,20 @@ class ConvNeXtFemto(nn.Module):
         return distance, bin_logits, near_logit
 
 
+VARIANTS: dict[str, tuple[tuple[int, ...], tuple[int, ...]]] = {
+    "femto": ((48, 96, 192, 384), (2, 2, 6, 2)),
+    "nano": ((64, 128, 256, 512), (2, 2, 6, 2)),
+}
+
+
+def build_convnext(variant: str = "femto", **kwargs) -> ConvNeXtFemto:
+    """Build a ConvNeXtFemto from a named width/depth variant."""
+    if variant not in VARIANTS:
+        raise ValueError(f"unknown model variant {variant!r}; use {sorted(VARIANTS)}")
+    dims, depths = VARIANTS[variant]
+    return ConvNeXtFemto(dims=dims, depths=depths, **kwargs)
+
+
 class ObstacleInferenceModel(nn.Module):
     """Deployment wrapper that applies the leaderboard F1 threshold calibration."""
 

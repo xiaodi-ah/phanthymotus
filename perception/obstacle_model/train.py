@@ -21,7 +21,7 @@ from .data import (
 )
 from .losses import obstacle_loss
 from .metrics import obstacle_metrics
-from .model import ConvNeXtFemto, calibrate_near_threshold
+from .model import build_convnext, calibrate_near_threshold
 
 
 def parse_args() -> argparse.Namespace:
@@ -52,6 +52,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-distance", type=float, default=50.0)
     parser.add_argument("--near-threshold", type=float, default=2.0)
+    parser.add_argument(
+        "--model-variant",
+        type=str,
+        default="femto",
+        choices=("femto", "nano"),
+        help="ConvNeXt width/depth variant",
+    )
     parser.add_argument("--smoke-samples", type=int, default=0)
     return parser.parse_args()
 
@@ -165,7 +172,9 @@ def main() -> None:
     train_loader = DataLoader(train_set, shuffle=True, drop_last=True, **loader_options)
     validation_loader = DataLoader(validation_set, shuffle=False, **loader_options)
 
-    model = ConvNeXtFemto(max_distance=args.max_distance).to(device)
+    model = build_convnext(
+        args.model_variant, max_distance=args.max_distance
+    ).to(device)
     optimizer = AdamW(
         model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay
     )
@@ -216,6 +225,7 @@ def main() -> None:
             "metrics": metrics,
             "max_distance": args.max_distance,
             "near_threshold": args.near_threshold,
+            "model_variant": args.model_variant,
         }
         torch.save(checkpoint, args.output / "last.pt")
         if metrics["f1"] > best_f1:

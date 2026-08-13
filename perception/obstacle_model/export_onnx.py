@@ -10,7 +10,7 @@ import onnx
 import onnxruntime as ort
 import torch
 
-from .model import ConvNeXtFemto, ObstacleInferenceModel
+from .model import ObstacleInferenceModel, build_convnext
 
 
 def parse_args() -> argparse.Namespace:
@@ -23,7 +23,10 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     checkpoint = torch.load(args.checkpoint, map_location="cpu", weights_only=True)
-    model = ConvNeXtFemto(max_distance=checkpoint.get("max_distance", 655.0))
+    model = build_convnext(
+        checkpoint.get("model_variant", "femto"),
+        max_distance=checkpoint.get("max_distance", 655.0),
+    )
     model.load_state_dict(checkpoint["model"])
     model = ObstacleInferenceModel(
         model, near_threshold=checkpoint.get("near_threshold", 2.0)
