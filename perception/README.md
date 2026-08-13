@@ -124,3 +124,22 @@ the model through onnxruntime (TensorRT/CUDA providers preferred when
 available). The exported `distance` output is already calibrated by the model's
 `<2m` head (the leaderboard F1@2m threshold); failures log once and publish a
 conservative 10.0 m fallback instead of dropping the frame.
+
+### TensorRT FP16 (Jetson)
+
+CPU onnxruntime is too slow for the 10 FPS requirement. Set
+`plugins.obstacle.model_path` to `/models/obstacle.engine` (or
+`OBSTACLE_MODEL_PATH=/models/obstacle.engine`): the adapter then downloads the
+ONNX from `model_url`, converts it to a TensorRT FP16 engine on first use, and
+runs inference on the GPU. The Jetson image ships TensorRT, so no extra pip
+packages are required.
+
+Verify on the box (inside the perception container):
+
+```bash
+python3 -c "import tensorrt as trt; print('TRT', trt.__version__)"
+python3 -c "import torch; print('CUDA', torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+```
+
+And benchmark one image with the engine path configured; single-image latency
+should drop from ~1 s (CPU) to tens of milliseconds.

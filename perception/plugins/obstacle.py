@@ -369,6 +369,9 @@ class LocalDistanceAdapter(DistanceAdapter):
             raise FileNotFoundError(
                 f"obstacle ONNX model not found: {self.model_path!r}"
             )
+        if self.model_path.endswith(".engine"):
+            self._load_trt_engine()
+            return
         import onnxruntime as ort
         available = ort.get_available_providers()
         providers = [
@@ -390,6 +393,9 @@ class LocalDistanceAdapter(DistanceAdapter):
         target = self.model_path or "/models/obstacle.onnx"
         if os.path.isfile(target):
             self.model_path = target
+            return
+        if target.endswith(".engine"):
+            self._build_trt_engine(target)
             return
         if not self.model_url:
             raise FileNotFoundError(
@@ -413,13 +419,100 @@ class LocalDistanceAdapter(DistanceAdapter):
             f"[obstacle] model downloaded ({os.path.getsize(target)} bytes): {target}"
         )
 
+    def _build_trt_engine(self, engine_path: str):
+        """Download the ONNX and convert it to a TensorRT FP16 engine."""
+        if not self.model_url:
+            raise FileNotFoundError(
+                f"obstacle engine {engine_path!r} missing and no model_url "
+                "or OBSTACLE_MODEL_URL configured"
+            )
+        if self._download_failed_at and time.time() - self._download_failed_at < 30.0:
+            raise FileNotFoundError(f"obstacle engine build still failing: {engine_path!r}")
+        import tempfile
+        import tensorrt as trt
+
+        onnx_tmp = os.path.join(tempfile.gettempdir(), "obstacle_convert.onnx")
+        log.info(f"[obstacle] downloading ONNX for engine build from {self.model_url}")
+        try:
+            with urllib.request.urlopen(self.model_url, timeout=120) as response, \
+                    open(onnx_tmp, "wb") as output:
+                shutil.copyfileobj(response, output)
+            logger = trt.Logger(trt.Logger.WARNING)
+            builder = trt.Builder(logger)
+            network = builder.create_network(
+                1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH)
+            )
+            parser = trt.OnnxParser(network, logger)
+            with open(onnx_tmp, "rb") as handle:
+                if not parser.parse(handle.read()):
+                    raise RuntimeError(
+                        f"TensorRT ONNX parse failed: {parser.get_error(0)}"
+                    )
+            config = builder.create_builder_config()
+            config.set_flag(trt.BuilderFlag.FP16)
+            config.set_memory_pool_limit(trt.MemoryPoolType.WORKSPACE, 1 << 28)
+            serialized = builder.build_serialized_network(network, config)
+            if serialized is None:
+                raise RuntimeError("TensorRT engine build returned None")
+            os.makedirs(os.path.dirname(engine_path), exist_ok=True)
+            with open(engine_path, "wb") as handle:
+                handle.write(serialized)
+            log.info(f"[obstacle] TensorRT engine built: {engine_path}")
+        except Exception as exc:
+            self._download_failed_at = time.time()
+            log.error(f"[obstacle] TensorRT engine build failed: {exc}")
+            raise
+        finally:
+            if os.path.exists(onnx_tmp):
+                os.unlink(onnx_tmp)
+
+    def _load_trt_engine(self):
+        """Load a serialized TensorRT engine and prepare fixed-shape bindings."""
+        import tensorrt as trt
+        import torch
+
+        logger = trt.Logger(trt.Logger.WARNING)
+        runtime = trt.Runtime(logger)
+        with open(self.model_path, "rb") as handle:
+            engine = runtime.deserialize_cuda_engine(handle.read())
+        if engine is None:
+            raise RuntimeError(f"failed to deserialize TensorRT engine {self.model_path}")
+        self._trt_engine = engine
+        self._trt_context = engine.create_execution_context()
+        self._trt_bindings = []
+        self._trt_output_buffers = []
+        self._trt_input = torch.empty((1, 5, 240, 320), dtype=torch.float32, device="cuda")
+        for index in range(engine.num_io_tensors):
+            name = engine.get_tensor_name(index)
+            if engine.get_tensor_mode(name) == trt.TensorIOMode.INPUT:
+                self._trt_bindings.append(int(self._trt_input.data_ptr()))
+            else:
+                shape = tuple(engine.get_tensor_shape(name))
+                output = torch.empty(shape, dtype=torch.float32, device="cuda")
+                self._trt_output_buffers.append(output)
+                self._trt_bindings.append(int(output.data_ptr()))
+
+    def _trt_infer(self, tensor: np.ndarray) -> float:
+        import torch
+
+        self._trt_input.copy_(torch.from_numpy(tensor), non_blocking=False)
+        stream = torch.cuda.current_stream().cuda_stream
+        self._trt_context.execute_async_v2(
+            bindings=self._trt_bindings, stream_handle=stream
+        )
+        torch.cuda.synchronize()
+        return float(self._trt_output_buffers[0].cpu().numpy()[0])
+
     def estimate(self, image_bytes: bytes) -> dict:
         """Run the ONNX model and return the calibrated distance in meters."""
         try:
             self._ensure_session()
             tensor = self.preprocess(self._decode_rgb(image_bytes))
-            outputs = self._session.run(["distance"], {self._input_name: tensor})
-            distance = float(outputs[0][0])
+            if self.model_path.endswith(".engine"):
+                distance = self._trt_infer(tensor)
+            else:
+                outputs = self._session.run(["distance"], {self._input_name: tensor})
+                distance = float(outputs[0][0])
             return {"pred_distance": round(distance, 3)}
         except Exception as exc:  # keep the camera pipeline alive on model failure
             self._log_once(f"local inference failed: {exc}")
