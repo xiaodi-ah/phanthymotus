@@ -32,6 +32,17 @@ def parse_args() -> argparse.Namespace:
         default=Path("/mnt/contest_ceph/i-wangaodi/datasets/EI_dataset"),
     )
     parser.add_argument("--cache-dir", type=Path, default=Path("runs/obstacle/cache"))
+    parser.add_argument(
+        "--obb-root",
+        type=Path,
+        default=Path("/tmp/vkitti2_textgt"),
+        help="VKITTI2 pose.txt/bbox.txt root for bumper-to-OBB outdoor labels",
+    )
+    parser.add_argument(
+        "--fov-aug",
+        action="store_true",
+        help="Enable random FOV crop augmentation for outdoor samples (experimental)",
+    )
     parser.add_argument("--output", type=Path, default=Path("runs/obstacle"))
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--batch-size", type=int, default=64)
@@ -53,7 +64,11 @@ def seed_everything(seed: int) -> None:
 
 
 def build_datasets(
-    root: Path, cache_dir: Path, smoke_samples: int = 0
+    root: Path,
+    cache_dir: Path,
+    smoke_samples: int = 0,
+    obb_root: Path | None = None,
+    fov_aug: bool = False,
 ) -> tuple[ConcatDataset, ConcatDataset]:
     if not root.is_dir():
         raise FileNotFoundError(f"EI_dataset root not found: {root}")
@@ -70,12 +85,16 @@ def build_datasets(
                 augment=True,
                 cache_dir=cache_dir,
                 limit=smoke_samples,
+                obb_root=obb_root,
+                fov_aug=fov_aug,
             ),
             EIOutdoorSegVk2Dataset(
                 root / "train" / "outdoor_seg",
                 augment=True,
                 cache_dir=cache_dir,
                 limit=smoke_samples,
+                obb_root=obb_root,
+                fov_aug=fov_aug,
             ),
         ]
     )
@@ -90,11 +109,15 @@ def build_datasets(
                 root / "val" / "outdoor_depth",
                 cache_dir=cache_dir,
                 limit=smoke_samples,
+                obb_root=obb_root,
+                fov_aug=fov_aug,
             ),
             EIOutdoorSegVk2Dataset(
                 root / "val" / "outdoor_seg",
                 cache_dir=cache_dir,
                 limit=smoke_samples,
+                obb_root=obb_root,
+                fov_aug=fov_aug,
             ),
         ]
     )
@@ -127,7 +150,11 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_set, validation_set = build_datasets(
-        args.dataset_root, args.cache_dir, args.smoke_samples
+        args.dataset_root,
+        args.cache_dir,
+        args.smoke_samples,
+        args.obb_root,
+        fov_aug=args.fov_aug,
     )
     loader_options = {
         "batch_size": args.batch_size,

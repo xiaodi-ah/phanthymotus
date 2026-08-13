@@ -6,6 +6,8 @@ from perception.obstacle_model.data import (
     EIIndoorDataset,
     RGB_MEAN,
     RGB_STD,
+    _parse_vkitti_name,
+    _random_fov_crop,
     indoor_p1_target,
     obstacle_mask_target,
     outdoor_depth_target,
@@ -95,6 +97,22 @@ def test_ei_indoor_dataset_filters_sentinel_and_caches(tmp_path) -> None:
     assert float(target) == pytest.approx(2.5)
     assert int(domain) == 0
     assert (tmp_path / "cache" / "ei_indoor_train.json").is_file()
+
+
+def test_parse_vkitti_name() -> None:
+    assert _parse_vkitti_name("vk2_Scene01_15-deg-left_00042_depth.npz") == (
+        "Scene01",
+        "15-deg-left",
+        42,
+    )
+    assert _parse_vkitti_name("not_a_vkitti_file.png") is None
+
+
+def test_random_fov_crop_preserves_rgb() -> None:
+    rgb = np.zeros((375, 1242, 3), dtype=np.uint8)
+    cropped = _random_fov_crop(rgb)
+    assert cropped.ndim == 3 and cropped.shape[2] == 3
+    assert 4.0 / 3.0 - 1e-6 <= cropped.shape[1] / cropped.shape[0] <= 16.0 / 9.0 + 1e-6
 
 
 def test_point_to_axis_aligned_obb() -> None:

@@ -6,6 +6,7 @@ import csv
 import json
 import math
 import random
+import re
 from pathlib import Path
 from typing import Iterable
 
@@ -23,6 +24,28 @@ OUTDOOR_MAX_DISTANCE = 50.0
 # VKITTI2 classSeg vehicle obstacle colors given as RGB
 # (255,127,80)/(210,0,200)/(255,130,0); stored here as BGR tuples.
 _OBSTACLE_BGR_COLORS = ((80, 127, 255), (200, 0, 210), (0, 130, 255))
+_VKITTI_NAME_RE = re.compile(r"vk2_(Scene\d+)_(.+?)_(\d+)_(?:rgb|depth|seg)\.")
+
+
+def _parse_vkitti_name(name: str) -> tuple[str, str, int] | None:
+    match = _VKITTI_NAME_RE.match(name)
+    if match is None:
+        return None
+    return match.group(1), match.group(2), int(match.group(3))
+
+
+def _random_fov_crop(rgb: np.ndarray) -> np.ndarray:
+    """Random center crop to a narrower FOV, mimicking a robot camera."""
+    height, width = rgb.shape[:2]
+    aspect = random.uniform(4.0 / 3.0, 16.0 / 9.0)
+    crop_w = min(width, int(round(aspect * height)))
+    crop_h = min(height, int(round(crop_w / aspect)))
+    crop_w = min(crop_w, int(crop_h * aspect))
+    max_x = max(width - crop_w, 0)
+    max_y = max(height - crop_h, 0)
+    x0 = random.randint(0, max_x) if max_x else 0
+    y0 = random.randint(0, max_y) if max_y else 0
+    return rgb[y0 : y0 + crop_h, x0 : x0 + crop_w]
 
 
 def _letterbox_rgb(rgb: np.ndarray, size: tuple[int, int] = IMAGE_SIZE) -> np.ndarray:
@@ -210,10 +233,14 @@ class EIOutdoorDepthDataset(Dataset):
         cache_dir: str | Path | None = None,
         limit: int = 0,
         max_distance: float = OUTDOOR_MAX_DISTANCE,
+        obb_root: str | Path | None = None,
+        fov_aug: bool = False,
     ) -> None:
         self.directory = Path(directory)
         self.augment = augment
         self.max_distance = max_distance
+        self.obb_root = Path(obb_root) if obb_root else None
+        self.fov_aug = fov_aug
         depth_files = sorted(self.directory.glob("vk2_*_depth.npz"))
         self.pairs: list[tuple[Path, Path]] = []
         for depth_path in depth_files:
@@ -224,14 +251,38 @@ class EIOutdoorDepthDataset(Dataset):
         if not self.pairs:
             raise FileNotFoundError(f"no EI outdoor_depth pairs under {self.directory}")
 
+        self._obb_targets: dict[tuple[str, str], dict[int, float]] = {}
+        if self.obb_root is not None:
+            for depth_path, _rgb in self.pairs:
+                parsed = _parse_vkitti_name(depth_path.name)
+                if parsed is None:
+                    continue
+                scene, variation = parsed[:2]
+                if (scene, variation) in self._obb_targets:
+                    continue
+                sequence = self.obb_root / scene / variation
+                if sequence.is_dir():
+                    self._obb_targets[(scene, variation)] = vkitti_obb_targets(sequence)
+
         def build(num: int) -> dict[str, float]:
             labels: dict[str, float] = {}
             pairs = self.pairs[:num] if num else self.pairs
             total = len(pairs)
             for index, (depth_path, _rgb) in enumerate(pairs, 1):
                 try:
-                    depth = np.load(depth_path)["depth"].astype(np.float32)
-                    labels[depth_path.name] = outdoor_depth_target(depth)
+                    if self.obb_root is not None:
+                        parsed = _parse_vkitti_name(depth_path.name)
+                        if parsed is None:
+                            continue
+                        label = self._obb_targets.get(
+                            parsed[:2], {}
+                        ).get(parsed[2])
+                        if label is None:
+                            continue
+                    else:
+                        depth = np.load(depth_path)["depth"].astype(np.float32)
+                        label = outdoor_depth_target(depth)
+                    labels[depth_path.name] = label
                 except (OSError, KeyError, ValueError):
                     continue
                 if index % 1000 == 0 or index == total:
@@ -241,7 +292,10 @@ class EIOutdoorDepthDataset(Dataset):
         if limit:
             labels = build(limit)
         elif cache_dir:
-            cache_path = Path(cache_dir) / f"ei_outdoor_depth_{self.directory.parent.name}.json"
+            tag = "obb_" if self.obb_root is not None else ""
+            cache_path = (
+                Path(cache_dir) / f"ei_outdoor_depth_{tag}{self.directory.parent.name}.json"
+            )
             labels = _load_or_build_label_cache(cache_path, lambda: build(0))
         else:
             labels = build(0)
@@ -262,8 +316,11 @@ class EIOutdoorDepthDataset(Dataset):
         bgr = cv2.imread(str(path), cv2.IMREAD_COLOR)
         if bgr is None:
             raise OSError(f"failed to read {path}")
+        rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        if self.augment and self.fov_aug:
+            rgb = _random_fov_crop(rgb)
         return (
-            preprocess_rgb(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB), self.augment),
+            preprocess_rgb(rgb, self.augment),
             torch.tensor(target, dtype=torch.float32),
             torch.tensor(1, dtype=torch.long),
         )
@@ -279,10 +336,14 @@ class EIOutdoorSegVk2Dataset(Dataset):
         cache_dir: str | Path | None = None,
         limit: int = 0,
         max_distance: float = OUTDOOR_MAX_DISTANCE,
+        obb_root: str | Path | None = None,
+        fov_aug: bool = False,
     ) -> None:
         self.directory = Path(directory)
         self.augment = augment
         self.max_distance = max_distance
+        self.obb_root = Path(obb_root) if obb_root else None
+        self.fov_aug = fov_aug
         self.triples: list[tuple[Path, Path, Path]] = []
         for seg_path in sorted(self.directory.glob("vk2_*_seg.png")):
             base = seg_path.name[: -len("_seg.png")]
@@ -292,19 +353,43 @@ class EIOutdoorSegVk2Dataset(Dataset):
         if not self.triples:
             raise FileNotFoundError(f"no EI outdoor_seg vk2 triples under {self.directory}")
 
+        self._obb_targets: dict[tuple[str, str], dict[int, float]] = {}
+        if self.obb_root is not None:
+            for rgb_path, depth_path, _seg in self.triples:
+                parsed = _parse_vkitti_name(depth_path.name)
+                if parsed is None:
+                    continue
+                scene, variation = parsed[:2]
+                if (scene, variation) in self._obb_targets:
+                    continue
+                sequence = self.obb_root / scene / variation
+                if sequence.is_dir():
+                    self._obb_targets[(scene, variation)] = vkitti_obb_targets(sequence)
+
         def build(num: int) -> dict[str, float]:
             labels: dict[str, float] = {}
             triples = self.triples[:num] if num else self.triples
             total = len(triples)
             for index, (rgb_path, depth_path, seg_path) in enumerate(triples, 1):
                 try:
-                    depth = np.load(depth_path)["depth"].astype(np.float32)
-                    seg = cv2.imread(str(seg_path), cv2.IMREAD_COLOR)
-                    if seg is None:
-                        continue
-                    labels[depth_path.name] = obstacle_mask_target(
-                        depth, vkitti_seg_obstacle_mask(seg)
-                    )
+                    if self.obb_root is not None:
+                        parsed = _parse_vkitti_name(depth_path.name)
+                        if parsed is None:
+                            continue
+                        label = self._obb_targets.get(
+                            parsed[:2], {}
+                        ).get(parsed[2])
+                        if label is None:
+                            continue
+                    else:
+                        depth = np.load(depth_path)["depth"].astype(np.float32)
+                        seg = cv2.imread(str(seg_path), cv2.IMREAD_COLOR)
+                        if seg is None:
+                            continue
+                        label = obstacle_mask_target(
+                            depth, vkitti_seg_obstacle_mask(seg)
+                        )
+                    labels[depth_path.name] = label
                 except (OSError, KeyError, ValueError):
                     continue
                 if index % 500 == 0 or index == total:
@@ -314,7 +399,11 @@ class EIOutdoorSegVk2Dataset(Dataset):
         if limit:
             labels = build(limit)
         elif cache_dir:
-            cache_path = Path(cache_dir) / f"ei_outdoor_seg_vk2_{self.directory.parent.name}.json"
+            tag = "obb_" if self.obb_root is not None else ""
+            cache_path = (
+                Path(cache_dir)
+                / f"ei_outdoor_seg_vk2_{tag}{self.directory.parent.name}.json"
+            )
             labels = _load_or_build_label_cache(cache_path, lambda: build(0))
         else:
             labels = build(0)
@@ -335,8 +424,11 @@ class EIOutdoorSegVk2Dataset(Dataset):
         bgr = cv2.imread(str(path), cv2.IMREAD_COLOR)
         if bgr is None:
             raise OSError(f"failed to read {path}")
+        rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        if self.augment and self.fov_aug:
+            rgb = _random_fov_crop(rgb)
         return (
-            preprocess_rgb(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB), self.augment),
+            preprocess_rgb(rgb, self.augment),
             torch.tensor(target, dtype=torch.float32),
             torch.tensor(2, dtype=torch.long),
         )
