@@ -184,7 +184,7 @@ class _TTSNode(Node):
             raise RuntimeError("TTS adapter not configured")
         # Dry-run: verify model can synthesize before declaring running
         try:
-            test_chunks = list(self._adapter.synthesize_stream("."))
+            test_chunks = list(self._adapter.synthesize_stream(getattr(self._adapter,"dry_run_text",".")))
             if not test_chunks:
                 return {"state": "error", "message": "TTS dry-run produced no audio"}
         except Exception as e:
@@ -202,20 +202,23 @@ class _TTSNode(Node):
         self.state = "idle"
         return {"state": "idle"}
 
-    def enqueue(self, text: str, trace_id: str = ''):
+    def enqueue(self, text: str, trace_id: str = '', language: str = 'auto'):
         if self.state != "running":
             raise RuntimeError("TTS not running; call start first")
-        self._text_queue.put((text, trace_id))
+        self._text_queue.put((text, trace_id, language))
 
     def _text_cb(self, msg: String):
         if self.state != "running": return
         try:
-            text = json.loads(msg.data).get("text","")
+            payload = json.loads(msg.data)
+            text = payload.get('text','')
+            language = payload.get('language',payload.get('lang','auto'))
         except Exception:
             text = msg.data.strip()
-        if text:
+            language = 'auto'
+        if isinstance(text,str) and text:
             log.info(f"[tts] received text from topic: {text[:50]}...")
-            self._text_queue.put((text, ''))
+            self._text_queue.put((text, '', language))
 
     def _worker(self):
         from audio_msgs.msg import AudioChunk
@@ -232,9 +235,11 @@ class _TTSNode(Node):
                 continue
             # Unpack queue item: (text, trace_id) or plain text for backward compat
             if isinstance(item, tuple):
-                text, _trace_id = item
+                text, _trace_id = item[:2]
+                language = item[2] if len(item)>2 else 'auto'
             else:
                 text, _trace_id = item, ''
+                language = 'auto'
             try:
                 import time as _time
                 t_start = _time.monotonic()
@@ -246,7 +251,8 @@ class _TTSNode(Node):
                 frames_sent = 0
                 prebuf = []   # pre-buffer queue
 
-                for raw_chunk in self._adapter.synthesize_stream(text):
+                stream = (self._adapter.synthesize_stream_language(text,language) if hasattr(self._adapter,'synthesize_stream_language') else self._adapter.synthesize_stream(text))
+                for raw_chunk in stream:
                     if self._stop_event.is_set():
                         break
                     buf  += raw_chunk
@@ -274,7 +280,7 @@ class _TTSNode(Node):
                             continue
 
                         # Real-time pacing
-                        target = t0 + frames_sent * FRAME_DURATION
+                        target = t0 + max(0,frames_sent * FRAME_DURATION - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
                         now = _time.monotonic()
                         if now < target:
                             _time.sleep(target - now)
@@ -299,7 +305,7 @@ class _TTSNode(Node):
                 # flush remainder
                 if buf and not self._stop_event.is_set():
                     if t0 is not None:
-                        target = t0 + frames_sent * FRAME_DURATION
+                        target = t0 + max(0,frames_sent * FRAME_DURATION - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
                         now = _time.monotonic()
                         if now < target:
                             _time.sleep(target - now)
@@ -323,7 +329,7 @@ class _TTSNode(Node):
                                       "meta": {"chars": len(text)}})
                         spans.append({**_span_base, "span": "tts_playback",
                                       "start_ts": t0_wall, "end_ts": t_end_wall,
-                                      "meta": {"frames": frames_sent}})
+                                      "meta": {"frames": frames_sent, "pcm_bytes": total}})
                     else:
                         # 没有 prebuf（极短文本），合并为一个 span
                         spans.append({**_span_base, "span": "tts_generate",

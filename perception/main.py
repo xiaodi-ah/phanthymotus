@@ -62,7 +62,10 @@ class PerceptionBundle:
             log.info("ASRPlugin loaded")
 
         if plugins_cfg.get("tts", {}).get("enabled", False):
-            from plugins.tts import TTSPlugin
+            if os.environ.get('TTS_PLUGIN','tts')=='moss_tts':
+                from plugins.moss_tts import TTSPlugin
+            else:
+                from plugins.tts import TTSPlugin
             self._plugins.append(TTSPlugin(plugins_cfg["tts"], executor))
             log.info("TTSPlugin loaded")
 
@@ -103,10 +106,10 @@ class PerceptionBundle:
                 return p.dispatch(name, args)
         return None
 
-    def tts_synthesize_raw(self, text: str) -> bytes:
+    def tts_synthesize_raw(self, text: str, language: str = 'auto') -> bytes:
         for p in self._plugins:
             if getattr(p, 'PREFIX', None) == 'tts':
-                return p.synthesize_raw(text)
+                return p.synthesize_raw(text, language=language) if language!='auto' else p.synthesize_raw(text)
         raise RuntimeError("TTS plugin not loaded or not enabled")
 
 
@@ -201,7 +204,7 @@ def make_handler():
                         )
                         pcm = adapter.synthesize(text)
                     else:
-                        pcm = _bundle.tts_synthesize_raw(text)
+                        pcm = _bundle.tts_synthesize_raw(text, req.get('language','auto'))
                     import base64 as _b64, io, wave
                     buf = io.BytesIO()
                     with wave.open(buf, 'wb') as w:
@@ -391,8 +394,8 @@ def main():
     global _bundle
 
     cfg      = _load_config()
-    mcp_port = int(cfg.get("mcp_port", 15720))
-    ws_port  = int(cfg.get("ws_port",  15721))
+    mcp_port = int(os.environ.get("MCP_PORT") or cfg.get("mcp_port", 15720))
+    ws_port  = int(os.environ.get("WS_PORT") or cfg.get("ws_port", 15721))
 
     log.info(f"perception bundle starting, mcp_port={mcp_port}, ws_port={ws_port}")
     log.info(f"config: plugins.asr.enabled={cfg.get('plugins',{}).get('asr',{}).get('enabled')}, "

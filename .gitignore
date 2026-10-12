@@ -42,3 +42,14 @@ Thumbs.db
 
 # Docker
 .docker/
+
+# TTS model distribution and local trial artifacts
+*.plan
+*.onnx
+*.whl
+*.safetensors
+*.wav
+*.npy
+/models/
+/outputs/
+/tmp/

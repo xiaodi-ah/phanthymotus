@@ -1,0 +1,67 @@
+{
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/moss-tts-trt-jp61-v2-20261012/",
+  "architecture": "aarch64",
+  "gpu": "Jetson Orin, sm_87",
+  "jetpack": "6.1",
+  "tensorrt": "10.4.0",
+  "tts_revision": "f52645cb467506d8e18e746ddd59482685b74e58",
+  "codec_revision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+  "frame_engine": "own v2; explicit FP16 network/FP32 sampling",
+  "files": [
+    {
+      "path": "prefill.plan",
+      "bytes": 224446868,
+      "sha256": "eada084135e85a917507bb56febd1d59df94166e424209f18439eafa10393a4e"
+    },
+    {
+      "path": "decode.plan",
+      "bytes": 223977308,
+      "sha256": "31df2f89a06edd3d30af03b57e9a57a33c7bc4283bd92c9d4c25e7ff9f8b202e"
+    },
+    {
+      "path": "codec.plan",
+      "bytes": 27688980,
+      "sha256": "da40b83b1ff8f12d6c14b9e9c361c5cee8da3502ced43520f5e50ed11722b621"
+    },
+    {
+      "path": "frame.plan",
+      "bytes": 40704156,
+      "sha256": "883efb1d19e5a072045c354746f14cf138b96c1bcf51b8f76f398cdc937fd5cd"
+    },
+    {
+      "path": "tts_meta.json",
+      "bytes": 4487,
+      "sha256": "3edf25232dcd0af3d061c837e9a968a39e2f8592e06777d740503c4f2244f95c"
+    },
+    {
+      "path": "browser_manifest.json",
+      "bytes": 503354,
+      "sha256": "097d80e993dc29f0bae427590b4f77084a161cb578b50d82c29f455d5faa9eee"
+    },
+    {
+      "path": "tokenizer.model",
+      "bytes": 470897,
+      "sha256": "c353ee1479b536bf414c1b247f5542b6607fb8ae91320e5af1781fee200fddff"
+    },
+    {
+      "path": "codec_meta.json",
+      "bytes": 17036,
+      "sha256": "3e291c883bb7d11ff2fe8e964e3e495519760358859f35c951254c7741592731"
+    },
+    {
+      "path": "wheels/numpy-1.26.4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 14219016,
+      "sha256": "d209d8969599b27ad20994c8e41936ee0964e6da07478d6c35016bc386b66ad4"
+    },
+    {
+      "path": "wheels/scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 35547617,
+      "sha256": "263961f658ce2165bbd7b99fa5135195c3a12d9bef045345016b8b50c315cb82"
+    },
+    {
+      "path": "wheels/sentencepiece-0.2.1-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "bytes": 1316379,
+      "sha256": "d8b1d91545578852f128650b8cce4ec20f93d39b378ff554ebe66290f2dabb92"
+    }
+  ]
+}
