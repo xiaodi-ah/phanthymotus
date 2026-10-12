@@ -56,8 +56,8 @@ def main():
         assert any(t['name']=='tts' for t in tools['tools'])
         count=3 if args.triple else 1
         for i in range(count):
-            subs.append(node.create_subscription(AudioChunk,f'/moss_trial/{i}/text/tts',lambda msg,i=i:audio(i,msg),qos))
-            result=call('start',instance_id=f'trial{i}',input_topic=f'/moss_trial/{i}/text')
+            subs.append(node.create_subscription(AudioChunk,f'/moss_trial/instance{i}/text/tts',lambda msg,i=i:audio(i,msg),qos))
+            result=call('start',instance_id=f'trial{i}',input_topic=f'/moss_trial/instance{i}/text')
             assert result['state']=='running',result
         status=call('info');assert status['independent_models']==count and status['state']=='running',status
         time.sleep(.5)
