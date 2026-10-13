@@ -56,3 +56,16 @@ On the same Orin, seven short language samples (Thai excluded) matched legacy PC
 Single-model Torch buffer allocation after seven cases:178.6→126.4MiB; reserved274→210MiB. These figures exclude TensorRT-owned engine weights/context memory. Shared-host late-test available RAM was about942–960MiB at5-second samples. Single MCP/ROS RTF0.785–0.887; three-model RTF0.883–1.138, median1.020, with48/90 at or above1. First received PCM0.358–0.653s; recognized first-word latency was not checked.
 
 The memory improvements do not establish full contest admission: concurrent RTF remains above1 in some cases; long inputs, hours of stability, three containers, listening/GSB remain unverified. Existing submission YAML remains on37b4fb2e13773c461b53e778fe65c001cbbe12c5. Local artifacts: outputs/memory-ab-20261013-073746/ and outputs/memory-stability-20261013-073743/ in the project workspace. Experimental image:local/tts-moss-submit:mem-opt-20261013-e.
+
+
+## Concurrent RTF optimization with codec CUDA Graph (2026-10-13)
+
+Profiling three native requests found142 codec calls with5.146s summed wall time and1.208s GPU-event time around TensorRT enqueue; events omit some queue delays and profiling adds overhead, so the difference is not a pure CPU-time measurement. Serializing all GPU stages made native RTF worse (1.50–1.89 in the profiled control) and was rejected. Codec IO has fixed profile shapes, no host/shape IO, and no auxiliary streams.
+
+The new codec adapter binds fixed input/output banks once, captures TensorRT plus recurrent-state device copies in one CUDA Graph, and asynchronously copies audio/length into pinned CPU buffers on the same private stream. One explicit stream synchronization precedes all CPU reads. Recurrent values return the updated input bank so the existing request reset stays valid. Every model retains its own engine/context/graph/buffers. Existing `cuda_graph=true` enables both frame and codec graphs; false uses the earlier codec adapter. Weights, precision and sampling are unchanged.
+
+This follows [NVIDIA CUDA Graph guidance](https://docs.nvidia.com/deeplearning/tensorrt/10.x.x/performance/optimization.html) and [PyTorch nonblocking-copy guidance](https://docs.pytorch.org/tutorials/intermediate/pinmem_nonblock.html). No new dependencies or engines are required.
+
+Seven native A/B PCM pairs and all90 concurrent received WAV PCM matched the79ae3ba baseline bitwise. Actual MCP/ROS three-model seven-language rotation completed30 rounds /90 requests: RTF0.754–0.908 (median0.822), all90 below1; first PCM0.257–0.534s. The previous separate run had RTF0.883–1.138, with48/90 at or above1; these full-chain comparisons were not measured in the same time window. Single MCP/ROS RTF0.730–0.874. Native optimized single-model RTF0.369–0.495 in the same-run A/B.
+
+Late-test shared-host available RAM stayed around983–1005MiB at5-second samples; no memory protection stop, no audio-byte loss. Artifacts: outputs/codec-ab-20261013-085608/, outputs/codec-stability-20261013-085605/, outputs/concurrent-profile-20261013-084029/ in the project workspace. Experimental image:local/tts-moss-submit:codec-graph-20261013-a. Thai, long inputs, hours of stability and GSB were not checked; first PCM is not recognized first-word latency. Submission YAML remains on37b4fb2e13773c461b53e778fe65c001cbbe12c5 pending platform feedback.

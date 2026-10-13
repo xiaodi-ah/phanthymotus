@@ -27,6 +27,7 @@ class MossAdapter:
         from . import ort_cpu_runtime as vendor
         from .trt_session import TrtSession
         from .trt_fused_session import FusedSession
+        from .trt_codec_session import CodecGraphSession
         if trt.__version__!='10.4.0':raise RuntimeError('These Orin engines require TensorRT 10.4.0; got '+trt.__version__)
         if not torch.cuda.is_available():raise RuntimeError('Jetson CUDA is required')
         torch.set_num_threads(1);root=Path(model_dir)
@@ -43,7 +44,7 @@ class MossAdapter:
             return bool(continuing[0,0]),frame.reshape(-1).tolist()
         runtime.run_local_fixed_sampled_frame=MethodType(fused_frame,runtime)
         codec_meta=json.loads((root/'codec_meta.json').read_text())
-        self.codec=vendor.CodecStreamingDecodeSession(codec_meta,TrtSession(root/'codec.plan'))
+        self.codec=vendor.CodecStreamingDecodeSession(codec_meta,CodecGraphSession(root/'codec.plan',codec_meta) if cuda_graph else TrtSession(root/'codec.plan'))
         self.tokenizer=spm.SentencePieceProcessor(model_file=str(root/'tokenizer.model'))
         self.voices={v['voice']:v['prompt_audio_codes'] for v in runtime.manifest['builtin_voices']}
         self.runtime=runtime;self.language=language;self.seed=int(seed);self.lock=threading.Lock()
