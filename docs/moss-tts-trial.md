@@ -45,3 +45,14 @@ Only short samples were tested. No full GSB/ASR/listening validation or long-dur
 ## Verification
 
 `tools/test_moss_submission.py` checks streaming resampler continuity, anti-aliasing, PCM validity and language validation. `tools/test_moss_mcp.py --output /path` tests eight samples through the actual MCP/ROS path; `--triple` starts three independent MCP model instances and sends five concurrent rounds. It checks received PCM byte counts against published completion metadata and writes WAV/results. That three-instance test is one framework process/container; it does not prove stability of three separately deployed framework containers.
+
+
+## Local three-model memory optimization (2026-10-13)
+
+The optimization branch preserves separate engines, execution contexts, KV and codec state per model. Prefill uses one output bank; the recurrent decode and codec retain two banks. Initial GPU input buffers are discarded after recurrence moves to device outputs. The codec resets its existing device state on its own CUDA stream (zeros, positions=-1), avoiding repeated large CPU cache allocations/uploads. Weights, sampling and precision are unchanged.
+
+On the same Orin, seven short language samples (Thai excluded) matched legacy PCM bitwise. The actual MCP/ROS path completed 30 concurrent rounds /90 requests across seven languages; all90 received WAV PCM matched their baseline sample bitwise. No audio-byte loss or memory protection stop. This is three independent models in one framework process/container, not three independently deployed containers.
+
+Single-model Torch buffer allocation after seven cases:178.6→126.4MiB; reserved274→210MiB. These figures exclude TensorRT-owned engine weights/context memory. Shared-host late-test available RAM was about942–960MiB at5-second samples. Single MCP/ROS RTF0.785–0.887; three-model RTF0.883–1.138, median1.020, with48/90 at or above1. First received PCM0.358–0.653s; recognized first-word latency was not checked.
+
+The memory improvements do not establish full contest admission: concurrent RTF remains above1 in some cases; long inputs, hours of stability, three containers, listening/GSB remain unverified. Existing submission YAML remains on37b4fb2e13773c461b53e778fe65c001cbbe12c5. Local artifacts: outputs/memory-ab-20261013-073746/ and outputs/memory-stability-20261013-073743/ in the project workspace. Experimental image:local/tts-moss-submit:mem-opt-20261013-e.

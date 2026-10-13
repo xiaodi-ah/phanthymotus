@@ -48,6 +48,14 @@ class MossAdapter:
         self.voices={v['voice']:v['prompt_audio_codes'] for v in runtime.manifest['builtin_voices']}
         self.runtime=runtime;self.language=language;self.seed=int(seed);self.lock=threading.Lock()
         gc.collect();ctypes.CDLL('libc.so.6').malloc_trim(0)
+    def reset_codec(self):
+        import torch
+        if all(isinstance(value,torch.Tensor) for value in self.codec.state_feeds.values()):
+            positions={str(spec['cached_positions_input_name']) for spec in self.codec.attention_specs}
+            # Queue reset on the codec stream before it reads its recurrent state.
+            with torch.cuda.stream(self.codec.session.stream):
+                for name,value in self.codec.state_feeds.items():value.fill_(-1 if name in positions else 0)
+        else:self.codec.reset()
     def synthesize(self,text,language=None):return b''.join(self.synthesize_stream_language(text,language))
     def synthesize_stream(self,text):yield from self.synthesize_stream_language(text,self.language)
     def synthesize_stream_language(self,text,language=None):
@@ -62,7 +70,7 @@ class MossAdapter:
         def produce():
             try:
                 with self.lock:
-                    self.codec.reset();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM()
+                    self.reset_codec();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM()
                     request=self.runtime.build_voice_clone_request_rows(self.voices[VOICES[code]],self.tokenizer.encode(text,out_type=int))
                     prompt=len(request['inputIds'])
                     if prompt>512:raise ValueError('Text exceeds certified prefill profile (512 rows); use shorter utterances')

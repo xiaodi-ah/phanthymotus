@@ -14,6 +14,8 @@ class TrtSession:
   self.names=[self.engine.get_tensor_name(i) for i in range(self.engine.num_io_tensors)]
   self.inputs=[n for n in self.names if self.engine.get_tensor_mode(n)==trt.TensorIOMode.INPUT]
   self.outputs=[n for n in self.names if n not in self.inputs];self.buffers={};self.parity=0;self.input_shapes={};self.addresses={}
+  # Prefill has no output-to-input recurrence and only needs one output bank.
+  self.double_buffer=set(self.inputs)!={'input_ids','attention_mask'}
   self.info={}
   for name in self.names:
    npdtype=trt.nptype(self.engine.get_tensor_dtype(name));dtype=torch.from_numpy(np.empty((),dtype=npdtype)).dtype
@@ -33,11 +35,12 @@ class TrtSession:
    self.addresses[name]=address
  def run(self,requested,feeds):
   if set(feeds)!=set(self.inputs):raise ValueError('Engine input names mismatch')
-  self.parity=1-self.parity;alive=[];out={}
+  self.parity=1-self.parity if self.double_buffer else 0;alive=[];out={}
   with torch.cuda.stream(self.stream):
    for name in self.inputs:
     value=feeds[name];npdtype,dtype,device=self.info[name]
     if isinstance(value,torch.Tensor):
+     self.buffers.pop(('in',name),None)
      tensor=value.to(device=device,dtype=dtype).contiguous()
     else:
      array=np.ascontiguousarray(value,dtype=npdtype);tensor=self.buffer(('in',name),array.size,dtype,device).reshape(array.shape)

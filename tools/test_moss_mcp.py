@@ -6,7 +6,10 @@ import numpy as np
 SAMPLES=[('zh','你好，欢迎使用多语言语音服务。'),('ja','こんにちは。多言語音声サービスへようこそ。'),('ru','Здравствуйте! Добро пожаловать в многоязычный голосовой сервис.'),('en','Hello, and welcome to our multilingual voice service.'),('es','Hola, bienvenido a nuestro servicio de voz multilingüe.'),('fr','Bonjour, bienvenue dans notre service vocal multilingue.'),('th','สวัสดี ยินดีต้อนรับสู่บริการเสียงหลายภาษา'),('de','Hallo, willkommen bei unserem mehrsprachigen Sprachdienst.')]
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');args=parser.parse_args()
+    if not 1<=args.rounds<=100:raise ValueError('rounds must be 1..100')
+    selected=args.languages.split(',')
+    if not selected or len(set(selected))!=len(selected) or any(code not in dict(SAMPLES) for code in selected):raise ValueError('Invalid language selection')
     folder=Path(args.output);folder.mkdir(parents=True,exist_ok=True)
     import rclpy
     from rclpy.node import Node
@@ -86,17 +89,19 @@ def main():
                 rows.append(row);(folder/'results.json').write_text(json.dumps({'commit':os.environ.get('TTS_COMMIT_ID'),'independent_models':count,'transport':'real MCP/ROS; RTF through last received PCM, not player completion','results':rows},ensure_ascii=False,indent=2))
             print('RESULT='+json.dumps(row,ensure_ascii=False),flush=True)
         if args.triple:
-            for round_index in range(5):
+            triple_samples=[row for row in SAMPLES if row[0] in selected]
+            for round_index in range(args.rounds):
                 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
                     jobs=[]
                     for i in range(3):
-                        code,text=[SAMPLES[0],SAMPLES[3],SAMPLES[1]][(i+round_index)%3]
+                        code,text=triple_samples[(i+round_index)%len(triple_samples)]
                         jobs.append(pool.submit(measure,i,f'round{round_index}-{code}',text,code))
                     for job in jobs:job.result()
         else:
-            for code,text in SAMPLES:measure(0,code,text,code)
+            for code,text in SAMPLES:
+                if code in selected:measure(0,code,text,code)
         call('stop')
-        assert len(rows)==(15 if args.triple else 8)
+        assert len(rows)==(3*args.rounds if args.triple else len(selected))
         summary={'completed':True,'requests':len(rows),'independent_models':count,'first_pcm_range':[min(r['first_pcm_seconds'] for r in rows),max(r['first_pcm_seconds'] for r in rows)],'rtf_range':[min(r['rtf_to_last_pcm'] for r in rows),max(r['rtf_to_last_pcm'] for r in rows)],'all_rtf_below_1':all(r['rtf_to_last_pcm']<1 for r in rows),'all_first_pcm_below_1s':all(r['first_pcm_seconds']<1 for r in rows),'recognized_first_word_not_checked':True,'container_count':1}
         (folder/'summary.json').write_text(json.dumps(summary,indent=2));print('SUMMARY='+json.dumps(summary),flush=True)
     finally:
