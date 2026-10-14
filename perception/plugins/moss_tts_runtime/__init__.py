@@ -4,9 +4,10 @@ from pathlib import Path
 from types import MethodType
 import numpy as np
 from .resample import StreamingPCM
+from .text_chunks import text_chunks
 
 LANGUAGES=('zh','ja','ru','en','es','fr','th','de')
-VOICES={'zh':'Junhao','ja':'Soyo','ru':'Adam','en':'Adam','es':'Ava','fr':'Bella','th':'Ava','de':'Nathan'}
+VOICES={'zh':'Zhiming','ja':'Soyo','ru':'Adam','en':'Adam','es':'Ava','fr':'Bella','th':'Ava','de':'Nathan'}
 
 def language_for(text,language='auto'):
     language=str(language or 'auto').lower().replace('_','-').split('-')[0]
@@ -71,20 +72,22 @@ class MossAdapter:
         def produce():
             try:
                 with self.lock:
-                    self.reset_codec();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM()
-                    request=self.runtime.build_voice_clone_request_rows(self.voices[VOICES[code]],self.tokenizer.encode(text,out_type=int))
-                    prompt=len(request['inputIds'])
-                    if prompt>512:raise ValueError('Text exceeds certified prefill profile (512 rows); use shorter utterances')
-                    budget=min(375,768-prompt)
-                    if budget<=0:raise ValueError('No certified KV capacity for this request')
-                    self.runtime.manifest['generation_defaults']['max_new_frames']=budget
-                    def on_frame(all_frames,index,frame):
-                        if cancel.is_set():raise RuntimeError('Synthesis cancelled')
-                        audio,length=self.codec.run_frames([frame]);pcm=converter.process(audio[0,:,:length])
-                        if not put(pcm):raise RuntimeError('Synthesis cancelled')
-                    frames=self.runtime.generate_audio_frames(request,on_frame=on_frame)
-                    if not frames:raise RuntimeError('Model produced no audio')
-                    if len(frames)>=budget:raise RuntimeError('Frame/KV limit reached; audio may be incomplete')
+                    for chunk in text_chunks(text,self.tokenizer):
+                        if cancel.is_set():return
+                        self.reset_codec();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM()
+                        request=self.runtime.build_voice_clone_request_rows(self.voices[VOICES[code]],self.tokenizer.encode(chunk,out_type=int))
+                        prompt=len(request['inputIds'])
+                        if prompt>512:raise ValueError('Text exceeds certified prefill profile (512 rows); use shorter utterances')
+                        budget=min(375,768-prompt)
+                        if budget<=0:raise ValueError('No certified KV capacity for this request')
+                        self.runtime.manifest['generation_defaults']['max_new_frames']=budget
+                        def on_frame(all_frames,index,frame):
+                            if cancel.is_set():raise RuntimeError('Synthesis cancelled')
+                            audio,length=self.codec.run_frames([frame]);pcm=converter.process(audio[0,:,:length])
+                            if not put(pcm):raise RuntimeError('Synthesis cancelled')
+                        frames=self.runtime.generate_audio_frames(request,on_frame=on_frame)
+                        if not frames:raise RuntimeError('Model produced no audio')
+                        if len(frames)>=budget:raise RuntimeError('Frame/KV limit reached; audio may be incomplete')
             except Exception as error:
                 if not cancel.is_set():put(error)
             finally:put(end)

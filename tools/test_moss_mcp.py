@@ -6,7 +6,12 @@ import numpy as np
 SAMPLES=[('zh','你好，欢迎使用多语言语音服务。'),('ja','こんにちは。多言語音声サービスへようこそ。'),('ru','Здравствуйте! Добро пожаловать в многоязычный голосовой сервис.'),('en','Hello, and welcome to our multilingual voice service.'),('es','Hola, bienvenido a nuestro servicio de voz multilingüe.'),('fr','Bonjour, bienvenue dans notre service vocal multilingue.'),('th','สวัสดี ยินดีต้อนรับสู่บริการเสียงหลายภาษา'),('de','Hallo, willkommen bei unserem mehrsprachigen Sprachdienst.')]
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');args=parser.parse_args()
+    global SAMPLES
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');parser.add_argument('--samples-file');args=parser.parse_args()
+    if args.samples_file:
+        samples=json.loads(Path(args.samples_file).read_text())
+        if not isinstance(samples,dict) or not samples or any(code not in dict(SAMPLES) or not isinstance(text,str) or not text.strip() for code,text in samples.items()):raise ValueError('Invalid sample file')
+        SAMPLES=list(samples.items())
     if not 1<=args.rounds<=100:raise ValueError('rounds must be 1..100')
     selected=args.languages.split(',')
     if not selected or len(set(selected))!=len(selected) or any(code not in dict(SAMPLES) for code in selected):raise ValueError('Invalid language selection')
@@ -69,7 +74,7 @@ def main():
             with lock:buffers[trace]=bytearray();events[trace]=[];active[instance]=trace
             start=time.perf_counter();queued=call('speak',instance_id=f'trial{instance}',text=text,language=language,_trace_id=trace)
             assert queued['status']=='queued',queued
-            deadline=time.monotonic()+90
+            deadline=time.monotonic()+180
             while True:
                 with lock:finished=trace in done
                 if finished:break
