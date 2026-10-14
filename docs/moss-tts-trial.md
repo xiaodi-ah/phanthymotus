@@ -17,7 +17,7 @@ Submit this branch's full 40-character commit and `https://github.com/xiaodi-ah/
 
 ## Contract
 
-The official MCP tool remains `tts`, with actions `start`, `stop`, `speak`, `info`, `config`. Each started `instance_id` owns independent TensorRT engines, KV and codec state. Model construction/capture is serialized; inference across instances may overlap. Start performs a real short synthesis before reporting `running`.
+The official MCP tool remains `tts`, with actions `start`, `stop`, `speak`, `info`, `config`. Each started `instance_id` owns independent TensorRT engines, KV and codec state. Model construction/capture is serialized; inference across instances may overlap. Start performs a real short synthesis before reporting `running`. Unkeyed `speak` reuses the only started instance; if multiple nondefault instances exist, specify `instance_id` or `input_topic` instead of implicitly loading another model.
 
 Example arguments:
 

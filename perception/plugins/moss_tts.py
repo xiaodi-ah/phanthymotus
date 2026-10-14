@@ -55,6 +55,9 @@ class TTSPlugin:
             text=args.get('text','');language=args.get('language',args.get('lang','auto'))
             if not isinstance(text,str) or not text.strip():raise ValueError('text must be a nonempty string')
             language_for(text,language)
+            if not args.get('instance_id') and not args.get('input_topic') and key not in self.nodes and self.nodes:
+                if len(self.nodes)!=1:raise ValueError('Specify instance_id or input_topic when multiple TTS instances are running')
+                key=next(iter(self.nodes))
             node=self._node(key,args.get('input_topic',''))
             if node.state!='running':
                 status=node.start()

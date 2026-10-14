@@ -72,7 +72,8 @@ def main():
         def measure(instance,label,text,language):
             trace=uuid.uuid4().hex
             with lock:buffers[trace]=bytearray();events[trace]=[];active[instance]=trace
-            start=time.perf_counter();queued=call('speak',instance_id=f'trial{instance}',text=text,language=language,_trace_id=trace)
+            target={'instance_id':f'trial{instance}'} if count>1 else {}
+            start=time.perf_counter();queued=call('speak',**target,text=text,language=language,_trace_id=trace)
             assert queued['status']=='queued',queued
             deadline=time.monotonic()+180
             while True:
@@ -105,6 +106,7 @@ def main():
         else:
             for code,text in SAMPLES:
                 if code in selected:measure(0,code,text,code)
+        assert call('info')['independent_models']==count,'Speak loaded an unexpected additional model'
         call('stop')
         assert len(rows)==(3*args.rounds if args.triple else len(selected))
         summary={'completed':True,'requests':len(rows),'independent_models':count,'first_pcm_range':[min(r['first_pcm_seconds'] for r in rows),max(r['first_pcm_seconds'] for r in rows)],'rtf_range':[min(r['rtf_to_last_pcm'] for r in rows),max(r['rtf_to_last_pcm'] for r in rows)],'all_rtf_below_1':all(r['rtf_to_last_pcm']<1 for r in rows),'all_first_pcm_below_1s':all(r['first_pcm_seconds']<1 for r in rows),'recognized_first_word_not_checked':True,'container_count':1}
