@@ -22,7 +22,12 @@ class TTSPlugin:
                 node=_TTSNode(input_topic or None,adapter,node_suffix=hashlib.sha256(key.encode()).hexdigest()[:12])
                 self.executor.add_node(node);self.nodes[key]=node
             elif input_topic and self.nodes[key]._input_topic!=input_topic:
-                raise ValueError('Stop the instance before changing its input topic')
+                previous=self.nodes[key]
+                if previous.state!='idle' or (previous._worker_thread and previous._worker_thread.is_alive()):
+                    raise ValueError('Stop the instance before changing its input topic')
+                node=_TTSNode(input_topic,previous._adapter,node_suffix=hashlib.sha256(key.encode()).hexdigest()[:12])
+                self.executor.remove_node(previous);previous.destroy_node()
+                self.executor.add_node(node);self.nodes[key]=node
             return self.nodes[key]
     def dispatch(self,name,args):
         action=args.get('action') if name=='tts' else name
@@ -42,7 +47,7 @@ class TTSPlugin:
                 if item in self.nodes:
                     node=self.nodes[item];node.stop()
                     if node._worker_thread and node._worker_thread.is_alive():return {'state':'stopping'}
-                    self.executor.remove_node(node);node.destroy_node();del self.nodes[item]
+                    # Platform stops after every case; retain this instance's model to avoid reload peaks.
             return {'state':'idle'}
         if action=='config':
             language=args.get('language',args.get('tts_language',self.cfg.get('language','auto')))

@@ -5,9 +5,19 @@ import urllib.request
 import numpy as np
 SAMPLES=[('zh','你好，欢迎使用多语言语音服务。'),('ja','こんにちは。多言語音声サービスへようこそ。'),('ru','Здравствуйте! Добро пожаловать в многоязычный голосовой сервис.'),('en','Hello, and welcome to our multilingual voice service.'),('es','Hola, bienvenido a nuestro servicio de voz multilingüe.'),('fr','Bonjour, bienvenue dans notre service vocal multilingue.'),('th','สวัสดี ยินดีต้อนรับสู่บริการเสียงหลายภาษา'),('de','Hallo, willkommen bei unserem mehrsprachigen Sprachdienst.')]
 
+def wait_for_test_release(folder,server,start_file,timeout=180):
+    if not start_file:return
+    (folder/'ready.json').write_text(json.dumps({'framework_pid':server.pid,'ready':True}))
+    deadline=time.monotonic()+timeout
+    while not Path(start_file).is_file():
+        if server.poll() is not None:raise RuntimeError('Framework exited before test release')
+        if time.monotonic()>=deadline:raise TimeoutError('Waiting for other test models timed out')
+        time.sleep(.1)
+
+
 def main():
     global SAMPLES
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');parser.add_argument('--samples-file');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');parser.add_argument('--samples-file');parser.add_argument('--restart-each-case',action='store_true');args=parser.parse_args()
     if args.samples_file:
         samples=json.loads(Path(args.samples_file).read_text())
         if not isinstance(samples,dict) or not samples or any(code not in dict(SAMPLES) or not isinstance(text,str) or not text.strip() for code,text in samples.items()):raise ValueError('Invalid sample file')
@@ -68,8 +78,12 @@ def main():
             result=call('start',instance_id=f'trial{i}',input_topic=f'/moss_trial/instance{i}/text')
             assert result['state']=='running',result
         status=call('info');assert status['independent_models']==count and status['state']=='running',status
+        wait_for_test_release(folder,server,os.environ.get('MOSS_TEST_START_FILE'))
         time.sleep(.5)
         def measure(instance,label,text,language):
+            if args.restart_each_case:
+                status=call('start',instance_id=f'trial{instance}',input_topic=f'/moss_trial/instance{instance}/text')
+                assert status['state']=='running',status
             trace=uuid.uuid4().hex
             with lock:buffers[trace]=bytearray();events[trace]=[];active[instance]=trace
             target={'instance_id':f'trial{instance}'} if count>1 else {}
@@ -90,6 +104,12 @@ def main():
             duration=len(pcm)/32000
             elapsed=arrivals[-1]-start
             row={'instance':instance,'label':label,'language':language,'text':text,'audio_seconds':duration,'pcm_bytes':len(pcm),'chunks':len(arrivals),'first_pcm_seconds':arrivals[0]-start,'last_pcm_seconds':elapsed,'rtf_to_last_pcm':elapsed/duration,'rms':float(np.sqrt(np.mean((samples.astype(np.float64)/32768)**2)))}
+            if args.restart_each_case:
+                stopped=call('stop',instance_id=f'trial{instance}')
+                assert stopped['state']=='idle',stopped
+                assert call('info')['independent_models']==count,'Per-case stop discarded a loaded model'
+                memory=Path(f'/proc/{server.pid}/status').read_text().splitlines()
+                row['framework_memory_kib']={line.split(':')[0]:int(line.split()[1]) for line in memory if line.startswith(('VmRSS:','VmHWM:'))}
             with wave.open(str(folder/(f'{instance}-{label}.wav')),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(16000);w.writeframes(pcm)
             with lock:
                 rows.append(row);(folder/'results.json').write_text(json.dumps({'commit':os.environ.get('TTS_COMMIT_ID'),'independent_models':count,'transport':'real MCP/ROS; RTF through last received PCM, not player completion','results':rows},ensure_ascii=False,indent=2))
@@ -104,12 +124,14 @@ def main():
                         jobs.append(pool.submit(measure,i,f'round{round_index}-{code}',text,code))
                     for job in jobs:job.result()
         else:
-            for code,text in SAMPLES:
-                if code in selected:measure(0,code,text,code)
+            for round_index in range(args.rounds if args.restart_each_case else 1):
+                for code,text in SAMPLES:
+                    if code in selected:measure(0,f'round{round_index}-{code}' if args.restart_each_case else code,text,code)
         assert call('info')['independent_models']==count,'Speak loaded an unexpected additional model'
         call('stop')
-        assert len(rows)==(3*args.rounds if args.triple else len(selected))
+        assert len(rows)==(3*args.rounds if args.triple else len(selected)*(args.rounds if args.restart_each_case else 1))
         summary={'completed':True,'requests':len(rows),'independent_models':count,'first_pcm_range':[min(r['first_pcm_seconds'] for r in rows),max(r['first_pcm_seconds'] for r in rows)],'rtf_range':[min(r['rtf_to_last_pcm'] for r in rows),max(r['rtf_to_last_pcm'] for r in rows)],'all_rtf_below_1':all(r['rtf_to_last_pcm']<1 for r in rows),'all_first_pcm_below_1s':all(r['first_pcm_seconds']<1 for r in rows),'recognized_first_word_not_checked':True,'container_count':1}
+        summary['restart_each_case']=args.restart_each_case
         (folder/'summary.json').write_text(json.dumps(summary,indent=2));print('SUMMARY='+json.dumps(summary),flush=True)
     finally:
         executor.shutdown(timeout_sec=3);node.destroy_node();rclpy.shutdown()
