@@ -1,5 +1,5 @@
 """On-device MOSS inference, using our Orin frame-fusion engines."""
-import ctypes,gc,json,queue,threading
+import ctypes,gc,json,os,queue,threading
 from pathlib import Path
 from types import MethodType
 import numpy as np
@@ -24,6 +24,9 @@ def language_for(text,language='auto'):
 class MossAdapter:
     dry_run_text='你好。'
     def __init__(self,model_dir,cuda_graph=True,language='auto',seed=42):
+        delivery=os.environ.get('MOSS_TTS_DELIVERY','optimized')
+        if delivery not in ('legacy','optimized'):raise ValueError('MOSS_TTS_DELIVERY must be legacy or optimized')
+        self.fast_delivery=delivery=='optimized'
         import torch,sentencepiece as spm,tensorrt as trt
         from . import ort_cpu_runtime as vendor
         from .trt_session import TrtSession

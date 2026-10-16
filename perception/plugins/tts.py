@@ -220,13 +220,33 @@ class _TTSNode(Node):
             log.info(f"[tts] received text from topic: {text[:50]}...")
             self._text_queue.put((text, '', language))
 
+    def _wait_for_audio_subscriber(self, timeout=3.0, settle=0.1):
+        import time
+        started = time.monotonic()
+        matched_since = None
+        while not self._stop_event.is_set():
+            now = time.monotonic()
+            if self._pub.get_subscription_count() > 0:
+                if matched_since is None:
+                    matched_since = now
+                if now - matched_since >= settle:
+                    return now - started
+            else:
+                matched_since = None
+            if now - started >= timeout:
+                raise RuntimeError("No stable TTS audio subscriber before publication")
+            self._stop_event.wait(0.01)
+        raise RuntimeError("TTS stopped while waiting for an audio subscriber")
+
     def _worker(self):
         from audio_msgs.msg import AudioChunk
         import time as _time
 
-        # Real-time pacing: publish frames at playback rate to avoid bursts/gaps
+        # MOSS can deliver faster than playback while retaining bounded inference queues.
         FRAME_DURATION = CHUNK_BYTES / (SAMPLE_RATE * 2)  # 0.1s per 3200-byte frame
-        PREBUF_FRAMES  = 3  # buffer 3 frames (~300ms) before starting real-time pacing
+        optimized = getattr(self._adapter, "fast_delivery", False)
+        PUBLISH_INTERVAL = 0.07 if optimized else FRAME_DURATION
+        PREBUF_FRAMES = 1 if optimized else 3
 
         while not self._stop_event.is_set():
             try:
@@ -250,11 +270,14 @@ class _TTSNode(Node):
                 t0    = None  # wall-clock start of playback
                 frames_sent = 0
                 prebuf = []   # pre-buffer queue
+                subscriber_wait = None if optimized else 0.0
 
                 stream = (self._adapter.synthesize_stream_language(text,language) if hasattr(self._adapter,'synthesize_stream_language') else self._adapter.synthesize_stream(text))
                 for raw_chunk in stream:
                     if self._stop_event.is_set():
                         break
+                    if subscriber_wait is None:
+                        subscriber_wait = self._wait_for_audio_subscriber()
                     buf  += raw_chunk
                     total += len(raw_chunk)
                     # split into CHUNK_BYTES frames
@@ -280,7 +303,7 @@ class _TTSNode(Node):
                             continue
 
                         # Real-time pacing
-                        target = t0 + max(0,frames_sent * FRAME_DURATION - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
+                        target = t0 + max(0,frames_sent * PUBLISH_INTERVAL - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
                         now = _time.monotonic()
                         if now < target:
                             _time.sleep(target - now)
@@ -305,7 +328,7 @@ class _TTSNode(Node):
                 # flush remainder
                 if buf and not self._stop_event.is_set():
                     if t0 is not None:
-                        target = t0 + max(0,frames_sent * FRAME_DURATION - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
+                        target = t0 + max(0,frames_sent * PUBLISH_INTERVAL - (1.0 if hasattr(self._adapter,'synthesize_stream_language') else 0.0))
                         now = _time.monotonic()
                         if now < target:
                             _time.sleep(target - now)
@@ -329,7 +352,9 @@ class _TTSNode(Node):
                                       "meta": {"chars": len(text)}})
                         spans.append({**_span_base, "span": "tts_playback",
                                       "start_ts": t0_wall, "end_ts": t_end_wall,
-                                      "meta": {"frames": frames_sent, "pcm_bytes": total}})
+                                      "meta": {"frames": frames_sent, "pcm_bytes": total,
+                                               "subscriber_wait_seconds": subscriber_wait,
+                                               "publish_interval_seconds": PUBLISH_INTERVAL}})
                     else:
                         # 没有 prebuf（极短文本），合并为一个 span
                         spans.append({**_span_base, "span": "tts_generate",

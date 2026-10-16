@@ -17,12 +17,13 @@ def wait_for_test_release(folder,server,start_file,timeout=180):
 
 def main():
     global SAMPLES
-    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');parser.add_argument('--samples-file');parser.add_argument('--restart-each-case',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--output',required=True);parser.add_argument('--triple',action='store_true');parser.add_argument('--rounds',type=int,default=5);parser.add_argument('--languages',default='zh,ja,ru,en,es,fr,th,de');parser.add_argument('--samples-file');parser.add_argument('--restart-each-case',action='store_true');parser.add_argument('--recreate-subscriber',action='store_true');parser.add_argument('--subscriber-delay-ms',type=int,default=0);parser.add_argument('--record-audio-loss',action='store_true');args=parser.parse_args()
     if args.samples_file:
         samples=json.loads(Path(args.samples_file).read_text())
         if not isinstance(samples,dict) or not samples or any(code not in dict(SAMPLES) or not isinstance(text,str) or not text.strip() for code,text in samples.items()):raise ValueError('Invalid sample file')
         SAMPLES=list(samples.items())
     if not 1<=args.rounds<=100:raise ValueError('rounds must be 1..100')
+    if not 0<=args.subscriber_delay_ms<=500 or (args.subscriber_delay_ms and not args.recreate_subscriber):raise ValueError('Subscriber delay requires recreation and must be 0..500 ms')
     selected=args.languages.split(',')
     if not selected or len(set(selected))!=len(selected) or any(code not in dict(SAMPLES) for code in selected):raise ValueError('Invalid language selection')
     folder=Path(args.output);folder.mkdir(parents=True,exist_ok=True)
@@ -49,7 +50,7 @@ def main():
         return json.loads(result['content'][0]['text'])
     rclpy.init();node=Node('moss_submission_probe');executor=MultiThreadedExecutor(num_threads=2);executor.add_node(node)
     qos=QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT,history=HistoryPolicy.KEEP_LAST,depth=200,durability=DurabilityPolicy.VOLATILE)
-    lock=threading.Lock();buffers={};events={};done={};rows=[];active={};subs=[]
+    lock=threading.Lock();buffers={};events={};done={};rows=[];active={};subs=[];audio_subs={}
     def audio(instance,msg):
         if msg.format!='audio/pcm-16k':raise RuntimeError('Wrong audio format: '+msg.format)
         stamp=time.perf_counter()
@@ -74,7 +75,8 @@ def main():
         assert any(t['name']=='tts' for t in tools['tools'])
         count=3 if args.triple else 1
         for i in range(count):
-            subs.append(node.create_subscription(AudioChunk,f'/moss_trial/instance{i}/text/tts',lambda msg,i=i:audio(i,msg),qos))
+            if not args.recreate_subscriber:
+                audio_subs[i]=node.create_subscription(AudioChunk,f'/moss_trial/instance{i}/text/tts',lambda msg,i=i:audio(i,msg),qos)
             result=call('start',instance_id=f'trial{i}',input_topic=f'/moss_trial/instance{i}/text')
             assert result['state']=='running',result
         status=call('info');assert status['independent_models']==count and status['state']=='running',status
@@ -84,11 +86,18 @@ def main():
             if args.restart_each_case:
                 status=call('start',instance_id=f'trial{instance}',input_topic=f'/moss_trial/instance{instance}/text')
                 assert status['state']=='running',status
+            if args.recreate_subscriber and instance in audio_subs:
+                node.destroy_subscription(audio_subs.pop(instance))
+            if args.recreate_subscriber and not args.subscriber_delay_ms:
+                audio_subs[instance]=node.create_subscription(AudioChunk,f'/moss_trial/instance{instance}/text/tts',lambda msg:audio(instance,msg),qos)
             trace=uuid.uuid4().hex
             with lock:buffers[trace]=bytearray();events[trace]=[];active[instance]=trace
             target={'instance_id':f'trial{instance}'} if count>1 else {}
             start=time.perf_counter();queued=call('speak',**target,text=text,language=language,_trace_id=trace)
             assert queued['status']=='queued',queued
+            if args.recreate_subscriber and args.subscriber_delay_ms:
+                time.sleep(args.subscriber_delay_ms/1000)
+                audio_subs[instance]=node.create_subscription(AudioChunk,f'/moss_trial/instance{instance}/text/tts',lambda msg:audio(instance,msg),qos)
             deadline=time.monotonic()+180
             while True:
                 with lock:finished=trace in done
@@ -99,11 +108,13 @@ def main():
             time.sleep(.05)
             with lock:pcm=bytes(buffers[trace]);arrivals=list(events[trace]);active.pop(instance,None)
             assert pcm and len(pcm)%2==0 and arrivals,'Missing/invalid streamed PCM'
-            assert len(pcm)==done[trace]['meta']['pcm_bytes'],'DDS dropped audio bytes'
+            expected_bytes=done[trace]['meta']['pcm_bytes']
+            complete=len(pcm)==expected_bytes
             samples=np.frombuffer(pcm,dtype='<i2');assert np.any(samples),'Silent PCM'
             duration=len(pcm)/32000
             elapsed=arrivals[-1]-start
             row={'instance':instance,'label':label,'language':language,'text':text,'audio_seconds':duration,'pcm_bytes':len(pcm),'chunks':len(arrivals),'first_pcm_seconds':arrivals[0]-start,'last_pcm_seconds':elapsed,'rtf_to_last_pcm':elapsed/duration,'rms':float(np.sqrt(np.mean((samples.astype(np.float64)/32768)**2)))}
+            row.update(expected_pcm_bytes=expected_bytes,pcm_complete=complete,delivery=os.environ.get('MOSS_TTS_DELIVERY','optimized'),subscriber_wait_seconds=done[trace]['meta'].get('subscriber_wait_seconds'))
             if args.restart_each_case:
                 stopped=call('stop',instance_id=f'trial{instance}')
                 assert stopped['state']=='idle',stopped
@@ -114,6 +125,7 @@ def main():
             with lock:
                 rows.append(row);(folder/'results.json').write_text(json.dumps({'commit':os.environ.get('TTS_COMMIT_ID'),'independent_models':count,'transport':'real MCP/ROS; RTF through last received PCM, not player completion','results':rows},ensure_ascii=False,indent=2))
             print('RESULT='+json.dumps(row,ensure_ascii=False),flush=True)
+            assert complete or args.record_audio_loss,'DDS dropped audio bytes'
         if args.triple:
             triple_samples=[row for row in SAMPLES if row[0] in selected]
             for round_index in range(args.rounds):
@@ -131,7 +143,7 @@ def main():
         call('stop')
         assert len(rows)==(3*args.rounds if args.triple else len(selected)*(args.rounds if args.restart_each_case else 1))
         summary={'completed':True,'requests':len(rows),'independent_models':count,'first_pcm_range':[min(r['first_pcm_seconds'] for r in rows),max(r['first_pcm_seconds'] for r in rows)],'rtf_range':[min(r['rtf_to_last_pcm'] for r in rows),max(r['rtf_to_last_pcm'] for r in rows)],'all_rtf_below_1':all(r['rtf_to_last_pcm']<1 for r in rows),'all_first_pcm_below_1s':all(r['first_pcm_seconds']<1 for r in rows),'recognized_first_word_not_checked':True,'container_count':1}
-        summary['restart_each_case']=args.restart_each_case
+        summary.update(restart_each_case=args.restart_each_case,recreate_subscriber=args.recreate_subscriber,subscriber_delay_ms=args.subscriber_delay_ms,delivery=os.environ.get('MOSS_TTS_DELIVERY','optimized'),all_pcm_complete=all(row['pcm_complete'] for row in rows),audio_loss_requests=sum(not row['pcm_complete'] for row in rows))
         (folder/'summary.json').write_text(json.dumps(summary,indent=2));print('SUMMARY='+json.dumps(summary),flush=True)
     finally:
         executor.shutdown(timeout_sec=3);node.destroy_node();rclpy.shutdown()
