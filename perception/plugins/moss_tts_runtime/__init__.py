@@ -5,9 +5,10 @@ from types import MethodType
 import numpy as np
 from .resample import StreamingPCM
 from .text_chunks import text_chunks
+from .text_normalization import normalize_text
 
 LANGUAGES=('zh','ja','ru','en','es','fr','th','de')
-VOICES={'zh':'Zhiming','ja':'Soyo','ru':'Adam','en':'Adam','es':'Ava','fr':'Bella','th':'Ava','de':'Nathan'}
+VOICES={'zh':'Zhiming','ja':'Saki','ru':'Adam','en':'Adam','es':'Ava','fr':'Bella','th':'Ava','de':'Adam'}
 
 def language_for(text,language='auto'):
     language=str(language or 'auto').lower().replace('_','-').split('-')[0]
@@ -27,6 +28,10 @@ class MossAdapter:
         delivery=os.environ.get('MOSS_TTS_DELIVERY','optimized')
         if delivery not in ('legacy','optimized'):raise ValueError('MOSS_TTS_DELIVERY must be legacy or optimized')
         self.fast_delivery=delivery=='optimized'
+        self.stop_mode=os.environ.get('MOSS_TTS_STOP_MODE','greedy')
+        if self.stop_mode not in ('sample','greedy'):raise ValueError('MOSS_TTS_STOP_MODE must be sample or greedy')
+        self.text_frontend=os.environ.get('MOSS_TTS_TEXT_FRONTEND','numbers')
+        if self.text_frontend not in ('off','numbers','numbers_terms'):raise ValueError('MOSS_TTS_TEXT_FRONTEND must be off, numbers or numbers_terms')
         import torch,sentencepiece as spm,tensorrt as trt
         from . import ort_cpu_runtime as vendor
         from .trt_session import TrtSession
@@ -44,8 +49,15 @@ class MossAdapter:
         runtime.sessions={'prefill':TrtSession(root/'prefill.plan'),'decode':TrtSession(root/'decode.plan'),'local_fixed_sampled_frame':FusedSession(root/'frame.plan',cuda_graph=cuda_graph)}
         def fused_frame(self,global_hidden,*,previous_token_sets_by_channel):
             uniform=np.clip(self.rng.random((1,17)),0,.99999994).astype(np.float32)
+            if self.greedy_stop:
+                # Force the slot embedding inside the graph; decide EOS from its exported scores.
+                uniform[:,0]=0
+                scores,frame=self.sessions['local_fixed_sampled_frame'].run(['text_scores','frame_token_ids'],{'global_hidden':global_hidden,'random_u':uniform})
+                if scores.shape!=(1,2) or not np.isfinite(scores).all():raise RuntimeError('Invalid continuation/EOS scores')
+                return bool(scores[0,0]>=scores[0,1]),frame.reshape(-1).tolist()
             continuing,frame=self.sessions['local_fixed_sampled_frame'].run(['should_continue','frame_token_ids'],{'global_hidden':global_hidden,'random_u':uniform})
             return bool(continuing[0,0]),frame.reshape(-1).tolist()
+        runtime.greedy_stop=False
         runtime.run_local_fixed_sampled_frame=MethodType(fused_frame,runtime)
         codec_meta=json.loads((root/'codec_meta.json').read_text())
         self.codec=vendor.CodecStreamingDecodeSession(codec_meta,CodecGraphSession(root/'codec.plan',codec_meta) if cuda_graph else TrtSession(root/'codec.plan'))
@@ -66,6 +78,7 @@ class MossAdapter:
     def synthesize_stream_language(self,text,language=None):
         if not isinstance(text,str) or not text.strip():raise ValueError('text must be a nonempty string')
         code=language_for(text,language if language not in (None,'auto') else self.language)
+        if self.text_frontend!='off':text=normalize_text(text,code,terms=self.text_frontend=='numbers_terms')
         channel=queue.Queue(maxsize=8);cancel=threading.Event();end=object()
         def put(value):
             while not cancel.is_set():
@@ -75,6 +88,8 @@ class MossAdapter:
         def produce():
             try:
                 with self.lock:
+                    # Only English has paired stop-policy evidence; reset for every request.
+                    self.runtime.greedy_stop=self.stop_mode=='greedy' and code=='en'
                     for chunk in text_chunks(text,self.tokenizer):
                         if cancel.is_set():return
                         self.reset_codec();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM()
