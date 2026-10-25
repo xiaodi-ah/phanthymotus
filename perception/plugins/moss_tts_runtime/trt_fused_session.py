@@ -21,10 +21,11 @@ class FusedSession:
    if self.engine.get_tensor_mode(name)==trt.TensorIOMode.INPUT:
     self.inputs.append(name);self.host[name]=torch.empty(shape,dtype=tensor_dtype,pin_memory=True)
    else:self.outputs.append(name)
-  assert set(self.inputs)=={'global_hidden','random_u'}
+  assert set(self.inputs) in ({'global_hidden','random_u'},{'global_hidden','random_u','repetition_seen_mask'})
   assert self.buffers['audio_topk_scores'].dtype==torch.float32 and self.buffers['text_scores'].dtype==torch.float32
   with torch.cuda.stream(self.stream):
    self.buffers['global_hidden'].zero_();self.buffers['random_u'].fill_(.5)
+   if 'repetition_seen_mask' in self.buffers:self.buffers['repetition_seen_mask'].zero_()
    for _ in range(3):self.enqueue()
   self.stream.synchronize()
   if cuda_graph:

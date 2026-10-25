@@ -30,7 +30,7 @@ def main():
     save()
     try:
         model=MossAdapter(args.model_dir,cuda_graph=True)
-        assert model.stop_mode=='greedy' and model.text_frontend=='numbers'
+        assert model.stop_mode=='guarded' and model.text_frontend=='numbers'
         assert VOICES['ja']=='Saki' and VOICES['de']=='Adam'
         assert all(name in model.voices for name in VOICES.values())
         jobs=[(language,text,seed) for seed in (42,2026) for language,text in CASES.items()]+[('en',LONG,seed) for seed in (42,2026)]
@@ -43,6 +43,7 @@ def main():
             elapsed=time.perf_counter()-started;audio=b''.join(parts)
             assert audio and len(audio)%2==0
             assert model.runtime.greedy_stop==(language=='en')
+            assert model.runtime.guard_stop==(language!='en')
             path=args.output/f'{index:02d}-{language}-{seed}.wav'
             with wave.open(str(path),'wb') as wav:
                 wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(16000);wav.writeframes(audio)

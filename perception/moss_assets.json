@@ -1,5 +1,5 @@
 {
-  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/moss-tts-trt-jp61-v2-20261012/",
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/moss-tts-trt-jp61-v2-codecfp32-20261025/",
   "architecture": "aarch64",
   "gpu": "Jetson Orin, sm_87",
   "jetpack": "6.1",
@@ -20,8 +20,8 @@
     },
     {
       "path": "codec.plan",
-      "bytes": 27688980,
-      "sha256": "da40b83b1ff8f12d6c14b9e9c361c5cee8da3502ced43520f5e50ed11722b621"
+      "bytes": 45858660,
+      "sha256": "9bbfb3d93f99f589e7f6f896db9959bf8b137a8c1efad07240f18f47efa7867b"
     },
     {
       "path": "frame.plan",
@@ -63,5 +63,6 @@
       "bytes": 1316379,
       "sha256": "d8b1d91545578852f128650b8cce4ec20f93d39b378ff554ebe66290f2dabb92"
     }
-  ]
+  ],
+  "codec_engine": "B: full FP32, TF32 disabled; 2026-10-23 Orin build"
 }

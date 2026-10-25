@@ -1,0 +1,647 @@
+{
+  "schema_version": 1,
+  "description": "trial applies only with numbers_terms; pending/rejected never rewrite. ASR screening is not native pronunciation approval.",
+  "entries": [
+    {
+      "term": "IP",
+      "language": "zh",
+      "reading": "I P",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "ID",
+      "language": "zh",
+      "reading": "I D",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "HAMi",
+      "language": "zh",
+      "reading": "哈米",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled.",
+      "case_sensitive": false
+    },
+    {
+      "term": "Qwen",
+      "language": "zh",
+      "reading": "千问",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Only Qwen plus explicit version; ASR may confuse 千问/千万. Needs native review.",
+      "scope": "version",
+      "case_sensitive": false
+    },
+    {
+      "term": "ID",
+      "language": "en",
+      "reading": "I D",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "de",
+      "reading": "Envidia",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "Jetson",
+      "language": "de",
+      "reading": "Dschetson",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "GPU",
+      "language": "de",
+      "reading": "Ge Pe U",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "CPU",
+      "language": "de",
+      "reading": "Ze Pe U",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "TTS",
+      "language": "de",
+      "reading": "Te Te Es",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "RTF",
+      "language": "de",
+      "reading": "Er Te Ef",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "ja",
+      "reading": "エヌビディア",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "Jetson",
+      "language": "ja",
+      "reading": "ジェットソン",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "GPU",
+      "language": "ja",
+      "reading": "ジーピーユー",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "CPU",
+      "language": "ja",
+      "reading": "シーピーユー",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "TTS",
+      "language": "ja",
+      "reading": "ティーティーエス",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "RTF",
+      "language": "ja",
+      "reading": "アールティーエフ",
+      "status": "trial",
+      "source": "Existing single-MOSS numbers_terms frontend",
+      "evidence": "Opt-in candidate only; no native-speaker/GSB approval. zh/en: outputs/moss-frontend-selected-20261023; de/ja: previous reference/term screening, default remains disabled."
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text.",
+      "aliases": [
+        "ModelHub XC"
+      ]
+    },
+    {
+      "term": "EngineX",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "CNCF",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "GPU",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "NPU",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "DCU",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "MLU",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "CPU",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "TTS",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "RTF",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "API",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "FeatInsight",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "PhanRouter",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Jetson",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "TensorRT",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "ONNX",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "CUDA",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "4Paradigm",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Agentic",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "A100",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "H800",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Ascend910B",
+      "language": "zh",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "HAMi",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Qwen",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text.",
+      "aliases": [
+        "ModelHub XC"
+      ]
+    },
+    {
+      "term": "EngineX",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "CNCF",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "GPU",
+      "language": "en",
+      "reading": "G P U",
+      "status": "rejected",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Acronym expansion regressed English long/technical cases in outputs/quality-v3-frontend-20261023-165644 and quality-v3-targeted-20261023-170958; leave original text."
+    },
+    {
+      "term": "NPU",
+      "language": "en",
+      "reading": "N P U",
+      "status": "rejected",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Acronym expansion regressed English long/technical cases in outputs/quality-v3-frontend-20261023-165644 and quality-v3-targeted-20261023-170958; leave original text."
+    },
+    {
+      "term": "DCU",
+      "language": "en",
+      "reading": "D C U",
+      "status": "rejected",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Acronym expansion regressed English long/technical cases in outputs/quality-v3-frontend-20261023-165644 and quality-v3-targeted-20261023-170958; leave original text."
+    },
+    {
+      "term": "MLU",
+      "language": "en",
+      "reading": "M L U",
+      "status": "rejected",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Acronym expansion regressed English long/technical cases in outputs/quality-v3-frontend-20261023-165644 and quality-v3-targeted-20261023-170958; leave original text."
+    },
+    {
+      "term": "CPU",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "TTS",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "RTF",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "API",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "FeatInsight",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "PhanRouter",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Jetson",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "TensorRT",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "ONNX",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "CUDA",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "4Paradigm",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Agentic",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "A100",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "H800",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "Ascend910B",
+      "language": "en",
+      "reading": "",
+      "status": "pending",
+      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
+      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "fr",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "Jetson",
+      "language": "fr",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "TensorRT",
+      "language": "fr",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "ONNX",
+      "language": "fr",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "es",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "Jetson",
+      "language": "es",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "TensorRT",
+      "language": "es",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "ONNX",
+      "language": "es",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "NVIDIA",
+      "language": "ru",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "Jetson",
+      "language": "ru",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "TensorRT",
+      "language": "ru",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    },
+    {
+      "term": "ONNX",
+      "language": "ru",
+      "reading": "",
+      "status": "pending",
+      "source": "Multilingual technical-name backlog",
+      "evidence": "Native reading and MOSS synthesis not screened. Original spelling retained."
+    }
+  ]
+}

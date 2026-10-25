@@ -16,6 +16,9 @@ def main():
     assert text_chunks(paragraph,tokenizer)==['现在开始测试。','机器人前往会议室！','最后一句：播报结束。']
     english='Dr. Smith uses model.onnx version3.2 in the U.S. office. It costs3.5 dollars.'
     assert text_chunks(english,tokenizer)==['Dr. Smith uses model.onnx version3.2 in the U.S. office.','It costs3.5 dollars.']
+    for sentence in ('Merci, s’il vous plaît.', 'La réunion.', 'La habitación.', 'Der Akku ist grün.', 'Это окно.', 'Il est pre\u0302t.'):
+        assert text_chunks(sentence+' Next.',tokenizer)==[sentence,'Next.'],sentence
+    assert text_chunks('J. Smith uses the U.S. office. Next.',tokenizer)==['J. Smith uses the U.S. office.','Next.']
     assert text_chunks('数字是3. 下一句。',tokenizer)==['数字是3.','下一句。']
     assert text_chunks('他说：“你好！” 然后离开。',tokenizer)==['他说：“你好！”','然后离开。']
     for paragraph in ['长句没有标点'*50,'word '*100,'这是长句，'*40,english,paragraph]:
@@ -27,6 +30,17 @@ def main():
     chunks=text_chunks('x'*39+','+'y'*80,NonMonotone())
     assert all(len(NonMonotone().encode(chunk))<=75 for chunk in chunks)
     assert ''.join(chunks)=='x'*39+','+'y'*80
+    # A nearly full chunk must not leave a two-word independent synthesis.
+    orphan='The resources return to the computing pool in time to be allocated to other tasks.'
+    chunks=text_chunks(orphan,tokenizer)
+    assert len(chunks)==2 and all(len(chunk)>=12 for chunk in chunks),chunks
+    clause='A'*32+', '+'B'*32+' and '+'C'*35+'.'
+    chunks=text_chunks(clause,tokenizer)
+    assert chunks[0].endswith(',') and ''.join(chunks).replace(' ','')==clause.replace(' ',''),chunks
+    assert all(0<len(tokenizer.encode(chunk))<=75 for chunk in chunks)
+    for value in ('123,456,789','12:30'):
+        sentence='This long sentence refers to value '+value+' and continues to describe the remaining resources for other jobs.'
+        assert any(value in chunk for chunk in text_chunks(sentence,tokenizer))
     rng=np.random.default_rng(42);audio=rng.normal(scale=.1,size=(2,10001))
     converter=StreamingPCM();pieces=[];start=0
     for count in [1,2,31,3840,500,17,5610]:
