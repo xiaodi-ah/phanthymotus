@@ -12,7 +12,7 @@ init=next(n for n in adapter.body if isinstance(n,ast.FunctionDef) and n.name=='
 method=next(n for n in init.body if isinstance(n,ast.FunctionDef) and n.name=='fused_frame')
 
 class StopPolicyTests(unittest.TestCase):
-    def exercise(self,mode,probability=.75,histories=None,seed=42):
+    def exercise(self,mode,probability=.75,histories=None,seed=42,threshold=.99):
         namespace={'np':np};exec(compile(ast.Module(body=[method],type_ignores=[]),str(source),'exec'),namespace)
         captured={'calls':[]}
         def execute(requested,feeds):
@@ -21,7 +21,8 @@ class StopPolicyTests(unittest.TestCase):
             slot=feeds['random_u'][0,0]<=probability
             outputs={'should_continue':np.array([[int(slot)]]),'text_scores':np.array([[np.log(probability),np.log(1-probability)]],np.float32),'frame_token_ids':np.full((1,16),7 if slot else 9,np.int32)}
             return [outputs[n] for n in requested]
-        runtime=SimpleNamespace(greedy_stop=mode=='greedy',guard_stop=mode=='guarded',rng=np.random.default_rng(seed),sessions={'local_fixed_sampled_frame':SimpleNamespace(run=execute,inputs=['global_hidden','random_u']+(['repetition_seen_mask'] if histories is not None else []))})
+        runtime=SimpleNamespace(greedy_stop=mode=='greedy',guard_stop=mode in ('guarded','bounded'),force_likely_eos=mode=='bounded',rng=np.random.default_rng(seed),sessions={'local_fixed_sampled_frame':SimpleNamespace(run=execute,inputs=['global_hidden','random_u']+(['repetition_seen_mask'] if histories is not None else []))})
+        runtime.stop_guard_threshold=threshold
         result=namespace['fused_frame'](runtime,np.zeros((1,768),np.float32),previous_token_sets_by_channel=[] if histories is None else histories)
         captured['last_stop']=runtime.last_stop
         return result,captured,runtime.rng
@@ -58,6 +59,30 @@ class StopPolicyTests(unittest.TestCase):
             sampled,_,_=self.exercise('sample',probability=probability,seed=1074)
             self.assertEqual(guarded,sampled);self.assertEqual(len(captured['calls']),1)
             self.assertFalse(captured['last_stop']['rare_eos_overridden'])
+    def test_spanish_guard_recovers_high_confidence_continuation_without_new_rng(self):
+        old,_,reference=self.exercise('guarded',probability=.9696,seed=1074)
+        new,captured,rng=self.exercise('guarded',probability=.9696,seed=1074,threshold=.95)
+        self.assertFalse(old[0]);self.assertEqual(new,(True,[7]*16))
+        self.assertTrue(captured['last_stop']['rare_eos_overridden'])
+        self.assertEqual(len(captured['calls']),2)
+        np.testing.assert_array_equal(captured['calls'][0]['random'][:,1:],captured['calls'][1]['random'][:,1:])
+        self.assertEqual(rng.random(),reference.random())
+    def test_spanish_guard_preserves_lower_confidence_stopping(self):
+        for probability in (.2,.5,.94):
+            old,_,_=self.exercise('guarded',probability=probability,seed=1074)
+            new,captured,_=self.exercise('guarded',probability=probability,seed=1074,threshold=.95)
+            self.assertEqual(old,new);self.assertEqual(len(captured['calls']),1)
+    def test_bounded_policy_stops_when_sampled_continuation_disagrees_with_likely_eos(self):
+        sampled,_,reference=self.exercise('guarded',probability=.2,seed=3)
+        bounded,captured,rng=self.exercise('bounded',probability=.2,seed=3)
+        self.assertTrue(sampled[0]);self.assertFalse(bounded[0])
+        self.assertTrue(captured['last_stop']['likely_eos_forced'])
+        self.assertEqual(len(captured['calls']),1);self.assertEqual(rng.random(),reference.random())
+    def test_bounded_policy_preserves_sampled_stopping_and_rare_eos_guard(self):
+        for probability in (.75,.995):
+            bounded,_,_=self.exercise('bounded',probability=probability,seed=1074)
+            guarded,_,_=self.exercise('guarded',probability=probability,seed=1074)
+            self.assertEqual(bounded,guarded)
     def test_invalid_scores_fail_instead_of_silent_truncation(self):
         with self.assertRaisesRegex(RuntimeError,'continuation/EOS'):self.exercise('greedy',probability=float('nan'))
     def test_nano_history_uses_channel_specific_mask(self):

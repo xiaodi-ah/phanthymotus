@@ -42,8 +42,12 @@ def main():
                 report['minimum_host_available_mb']=min(report['minimum_host_available_mb'],reserve());parts.append(pcm)
             elapsed=time.perf_counter()-started;audio=b''.join(parts)
             assert audio and len(audio)%2==0
-            assert model.runtime.greedy_stop==(language=='en')
-            assert model.runtime.guard_stop==(language!='en')
+            assert model.runtime.greedy_stop==(language in ('en','ja'))
+            assert model.runtime.guard_stop==(language not in ('en','ja'))
+            assert model.runtime.force_likely_eos==(language=='de')
+            if model.french_frame is not None:
+                assert model.frame_profile==('fr' if language=='fr' else 'legacy')
+                assert ('repetition_seen_mask' in model.runtime.sessions['local_fixed_sampled_frame'].inputs)==(language=='fr')
             path=args.output/f'{index:02d}-{language}-{seed}.wav'
             with wave.open(str(path),'wb') as wav:
                 wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(16000);wav.writeframes(audio)

@@ -1,0 +1,3941 @@
+{
+  "en": {
+    "math_letters": {},
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "one": "{0} meter",
+          "other": "{0} meters"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "one": "{0} kilometer",
+          "other": "{0} kilometers"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "one": "{0} centimeter",
+          "other": "{0} centimeters"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "one": "{0} millimeter",
+          "other": "{0} millimeters"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micrometer",
+          "other": "{0} micrometers"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micrometer",
+          "other": "{0} micrometers"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "one": "{0} nanometer",
+          "other": "{0} nanometers"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "one": "{0} second",
+          "other": "{0} seconds"
+        },
+        "gender": "masculine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "one": "{0} millisecond",
+          "other": "{0} milliseconds"
+        },
+        "gender": "masculine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microsecond",
+          "other": "{0} microseconds"
+        },
+        "gender": "masculine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microsecond",
+          "other": "{0} microseconds"
+        },
+        "gender": "masculine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "one": "{0} nanosecond",
+          "other": "{0} nanoseconds"
+        },
+        "gender": "masculine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "one": "{0} minute",
+          "other": "{0} minutes"
+        },
+        "gender": "masculine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "one": "{0} hour",
+          "other": "{0} hours"
+        },
+        "gender": "masculine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "one": "{0} gram",
+          "other": "{0} grams"
+        },
+        "gender": "masculine"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "one": "{0} kilogram",
+          "other": "{0} kilograms"
+        },
+        "gender": "masculine"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "one": "{0} milligram",
+          "other": "{0} milligrams"
+        },
+        "gender": "masculine"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "one": "{0} metric ton",
+          "other": "{0} metric tons"
+        },
+        "gender": "masculine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} liter",
+          "other": "{0} liters"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} liter",
+          "other": "{0} liters"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "one": "{0} milliliter",
+          "other": "{0} milliliters"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "one": "{0} volt",
+          "other": "{0} volts"
+        },
+        "gender": "masculine"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "one": "{0} ampere",
+          "other": "{0} amperes"
+        },
+        "gender": "masculine"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "one": "{0} milliampere",
+          "other": "{0} milliamperes"
+        },
+        "gender": "masculine"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "one": "{0} ohm",
+          "other": "{0} ohms"
+        },
+        "gender": "masculine"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "one": "{0} watt",
+          "other": "{0} watts"
+        },
+        "gender": "masculine"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "one": "{0} milliwatt",
+          "other": "{0} milliwatts"
+        },
+        "gender": "masculine"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "one": "{0} kilowatt",
+          "other": "{0} kilowatts"
+        },
+        "gender": "masculine"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "one": "{0} megawatt",
+          "other": "{0} megawatts"
+        },
+        "gender": "masculine"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "one": "{0} gigawatt",
+          "other": "{0} gigawatts"
+        },
+        "gender": "masculine"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "one": "{0} hertz",
+          "other": "{0} hertz"
+        },
+        "gender": "masculine"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "one": "{0} kilohertz",
+          "other": "{0} kilohertz"
+        },
+        "gender": "masculine"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "one": "{0} megahertz",
+          "other": "{0} megahertz"
+        },
+        "gender": "masculine"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "one": "{0} gigahertz",
+          "other": "{0} gigahertz"
+        },
+        "gender": "masculine"
+      },
+      "B": {
+        "id": "digital-byte",
+        "patterns": {
+          "one": "{0} byte",
+          "other": "{0} bytes"
+        },
+        "gender": "masculine"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilobyte",
+          "other": "{0} kilobytes"
+        },
+        "gender": "masculine"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilobyte",
+          "other": "{0} kilobytes"
+        },
+        "gender": "masculine"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "one": "{0} megabyte",
+          "other": "{0} megabytes"
+        },
+        "gender": "masculine"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "one": "{0} gigabyte",
+          "other": "{0} gigabytes"
+        },
+        "gender": "masculine"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "one": "{0} terabyte",
+          "other": "{0} terabytes"
+        },
+        "gender": "masculine"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "one": "{0} petabyte",
+          "other": "{0} petabytes"
+        },
+        "gender": "masculine"
+      },
+      "bit": {
+        "id": "digital-bit",
+        "patterns": {
+          "one": "{0} bit",
+          "other": "{0} bits"
+        },
+        "gender": "masculine"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "one": "{0} kilobit",
+          "other": "{0} kilobits"
+        },
+        "gender": "masculine"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "one": "{0} megabit",
+          "other": "{0} megabits"
+        },
+        "gender": "masculine"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "one": "{0} gigabit",
+          "other": "{0} gigabits"
+        },
+        "gender": "masculine"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} degree Celsius",
+          "other": "{0} degrees Celsius"
+        },
+        "gender": "masculine"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} degree Celsius",
+          "other": "{0} degrees Celsius"
+        },
+        "gender": "masculine"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} degree Fahrenheit",
+          "other": "{0} degrees Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} degree Fahrenheit",
+          "other": "{0} degrees Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "one": "{0} kelvin",
+          "other": "{0} kelvins"
+        },
+        "gender": "masculine"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} percent",
+          "other": "{0} percent"
+        },
+        "gender": "masculine"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} percent",
+          "other": "{0} percent"
+        },
+        "gender": "masculine"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "one": "{0} permille",
+          "other": "{0} permille"
+        },
+        "gender": "masculine"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "one": "{0} square meter",
+          "other": "{0} square meters"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "one": "{0} square kilometer",
+          "other": "{0} square kilometers"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "one": "{0} square centimeter",
+          "other": "{0} square centimeters"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "one": "{0} cubic meter",
+          "other": "{0} cubic meters"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "one": "{0} pascal",
+          "other": "{0} pascals"
+        },
+        "gender": "masculine"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "one": "{0} kilopascal",
+          "other": "{0} kilopascals"
+        },
+        "gender": "masculine"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "one": "{0} megapascal",
+          "other": "{0} megapascals"
+        },
+        "gender": "masculine"
+      },
+      "bar": {
+        "id": "pressure-bar",
+        "patterns": {
+          "one": "{0} bar",
+          "other": "{0} bars"
+        },
+        "gender": "masculine"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "one": "{0} joule",
+          "other": "{0} joules"
+        },
+        "gender": "masculine"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "one": "{0} kilojoule",
+          "other": "{0} kilojoules"
+        },
+        "gender": "masculine"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "one": "{0} kilowatt hour",
+          "other": "{0} kilowatt-hours"
+        },
+        "gender": "masculine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "one": "{0} newton",
+          "other": "{0} newtons"
+        },
+        "gender": "masculine"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "one": "{0} degree",
+          "other": "{0} degrees"
+        },
+        "gender": "masculine"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "one": "{0} radian",
+          "other": "{0} radians"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "one": "{0} kilometer per hour",
+          "other": "{0} kilometers per hour"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "one": "{0} meter per second",
+          "other": "{0} meters per second"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {
+      "∇": "nabla",
+      "α": "alpha",
+      "β": "beta",
+      "γ": "gamma",
+      "δ": "delta",
+      "ε": "epsilon",
+      "ζ": "zeta",
+      "η": "eta",
+      "θ": "theta",
+      "ι": "iota",
+      "κ": "kappa",
+      "λ": "lamda",
+      "μ": "mu",
+      "ν": "nu",
+      "ξ": "xi",
+      "ο": "omicron",
+      "π": "pi",
+      "ρ": "rho",
+      "ς": "final sigma",
+      "σ": "sigma",
+      "τ": "tau",
+      "υ": "upsilon",
+      "φ": "phi",
+      "χ": "chi",
+      "ψ": "psi",
+      "ω": "omega",
+      "∂": "partial differential",
+      "ϵ": "epsilon",
+      "ϑ": "theta",
+      "ϰ": "kappa",
+      "ϕ": "phi",
+      "ϱ": "rho",
+      "ϖ": "pi",
+      "Α": "Alpha",
+      "Β": "Beta",
+      "Γ": "Gamma",
+      "Δ": "Delta",
+      "Ε": "Epsilon",
+      "Ζ": "Zeta",
+      "Η": "Eta",
+      "Θ": "Theta",
+      "Ι": "Iota",
+      "Κ": "Kappa",
+      "Λ": "Lamda",
+      "Μ": "Mu",
+      "Ν": "Nu",
+      "Ξ": "Xi",
+      "Ο": "Omicron",
+      "Π": "Pi",
+      "Ρ": "Rho",
+      "ϴ": "Theta",
+      "Σ": "Sigma",
+      "Τ": "Tau",
+      "Υ": "Upsilon",
+      "Φ": "Phi",
+      "Χ": "Chi",
+      "Ψ": "Psi",
+      "Ω": "Omega"
+    },
+    "functions": {
+      "log": "log",
+      "ln": "natural log",
+      "exp": "exponential",
+      "max": "maximum",
+      "min": "minimum",
+      "cos": "cosine",
+      "cot": "cotangent",
+      "csc": "cosecant",
+      "sec": "secant",
+      "sin": "sine",
+      "tan": "tangent"
+    },
+    "operators": {
+      "+": "plus",
+      "-": "minus",
+      ":": "colon",
+      "<": "less than",
+      "=": "equals",
+      ">": "greater than",
+      "±": "plus or minus",
+      "×": "times",
+      "÷": "division",
+      "−": "minus",
+      "∶": "ratio",
+      "≃": "asymptotically equals",
+      "≈": "almost equals",
+      "≠": "not equals",
+      "≤": "less than or equals",
+      "≥": "greater than or equals"
+    },
+    "letters": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "E": "E",
+      "F": "F",
+      "G": "G",
+      "H": "H",
+      "I": "I",
+      "J": "J",
+      "K": "K",
+      "L": "L",
+      "M": "M",
+      "N": "N",
+      "O": "O",
+      "P": "P",
+      "Q": "Q",
+      "R": "R",
+      "S": "S",
+      "T": "T",
+      "U": "U",
+      "V": "V",
+      "W": "W",
+      "X": "X",
+      "Y": "Y",
+      "Z": "Z"
+    }
+  },
+  "ja": {
+    "math_letters": {},
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "other": "{0} メートル"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "other": "{0} キロメートル"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "other": "{0} センチメートル"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "other": "{0} ミリメートル"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "other": "{0} マイクロメートル"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "other": "{0} マイクロメートル"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "other": "{0} ナノメートル"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "other": "{0}秒"
+        },
+        "gender": "masculine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "other": "{0} ミリ秒"
+        },
+        "gender": "masculine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "other": "{0} マイクロ秒"
+        },
+        "gender": "masculine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "other": "{0} マイクロ秒"
+        },
+        "gender": "masculine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "other": "{0} ナノ秒"
+        },
+        "gender": "masculine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "other": "{0}分"
+        },
+        "gender": "masculine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "other": "{0}時間"
+        },
+        "gender": "masculine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "other": "{0} グラム"
+        },
+        "gender": "masculine"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "other": "{0} キログラム"
+        },
+        "gender": "masculine"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "other": "{0} ミリグラム"
+        },
+        "gender": "masculine"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "other": "{0} トン"
+        },
+        "gender": "masculine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "other": "{0} リットル"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "other": "{0} リットル"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "other": "{0} ミリリットル"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "other": "{0} ボルト"
+        },
+        "gender": "masculine"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "other": "{0} アンペア"
+        },
+        "gender": "masculine"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "other": "{0} ミリアンペア"
+        },
+        "gender": "masculine"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "other": "{0} オーム"
+        },
+        "gender": "masculine"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "other": "{0} ワット"
+        },
+        "gender": "masculine"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "other": "{0} ミリワット"
+        },
+        "gender": "masculine"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "other": "{0} キロワット"
+        },
+        "gender": "masculine"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "other": "{0} メガワット"
+        },
+        "gender": "masculine"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "other": "{0} ギガワット"
+        },
+        "gender": "masculine"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "other": "{0} ヘルツ"
+        },
+        "gender": "masculine"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "other": "{0} キロヘルツ"
+        },
+        "gender": "masculine"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "other": "{0} メガヘルツ"
+        },
+        "gender": "masculine"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "other": "{0} ギガヘルツ"
+        },
+        "gender": "masculine"
+      },
+      "B": {
+        "id": "digital-byte",
+        "patterns": {
+          "other": "{0} バイト"
+        },
+        "gender": "masculine"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "other": "{0} キロバイト"
+        },
+        "gender": "masculine"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "other": "{0} キロバイト"
+        },
+        "gender": "masculine"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "other": "{0} メガバイト"
+        },
+        "gender": "masculine"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "other": "{0} ギガバイト"
+        },
+        "gender": "masculine"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "other": "{0} テラバイト"
+        },
+        "gender": "masculine"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "other": "{0} ペタバイト"
+        },
+        "gender": "masculine"
+      },
+      "bit": {
+        "id": "digital-bit",
+        "patterns": {
+          "other": "{0} ビット"
+        },
+        "gender": "masculine"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "other": "{0} キロビット"
+        },
+        "gender": "masculine"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "other": "{0} メガビット"
+        },
+        "gender": "masculine"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "other": "{0} ギガビット"
+        },
+        "gender": "masculine"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "other": "摂氏{0}度"
+        },
+        "gender": "masculine"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "other": "摂氏{0}度"
+        },
+        "gender": "masculine"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "other": "華氏{0}度"
+        },
+        "gender": "masculine"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "other": "華氏{0}度"
+        },
+        "gender": "masculine"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "other": "{0} ケルビン"
+        },
+        "gender": "masculine"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "other": "{0}パーセント"
+        },
+        "gender": "masculine"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "other": "{0}パーセント"
+        },
+        "gender": "masculine"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "other": "{0}パーミル"
+        },
+        "gender": "masculine"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "other": "{0} 平方メートル"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "other": "{0} 平方キロメートル"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "other": "{0} 平方センチメートル"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "other": "{0} 立方メートル"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "other": "{0} パスカル"
+        },
+        "gender": "masculine"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "other": "{0} キロパスカル"
+        },
+        "gender": "masculine"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "other": "{0} メガパスカル"
+        },
+        "gender": "masculine"
+      },
+      "bar": {
+        "id": "pressure-bar",
+        "patterns": {
+          "other": "{0} バール"
+        },
+        "gender": "masculine"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "other": "{0} ジュール"
+        },
+        "gender": "masculine"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "other": "{0} キロジュール"
+        },
+        "gender": "masculine"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "other": "{0} キロワット時"
+        },
+        "gender": "masculine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "other": "{0} ニュートン"
+        },
+        "gender": "masculine"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "other": "{0}度"
+        },
+        "gender": "masculine"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "other": "{0} ラジアン"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "other": "時速 {0} キロメートル"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "other": "秒速 {0} メートル"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {},
+    "functions": {},
+    "operators": {},
+    "letters": {
+      "A": "エー",
+      "B": "ビー",
+      "C": "シー",
+      "D": "ディー",
+      "E": "イー",
+      "F": "エフ",
+      "G": "ジー",
+      "H": "エイチ",
+      "I": "アイ",
+      "J": "ジェー",
+      "K": "ケー",
+      "L": "エル",
+      "M": "エム",
+      "N": "エヌ",
+      "O": "オー",
+      "P": "ピー",
+      "Q": "キュー",
+      "R": "アール",
+      "S": "エス",
+      "T": "ティー",
+      "U": "ユー",
+      "V": "ブイ",
+      "W": "ダブリュー",
+      "X": "エックス",
+      "Y": "ワイ",
+      "Z": "ゼット"
+    }
+  },
+  "de": {
+    "math_letters": {},
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "one": "{0} Meter",
+          "other": "{0} Meter"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "one": "{0} Kilometer",
+          "other": "{0} Kilometer"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "one": "{0} Zentimeter",
+          "other": "{0} Zentimeter"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "one": "{0} Millimeter",
+          "other": "{0} Millimeter"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} Mikrometer",
+          "other": "{0} Mikrometer"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} Mikrometer",
+          "other": "{0} Mikrometer"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "one": "{0} Nanometer",
+          "other": "{0} Nanometer"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "one": "{0} Sekunde",
+          "other": "{0} Sekunden"
+        },
+        "gender": "feminine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "one": "{0} Millisekunde",
+          "other": "{0} Millisekunden"
+        },
+        "gender": "feminine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} Mikrosekunde",
+          "other": "{0} Mikrosekunden"
+        },
+        "gender": "feminine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} Mikrosekunde",
+          "other": "{0} Mikrosekunden"
+        },
+        "gender": "feminine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "one": "{0} Nanosekunde",
+          "other": "{0} Nanosekunden"
+        },
+        "gender": "feminine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "one": "{0} Minute",
+          "other": "{0} Minuten"
+        },
+        "gender": "feminine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "one": "{0} Stunde",
+          "other": "{0} Stunden"
+        },
+        "gender": "feminine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "one": "{0} Gramm",
+          "other": "{0} Gramm"
+        },
+        "gender": "neuter"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "one": "{0} Kilogramm",
+          "other": "{0} Kilogramm"
+        },
+        "gender": "neuter"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "one": "{0} Milligramm",
+          "other": "{0} Milligramm"
+        },
+        "gender": "neuter"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "one": "{0} Tonne",
+          "other": "{0} Tonnen"
+        },
+        "gender": "feminine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} Liter",
+          "other": "{0} Liter"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} Liter",
+          "other": "{0} Liter"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "one": "{0} Milliliter",
+          "other": "{0} Milliliter"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "one": "{0} Volt",
+          "other": "{0} Volt"
+        },
+        "gender": "neuter"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "one": "{0} Ampere",
+          "other": "{0} Ampere"
+        },
+        "gender": "neuter"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "one": "{0} Milliampere",
+          "other": "{0} Milliampere"
+        },
+        "gender": "neuter"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "one": "{0} Ohm",
+          "other": "{0} Ohm"
+        },
+        "gender": "neuter"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "one": "{0} Watt",
+          "other": "{0} Watt"
+        },
+        "gender": "neuter"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "one": "{0} Milliwatt",
+          "other": "{0} Milliwatt"
+        },
+        "gender": "neuter"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "one": "{0} Kilowatt",
+          "other": "{0} Kilowatt"
+        },
+        "gender": "neuter"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "one": "{0} Megawatt",
+          "other": "{0} Megawatt"
+        },
+        "gender": "neuter"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "one": "{0} Gigawatt",
+          "other": "{0} Gigawatt"
+        },
+        "gender": "neuter"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "one": "{0} Hertz",
+          "other": "{0} Hertz"
+        },
+        "gender": "neuter"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "one": "{0} Kilohertz",
+          "other": "{0} Kilohertz"
+        },
+        "gender": "neuter"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "one": "{0} Megahertz",
+          "other": "{0} Megahertz"
+        },
+        "gender": "neuter"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "one": "{0} Gigahertz",
+          "other": "{0} Gigahertz"
+        },
+        "gender": "neuter"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} Kilobyte",
+          "other": "{0} Kilobyte"
+        },
+        "gender": "neuter"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} Kilobyte",
+          "other": "{0} Kilobyte"
+        },
+        "gender": "neuter"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "one": "{0} Megabyte",
+          "other": "{0} Megabyte"
+        },
+        "gender": "neuter"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "one": "{0} Gigabyte",
+          "other": "{0} Gigabyte"
+        },
+        "gender": "neuter"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "one": "{0} Terabyte",
+          "other": "{0} Terabyte"
+        },
+        "gender": "neuter"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "one": "{0} Petabyte",
+          "other": "{0} Petabyte"
+        },
+        "gender": "neuter"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "one": "{0} Kilobit",
+          "other": "{0} Kilobit"
+        },
+        "gender": "neuter"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "one": "{0} Megabit",
+          "other": "{0} Megabit"
+        },
+        "gender": "neuter"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "one": "{0} Gigabit",
+          "other": "{0} Gigabit"
+        },
+        "gender": "neuter"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} Grad Celsius",
+          "other": "{0} Grad Celsius"
+        },
+        "gender": "neuter"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} Grad Celsius",
+          "other": "{0} Grad Celsius"
+        },
+        "gender": "neuter"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} Grad Fahrenheit",
+          "other": "{0} Grad Fahrenheit"
+        },
+        "gender": "neuter"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} Grad Fahrenheit",
+          "other": "{0} Grad Fahrenheit"
+        },
+        "gender": "neuter"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "one": "{0} Kelvin",
+          "other": "{0} Kelvin"
+        },
+        "gender": "neuter"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} Prozent",
+          "other": "{0} Prozent"
+        },
+        "gender": "neuter"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} Prozent",
+          "other": "{0} Prozent"
+        },
+        "gender": "neuter"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "one": "{0} Promille",
+          "other": "{0} Promille"
+        },
+        "gender": "neuter"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "one": "{0} Quadratmeter",
+          "other": "{0} Quadratmeter"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "one": "{0} Quadratkilometer",
+          "other": "{0} Quadratkilometer"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "one": "{0} Quadratzentimeter",
+          "other": "{0} Quadratzentimeter"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "one": "{0} Kubikmeter",
+          "other": "{0} Kubikmeter"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "one": "{0} Pascal",
+          "other": "{0} Pascal"
+        },
+        "gender": "neuter"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "one": "{0} Kilopascal",
+          "other": "{0} Kilopascal"
+        },
+        "gender": "neuter"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "one": "{0} Megapascal",
+          "other": "{0} Megapascal"
+        },
+        "gender": "neuter"
+      },
+      "bar": {
+        "id": "pressure-bar",
+        "patterns": {
+          "one": "{0} Bar",
+          "other": "{0} Bar"
+        },
+        "gender": "neuter"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "one": "{0} Joule",
+          "other": "{0} Joule"
+        },
+        "gender": "neuter"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "one": "{0} Kilojoule",
+          "other": "{0} Kilojoule"
+        },
+        "gender": "neuter"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "one": "{0} Kilowattstunde",
+          "other": "{0} Kilowattstunden"
+        },
+        "gender": "feminine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "one": "{0} Newton",
+          "other": "{0} Newton"
+        },
+        "gender": "neuter"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "one": "{0} Grad",
+          "other": "{0} Grad"
+        },
+        "gender": "neuter"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "one": "{0} Radiant",
+          "other": "{0} Radiant"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "one": "{0} Kilometer pro Stunde",
+          "other": "{0} Kilometer pro Stunde"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "one": "{0} Meter pro Sekunde",
+          "other": "{0} Meter pro Sekunde"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {
+      "∇": "nabla",
+      "α": "alpha",
+      "β": "beta",
+      "γ": "gamma",
+      "δ": "delta",
+      "ε": "epsilon",
+      "ζ": "zeta",
+      "η": "eta",
+      "θ": "theta",
+      "ι": "iota",
+      "κ": "kappa",
+      "λ": "lambda",
+      "μ": "my",
+      "ν": "ny",
+      "ξ": "xi",
+      "ο": "omikron",
+      "π": "pi",
+      "ρ": "rho",
+      "ς": "abschließendes sigma",
+      "σ": "sigma",
+      "τ": "tau",
+      "υ": "ypsilon",
+      "φ": "phi",
+      "χ": "chi",
+      "ψ": "psi",
+      "ω": "omega",
+      "∂": "partielle Ableitung",
+      "ϵ": "epsilon",
+      "ϑ": "theta",
+      "ϰ": "kappa",
+      "ϕ": "phi",
+      "ϱ": "rho",
+      "ϖ": "pi",
+      "Α": "Alpha",
+      "Β": "Beta",
+      "Γ": "Gamma",
+      "Δ": "Delta",
+      "Ε": "Epsilon",
+      "Ζ": "Zeta",
+      "Η": "Eta",
+      "Θ": "Theta",
+      "Ι": "Iota",
+      "Κ": "Kappa",
+      "Λ": "Lambda",
+      "Μ": "My",
+      "Ν": "Ny",
+      "Ξ": "Xi",
+      "Ο": "Omikron",
+      "Π": "Pi",
+      "Ρ": "Rho",
+      "ϴ": "Theta",
+      "Σ": "Sigma",
+      "Τ": "Tau",
+      "Υ": "Ypsilon",
+      "Φ": "Phi",
+      "Χ": "Chi",
+      "Ψ": "Psi",
+      "Ω": "Omega"
+    },
+    "functions": {
+      "log": "Logarithmus",
+      "ln": "natürlicher Logarithmus",
+      "exp": "Exponent",
+      "max": "Maximum",
+      "min": "Minimum",
+      "cos": "Kosinus",
+      "cot": "Kotangens",
+      "csc": "Kosekans",
+      "sec": "Sekans",
+      "sin": "Sinus",
+      "tan": "Tangens"
+    },
+    "operators": {
+      "+": "plus",
+      "-": "minus",
+      ":": "Doppelpunkt",
+      "<": "kleiner als",
+      "=": "ist gleich",
+      ">": "größer als",
+      "±": "plus minus",
+      "×": "mal",
+      "÷": "geteilt durch",
+      "−": "minus",
+      "∶": "Verhältnis",
+      "≃": "asymptotisch gleich",
+      "≈": "beinahe gleich",
+      "≠": "ungleich",
+      "≤": "kleiner oder gleich",
+      "≥": "größer oder gleich"
+    },
+    "letters": {
+      "A": "A",
+      "B": "Be",
+      "C": "Ze",
+      "D": "De",
+      "E": "E",
+      "F": "Ef",
+      "G": "Ge",
+      "H": "Ha",
+      "I": "I",
+      "J": "Jot",
+      "K": "Ka",
+      "L": "El",
+      "M": "Em",
+      "N": "En",
+      "O": "O",
+      "P": "Pe",
+      "Q": "Ku",
+      "R": "Er",
+      "S": "Es",
+      "T": "Te",
+      "U": "U",
+      "V": "Fau",
+      "W": "We",
+      "X": "Iks",
+      "Y": "Ypsilon",
+      "Z": "Zett"
+    }
+  },
+  "fr": {
+    "math_letters": {},
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "one": "{0} mètre",
+          "other": "{0} mètres"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "one": "{0} kilomètre",
+          "other": "{0} kilomètres"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "one": "{0} centimètre",
+          "other": "{0} centimètres"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "one": "{0} millimètre",
+          "other": "{0} millimètres"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micromètre",
+          "other": "{0} micromètres"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micromètre",
+          "other": "{0} micromètres"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "one": "{0} nanomètre",
+          "other": "{0} nanomètres"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "one": "{0} seconde",
+          "other": "{0} secondes"
+        },
+        "gender": "feminine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "one": "{0} milliseconde",
+          "other": "{0} millisecondes"
+        },
+        "gender": "feminine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microseconde",
+          "other": "{0} microsecondes"
+        },
+        "gender": "feminine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microseconde",
+          "other": "{0} microsecondes"
+        },
+        "gender": "feminine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "one": "{0} nanoseconde",
+          "other": "{0} nanosecondes"
+        },
+        "gender": "feminine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "one": "{0} minute",
+          "other": "{0} minutes"
+        },
+        "gender": "feminine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "one": "{0} heure",
+          "other": "{0} heures"
+        },
+        "gender": "feminine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "one": "{0} gramme",
+          "other": "{0} grammes"
+        },
+        "gender": "masculine"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "one": "{0} kilogramme",
+          "other": "{0} kilogrammes"
+        },
+        "gender": "masculine"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "one": "{0} milligramme",
+          "other": "{0} milligrammes"
+        },
+        "gender": "masculine"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "one": "{0} tonne",
+          "other": "{0} tonnes"
+        },
+        "gender": "feminine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} litre",
+          "other": "{0} litres"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} litre",
+          "other": "{0} litres"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "one": "{0} millilitre",
+          "other": "{0} millilitres"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "one": "{0} volt",
+          "other": "{0} volts"
+        },
+        "gender": "masculine"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "one": "{0} ampère",
+          "other": "{0} ampères"
+        },
+        "gender": "masculine"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "one": "{0} milliampère",
+          "other": "{0} milliampères"
+        },
+        "gender": "masculine"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "one": "{0} ohm",
+          "other": "{0} ohms"
+        },
+        "gender": "masculine"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "one": "{0} watt",
+          "other": "{0} watts"
+        },
+        "gender": "masculine"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "one": "{0} milliwatt",
+          "other": "{0} milliwatts"
+        },
+        "gender": "masculine"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "one": "{0} kilowatt",
+          "other": "{0} kilowatts"
+        },
+        "gender": "masculine"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "one": "{0} mégawatt",
+          "other": "{0} mégawatts"
+        },
+        "gender": "masculine"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "one": "{0} gigawatt",
+          "other": "{0} gigawatts"
+        },
+        "gender": "masculine"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "one": "{0} hertz",
+          "other": "{0} hertz"
+        },
+        "gender": "masculine"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "one": "{0} kilohertz",
+          "other": "{0} kilohertz"
+        },
+        "gender": "masculine"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "one": "{0} mégahertz",
+          "other": "{0} mégahertz"
+        },
+        "gender": "masculine"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "one": "{0} gigahertz",
+          "other": "{0} gigahertz"
+        },
+        "gender": "masculine"
+      },
+      "B": {
+        "id": "digital-byte",
+        "patterns": {
+          "one": "{0} octet",
+          "other": "{0} octets"
+        },
+        "gender": "masculine"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilooctet",
+          "other": "{0} kilooctets"
+        },
+        "gender": "masculine"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilooctet",
+          "other": "{0} kilooctets"
+        },
+        "gender": "masculine"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "one": "{0} mégaoctet",
+          "other": "{0} mégaoctets"
+        },
+        "gender": "masculine"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "one": "{0} gigaoctet",
+          "other": "{0} gigaoctets"
+        },
+        "gender": "masculine"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "one": "{0} téraoctet",
+          "other": "{0} téraoctets"
+        },
+        "gender": "masculine"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "one": "{0} pétaoctet",
+          "other": "{0} pétaoctets"
+        },
+        "gender": "masculine"
+      },
+      "bit": {
+        "id": "digital-bit",
+        "patterns": {
+          "one": "{0} bit",
+          "other": "{0} bits"
+        },
+        "gender": "masculine"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "one": "{0} kilobit",
+          "other": "{0} kilobits"
+        },
+        "gender": "masculine"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "one": "{0} mégabit",
+          "other": "{0} mégabits"
+        },
+        "gender": "masculine"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "one": "{0} gigabit",
+          "other": "{0} gigabits"
+        },
+        "gender": "masculine"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} degré Celsius",
+          "other": "{0} degrés Celsius"
+        },
+        "gender": "masculine"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} degré Celsius",
+          "other": "{0} degrés Celsius"
+        },
+        "gender": "masculine"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} degré Fahrenheit",
+          "other": "{0} degrés Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} degré Fahrenheit",
+          "other": "{0} degrés Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "one": "{0} kelvin",
+          "other": "{0} kelvins"
+        },
+        "gender": "masculine"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} pour cent",
+          "other": "{0} pour cent"
+        },
+        "gender": "masculine"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} pour cent",
+          "other": "{0} pour cent"
+        },
+        "gender": "masculine"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "one": "{0} pour mille",
+          "other": "{0} pour mille"
+        },
+        "gender": "masculine"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "one": "{0} mètre carré",
+          "other": "{0} mètres carrés"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "one": "{0} kilomètre carré",
+          "other": "{0} kilomètres carrés"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "one": "{0} centimètre carré",
+          "other": "{0} centimètres carrés"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "one": "{0} mètre cube",
+          "other": "{0} mètres cubes"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "one": "{0} pascal",
+          "other": "{0} pascals"
+        },
+        "gender": "masculine"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "one": "{0} kilopascal",
+          "other": "{0} kilopascals"
+        },
+        "gender": "masculine"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "one": "{0} mégapascal",
+          "other": "{0} mégapascals"
+        },
+        "gender": "masculine"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "one": "{0} joule",
+          "other": "{0} joules"
+        },
+        "gender": "masculine"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "one": "{0} kilojoule",
+          "other": "{0} kilojoules"
+        },
+        "gender": "masculine"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "one": "{0} kilowatt-heure",
+          "other": "{0} kilowatt-heures"
+        },
+        "gender": "masculine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "one": "{0} newton",
+          "other": "{0} newtons"
+        },
+        "gender": "masculine"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "one": "{0} degré",
+          "other": "{0} degrés"
+        },
+        "gender": "masculine"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "one": "{0} radian",
+          "other": "{0} radians"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "one": "{0} kilomètre par heure",
+          "other": "{0} kilomètres par heure"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "one": "{0} mètre par seconde",
+          "other": "{0} mètres par seconde"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {
+      "∇": "nabla",
+      "α": "alpha",
+      "β": "bêta",
+      "γ": "gamma",
+      "δ": "delta",
+      "ε": "epsilon",
+      "ζ": "zêta",
+      "η": "êta",
+      "θ": "thêta",
+      "ι": "iota",
+      "κ": "kappa",
+      "λ": "lambda",
+      "μ": "mû",
+      "ν": "nû",
+      "ξ": "xi",
+      "ο": "omicron",
+      "π": "pi",
+      "ρ": "rhô",
+      "ς": "sigma final",
+      "σ": "sigma",
+      "τ": "tau",
+      "υ": "upsilon",
+      "φ": "phi",
+      "χ": "chi",
+      "ψ": "psi",
+      "ω": "oméga",
+      "∂": "dérivée partielle",
+      "ϵ": "epsilon",
+      "ϑ": "thêta",
+      "ϰ": "kappa",
+      "ϕ": "phi",
+      "ϱ": "rhô",
+      "ϖ": "pi",
+      "Α": "Alpha",
+      "Β": "Bêta",
+      "Γ": "Gamma",
+      "Δ": "Delta",
+      "Ε": "Epsilon",
+      "Ζ": "Zêta",
+      "Η": "Êta",
+      "Θ": "Thêta",
+      "Ι": "Iota",
+      "Κ": "Kappa",
+      "Λ": "Lambda",
+      "Μ": "Mû",
+      "Ν": "Nû",
+      "Ξ": "Xi",
+      "Ο": "Omicron",
+      "Π": "Pi",
+      "Ρ": "Rhô",
+      "ϴ": "Thêta",
+      "Σ": "Sigma",
+      "Τ": "Tau",
+      "Υ": "Upsilon",
+      "Φ": "Phi",
+      "Χ": "Chi",
+      "Ψ": "Psi",
+      "Ω": "Oméga"
+    },
+    "functions": {
+      "log": "log",
+      "ln": "logarithme népérien",
+      "exp": "exponentielle",
+      "max": "maximum",
+      "min": "minimum",
+      "cos": "cosinus",
+      "cot": "cotangente",
+      "csc": "cosécante",
+      "sec": "sécante",
+      "sin": "sinus",
+      "tan": "tangente"
+    },
+    "operators": {
+      "+": "plus",
+      "-": "moins",
+      ":": "deux points",
+      "<": "inférieur à",
+      "=": "égale",
+      ">": "supérieur à",
+      "±": "plus ou moins",
+      "×": "multiplié par",
+      "÷": "divisé par",
+      "−": "moins",
+      "∶": "rapport",
+      "≃": "asymptotiquement égal à",
+      "≈": "presque égal à",
+      "≠": "pas égal à",
+      "≤": "plus petit ou égal à",
+      "≥": "plus grand ou égal à"
+    },
+    "letters": {
+      "A": "a",
+      "B": "bé",
+      "C": "cé",
+      "D": "dé",
+      "E": "e",
+      "F": "effe",
+      "G": "gé",
+      "H": "ache",
+      "I": "i",
+      "J": "ji",
+      "K": "ka",
+      "L": "elle",
+      "M": "emme",
+      "N": "enne",
+      "O": "o",
+      "P": "pé",
+      "Q": "ku",
+      "R": "erre",
+      "S": "esse",
+      "T": "té",
+      "U": "u",
+      "V": "vé",
+      "W": "double-vé",
+      "X": "ixe",
+      "Y": "i-grec",
+      "Z": "zède"
+    }
+  },
+  "ru": {
+    "math_letters": {
+      "B": "бэ",
+      "C": "цэ",
+      "D": "дэ",
+      "E": "е",
+      "F": "эф",
+      "G": "гэ",
+      "H": "аш",
+      "I": "и",
+      "J": "йот",
+      "K": "ка",
+      "L": "эль",
+      "M": "эм",
+      "N": "эн",
+      "O": "о",
+      "P": "пэ",
+      "Q": "ку",
+      "R": "эр",
+      "S": "эс",
+      "T": "тэ",
+      "U": "у",
+      "V": "вэ",
+      "W": "дубль-вэ",
+      "X": "икс",
+      "Y": "игрек",
+      "Z": "зэт",
+      "A": "а"
+    },
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "one": "{0} метр",
+          "few": "{0} метра",
+          "many": "{0} метров",
+          "other": "{0} метра"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "one": "{0} километр",
+          "few": "{0} километра",
+          "many": "{0} километров",
+          "other": "{0} километра"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "one": "{0} сантиметр",
+          "few": "{0} сантиметра",
+          "many": "{0} сантиметров",
+          "other": "{0} сантиметра"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "one": "{0} миллиметр",
+          "few": "{0} миллиметра",
+          "many": "{0} миллиметров",
+          "other": "{0} миллиметра"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} микрометр",
+          "few": "{0} микрометра",
+          "many": "{0} микрометров",
+          "other": "{0} микрометра"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} микрометр",
+          "few": "{0} микрометра",
+          "many": "{0} микрометров",
+          "other": "{0} микрометра"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "one": "{0} нанометр",
+          "few": "{0} нанометра",
+          "many": "{0} нанометров",
+          "other": "{0} нанометра"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "one": "{0} секунда",
+          "few": "{0} секунды",
+          "many": "{0} секунд",
+          "other": "{0} секунды"
+        },
+        "gender": "feminine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "one": "{0} миллисекунда",
+          "few": "{0} миллисекунды",
+          "many": "{0} миллисекунд",
+          "other": "{0} миллисекунды"
+        },
+        "gender": "feminine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} микросекунда",
+          "few": "{0} микросекунды",
+          "many": "{0} микросекунд",
+          "other": "{0} микросекунды"
+        },
+        "gender": "feminine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} микросекунда",
+          "few": "{0} микросекунды",
+          "many": "{0} микросекунд",
+          "other": "{0} микросекунды"
+        },
+        "gender": "feminine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "one": "{0} наносекунда",
+          "few": "{0} наносекунды",
+          "many": "{0} наносекунд",
+          "other": "{0} наносекунды"
+        },
+        "gender": "feminine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "one": "{0} минута",
+          "few": "{0} минуты",
+          "many": "{0} минут",
+          "other": "{0} минуты"
+        },
+        "gender": "feminine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "one": "{0} час",
+          "few": "{0} часа",
+          "many": "{0} часов",
+          "other": "{0} часа"
+        },
+        "gender": "masculine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "one": "{0} грамм",
+          "few": "{0} грамма",
+          "many": "{0} грамм",
+          "other": "{0} грамма"
+        },
+        "gender": "masculine"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "one": "{0} килограмм",
+          "few": "{0} килограмма",
+          "many": "{0} килограмм",
+          "other": "{0} килограмма"
+        },
+        "gender": "masculine"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "one": "{0} миллиграмм",
+          "few": "{0} миллиграмма",
+          "many": "{0} миллиграмм",
+          "other": "{0} миллиграмма"
+        },
+        "gender": "masculine"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "one": "{0} тонна",
+          "few": "{0} тонны",
+          "many": "{0} тонн",
+          "other": "{0} тонны"
+        },
+        "gender": "feminine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} литр",
+          "few": "{0} литра",
+          "many": "{0} литров",
+          "other": "{0} литра"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} литр",
+          "few": "{0} литра",
+          "many": "{0} литров",
+          "other": "{0} литра"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "one": "{0} миллилитр",
+          "few": "{0} миллилитра",
+          "many": "{0} миллилитров",
+          "other": "{0} миллилитра"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "one": "{0} вольт",
+          "few": "{0} вольта",
+          "many": "{0} вольт",
+          "other": "{0} вольта"
+        },
+        "gender": "masculine"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "one": "{0} ампер",
+          "few": "{0} ампера",
+          "many": "{0} ампер",
+          "other": "{0} ампера"
+        },
+        "gender": "masculine"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "one": "{0} миллиампер",
+          "few": "{0} миллиампера",
+          "many": "{0} миллиампер",
+          "other": "{0} миллиампера"
+        },
+        "gender": "masculine"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "one": "{0} ом",
+          "few": "{0} ома",
+          "many": "{0} ом",
+          "other": "{0} ома"
+        },
+        "gender": "masculine"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "one": "{0} ватт",
+          "few": "{0} ватта",
+          "many": "{0} ватт",
+          "other": "{0} ватта"
+        },
+        "gender": "masculine"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "one": "{0} милливатт",
+          "few": "{0} милливатта",
+          "many": "{0} милливатт",
+          "other": "{0} милливатта"
+        },
+        "gender": "masculine"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "one": "{0} киловатт",
+          "few": "{0} киловатта",
+          "many": "{0} киловатт",
+          "other": "{0} киловатта"
+        },
+        "gender": "masculine"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "one": "{0} мегаватт",
+          "few": "{0} мегаватта",
+          "many": "{0} мегаватт",
+          "other": "{0} мегаватта"
+        },
+        "gender": "masculine"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "one": "{0} гигаватт",
+          "few": "{0} гигаватта",
+          "many": "{0} гигаватт",
+          "other": "{0} гигаватта"
+        },
+        "gender": "masculine"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "one": "{0} герц",
+          "few": "{0} герца",
+          "many": "{0} герц",
+          "other": "{0} герца"
+        },
+        "gender": "masculine"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "one": "{0} килогерц",
+          "few": "{0} килогерца",
+          "many": "{0} килогерц",
+          "other": "{0} килогерца"
+        },
+        "gender": "masculine"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "one": "{0} мегагерц",
+          "few": "{0} мегагерца",
+          "many": "{0} мегагерц",
+          "other": "{0} мегагерца"
+        },
+        "gender": "masculine"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "one": "{0} гигагерц",
+          "few": "{0} гигагерца",
+          "many": "{0} гигагерц",
+          "other": "{0} гигагерца"
+        },
+        "gender": "masculine"
+      },
+      "B": {
+        "id": "digital-byte",
+        "patterns": {
+          "one": "{0} байт",
+          "few": "{0} байта",
+          "many": "{0} байт",
+          "other": "{0} байта"
+        },
+        "gender": "masculine"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} килобайт",
+          "few": "{0} килобайта",
+          "many": "{0} килобайт",
+          "other": "{0} килобайта"
+        },
+        "gender": "masculine"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} килобайт",
+          "few": "{0} килобайта",
+          "many": "{0} килобайт",
+          "other": "{0} килобайта"
+        },
+        "gender": "masculine"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "one": "{0} мегабайт",
+          "few": "{0} мегабайта",
+          "many": "{0} мегабайт",
+          "other": "{0} мегабайта"
+        },
+        "gender": "masculine"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "one": "{0} гигабайт",
+          "few": "{0} гигабайта",
+          "many": "{0} гигабайт",
+          "other": "{0} гигабайта"
+        },
+        "gender": "masculine"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "one": "{0} терабайт",
+          "few": "{0} терабайта",
+          "many": "{0} терабайт",
+          "other": "{0} терабайта"
+        },
+        "gender": "masculine"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "one": "{0} петабайт",
+          "few": "{0} петабайта",
+          "many": "{0} петабайт",
+          "other": "{0} петабайта"
+        },
+        "gender": "masculine"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "one": "{0} килобит",
+          "few": "{0} килобита",
+          "many": "{0} килобит",
+          "other": "{0} килобита"
+        },
+        "gender": "masculine"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "one": "{0} мегабит",
+          "few": "{0} мегабита",
+          "many": "{0} мегабит",
+          "other": "{0} мегабита"
+        },
+        "gender": "masculine"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "one": "{0} гигабит",
+          "few": "{0} гигабита",
+          "many": "{0} гигабит",
+          "other": "{0} гигабита"
+        },
+        "gender": "masculine"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} градус Цельсия",
+          "few": "{0} градуса Цельсия",
+          "many": "{0} градусов Цельсия",
+          "other": "{0} градуса Цельсия"
+        },
+        "gender": "masculine"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} градус Цельсия",
+          "few": "{0} градуса Цельсия",
+          "many": "{0} градусов Цельсия",
+          "other": "{0} градуса Цельсия"
+        },
+        "gender": "masculine"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} градус Фаренгейта",
+          "few": "{0} градуса Фаренгейта",
+          "many": "{0} градусов Фаренгейта",
+          "other": "{0} градуса Фаренгейта"
+        },
+        "gender": "masculine"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} градус Фаренгейта",
+          "few": "{0} градуса Фаренгейта",
+          "many": "{0} градусов Фаренгейта",
+          "other": "{0} градуса Фаренгейта"
+        },
+        "gender": "masculine"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "one": "{0} кельвин",
+          "few": "{0} кельвина",
+          "many": "{0} кельвинов",
+          "other": "{0} кельвина"
+        },
+        "gender": "masculine"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} процент",
+          "few": "{0} процента",
+          "many": "{0} процентов",
+          "other": "{0} процента"
+        },
+        "gender": "masculine"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} процент",
+          "few": "{0} процента",
+          "many": "{0} процентов",
+          "other": "{0} процента"
+        },
+        "gender": "masculine"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "one": "{0} промилле",
+          "few": "{0} промилле",
+          "many": "{0} промилле",
+          "other": "{0} промилле"
+        },
+        "gender": "neuter"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "one": "{0} квадратный метр",
+          "few": "{0} квадратных метра",
+          "many": "{0} квадратных метров",
+          "other": "{0} квадратного метра"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "one": "{0} квадратный километр",
+          "few": "{0} квадратных километра",
+          "many": "{0} квадратных километров",
+          "other": "{0} квадратного километра"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "one": "{0} квадратный сантиметр",
+          "few": "{0} квадратных сантиметра",
+          "many": "{0} квадратных сантиметров",
+          "other": "{0} квадратного сантиметра"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "one": "{0} кубический метр",
+          "few": "{0} кубических метра",
+          "many": "{0} кубических метров",
+          "other": "{0} кубического метра"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "one": "{0} паскаль",
+          "few": "{0} паскаля",
+          "many": "{0} паскалей",
+          "other": "{0} паскаля"
+        },
+        "gender": "masculine"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "one": "{0} килопаскаль",
+          "few": "{0} килопаскаля",
+          "many": "{0} килопаскалей",
+          "other": "{0} килопаскаля"
+        },
+        "gender": "masculine"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "one": "{0} мегапаскаль",
+          "few": "{0} мегапаскаля",
+          "many": "{0} мегапаскалей",
+          "other": "{0} мегапаскаля"
+        },
+        "gender": "masculine"
+      },
+      "bar": {
+        "id": "pressure-bar",
+        "patterns": {
+          "few": "{0} бара",
+          "other": "{0} бара"
+        },
+        "gender": "masculine"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "one": "{0} джоуль",
+          "few": "{0} джоуля",
+          "many": "{0} джоулей",
+          "other": "{0} джоуля"
+        },
+        "gender": "masculine"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "one": "{0} килоджоуль",
+          "few": "{0} килоджоуля",
+          "many": "{0} килоджоулей",
+          "other": "{0} килоджоуля"
+        },
+        "gender": "masculine"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "one": "{0} киловатт-час",
+          "few": "{0} киловатт-часа",
+          "many": "{0} киловатт-часов",
+          "other": "{0} киловатт-часа"
+        },
+        "gender": "masculine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "one": "{0} ньютон",
+          "few": "{0} ньютона",
+          "many": "{0} ньютонов",
+          "other": "{0} ньютона"
+        },
+        "gender": "masculine"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "one": "{0} градус",
+          "few": "{0} градуса",
+          "many": "{0} градусов",
+          "other": "{0} градуса"
+        },
+        "gender": "masculine"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "one": "{0} радиан",
+          "few": "{0} радиана",
+          "many": "{0} радиан",
+          "other": "{0} радиана"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "one": "{0} километр в час",
+          "few": "{0} километра в час",
+          "many": "{0} километров в час",
+          "other": "{0} километра в час"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "one": "{0} метр в секунду",
+          "few": "{0} метра в секунду",
+          "many": "{0} метров в секунду",
+          "other": "{0} метра в секунду"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {},
+    "functions": {},
+    "operators": {},
+    "letters": {
+      "A": "эй",
+      "B": "би",
+      "C": "си",
+      "D": "ди",
+      "E": "и",
+      "F": "эф",
+      "H": "эйч",
+      "I": "ай",
+      "G": "джи",
+      "J": "джей",
+      "K": "кей",
+      "L": "эл",
+      "M": "эм",
+      "N": "эн",
+      "O": "оу",
+      "P": "пи",
+      "Q": "кью",
+      "R": "ар",
+      "S": "эс",
+      "T": "ти",
+      "U": "ю",
+      "V": "ви",
+      "W": "дабл ю",
+      "X": "экс",
+      "Y": "уай",
+      "Z": "зед"
+    }
+  },
+  "es": {
+    "math_letters": {},
+    "units": {
+      "m": {
+        "id": "length-meter",
+        "patterns": {
+          "one": "{0} metro",
+          "other": "{0} metros"
+        },
+        "gender": "masculine"
+      },
+      "km": {
+        "id": "length-kilometer",
+        "patterns": {
+          "one": "{0} kilómetro",
+          "other": "{0} kilómetros"
+        },
+        "gender": "masculine"
+      },
+      "cm": {
+        "id": "length-centimeter",
+        "patterns": {
+          "one": "{0} centímetro",
+          "other": "{0} centímetros"
+        },
+        "gender": "masculine"
+      },
+      "mm": {
+        "id": "length-millimeter",
+        "patterns": {
+          "one": "{0} milímetro",
+          "other": "{0} milímetros"
+        },
+        "gender": "masculine"
+      },
+      "µm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micrómetro",
+          "other": "{0} micrómetros"
+        },
+        "gender": "masculine"
+      },
+      "μm": {
+        "id": "length-micrometer",
+        "patterns": {
+          "one": "{0} micrómetro",
+          "other": "{0} micrómetros"
+        },
+        "gender": "masculine"
+      },
+      "nm": {
+        "id": "length-nanometer",
+        "patterns": {
+          "one": "{0} nanómetro",
+          "other": "{0} nanómetros"
+        },
+        "gender": "masculine"
+      },
+      "s": {
+        "id": "duration-second",
+        "patterns": {
+          "one": "{0} segundo",
+          "other": "{0} segundos"
+        },
+        "gender": "masculine"
+      },
+      "ms": {
+        "id": "duration-millisecond",
+        "patterns": {
+          "one": "{0} milisegundo",
+          "other": "{0} milisegundos"
+        },
+        "gender": "masculine"
+      },
+      "µs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microsegundo",
+          "other": "{0} microsegundos"
+        },
+        "gender": "masculine"
+      },
+      "μs": {
+        "id": "duration-microsecond",
+        "patterns": {
+          "one": "{0} microsegundo",
+          "other": "{0} microsegundos"
+        },
+        "gender": "masculine"
+      },
+      "ns": {
+        "id": "duration-nanosecond",
+        "patterns": {
+          "one": "{0} nanosegundo",
+          "other": "{0} nanosegundos"
+        },
+        "gender": "masculine"
+      },
+      "min": {
+        "id": "duration-minute",
+        "patterns": {
+          "one": "{0} minuto",
+          "other": "{0} minutos"
+        },
+        "gender": "masculine"
+      },
+      "h": {
+        "id": "duration-hour",
+        "patterns": {
+          "one": "{0} hora",
+          "other": "{0} horas"
+        },
+        "gender": "feminine"
+      },
+      "g": {
+        "id": "mass-gram",
+        "patterns": {
+          "one": "{0} gramo",
+          "other": "{0} gramos"
+        },
+        "gender": "masculine"
+      },
+      "kg": {
+        "id": "mass-kilogram",
+        "patterns": {
+          "one": "{0} kilogramo",
+          "other": "{0} kilogramos"
+        },
+        "gender": "masculine"
+      },
+      "mg": {
+        "id": "mass-milligram",
+        "patterns": {
+          "one": "{0} miligramo",
+          "other": "{0} miligramos"
+        },
+        "gender": "masculine"
+      },
+      "t": {
+        "id": "mass-tonne",
+        "patterns": {
+          "one": "{0} tonelada",
+          "other": "{0} toneladas"
+        },
+        "gender": "feminine"
+      },
+      "L": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} litro",
+          "other": "{0} litros"
+        },
+        "gender": "masculine"
+      },
+      "l": {
+        "id": "volume-liter",
+        "patterns": {
+          "one": "{0} litro",
+          "other": "{0} litros"
+        },
+        "gender": "masculine"
+      },
+      "mL": {
+        "id": "volume-milliliter",
+        "patterns": {
+          "one": "{0} mililitro",
+          "other": "{0} mililitros"
+        },
+        "gender": "masculine"
+      },
+      "V": {
+        "id": "electric-volt",
+        "patterns": {
+          "one": "{0} voltio",
+          "other": "{0} voltios"
+        },
+        "gender": "masculine"
+      },
+      "A": {
+        "id": "electric-ampere",
+        "patterns": {
+          "one": "{0} amperio",
+          "other": "{0} amperios"
+        },
+        "gender": "masculine"
+      },
+      "mA": {
+        "id": "electric-milliampere",
+        "patterns": {
+          "one": "{0} miliamperio",
+          "other": "{0} miliamperios"
+        },
+        "gender": "masculine"
+      },
+      "Ω": {
+        "id": "electric-ohm",
+        "patterns": {
+          "one": "{0} ohmio",
+          "other": "{0} ohmios"
+        },
+        "gender": "masculine"
+      },
+      "W": {
+        "id": "power-watt",
+        "patterns": {
+          "one": "{0} vatio",
+          "other": "{0} vatios"
+        },
+        "gender": "masculine"
+      },
+      "mW": {
+        "id": "power-milliwatt",
+        "patterns": {
+          "one": "{0} milivatio",
+          "other": "{0} milivatios"
+        },
+        "gender": "masculine"
+      },
+      "kW": {
+        "id": "power-kilowatt",
+        "patterns": {
+          "one": "{0} kilovatio",
+          "other": "{0} kilovatios"
+        },
+        "gender": "masculine"
+      },
+      "MW": {
+        "id": "power-megawatt",
+        "patterns": {
+          "one": "{0} megavatio",
+          "other": "{0} megavatios"
+        },
+        "gender": "masculine"
+      },
+      "GW": {
+        "id": "power-gigawatt",
+        "patterns": {
+          "one": "{0} gigavatio",
+          "other": "{0} gigavatios"
+        },
+        "gender": "masculine"
+      },
+      "Hz": {
+        "id": "frequency-hertz",
+        "patterns": {
+          "one": "{0} hercio",
+          "other": "{0} hercios"
+        },
+        "gender": "masculine"
+      },
+      "kHz": {
+        "id": "frequency-kilohertz",
+        "patterns": {
+          "one": "{0} kilohercio",
+          "other": "{0} kilohercios"
+        },
+        "gender": "masculine"
+      },
+      "MHz": {
+        "id": "frequency-megahertz",
+        "patterns": {
+          "one": "{0} megahercio",
+          "other": "{0} megahercios"
+        },
+        "gender": "masculine"
+      },
+      "GHz": {
+        "id": "frequency-gigahertz",
+        "patterns": {
+          "one": "{0} gigahercio",
+          "other": "{0} gigahercios"
+        },
+        "gender": "masculine"
+      },
+      "B": {
+        "id": "digital-byte",
+        "patterns": {
+          "one": "{0} byte",
+          "other": "{0} bytes"
+        },
+        "gender": "masculine"
+      },
+      "kB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilobyte",
+          "other": "{0} kilobytes"
+        },
+        "gender": "masculine"
+      },
+      "KB": {
+        "id": "digital-kilobyte",
+        "patterns": {
+          "one": "{0} kilobyte",
+          "other": "{0} kilobytes"
+        },
+        "gender": "masculine"
+      },
+      "MB": {
+        "id": "digital-megabyte",
+        "patterns": {
+          "one": "{0} megabyte",
+          "other": "{0} megabytes"
+        },
+        "gender": "masculine"
+      },
+      "GB": {
+        "id": "digital-gigabyte",
+        "patterns": {
+          "one": "{0} gigabyte",
+          "other": "{0} gigabytes"
+        },
+        "gender": "masculine"
+      },
+      "TB": {
+        "id": "digital-terabyte",
+        "patterns": {
+          "one": "{0} terabyte",
+          "other": "{0} terabytes"
+        },
+        "gender": "masculine"
+      },
+      "PB": {
+        "id": "digital-petabyte",
+        "patterns": {
+          "one": "{0} petabyte",
+          "other": "{0} petabytes"
+        },
+        "gender": "masculine"
+      },
+      "bit": {
+        "id": "digital-bit",
+        "patterns": {
+          "one": "{0} bit",
+          "other": "{0} bits"
+        },
+        "gender": "masculine"
+      },
+      "kbit": {
+        "id": "digital-kilobit",
+        "patterns": {
+          "one": "{0} kilobit",
+          "other": "{0} kilobits"
+        },
+        "gender": "masculine"
+      },
+      "Mbit": {
+        "id": "digital-megabit",
+        "patterns": {
+          "one": "{0} megabit",
+          "other": "{0} megabits"
+        },
+        "gender": "masculine"
+      },
+      "Gbit": {
+        "id": "digital-gigabit",
+        "patterns": {
+          "one": "{0} gigabit",
+          "other": "{0} gigabits"
+        },
+        "gender": "masculine"
+      },
+      "℃": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} grado Celsius",
+          "other": "{0} grados Celsius"
+        },
+        "gender": "masculine"
+      },
+      "°C": {
+        "id": "temperature-celsius",
+        "patterns": {
+          "one": "{0} grado Celsius",
+          "other": "{0} grados Celsius"
+        },
+        "gender": "masculine"
+      },
+      "℉": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} grado Fahrenheit",
+          "other": "{0} grados Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "°F": {
+        "id": "temperature-fahrenheit",
+        "patterns": {
+          "one": "{0} grado Fahrenheit",
+          "other": "{0} grados Fahrenheit"
+        },
+        "gender": "masculine"
+      },
+      "K": {
+        "id": "temperature-kelvin",
+        "patterns": {
+          "one": "{0} kelvin",
+          "other": "{0} kelvin"
+        },
+        "gender": "masculine"
+      },
+      "%": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} por ciento",
+          "other": "{0} por ciento"
+        },
+        "gender": "masculine"
+      },
+      "％": {
+        "id": "concentr-percent",
+        "patterns": {
+          "one": "{0} por ciento",
+          "other": "{0} por ciento"
+        },
+        "gender": "masculine"
+      },
+      "‰": {
+        "id": "concentr-permille",
+        "patterns": {
+          "one": "{0} por mil",
+          "other": "{0} por mil"
+        },
+        "gender": "masculine"
+      },
+      "m²": {
+        "id": "area-square-meter",
+        "patterns": {
+          "one": "{0} metro cuadrado",
+          "other": "{0} metros cuadrados"
+        },
+        "gender": "masculine"
+      },
+      "km²": {
+        "id": "area-square-kilometer",
+        "patterns": {
+          "one": "{0} kilómetro cuadrado",
+          "other": "{0} kilómetros cuadrados"
+        },
+        "gender": "masculine"
+      },
+      "cm²": {
+        "id": "area-square-centimeter",
+        "patterns": {
+          "one": "{0} centímetro cuadrado",
+          "other": "{0} centímetros cuadrados"
+        },
+        "gender": "masculine"
+      },
+      "m³": {
+        "id": "volume-cubic-meter",
+        "patterns": {
+          "one": "{0} metro cúbico",
+          "other": "{0} metros cúbicos"
+        },
+        "gender": "masculine"
+      },
+      "Pa": {
+        "id": "pressure-pascal",
+        "patterns": {
+          "one": "{0} pascal",
+          "other": "{0} pascales"
+        },
+        "gender": "masculine"
+      },
+      "kPa": {
+        "id": "pressure-kilopascal",
+        "patterns": {
+          "one": "{0} kilopascal",
+          "other": "{0} kilopascales"
+        },
+        "gender": "masculine"
+      },
+      "MPa": {
+        "id": "pressure-megapascal",
+        "patterns": {
+          "one": "{0} megapascal",
+          "other": "{0} megapascales"
+        },
+        "gender": "masculine"
+      },
+      "bar": {
+        "id": "pressure-bar",
+        "patterns": {
+          "other": "{0} bares"
+        },
+        "gender": "masculine"
+      },
+      "J": {
+        "id": "energy-joule",
+        "patterns": {
+          "one": "{0} julio",
+          "other": "{0} julios"
+        },
+        "gender": "masculine"
+      },
+      "kJ": {
+        "id": "energy-kilojoule",
+        "patterns": {
+          "one": "{0} kilojulio",
+          "other": "{0} kilojulios"
+        },
+        "gender": "masculine"
+      },
+      "kWh": {
+        "id": "energy-kilowatt-hour",
+        "patterns": {
+          "one": "{0} kilovatio hora",
+          "other": "{0} kilovatios hora"
+        },
+        "gender": "masculine"
+      },
+      "N": {
+        "id": "force-newton",
+        "patterns": {
+          "one": "{0} newton",
+          "other": "{0} newtons"
+        },
+        "gender": "masculine"
+      },
+      "°": {
+        "id": "angle-degree",
+        "patterns": {
+          "one": "{0} grado",
+          "other": "{0} grados"
+        },
+        "gender": "masculine"
+      },
+      "rad": {
+        "id": "angle-radian",
+        "patterns": {
+          "one": "{0} radián",
+          "other": "{0} radianes"
+        },
+        "gender": "masculine"
+      },
+      "km/h": {
+        "id": "speed-kilometer-per-hour",
+        "patterns": {
+          "one": "{0} kilómetro por hora",
+          "other": "{0} kilómetros por hora"
+        },
+        "gender": "masculine"
+      },
+      "m/s": {
+        "id": "speed-meter-per-second",
+        "patterns": {
+          "one": "{0} metro por segundo",
+          "other": "{0} metros por segundo"
+        },
+        "gender": "masculine"
+      }
+    },
+    "greek": {
+      "∇": "nabla",
+      "α": "alfa",
+      "β": "beta",
+      "γ": "gamma",
+      "δ": "delta",
+      "ε": "épsilon",
+      "ζ": "zeta",
+      "η": "eta",
+      "θ": "theta",
+      "ι": "iota",
+      "κ": "kappa",
+      "λ": "lambda",
+      "μ": "mi",
+      "ν": "ni",
+      "ξ": "xi",
+      "ο": "ómicron",
+      "π": "pi",
+      "ρ": "rho",
+      "ς": "sigma final",
+      "σ": "sigma",
+      "τ": "tau",
+      "υ": "ípsilon",
+      "φ": "phi",
+      "χ": "ji",
+      "ψ": "psi",
+      "ω": "omega",
+      "∂": "diferencial parcial",
+      "ϵ": "épsilon",
+      "ϑ": "theta",
+      "ϰ": "kappa",
+      "ϕ": "phi",
+      "ϱ": "rho",
+      "ϖ": "pi",
+      "Α": "Alfa",
+      "Β": "Beta",
+      "Γ": "Gamma",
+      "Δ": "Delta",
+      "Ε": "Épsilon",
+      "Ζ": "Zeta",
+      "Η": "Eta",
+      "Θ": "Theta",
+      "Ι": "Iota",
+      "Κ": "Kappa",
+      "Λ": "Lambda",
+      "Μ": "Mi",
+      "Ν": "Ni",
+      "Ξ": "Xi",
+      "Ο": "Ómicron",
+      "Π": "Pi",
+      "Ρ": "Rho",
+      "ϴ": "Theta",
+      "Σ": "Sigma",
+      "Τ": "Tau",
+      "Υ": "Ípsilon",
+      "Φ": "Phi",
+      "Χ": "Ji",
+      "Ψ": "Psi",
+      "Ω": "Omega"
+    },
+    "functions": {
+      "log": "logaritmo",
+      "ln": "logaritmo neperiano",
+      "exp": "exponente",
+      "max": "máximo",
+      "min": "mínimo",
+      "cos": "coseno",
+      "cot": "cotangente",
+      "csc": "cosecante",
+      "sec": "secant",
+      "sin": "seno",
+      "tan": "tangente"
+    },
+    "operators": {
+      "+": "más",
+      "-": "menos",
+      ":": "dos puntos",
+      "<": "menor que",
+      "=": "igual",
+      ">": "mayor que",
+      "±": "más menos",
+      "×": "por",
+      "÷": "dividido",
+      "−": "menos",
+      "∶": "razón",
+      "≃": "asintóticamente igual a",
+      "≈": "aproximado",
+      "≠": "no es igual a",
+      "≤": "menor o igual que",
+      "≥": "mayor o igual que"
+    },
+    "letters": {
+      "A": "a",
+      "B": "be",
+      "C": "ce",
+      "D": "de",
+      "E": "e",
+      "F": "efe",
+      "G": "ge",
+      "H": "hache",
+      "I": "i",
+      "J": "jota",
+      "K": "ka",
+      "L": "ele",
+      "M": "eme",
+      "N": "ene",
+      "O": "o",
+      "P": "pe",
+      "Q": "cu",
+      "R": "erre",
+      "S": "ese",
+      "T": "te",
+      "U": "u",
+      "V": "uve",
+      "W": "doble-uve",
+      "X": "equis",
+      "Y": "ye",
+      "Z": "zeta"
+    }
+  }
+}

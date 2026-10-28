@@ -1,0 +1,6492 @@
+{
+  "schema_version": 1,
+  "notes": "Word names retain identity. New initialism spellings remain opt-in until device/ASR screening. Existing rejected English GPU/NPU/DCU/MLU spellings are preserved.",
+  "languages": [
+    {
+      "language": "en",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "A G I"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "A I"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "A N N"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "A P I"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "A S R"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "A W Q"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "B G E"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "B P E"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "C 2 P A"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "C N C F"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "C P U"
+        },
+        "CUDA": {
+          "policy": "pending",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "rejected",
+          "reading": "D C U"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "D P"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "D P O"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "F S D P"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "G G M L"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "G G U F"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "G L M"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "G P Q A"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "G P T"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "G P T Q"
+        },
+        "GPU": {
+          "policy": "rejected",
+          "reading": "G P U"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "G Q A"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "G R P O"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "G U I"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "pending",
+          "reading": "Hah mee"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "H N S W"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "H T T P"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "I C L"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "I D"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "I P O"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "I T L"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "I V F"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "pending",
+          "reading": "Jetson"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "K T O"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "K V"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "L L M"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "L M"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "M C P"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "M H A"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "M L"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "M L A"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "rejected",
+          "reading": "M L U"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "M M L U"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "M Q A"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "rejected",
+          "reading": "N P U"
+        },
+        "NVIDIA": {
+          "policy": "pending",
+          "reading": "NVIDIA"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "O C R"
+        },
+        "ONNX": {
+          "policy": "pending",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "O R P O"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "P C"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "P E F T"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "P I I"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "P P"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "P P L"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "P P O"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "P T Q"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "Q A T"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "R L"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "R L A I F"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "R L H F"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "R M"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "R N N"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "R P M"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "R R F"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "R T F"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "S F T"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "S G D"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "T P"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "T P M"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "T P O T"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "T T F T"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "T T S"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "pending",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "V L"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "V L M"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "V R A M"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "X T T S"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "approved",
+          "reading": "V G P U"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    },
+    {
+      "language": "ja",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "エージーアイ"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "エーアイ"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "エーエヌエヌ"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "エーピーアイ"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "エーエスアール"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "エーダブリューキュー"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "ビージーイー"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "ビーピーイー"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "シー2ピーエー"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "シーエヌシーエフ"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "シーピーユー"
+        },
+        "CUDA": {
+          "policy": "preserve-word",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "trial",
+          "reading": "ディーシーユー"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "ディーピー"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "ディーピーオー"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "エフエスディーピー"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "ジージーエムエル"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "ジージーユーエフ"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "ジーエルエム"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "ジーピーキューエー"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "ジーピーティー"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "ジーピーティーキュー"
+        },
+        "GPU": {
+          "policy": "trial",
+          "reading": "ジーピーユー"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "ジーキューエー"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "ジーアールピーオー"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "ジーユーアイ"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "preserve-word",
+          "reading": "HAMi"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "エイチエヌエスダブリュー"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "エイチティーティーピー"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "アイシーエル"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "アイディー"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "アイピーオー"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "アイティーエル"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "アイブイエフ"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "trial",
+          "reading": "ジェットソン"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "ケーティーオー"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "ケーブイ"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "エルエルエム"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "エルエム"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "エムシーピー"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "エムエイチエー"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "エムエル"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "エムエルエー"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "trial",
+          "reading": "エムエルユー"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "エムエムエルユー"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "エムキューエー"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "trial",
+          "reading": "エヌピーユー"
+        },
+        "NVIDIA": {
+          "policy": "trial",
+          "reading": "エヌビディア"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "オーシーアール"
+        },
+        "ONNX": {
+          "policy": "preserve-word",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "オーアールピーオー"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "ピーシー"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "ピーイーエフティー"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "ピーアイアイ"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "ピーピー"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "ピーピーエル"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "ピーピーオー"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "ピーティーキュー"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "キューエーティー"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "アールエル"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "アールエルエーアイエフ"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "アールエルエイチエフ"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "アールエム"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "アールエヌエヌ"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "アールピーエム"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "アールアールエフ"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "アールティーエフ"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "エスエフティー"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "エスジーディー"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "ティーピー"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "ティーピーエム"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "ティーピーオーティー"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "ティーティーエフティー"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "ティーティーエス"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "preserve-word",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "ブイエル"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "ブイエルエム"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "ブイアールエーエム"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "エックスティーティーエス"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "preserve-word",
+          "reading": "vGPU"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    },
+    {
+      "language": "de",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "A Ge I"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "A I"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "A En En"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "A Pe I"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "A Es Er"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "A We Ku"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "Be Ge E"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "Be Pe E"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "Ze 2 Pe A"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "Ze En Ze Ef"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "Ze Pe U"
+        },
+        "CUDA": {
+          "policy": "preserve-word",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "trial",
+          "reading": "De Ze U"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "De Pe"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "De Pe O"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "Ef Es De Pe"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "Ge Ge Em El"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "Ge Ge U Ef"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "Ge El Em"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "Ge Pe Ku A"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "Ge Pe Te"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "Ge Pe Te Ku"
+        },
+        "GPU": {
+          "policy": "trial",
+          "reading": "Ge Pe U"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "Ge Ku A"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "Ge Er Pe O"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "Ge U I"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "preserve-word",
+          "reading": "HAMi"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "Ha En Es We"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "Ha Te Te Pe"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "I Ze El"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "I De"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "I Pe O"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "I Te El"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "I Fau Ef"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "trial",
+          "reading": "Dschetson"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "Ka Te O"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "Ka Fau"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "El El Em"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "El Em"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "Em Ze Pe"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "Em Ha A"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "Em El"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "Em El A"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "trial",
+          "reading": "Em El U"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "Em Em El U"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "Em Ku A"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "trial",
+          "reading": "En Pe U"
+        },
+        "NVIDIA": {
+          "policy": "trial",
+          "reading": "Envidia"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "O Ze Er"
+        },
+        "ONNX": {
+          "policy": "preserve-word",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "O Er Pe O"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "Pe Ze"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "Pe E Ef Te"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "Pe I I"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "Pe Pe"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "Pe Pe El"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "Pe Pe O"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "Pe Te Ku"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "Ku A Te"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "Er El"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "Er El A I Ef"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "Er El Ha Ef"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "Er Em"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "Er En En"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "Er Pe Em"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "Er Er Ef"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "Er Te Ef"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "Es Ef Te"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "Es Ge De"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "Te Pe"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "Te Pe Em"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "Te Pe O Te"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "Te Te Ef Te"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "Te Te Es"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "preserve-word",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "Fau El"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "Fau El Em"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "Fau Er A Em"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "Iks Te Te Es"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "preserve-word",
+          "reading": "vGPU"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    },
+    {
+      "language": "fr",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "a gé i"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "a i"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "a enne enne"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "a pé i"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "a esse erre"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "a double-vé ku"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "bé gé e"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "bé pé e"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "cé 2 pé a"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "cé enne cé effe"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "cé pé u"
+        },
+        "CUDA": {
+          "policy": "preserve-word",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "trial",
+          "reading": "dé cé u"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "dé pé"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "dé pé o"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "effe esse dé pé"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "gé gé emme elle"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "gé gé u effe"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "gé elle emme"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "gé pé ku a"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "gé pé té"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "gé pé té ku"
+        },
+        "GPU": {
+          "policy": "trial",
+          "reading": "gé pé u"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "gé ku a"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "gé erre pé o"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "gé u i"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "preserve-word",
+          "reading": "HAMi"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "ache enne esse double-vé"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "ache té té pé"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "i cé elle"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "i dé"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "i pé o"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "i té elle"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "i vé effe"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "pending",
+          "reading": "Jetson"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "ka té o"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "ka vé"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "elle elle emme"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "elle emme"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "emme cé pé"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "emme ache a"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "emme elle"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "emme elle a"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "trial",
+          "reading": "emme elle u"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "emme emme elle u"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "emme ku a"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "trial",
+          "reading": "enne pé u"
+        },
+        "NVIDIA": {
+          "policy": "pending",
+          "reading": "NVIDIA"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "o cé erre"
+        },
+        "ONNX": {
+          "policy": "pending",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "o erre pé o"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "pé cé"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "pé e effe té"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "pé i i"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "pé pé"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "pé pé elle"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "pé pé o"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "pé té ku"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "ku a té"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "erre elle"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "erre elle a i effe"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "erre elle ache effe"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "erre emme"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "erre enne enne"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "erre pé emme"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "erre erre effe"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "erre té effe"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "esse effe té"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "esse gé dé"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "té pé"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "té pé emme"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "té pé o té"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "té té effe té"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "té té esse"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "pending",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "vé elle"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "vé elle emme"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "vé erre a emme"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "ixe té té esse"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "preserve-word",
+          "reading": "vGPU"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "эй джи ай"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "эй ай"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "эй эн эн"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "эй пи ай"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "эй эс ар"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "эй дабл ю кью"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "би джи и"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "би пи и"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "си 2 пи эй"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "си эн си эф"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "си пи ю"
+        },
+        "CUDA": {
+          "policy": "preserve-word",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "trial",
+          "reading": "ди си ю"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "ди пи"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "ди пи оу"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "эф эс ди пи"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "джи джи эм эл"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "джи джи ю эф"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "джи эл эм"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "джи пи кью эй"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "джи пи ти"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "джи пи ти кью"
+        },
+        "GPU": {
+          "policy": "trial",
+          "reading": "джи пи ю"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "джи кью эй"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "джи ар пи оу"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "джи ю ай"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "preserve-word",
+          "reading": "HAMi"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "эйч эн эс дабл ю"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "эйч ти ти пи"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "ай си эл"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "ай ди"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "ай пи оу"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "ай ти эл"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "ай ви эф"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "pending",
+          "reading": "Jetson"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "кей ти оу"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "кей ви"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "эл эл эм"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "эл эм"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "эм си пи"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "эм эйч эй"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "эм эл"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "эм эл эй"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "trial",
+          "reading": "эм эл ю"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "эм эм эл ю"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "эм кью эй"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "trial",
+          "reading": "эн пи ю"
+        },
+        "NVIDIA": {
+          "policy": "pending",
+          "reading": "NVIDIA"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "оу си ар"
+        },
+        "ONNX": {
+          "policy": "pending",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "оу ар пи оу"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "пи си"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "пи и эф ти"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "пи ай ай"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "пи пи"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "пи пи эл"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "пи пи оу"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "пи ти кью"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "кью эй ти"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "ар эл"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "ар эл эй ай эф"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "ар эл эйч эф"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "ар эм"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "ар эн эн"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "ар пи эм"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "ар ар эф"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "ар ти эф"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "эс эф ти"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "эс джи ди"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "ти пи"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "ти пи эм"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "ти пи оу ти"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "ти ти эф ти"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "ти ти эс"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "pending",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "ви эл"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "ви эл эм"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "ви ар эй эм"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "экс ти ти эс"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "preserve-word",
+          "reading": "vGPU"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    },
+    {
+      "language": "es",
+      "terms": {
+        "AGI": {
+          "policy": "trial",
+          "reading": "a ge i"
+        },
+        "AI": {
+          "policy": "trial",
+          "reading": "a i"
+        },
+        "AIME": {
+          "policy": "preserve-word",
+          "reading": "AIME"
+        },
+        "ANN": {
+          "policy": "trial",
+          "reading": "a ene ene"
+        },
+        "API": {
+          "policy": "trial",
+          "reading": "a pe i"
+        },
+        "ASR": {
+          "policy": "trial",
+          "reading": "a ese erre"
+        },
+        "AWQ": {
+          "policy": "trial",
+          "reading": "a doble-uve cu"
+        },
+        "Adapter": {
+          "policy": "preserve-word",
+          "reading": "Adapter"
+        },
+        "Agent": {
+          "policy": "preserve-word",
+          "reading": "Agent"
+        },
+        "Agentic RAG": {
+          "policy": "preserve-word",
+          "reading": "Agentic RAG"
+        },
+        "Alignment": {
+          "policy": "preserve-word",
+          "reading": "Alignment"
+        },
+        "Application Programming Interface": {
+          "policy": "preserve-word",
+          "reading": "Application Programming Interface"
+        },
+        "Artificial General Intelligence": {
+          "policy": "preserve-word",
+          "reading": "Artificial General Intelligence"
+        },
+        "Attention Mechanism": {
+          "policy": "preserve-word",
+          "reading": "Attention Mechanism"
+        },
+        "Automatic Speech Recognition": {
+          "policy": "preserve-word",
+          "reading": "Automatic Speech Recognition"
+        },
+        "Autonomy": {
+          "policy": "preserve-word",
+          "reading": "Autonomy"
+        },
+        "BART": {
+          "policy": "preserve-word",
+          "reading": "BART"
+        },
+        "BERT": {
+          "policy": "preserve-word",
+          "reading": "BERT"
+        },
+        "BF16": {
+          "policy": "preserve-word",
+          "reading": "BF16"
+        },
+        "BGE": {
+          "policy": "trial",
+          "reading": "be ge e"
+        },
+        "BLEU": {
+          "policy": "preserve-word",
+          "reading": "BLEU"
+        },
+        "BM25": {
+          "policy": "preserve-word",
+          "reading": "BM25"
+        },
+        "BPE": {
+          "policy": "trial",
+          "reading": "be pe e"
+        },
+        "BY": {
+          "policy": "preserve-word",
+          "reading": "BY"
+        },
+        "Batching": {
+          "policy": "preserve-word",
+          "reading": "Batching"
+        },
+        "Benchmark": {
+          "policy": "preserve-word",
+          "reading": "Benchmark"
+        },
+        "Benchmark Contamination": {
+          "policy": "preserve-word",
+          "reading": "Benchmark Contamination"
+        },
+        "Bias": {
+          "policy": "preserve-word",
+          "reading": "Bias"
+        },
+        "C2PA": {
+          "policy": "trial",
+          "reading": "ce 2 pe a"
+        },
+        "CC": {
+          "policy": "preserve-word",
+          "reading": "CC"
+        },
+        "CLIP": {
+          "policy": "preserve-word",
+          "reading": "CLIP"
+        },
+        "CNCF": {
+          "policy": "trial",
+          "reading": "ce ene ce efe"
+        },
+        "CPU": {
+          "policy": "trial",
+          "reading": "ce pe u"
+        },
+        "CUDA": {
+          "policy": "preserve-word",
+          "reading": "CUDA"
+        },
+        "Catastrophic Forgetting": {
+          "policy": "preserve-word",
+          "reading": "Catastrophic Forgetting"
+        },
+        "Chain-of-Thought": {
+          "policy": "preserve-word",
+          "reading": "Chain-of-Thought"
+        },
+        "Chunking": {
+          "policy": "preserve-word",
+          "reading": "Chunking"
+        },
+        "CoT": {
+          "policy": "preserve-word",
+          "reading": "CoT"
+        },
+        "Computer Use": {
+          "policy": "preserve-word",
+          "reading": "Computer Use"
+        },
+        "Constitutional AI": {
+          "policy": "preserve-word",
+          "reading": "Constitutional AI"
+        },
+        "Content Moderation": {
+          "policy": "preserve-word",
+          "reading": "Content Moderation"
+        },
+        "Context Window": {
+          "policy": "preserve-word",
+          "reading": "Context Window"
+        },
+        "Contrastive Language-Image Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Contrastive Language-Image Pre-training"
+        },
+        "Cosine Similarity": {
+          "policy": "preserve-word",
+          "reading": "Cosine Similarity"
+        },
+        "DALL": {
+          "policy": "preserve-word",
+          "reading": "DALL"
+        },
+        "DCU": {
+          "policy": "trial",
+          "reading": "de ce u"
+        },
+        "DP": {
+          "policy": "trial",
+          "reading": "de pe"
+        },
+        "DPO": {
+          "policy": "trial",
+          "reading": "de pe o"
+        },
+        "Data Cleaning": {
+          "policy": "preserve-word",
+          "reading": "Data Cleaning"
+        },
+        "Data Poisoning": {
+          "policy": "preserve-word",
+          "reading": "Data Poisoning"
+        },
+        "Decoder-only Architecture": {
+          "policy": "preserve-word",
+          "reading": "Decoder-only Architecture"
+        },
+        "Deepfake": {
+          "policy": "preserve-word",
+          "reading": "Deepfake"
+        },
+        "Diffusion Model": {
+          "policy": "preserve-word",
+          "reading": "Diffusion Model"
+        },
+        "Direct Preference Optimization": {
+          "policy": "preserve-word",
+          "reading": "Direct Preference Optimization"
+        },
+        "Distributed Training": {
+          "policy": "preserve-word",
+          "reading": "Distributed Training"
+        },
+        "Domain Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Domain Adaptation"
+        },
+        "E5": {
+          "policy": "preserve-word",
+          "reading": "E5"
+        },
+        "EAGLE": {
+          "policy": "preserve-word",
+          "reading": "EAGLE"
+        },
+        "Edge Deployment": {
+          "policy": "preserve-word",
+          "reading": "Edge Deployment"
+        },
+        "Elo Rating": {
+          "policy": "preserve-word",
+          "reading": "Elo Rating"
+        },
+        "Embedding": {
+          "policy": "preserve-word",
+          "reading": "Embedding"
+        },
+        "Emergent Abilities": {
+          "policy": "preserve-word",
+          "reading": "Emergent Abilities"
+        },
+        "Encoder-Decoder Architecture": {
+          "policy": "preserve-word",
+          "reading": "Encoder-Decoder Architecture"
+        },
+        "FLAN": {
+          "policy": "preserve-word",
+          "reading": "FLAN"
+        },
+        "FLUX": {
+          "policy": "preserve-word",
+          "reading": "FLUX"
+        },
+        "FP16": {
+          "policy": "preserve-word",
+          "reading": "FP16"
+        },
+        "FSDP": {
+          "policy": "trial",
+          "reading": "efe ese de pe"
+        },
+        "Few-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "Few-shot Prompting"
+        },
+        "Foundation Model": {
+          "policy": "preserve-word",
+          "reading": "Foundation Model"
+        },
+        "Full-Parameter Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Full-Parameter Fine-Tuning"
+        },
+        "Function Calling": {
+          "policy": "preserve-word",
+          "reading": "Function Calling"
+        },
+        "GGML": {
+          "policy": "trial",
+          "reading": "ge ge eme ele"
+        },
+        "GGUF": {
+          "policy": "trial",
+          "reading": "ge ge u efe"
+        },
+        "GLM": {
+          "policy": "trial",
+          "reading": "ge ele eme"
+        },
+        "GPQA": {
+          "policy": "trial",
+          "reading": "ge pe cu a"
+        },
+        "GPT": {
+          "policy": "trial",
+          "reading": "ge pe te"
+        },
+        "GPTQ": {
+          "policy": "trial",
+          "reading": "ge pe te cu"
+        },
+        "GPU": {
+          "policy": "trial",
+          "reading": "ge pe u"
+        },
+        "GPU VRAM": {
+          "policy": "preserve-word",
+          "reading": "GPU VRAM"
+        },
+        "GQA": {
+          "policy": "trial",
+          "reading": "ge cu a"
+        },
+        "GRPO": {
+          "policy": "trial",
+          "reading": "ge erre pe o"
+        },
+        "GSM8K": {
+          "policy": "preserve-word",
+          "reading": "GSM8K"
+        },
+        "GUI": {
+          "policy": "trial",
+          "reading": "ge u i"
+        },
+        "Generalization": {
+          "policy": "preserve-word",
+          "reading": "Generalization"
+        },
+        "Generative AI": {
+          "policy": "preserve-word",
+          "reading": "Generative AI"
+        },
+        "Gradient Descent": {
+          "policy": "preserve-word",
+          "reading": "Gradient Descent"
+        },
+        "GraphRAG": {
+          "policy": "preserve-word",
+          "reading": "GraphRAG"
+        },
+        "Group Relative Policy Optimization": {
+          "policy": "preserve-word",
+          "reading": "Group Relative Policy Optimization"
+        },
+        "Grouped-Query Attention": {
+          "policy": "preserve-word",
+          "reading": "Grouped-Query Attention"
+        },
+        "Guardrails": {
+          "policy": "preserve-word",
+          "reading": "Guardrails"
+        },
+        "HAMi": {
+          "policy": "preserve-word",
+          "reading": "HAMi"
+        },
+        "HNSW": {
+          "policy": "trial",
+          "reading": "hache ene ese doble-uve"
+        },
+        "HTTP": {
+          "policy": "trial",
+          "reading": "hache te te pe"
+        },
+        "Hallucination": {
+          "policy": "preserve-word",
+          "reading": "Hallucination"
+        },
+        "Harmful Content": {
+          "policy": "preserve-word",
+          "reading": "Harmful Content"
+        },
+        "Hugging Face": {
+          "policy": "preserve-word",
+          "reading": "Hugging Face"
+        },
+        "Human Evaluation": {
+          "policy": "preserve-word",
+          "reading": "Human Evaluation"
+        },
+        "HumanEval": {
+          "policy": "preserve-word",
+          "reading": "HumanEval"
+        },
+        "HyDE": {
+          "policy": "preserve-word",
+          "reading": "HyDE"
+        },
+        "Hybrid Search": {
+          "policy": "preserve-word",
+          "reading": "Hybrid Search"
+        },
+        "Hypothetical Document Embeddings": {
+          "policy": "preserve-word",
+          "reading": "Hypothetical Document Embeddings"
+        },
+        "ICL": {
+          "policy": "trial",
+          "reading": "i ce ele"
+        },
+        "ID": {
+          "policy": "trial",
+          "reading": "i de"
+        },
+        "INT4": {
+          "policy": "preserve-word",
+          "reading": "INT4"
+        },
+        "INT8": {
+          "policy": "preserve-word",
+          "reading": "INT8"
+        },
+        "IPO": {
+          "policy": "trial",
+          "reading": "i pe o"
+        },
+        "ITL": {
+          "policy": "trial",
+          "reading": "i te ele"
+        },
+        "IVF": {
+          "policy": "trial",
+          "reading": "i uve efe"
+        },
+        "Image Understanding": {
+          "policy": "preserve-word",
+          "reading": "Image Understanding"
+        },
+        "In-context Learning": {
+          "policy": "preserve-word",
+          "reading": "In-context Learning"
+        },
+        "Inference Cost": {
+          "policy": "preserve-word",
+          "reading": "Inference Cost"
+        },
+        "Instruction Tuning": {
+          "policy": "preserve-word",
+          "reading": "Instruction Tuning"
+        },
+        "Interpretability": {
+          "policy": "preserve-word",
+          "reading": "Interpretability"
+        },
+        "JSON": {
+          "policy": "preserve-word",
+          "reading": "JSON"
+        },
+        "Jailbreak": {
+          "policy": "preserve-word",
+          "reading": "Jailbreak"
+        },
+        "Jetson": {
+          "policy": "pending",
+          "reading": "Jetson"
+        },
+        "KTO": {
+          "policy": "trial",
+          "reading": "ka te o"
+        },
+        "KV": {
+          "policy": "trial",
+          "reading": "ka uve"
+        },
+        "KV Cache": {
+          "policy": "preserve-word",
+          "reading": "KV Cache"
+        },
+        "Knowledge Base": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Base"
+        },
+        "Knowledge Distillation": {
+          "policy": "preserve-word",
+          "reading": "Knowledge Distillation"
+        },
+        "LIMA": {
+          "policy": "preserve-word",
+          "reading": "LIMA"
+        },
+        "LLM": {
+          "policy": "trial",
+          "reading": "ele ele eme"
+        },
+        "LLMOps": {
+          "policy": "preserve-word",
+          "reading": "LLMOps"
+        },
+        "LM": {
+          "policy": "trial",
+          "reading": "ele eme"
+        },
+        "Large Language Model": {
+          "policy": "preserve-word",
+          "reading": "Large Language Model"
+        },
+        "Latency": {
+          "policy": "preserve-word",
+          "reading": "Latency"
+        },
+        "Layer Normalization": {
+          "policy": "preserve-word",
+          "reading": "Layer Normalization"
+        },
+        "Learning Rate": {
+          "policy": "preserve-word",
+          "reading": "Learning Rate"
+        },
+        "License": {
+          "policy": "preserve-word",
+          "reading": "License"
+        },
+        "LoRA": {
+          "policy": "preserve-word",
+          "reading": "LoRA"
+        },
+        "Loss Function": {
+          "policy": "preserve-word",
+          "reading": "Loss Function"
+        },
+        "Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Low-Rank Adaptation"
+        },
+        "MATH": {
+          "policy": "preserve-word",
+          "reading": "MATH"
+        },
+        "MCP": {
+          "policy": "trial",
+          "reading": "eme ce pe"
+        },
+        "MHA": {
+          "policy": "trial",
+          "reading": "eme hache a"
+        },
+        "MIT": {
+          "policy": "preserve-word",
+          "reading": "MIT"
+        },
+        "ML": {
+          "policy": "trial",
+          "reading": "eme ele"
+        },
+        "MLA": {
+          "policy": "trial",
+          "reading": "eme ele a"
+        },
+        "MLOps": {
+          "policy": "preserve-word",
+          "reading": "MLOps"
+        },
+        "MLU": {
+          "policy": "trial",
+          "reading": "eme ele u"
+        },
+        "MMLU": {
+          "policy": "trial",
+          "reading": "eme eme ele u"
+        },
+        "MQA": {
+          "policy": "trial",
+          "reading": "eme cu a"
+        },
+        "Massive Multitask Language Understanding": {
+          "policy": "preserve-word",
+          "reading": "Massive Multitask Language Understanding"
+        },
+        "Memory": {
+          "policy": "preserve-word",
+          "reading": "Memory"
+        },
+        "Mixture of Experts": {
+          "policy": "preserve-word",
+          "reading": "Mixture of Experts"
+        },
+        "MoE": {
+          "policy": "preserve-word",
+          "reading": "MoE"
+        },
+        "Model Context Protocol": {
+          "policy": "preserve-word",
+          "reading": "Model Context Protocol"
+        },
+        "Model Merging": {
+          "policy": "preserve-word",
+          "reading": "Model Merging"
+        },
+        "Model Parallelism": {
+          "policy": "preserve-word",
+          "reading": "Model Parallelism"
+        },
+        "Model Weights": {
+          "policy": "preserve-word",
+          "reading": "Model Weights"
+        },
+        "Multi-Agent System": {
+          "policy": "preserve-word",
+          "reading": "Multi-Agent System"
+        },
+        "Multi-Head Attention": {
+          "policy": "preserve-word",
+          "reading": "Multi-Head Attention"
+        },
+        "Multimodal Alignment": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Alignment"
+        },
+        "Multimodal Model": {
+          "policy": "preserve-word",
+          "reading": "Multimodal Model"
+        },
+        "NC": {
+          "policy": "preserve-word",
+          "reading": "NC"
+        },
+        "NF4": {
+          "policy": "preserve-word",
+          "reading": "NF4"
+        },
+        "NPU": {
+          "policy": "trial",
+          "reading": "ene pe u"
+        },
+        "NVIDIA": {
+          "policy": "pending",
+          "reading": "NVIDIA"
+        },
+        "Nucleus Sampling": {
+          "policy": "preserve-word",
+          "reading": "Nucleus Sampling"
+        },
+        "OCR": {
+          "policy": "trial",
+          "reading": "o ce erre"
+        },
+        "ONNX": {
+          "policy": "pending",
+          "reading": "ONNX"
+        },
+        "ORPO": {
+          "policy": "trial",
+          "reading": "o erre pe o"
+        },
+        "Ollama": {
+          "policy": "preserve-word",
+          "reading": "Ollama"
+        },
+        "One-shot Prompting": {
+          "policy": "preserve-word",
+          "reading": "One-shot Prompting"
+        },
+        "Open Neural Network Exchange": {
+          "policy": "preserve-word",
+          "reading": "Open Neural Network Exchange"
+        },
+        "Open-Source": {
+          "policy": "preserve-word",
+          "reading": "Open-Source"
+        },
+        "Open-Weight Model": {
+          "policy": "preserve-word",
+          "reading": "Open-Weight Model"
+        },
+        "Optical Character Recognition": {
+          "policy": "preserve-word",
+          "reading": "Optical Character Recognition"
+        },
+        "Overfitting": {
+          "policy": "preserve-word",
+          "reading": "Overfitting"
+        },
+        "PC": {
+          "policy": "trial",
+          "reading": "pe ce"
+        },
+        "PEFT": {
+          "policy": "trial",
+          "reading": "pe e efe te"
+        },
+        "PII": {
+          "policy": "trial",
+          "reading": "pe i i"
+        },
+        "PP": {
+          "policy": "trial",
+          "reading": "pe pe"
+        },
+        "PPL": {
+          "policy": "trial",
+          "reading": "pe pe ele"
+        },
+        "PPO": {
+          "policy": "trial",
+          "reading": "pe pe o"
+        },
+        "PTQ": {
+          "policy": "trial",
+          "reading": "pe te cu"
+        },
+        "PagedAttention": {
+          "policy": "preserve-word",
+          "reading": "PagedAttention"
+        },
+        "Parameter-Efficient Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Parameter-Efficient Fine-Tuning"
+        },
+        "Parameters": {
+          "policy": "preserve-word",
+          "reading": "Parameters"
+        },
+        "Perplexity": {
+          "policy": "preserve-word",
+          "reading": "Perplexity"
+        },
+        "Planning": {
+          "policy": "preserve-word",
+          "reading": "Planning"
+        },
+        "Positional Encoding": {
+          "policy": "preserve-word",
+          "reading": "Positional Encoding"
+        },
+        "Post-training": {
+          "policy": "preserve-word",
+          "reading": "Post-training"
+        },
+        "Pre-training": {
+          "policy": "preserve-word",
+          "reading": "Pre-training"
+        },
+        "Privacy Leakage": {
+          "policy": "preserve-word",
+          "reading": "Privacy Leakage"
+        },
+        "Prompt": {
+          "policy": "preserve-word",
+          "reading": "Prompt"
+        },
+        "Prompt Caching": {
+          "policy": "preserve-word",
+          "reading": "Prompt Caching"
+        },
+        "Prompt Engineering": {
+          "policy": "preserve-word",
+          "reading": "Prompt Engineering"
+        },
+        "Prompt Injection": {
+          "policy": "preserve-word",
+          "reading": "Prompt Injection"
+        },
+        "Prompt Template": {
+          "policy": "preserve-word",
+          "reading": "Prompt Template"
+        },
+        "Prompt Tuning": {
+          "policy": "preserve-word",
+          "reading": "Prompt Tuning"
+        },
+        "Q2": {
+          "policy": "preserve-word",
+          "reading": "Q2"
+        },
+        "Q8": {
+          "policy": "preserve-word",
+          "reading": "Q8"
+        },
+        "QAT": {
+          "policy": "trial",
+          "reading": "cu a te"
+        },
+        "QLoRA": {
+          "policy": "preserve-word",
+          "reading": "QLoRA"
+        },
+        "Quantization": {
+          "policy": "preserve-word",
+          "reading": "Quantization"
+        },
+        "Quantized Low-Rank Adaptation": {
+          "policy": "preserve-word",
+          "reading": "Quantized Low-Rank Adaptation"
+        },
+        "R1": {
+          "policy": "preserve-word",
+          "reading": "R1"
+        },
+        "RAG": {
+          "policy": "preserve-word",
+          "reading": "RAG"
+        },
+        "RL": {
+          "policy": "trial",
+          "reading": "erre ele"
+        },
+        "RLAIF": {
+          "policy": "trial",
+          "reading": "erre ele a i efe"
+        },
+        "RLHF": {
+          "policy": "trial",
+          "reading": "erre ele hache efe"
+        },
+        "RM": {
+          "policy": "trial",
+          "reading": "erre eme"
+        },
+        "RNN": {
+          "policy": "trial",
+          "reading": "erre ene ene"
+        },
+        "ROUGE": {
+          "policy": "preserve-word",
+          "reading": "ROUGE"
+        },
+        "RPM": {
+          "policy": "trial",
+          "reading": "erre pe eme"
+        },
+        "RRF": {
+          "policy": "trial",
+          "reading": "erre erre efe"
+        },
+        "RTF": {
+          "policy": "trial",
+          "reading": "erre te efe"
+        },
+        "Rate Limit": {
+          "policy": "preserve-word",
+          "reading": "Rate Limit"
+        },
+        "ReAct": {
+          "policy": "preserve-word",
+          "reading": "ReAct"
+        },
+        "Reasoning + Acting": {
+          "policy": "preserve-word",
+          "reading": "Reasoning + Acting"
+        },
+        "Reasoning Model": {
+          "policy": "preserve-word",
+          "reading": "Reasoning Model"
+        },
+        "Recall": {
+          "policy": "preserve-word",
+          "reading": "Recall"
+        },
+        "Red Teaming": {
+          "policy": "preserve-word",
+          "reading": "Red Teaming"
+        },
+        "Reflection": {
+          "policy": "preserve-word",
+          "reading": "Reflection"
+        },
+        "Reinforcement Learning from Human Feedback": {
+          "policy": "preserve-word",
+          "reading": "Reinforcement Learning from Human Feedback"
+        },
+        "Reranking": {
+          "policy": "preserve-word",
+          "reading": "Reranking"
+        },
+        "Residual Connection": {
+          "policy": "preserve-word",
+          "reading": "Residual Connection"
+        },
+        "Retrieval-Augmented Generation": {
+          "policy": "preserve-word",
+          "reading": "Retrieval-Augmented Generation"
+        },
+        "Reward Model": {
+          "policy": "preserve-word",
+          "reading": "Reward Model"
+        },
+        "Role-playing": {
+          "policy": "preserve-word",
+          "reading": "Role-playing"
+        },
+        "SFT": {
+          "policy": "trial",
+          "reading": "ese efe te"
+        },
+        "SGD": {
+          "policy": "trial",
+          "reading": "ese ge de"
+        },
+        "SLERP": {
+          "policy": "preserve-word",
+          "reading": "SLERP"
+        },
+        "SWE": {
+          "policy": "preserve-word",
+          "reading": "SWE"
+        },
+        "Sampling": {
+          "policy": "preserve-word",
+          "reading": "Sampling"
+        },
+        "Scaling Law": {
+          "policy": "preserve-word",
+          "reading": "Scaling Law"
+        },
+        "Self-Attention": {
+          "policy": "preserve-word",
+          "reading": "Self-Attention"
+        },
+        "Self-Consistency": {
+          "policy": "preserve-word",
+          "reading": "Self-Consistency"
+        },
+        "Semantic Search": {
+          "policy": "preserve-word",
+          "reading": "Semantic Search"
+        },
+        "Speculative Decoding": {
+          "policy": "preserve-word",
+          "reading": "Speculative Decoding"
+        },
+        "Structured Output": {
+          "policy": "preserve-word",
+          "reading": "Structured Output"
+        },
+        "Supervised Fine-Tuning": {
+          "policy": "preserve-word",
+          "reading": "Supervised Fine-Tuning"
+        },
+        "Synthetic Data": {
+          "policy": "preserve-word",
+          "reading": "Synthetic Data"
+        },
+        "System Prompt": {
+          "policy": "preserve-word",
+          "reading": "System Prompt"
+        },
+        "T5": {
+          "policy": "preserve-word",
+          "reading": "T5"
+        },
+        "TIES": {
+          "policy": "preserve-word",
+          "reading": "TIES"
+        },
+        "TP": {
+          "policy": "trial",
+          "reading": "te pe"
+        },
+        "TPM": {
+          "policy": "trial",
+          "reading": "te pe eme"
+        },
+        "TPOT": {
+          "policy": "trial",
+          "reading": "te pe o te"
+        },
+        "TTFT": {
+          "policy": "trial",
+          "reading": "te te efe te"
+        },
+        "TTS": {
+          "policy": "trial",
+          "reading": "te te ese"
+        },
+        "Temperature": {
+          "policy": "preserve-word",
+          "reading": "Temperature"
+        },
+        "TensorRT": {
+          "policy": "pending",
+          "reading": "TensorRT"
+        },
+        "Text-to-Image": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Image"
+        },
+        "Text-to-Speech": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Speech"
+        },
+        "Text-to-Video": {
+          "policy": "preserve-word",
+          "reading": "Text-to-Video"
+        },
+        "Throughput": {
+          "policy": "preserve-word",
+          "reading": "Throughput"
+        },
+        "ToT": {
+          "policy": "preserve-word",
+          "reading": "ToT"
+        },
+        "Token": {
+          "policy": "preserve-word",
+          "reading": "Token"
+        },
+        "Tokenizer": {
+          "policy": "preserve-word",
+          "reading": "Tokenizer"
+        },
+        "Tool Use": {
+          "policy": "preserve-word",
+          "reading": "Tool Use"
+        },
+        "Top-p": {
+          "policy": "preserve-word",
+          "reading": "Top-p"
+        },
+        "Transformer": {
+          "policy": "preserve-word",
+          "reading": "Transformer"
+        },
+        "Tree of Thoughts": {
+          "policy": "preserve-word",
+          "reading": "Tree of Thoughts"
+        },
+        "V3": {
+          "policy": "preserve-word",
+          "reading": "V3"
+        },
+        "VITS": {
+          "policy": "preserve-word",
+          "reading": "VITS"
+        },
+        "VL": {
+          "policy": "trial",
+          "reading": "uve ele"
+        },
+        "VLM": {
+          "policy": "trial",
+          "reading": "uve ele eme"
+        },
+        "VRAM": {
+          "policy": "trial",
+          "reading": "uve erre a eme"
+        },
+        "Vector Database": {
+          "policy": "preserve-word",
+          "reading": "Vector Database"
+        },
+        "Vision-Language Model": {
+          "policy": "preserve-word",
+          "reading": "Vision-Language Model"
+        },
+        "Voice Cloning": {
+          "policy": "preserve-word",
+          "reading": "Voice Cloning"
+        },
+        "Workflow Orchestration": {
+          "policy": "preserve-word",
+          "reading": "Workflow Orchestration"
+        },
+        "XTTS": {
+          "policy": "trial",
+          "reading": "equis te te ese"
+        },
+        "Zero-shot": {
+          "policy": "preserve-word",
+          "reading": "Zero-shot"
+        },
+        "vGPU": {
+          "policy": "preserve-word",
+          "reading": "vGPU"
+        },
+        "vLLM": {
+          "policy": "preserve-word",
+          "reading": "vLLM"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "wetext": {
+    "repository": "https://github.com/wenet-e2e/WeTextProcessing",
+    "revision": "039007e6b819bd40c4c4a0644f3939da1da47e44",
+    "files": {
+      "tn/chinese/data/math/operator.tsv": {
+        "sha256": "7a79547f591ad215b279fec278da8bee2f5e71cb442fa3abf4807f2f467c63ea",
+        "bytes": 101
+      },
+      "tn/chinese/data/math/operator_unambiguous.tsv": {
+        "sha256": "43676b53f7d636d333cad7550933f4163465056fe16d1da3d51f8771bb1676e4",
+        "bytes": 80
+      },
+      "tn/chinese/data/measure/units_en.tsv": {
+        "sha256": "5e372271d92173040f3e4884093df7d3aa6ac9177507def5061414689514c8a9",
+        "bytes": 1150
+      },
+      "tn/chinese/data/measure/units_zh.tsv": {
+        "sha256": "ac6eb534802001c1c94d55dfd3510ad0a2c1d60a21e956af41a776696666af96",
+        "bytes": 1161
+      },
+      "LICENSE": {
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "bytes": 11357
+      },
+      "tn/chinese/rules/math.py": {
+        "sha256": "fe2834d50d76f10ed65447c5fe7f45dca30c2c428090c1b0550549ab43cea6a7",
+        "bytes": 1777
+      },
+      "tn/chinese/rules/fraction.py": {
+        "sha256": "8a73f8da015e31304291b728da9f06fbe2a7e9be18e223a22258d8ec479accf5",
+        "bytes": 1593
+      },
+      "tn/chinese/rules/measure.py": {
+        "sha256": "c3d3db7c841ba83490ecee3bd19a1e09bc0f3c8922e0d41ed037326caec183b2",
+        "bytes": 3286
+      }
+    }
+  },
+  "glossary": {
+    "repository": "https://github.com/JingHao-Leon/ai-llm-glossary",
+    "revision": "abc74818e14884f0e28fe6465c2328c68f9aae53",
+    "files": {
+      "docs/agents.md": {
+        "sha256": "7333a736115ed45fb3b8f7b84ac9e3473f8b844349c187feb6fb3f5e5b3e39e1",
+        "bytes": 6946
+      },
+      "docs/basic-concepts.md": {
+        "sha256": "3afd642e330a356f61229d915efed70b6ecb028ee1a502225c8d19e1c26cddef",
+        "bytes": 7800
+      },
+      "docs/ecosystem-engineering.md": {
+        "sha256": "2f0295de125c7ee2acf6bb9be2f787f0b3e9f143f6ed2915b1bc3ae16f22a87f",
+        "bytes": 6172
+      },
+      "docs/evaluation-benchmarks.md": {
+        "sha256": "f35df00494517ac7f8109387958c8413ef01efacb7de3e7195f9d671b7b3c356",
+        "bytes": 5347
+      },
+      "docs/fine-tuning.md": {
+        "sha256": "100a23aac1a6d695a621e3338093feec9a742494f32cb80453a59b77ee9beb30",
+        "bytes": 6119
+      },
+      "docs/inference-deployment.md": {
+        "sha256": "a93e1a2f08f11b20742cf4c0f131aaa664902bf55805b4c54c578d060c0610f4",
+        "bytes": 6406
+      },
+      "docs/model-architecture.md": {
+        "sha256": "cf773f13e53a82353ac19f22321b9a70fd18a1d8a84393d761ed445f64439ef0",
+        "bytes": 7123
+      },
+      "docs/multimodal.md": {
+        "sha256": "1aa4a7f614585c4799c61c0e77c08283a78ab9f3f70a20ef01019ddff95220f2",
+        "bytes": 6139
+      },
+      "docs/prompt-engineering.md": {
+        "sha256": "87e48bd9be6e86b254c04cd9e10ffd4135885a9b546d8f690504c189bc0cb932",
+        "bytes": 7256
+      },
+      "docs/rag-retrieval.md": {
+        "sha256": "f32b2115898768a0636650ec6a8ea8da59994ddc779d8ef07363decef82de4fe",
+        "bytes": 6837
+      },
+      "docs/safety-alignment.md": {
+        "sha256": "3561ca934ac04f809b4128ad7779b4799740c4e07517dbbb4a45cb05ac0ff664",
+        "bytes": 6667
+      },
+      "docs/training.md": {
+        "sha256": "9de13b000680355502b8b0aebacd649a956d5af4882db942c3a5738cbbb660c7",
+        "bytes": 8508
+      },
+      "README.md": {
+        "sha256": "13d41b514298db563942debc9de2cc497c03f504a1a18f0177a9bb777450fde8",
+        "bytes": 9602
+      },
+      "LICENSE": {
+        "sha256": "bafcc1ea5c7fc5d1494e34dd9b4d34b8140173709eca7219555d4673016413f7",
+        "bytes": 1069
+      }
+    }
+  },
+  "cmudict": {
+    "repository": "https://github.com/cmusphinx/cmudict",
+    "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+    "files": {
+      "cmudict.dict": {
+        "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "bytes": 3618488
+      },
+      "LICENSE": {
+        "sha256": "bd4ce8e44170a5f9f481310ca85c51de3c4f851a65e679b40e603b143bd3542a",
+        "bytes": 1754
+      }
+    }
+  }
+}

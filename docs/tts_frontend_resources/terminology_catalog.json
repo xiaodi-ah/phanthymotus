@@ -1,0 +1,1572 @@
+{
+  "source_terms": 148,
+  "categories": 12,
+  "entries": [
+    {
+      "category": "agents",
+      "heading": "智能体（Agent）",
+      "english": "Agent",
+      "terms": [
+        "Agent",
+        "AI"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "工具调用（Tool Use）",
+      "english": "Tool Use",
+      "terms": [
+        "Tool Use",
+        "API",
+        "LLM",
+        "MCP"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "计算机使用（Computer Use）",
+      "english": "Computer Use",
+      "terms": [
+        "Computer Use",
+        "AI",
+        "API",
+        "VLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "Function Calling（函数调用）",
+      "english": "Function Calling",
+      "terms": [
+        "Function Calling",
+        "JSON"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "MCP（模型上下文协议）",
+      "english": "Model Context Protocol (MCP)",
+      "terms": [
+        "Model Context Protocol",
+        "MCP"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "ReAct",
+      "english": "ReAct (Reasoning + Acting)",
+      "terms": [
+        "ReAct",
+        "Reasoning + Acting"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "多智能体（Multi-Agent）",
+      "english": "Multi-Agent System",
+      "terms": [
+        "Multi-Agent System"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "规划（Planning）",
+      "english": "Planning",
+      "terms": [
+        "Planning"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "记忆（Memory）",
+      "english": "Memory",
+      "terms": [
+        "Memory",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "反思（Reflection）",
+      "english": "Reflection",
+      "terms": [
+        "Reflection"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "自主性（Autonomy）",
+      "english": "Autonomy",
+      "terms": [
+        "Autonomy"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "agents",
+      "heading": "工作流编排（Workflow Orchestration）",
+      "english": "Workflow Orchestration",
+      "terms": [
+        "Workflow Orchestration",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/agents.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "大语言模型（LLM）",
+      "english": "Large Language Model (LLM)",
+      "terms": [
+        "Large Language Model",
+        "LLM",
+        "GPT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "Token（词元）",
+      "english": "Token",
+      "terms": [
+        "Token",
+        "BPE"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "参数（Parameters）",
+      "english": "Parameters",
+      "terms": [
+        "Parameters"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "上下文窗口（Context Window）",
+      "english": "Context Window",
+      "terms": [
+        "Context Window",
+        "KV",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "涌现能力（Emergent Abilities）",
+      "english": "Emergent Abilities",
+      "terms": [
+        "Emergent Abilities"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "上下文学习（In-context Learning）",
+      "english": "In-context Learning (ICL)",
+      "terms": [
+        "In-context Learning",
+        "ICL"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "幻觉（Hallucination）",
+      "english": "Hallucination",
+      "terms": [
+        "Hallucination",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "推理模型（Reasoning Model）",
+      "english": "Reasoning Model",
+      "terms": [
+        "Reasoning Model",
+        "GRPO",
+        "R1"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "基础模型（Foundation Model）",
+      "english": "Foundation Model",
+      "terms": [
+        "Foundation Model",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "生成式人工智能（Generative AI）",
+      "english": "Generative AI",
+      "terms": [
+        "Generative AI",
+        "AI",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "通用人工智能（AGI）",
+      "english": "Artificial General Intelligence (AGI)",
+      "terms": [
+        "Artificial General Intelligence",
+        "AGI"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "温度（Temperature）",
+      "english": "Temperature",
+      "terms": [
+        "Temperature"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "Top-p（核采样）",
+      "english": "Top-p (Nucleus Sampling)",
+      "terms": [
+        "Top-p",
+        "Nucleus Sampling"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "basic-concepts",
+      "heading": "采样（Sampling）",
+      "english": "Sampling",
+      "terms": [
+        "Sampling"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/basic-concepts.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "开源模型（Open-Source / Open-Weight Model）",
+      "english": "Open-Source / Open-Weight Model",
+      "terms": [
+        "Open-Source",
+        "Open-Weight Model",
+        "GLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "API（应用程序接口）",
+      "english": "API (Application Programming Interface)",
+      "terms": [
+        "API",
+        "Application Programming Interface",
+        "HTTP"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "推理成本（Inference Cost）",
+      "english": "Inference Cost",
+      "terms": [
+        "Inference Cost"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "Hugging Face",
+      "english": "Hugging Face",
+      "terms": [
+        "Hugging Face",
+        "AI",
+        "LLM",
+        "PEFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "Ollama",
+      "english": "Ollama",
+      "terms": [
+        "Ollama",
+        "API",
+        "GGUF",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "模型权重（Model Weights）",
+      "english": "Model Weights",
+      "terms": [
+        "Model Weights",
+        "GGUF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "许可证（License）",
+      "english": "License",
+      "terms": [
+        "License",
+        "BY",
+        "CC",
+        "MIT",
+        "NC"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "MLOps / LLMOps",
+      "english": "MLOps / LLMOps",
+      "terms": [
+        "MLOps",
+        "LLMOps"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "GPU 显存（VRAM）",
+      "english": "GPU VRAM",
+      "terms": [
+        "GPU VRAM",
+        "FP16",
+        "GPU",
+        "KV",
+        "VRAM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "提示缓存（Prompt Caching）",
+      "english": "Prompt Caching",
+      "terms": [
+        "Prompt Caching",
+        "API",
+        "KV"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "ecosystem-engineering",
+      "heading": "速率限制（Rate Limit）",
+      "english": "Rate Limit",
+      "terms": [
+        "Rate Limit",
+        "API",
+        "RPM",
+        "TPM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/ecosystem-engineering.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "基准测试（Benchmark）",
+      "english": "Benchmark",
+      "terms": [
+        "Benchmark",
+        "MMLU"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "MMLU",
+      "english": "Massive Multitask Language Understanding (MMLU)",
+      "terms": [
+        "Massive Multitask Language Understanding",
+        "MMLU",
+        "GPQA"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "HumanEval",
+      "english": "HumanEval",
+      "terms": [
+        "HumanEval",
+        "SWE"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "困惑度（Perplexity）",
+      "english": "Perplexity (PPL)",
+      "terms": [
+        "Perplexity",
+        "PPL"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "基准污染（Benchmark Contamination）",
+      "english": "Benchmark Contamination",
+      "terms": [
+        "Benchmark Contamination"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "GSM8K",
+      "english": "GSM8K",
+      "terms": [
+        "GSM8K",
+        "AIME",
+        "MATH"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "Elo 评分（Elo Rating）",
+      "english": "Elo Rating",
+      "terms": [
+        "Elo Rating"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "人工评估（Human Evaluation）",
+      "english": "Human Evaluation",
+      "terms": [
+        "Human Evaluation",
+        "GPT",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "BLEU 与 ROUGE",
+      "english": "BLEU / ROUGE",
+      "terms": [
+        "BLEU",
+        "ROUGE"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "evaluation-benchmarks",
+      "heading": "泛化能力（Generalization）",
+      "english": "Generalization",
+      "terms": [
+        "Generalization"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/evaluation-benchmarks.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "监督微调（SFT）",
+      "english": "Supervised Fine-Tuning (SFT)",
+      "terms": [
+        "Supervised Fine-Tuning",
+        "SFT",
+        "LIMA",
+        "RLHF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "LoRA（低秩自适应）",
+      "english": "Low-Rank Adaptation (LoRA)",
+      "terms": [
+        "Low-Rank Adaptation",
+        "LoRA",
+        "PEFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "QLoRA（量化低秩微调）",
+      "english": "Quantized Low-Rank Adaptation (QLoRA)",
+      "terms": [
+        "Quantized Low-Rank Adaptation",
+        "QLoRA",
+        "NF4"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "PEFT（参数高效微调）",
+      "english": "Parameter-Efficient Fine-Tuning (PEFT)",
+      "terms": [
+        "Parameter-Efficient Fine-Tuning",
+        "PEFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "全参微调（Full-Parameter Fine-Tuning）",
+      "english": "Full-Parameter Fine-Tuning",
+      "terms": [
+        "Full-Parameter Fine-Tuning",
+        "PEFT",
+        "SFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "知识蒸馏（Distillation）",
+      "english": "Knowledge Distillation",
+      "terms": [
+        "Knowledge Distillation",
+        "R1"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "指令微调（Instruction Tuning）",
+      "english": "Instruction Tuning",
+      "terms": [
+        "Instruction Tuning",
+        "FLAN",
+        "SFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "Adapter（适配器）",
+      "english": "Adapter",
+      "terms": [
+        "Adapter",
+        "PEFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "提示微调（Prompt Tuning）",
+      "english": "Prompt Tuning",
+      "terms": [
+        "Prompt Tuning"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "领域适配（Domain Adaptation）",
+      "english": "Domain Adaptation",
+      "terms": [
+        "Domain Adaptation",
+        "RAG",
+        "SFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "fine-tuning",
+      "heading": "模型合并（Model Merging）",
+      "english": "Model Merging",
+      "terms": [
+        "Model Merging",
+        "SLERP",
+        "TIES"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/fine-tuning.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "量化（Quantization）",
+      "english": "Quantization",
+      "terms": [
+        "Quantization",
+        "AWQ",
+        "BF16",
+        "FP16",
+        "GGUF",
+        "GPTQ",
+        "INT4",
+        "INT8",
+        "PTQ",
+        "QAT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "KV Cache（键值缓存）",
+      "english": "KV Cache",
+      "terms": [
+        "KV Cache",
+        "GQA",
+        "KV"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "vLLM",
+      "english": "vLLM",
+      "terms": [
+        "vLLM",
+        "API",
+        "KV"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "批处理（Batching）",
+      "english": "Batching",
+      "terms": [
+        "Batching",
+        "GPU"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "延迟（Latency）",
+      "english": "Latency",
+      "terms": [
+        "Latency",
+        "ITL",
+        "TPOT",
+        "TTFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "吞吐（Throughput）",
+      "english": "Throughput",
+      "terms": [
+        "Throughput"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "GGUF",
+      "english": "GGUF",
+      "terms": [
+        "GGUF",
+        "CPU",
+        "GGML",
+        "LM",
+        "Q2",
+        "Q8"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "ONNX",
+      "english": "ONNX (Open Neural Network Exchange)",
+      "terms": [
+        "ONNX",
+        "Open Neural Network Exchange"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "投机解码（Speculative Decoding）",
+      "english": "Speculative Decoding",
+      "terms": [
+        "Speculative Decoding",
+        "EAGLE"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "模型并行（Model Parallelism）",
+      "english": "Model Parallelism",
+      "terms": [
+        "Model Parallelism",
+        "GPU"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "边缘部署（Edge Deployment）",
+      "english": "Edge Deployment",
+      "terms": [
+        "Edge Deployment",
+        "GGUF",
+        "ML",
+        "ONNX",
+        "PC"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "inference-deployment",
+      "heading": "PagedAttention",
+      "english": "PagedAttention",
+      "terms": [
+        "PagedAttention",
+        "KV",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/inference-deployment.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "Transformer",
+      "english": "Transformer",
+      "terms": [
+        "Transformer",
+        "LLM",
+        "RNN"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "注意力机制（Attention Mechanism）",
+      "english": "Attention Mechanism",
+      "terms": [
+        "Attention Mechanism"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "自注意力（Self-Attention）",
+      "english": "Self-Attention",
+      "terms": [
+        "Self-Attention",
+        "KV"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "多头注意力（Multi-Head Attention）",
+      "english": "Multi-Head Attention (MHA)",
+      "terms": [
+        "Multi-Head Attention",
+        "MHA",
+        "GQA",
+        "KV",
+        "MQA"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "GQA（分组查询注意力）",
+      "english": "Grouped-Query Attention (GQA)",
+      "terms": [
+        "Grouped-Query Attention",
+        "GQA",
+        "KV",
+        "MHA",
+        "MLA",
+        "MQA"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "混合专家模型（MoE）",
+      "english": "Mixture of Experts (MoE)",
+      "terms": [
+        "Mixture of Experts",
+        "MoE",
+        "V3"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "位置编码（Positional Encoding）",
+      "english": "Positional Encoding",
+      "terms": [
+        "Positional Encoding"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "层归一化（Layer Normalization）",
+      "english": "Layer Normalization",
+      "terms": [
+        "Layer Normalization",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "残差连接（Residual Connection）",
+      "english": "Residual Connection",
+      "terms": [
+        "Residual Connection"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "分词器（Tokenizer）",
+      "english": "Tokenizer",
+      "terms": [
+        "Tokenizer",
+        "BPE",
+        "ID"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "词嵌入（Embedding）",
+      "english": "Embedding",
+      "terms": [
+        "Embedding",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "解码器架构（Decoder-only Architecture）",
+      "english": "Decoder-only Architecture",
+      "terms": [
+        "Decoder-only Architecture",
+        "BERT",
+        "GPT",
+        "LLM",
+        "T5"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "model-architecture",
+      "heading": "编码器-解码器架构（Encoder-Decoder Architecture）",
+      "english": "Encoder-Decoder Architecture",
+      "terms": [
+        "Encoder-Decoder Architecture",
+        "BART",
+        "T5"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/model-architecture.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "多模态模型（Multimodal Model）",
+      "english": "Multimodal Model",
+      "terms": [
+        "Multimodal Model",
+        "AI",
+        "GPT",
+        "VL",
+        "VLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "VLM（视觉语言模型）",
+      "english": "Vision-Language Model (VLM)",
+      "terms": [
+        "Vision-Language Model",
+        "VLM",
+        "CLIP",
+        "GPT",
+        "GUI",
+        "VL"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "文生图（Text-to-Image）",
+      "english": "Text-to-Image",
+      "terms": [
+        "Text-to-Image",
+        "AI",
+        "DALL",
+        "FLUX"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "文生视频（Text-to-Video）",
+      "english": "Text-to-Video",
+      "terms": [
+        "Text-to-Video",
+        "AI"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "TTS（文本转语音）",
+      "english": "Text-to-Speech (TTS)",
+      "terms": [
+        "Text-to-Speech",
+        "TTS",
+        "GPT",
+        "VITS",
+        "XTTS"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "ASR（自动语音识别）",
+      "english": "Automatic Speech Recognition (ASR)",
+      "terms": [
+        "Automatic Speech Recognition",
+        "ASR",
+        "TTS"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "语音克隆（Voice Cloning）",
+      "english": "Voice Cloning",
+      "terms": [
+        "Voice Cloning",
+        "TTS"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "多模态对齐（Multimodal Alignment）",
+      "english": "Multimodal Alignment",
+      "terms": [
+        "Multimodal Alignment",
+        "CLIP",
+        "VLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "扩散模型（Diffusion Model）",
+      "english": "Diffusion Model",
+      "terms": [
+        "Diffusion Model",
+        "DALL",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "CLIP",
+      "english": "CLIP (Contrastive Language-Image Pre-training)",
+      "terms": [
+        "CLIP",
+        "Contrastive Language-Image Pre-training",
+        "VLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "图像理解（Image Understanding）",
+      "english": "Image Understanding",
+      "terms": [
+        "Image Understanding",
+        "OCR",
+        "VLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "multimodal",
+      "heading": "OCR（光学字符识别）",
+      "english": "Optical Character Recognition (OCR)",
+      "terms": [
+        "Optical Character Recognition",
+        "OCR"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/multimodal.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "提示工程（Prompt Engineering）",
+      "english": "Prompt Engineering",
+      "terms": [
+        "Prompt Engineering"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "Prompt（提示词）",
+      "english": "Prompt",
+      "terms": [
+        "Prompt"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "System Prompt（系统提示词）",
+      "english": "System Prompt",
+      "terms": [
+        "System Prompt"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "Few-shot（少样本提示）",
+      "english": "Few-shot Prompting",
+      "terms": [
+        "Few-shot Prompting"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "One-shot（单样本提示）",
+      "english": "One-shot Prompting",
+      "terms": [
+        "One-shot Prompting"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "Zero-shot（零样本）",
+      "english": "Zero-shot",
+      "terms": [
+        "Zero-shot"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "CoT（思维链）",
+      "english": "Chain-of-Thought (CoT)",
+      "terms": [
+        "Chain-of-Thought",
+        "CoT",
+        "R1"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "提示注入（Prompt Injection）",
+      "english": "Prompt Injection",
+      "terms": [
+        "Prompt Injection"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "角色设定（Role-playing）",
+      "english": "Role-playing",
+      "terms": [
+        "Role-playing"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "提示模板（Prompt Template）",
+      "english": "Prompt Template",
+      "terms": [
+        "Prompt Template"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "思维树（Tree of Thoughts, ToT）",
+      "english": "Tree of Thoughts (ToT)",
+      "terms": [
+        "Tree of Thoughts",
+        "ToT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "自我一致性（Self-Consistency）",
+      "english": "Self-Consistency",
+      "terms": [
+        "Self-Consistency"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "prompt-engineering",
+      "heading": "结构化输出（Structured Output）",
+      "english": "Structured Output",
+      "terms": [
+        "Structured Output",
+        "JSON",
+        "LLM"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/prompt-engineering.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "RAG（检索增强生成）",
+      "english": "Retrieval-Augmented Generation (RAG)",
+      "terms": [
+        "Retrieval-Augmented Generation",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "Embedding（嵌入）",
+      "english": "Embedding",
+      "terms": [
+        "Embedding",
+        "BGE",
+        "E5",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "向量数据库（Vector Database）",
+      "english": "Vector Database",
+      "terms": [
+        "Vector Database",
+        "ANN",
+        "HNSW",
+        "IVF",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "Chunking（文本切分）",
+      "english": "Chunking",
+      "terms": [
+        "Chunking",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "重排序（Reranking）",
+      "english": "Reranking",
+      "terms": [
+        "Reranking",
+        "BGE",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "混合检索（Hybrid Search）",
+      "english": "Hybrid Search",
+      "terms": [
+        "Hybrid Search",
+        "BM25",
+        "RAG",
+        "RRF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "余弦相似度（Cosine Similarity）",
+      "english": "Cosine Similarity",
+      "terms": [
+        "Cosine Similarity",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "召回率（Recall）",
+      "english": "Recall",
+      "terms": [
+        "Recall",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "语义搜索（Semantic Search）",
+      "english": "Semantic Search",
+      "terms": [
+        "Semantic Search",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "知识库（Knowledge Base）",
+      "english": "Knowledge Base",
+      "terms": [
+        "Knowledge Base",
+        "LLM",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "GraphRAG",
+      "english": "GraphRAG",
+      "terms": [
+        "GraphRAG",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "Agentic RAG",
+      "english": "Agentic RAG",
+      "terms": [
+        "Agentic RAG",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "rag-retrieval",
+      "heading": "HyDE（假设性文档嵌入）",
+      "english": "Hypothetical Document Embeddings (HyDE)",
+      "terms": [
+        "Hypothetical Document Embeddings",
+        "HyDE",
+        "RAG"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/rag-retrieval.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "对齐（Alignment）",
+      "english": "Alignment",
+      "terms": [
+        "Alignment",
+        "AI",
+        "DPO",
+        "RLHF",
+        "SFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "越狱（Jailbreak）",
+      "english": "Jailbreak",
+      "terms": [
+        "Jailbreak"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "护栏（Guardrails）",
+      "english": "Guardrails",
+      "terms": [
+        "Guardrails",
+        "PII"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "红队测试（Red Teaming）",
+      "english": "Red Teaming",
+      "terms": [
+        "Red Teaming",
+        "AI"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "有害内容（Harmful Content）",
+      "english": "Harmful Content",
+      "terms": [
+        "Harmful Content"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "深度伪造（Deepfake）",
+      "english": "Deepfake",
+      "terms": [
+        "Deepfake",
+        "AI",
+        "C2PA"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "偏见（Bias）",
+      "english": "Bias",
+      "terms": [
+        "Bias"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "隐私泄露（Privacy Leakage）",
+      "english": "Privacy Leakage",
+      "terms": [
+        "Privacy Leakage",
+        "API",
+        "PII"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "数据投毒（Data Poisoning）",
+      "english": "Data Poisoning",
+      "terms": [
+        "Data Poisoning"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "可解释性（Interpretability）",
+      "english": "Interpretability",
+      "terms": [
+        "Interpretability"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "宪法 AI（Constitutional AI）",
+      "english": "Constitutional AI",
+      "terms": [
+        "Constitutional AI",
+        "AI",
+        "RLAIF",
+        "RLHF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "safety-alignment",
+      "heading": "内容审核（Content Moderation）",
+      "english": "Content Moderation",
+      "terms": [
+        "Content Moderation",
+        "AI",
+        "API"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/safety-alignment.md"
+    },
+    {
+      "category": "training",
+      "heading": "预训练（Pre-training）",
+      "english": "Pre-training",
+      "terms": [
+        "Pre-training",
+        "GPU"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "后训练（Post-training）",
+      "english": "Post-training",
+      "terms": [
+        "Post-training",
+        "DPO",
+        "RL",
+        "RLHF",
+        "SFT"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "RLHF（人类反馈强化学习）",
+      "english": "Reinforcement Learning from Human Feedback (RLHF)",
+      "terms": [
+        "Reinforcement Learning from Human Feedback",
+        "RLHF",
+        "DPO",
+        "PPO"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "奖励模型（Reward Model）",
+      "english": "Reward Model (RM)",
+      "terms": [
+        "Reward Model",
+        "RM",
+        "DPO",
+        "RLHF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "DPO（直接偏好优化）",
+      "english": "Direct Preference Optimization (DPO)",
+      "terms": [
+        "Direct Preference Optimization",
+        "DPO",
+        "IPO",
+        "KTO",
+        "ORPO",
+        "RLHF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "GRPO（组相对策略优化）",
+      "english": "Group Relative Policy Optimization (GRPO)",
+      "terms": [
+        "Group Relative Policy Optimization",
+        "GRPO",
+        "DPO",
+        "R1",
+        "RL",
+        "RLHF"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "损失函数（Loss Function）",
+      "english": "Loss Function",
+      "terms": [
+        "Loss Function"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "梯度下降（Gradient Descent）",
+      "english": "Gradient Descent",
+      "terms": [
+        "Gradient Descent",
+        "SGD"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "学习率（Learning Rate）",
+      "english": "Learning Rate",
+      "terms": [
+        "Learning Rate"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "数据清洗（Data Cleaning）",
+      "english": "Data Cleaning",
+      "terms": [
+        "Data Cleaning"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "合成数据（Synthetic Data）",
+      "english": "Synthetic Data",
+      "terms": [
+        "Synthetic Data"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "分布式训练（Distributed Training）",
+      "english": "Distributed Training",
+      "terms": [
+        "Distributed Training",
+        "DP",
+        "FSDP",
+        "GPU",
+        "LM",
+        "PP",
+        "TP"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "过拟合（Overfitting）",
+      "english": "Overfitting",
+      "terms": [
+        "Overfitting"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "灾难性遗忘（Catastrophic Forgetting）",
+      "english": "Catastrophic Forgetting",
+      "terms": [
+        "Catastrophic Forgetting"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    },
+    {
+      "category": "training",
+      "heading": "Scaling Law（扩展定律）",
+      "english": "Scaling Law",
+      "terms": [
+        "Scaling Law"
+      ],
+      "source": "https://github.com/JingHao-Leon/ai-llm-glossary/blob/abc74818e14884f0e28fe6465c2328c68f9aae53/docs/training.md"
+    }
+  ]
+}

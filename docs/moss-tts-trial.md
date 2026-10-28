@@ -184,3 +184,111 @@ This version enables the user-accepted full FP32 codec, 12ms sentence fade, guar
 The frame engine remains v2 with the existing sampling parameters and voice assignments. `numbers` remains the default frontend, so opt-in lexicon/French/Russian quantity candidates are not activated by this submission. Nano parameter switching is not enabled. The target quality test now checks the guarded submission defaults.
 
 Validation includes 45 frontend/stopping/PCM/delivery tests, 9 lifecycle tests, the existing streaming/chunking and normalization checks, and Git file-size checks. The full FP32 codec and fade already completed 10 single-model Orin requests on October 23; the later text-routing/Unicode changes have local coverage. No final-commit image or new three-container test has run because target SSH remains unavailable. Treat this version as a leaderboard trial: memory, RTF and external quality scores still require the platform run. User listening for languages other than Chinese/English covers noise and audible distortion only; it does not establish content or pronunciation accuracy.
+
+
+### 2026-10-26 quality candidate
+
+The default `guarded` policy uses the more probable continue/EOS decision for English and Japanese. German retains sampled EOS and the 0.99 rare-EOS guard, but rejects continuation when EOS is more probable. Using fully greedy German stopping caused a different long block to hit its frame limit and was discarded. The explicit legacy `greedy` setting keeps its English-only behavior, and `sample` restores sampled EOS for every language. Audio-channel random draws and the continuation embedding are preserved.
+
+French uses an independently validated local frame engine with text/audio temperatures 1.0/0.8, audio top-p 0.95, top-k 25 and repetition penalty 1.2. The other languages retain the exact v2 local engine and original sampling. A single MOSS instance shares the original global prefill/decode and full FP32 codec; switching languages releases the old local frame engine before loading the selected one under the request lock. Only one local frame engine is resident. The immutable asset bundle adds `frame_fr.plan` and `frame_fr_sampling.json`; older bundles without those files preserve their previous sampling. This is a quality repair, not evidence that all pronunciation or long-text issues are solved.
+
+The pronunciation library has 83 entries. `approved` token/phrase readings apply with the default `numbers` frontend; `trial` entries require `numbers_terms`, and `pending`/`rejected` entries remain disabled. `off` bypasses all normalization. The user selected Chinese HAMi → 哈密 and vGPU → V G P U on 2026-10-26. These approved readings cover Chinese HAMi / HAMi vGPU and Chinese/English vGPU, including capitalization variants. English HAMi pronunciation remains a pending candidate; untested Japanese/German term substitutions are not activated by this change. Approval records the requested reading, not a claim of native listening or leaderboard quality. URLs, email addresses, inline code and path-like identifiers remain protected.
+
+The final target regression completed 39 requests / 263 chunks on one Orin MOSS instance, without frame-cap failures or OOM, under a 1792MiB container cap. The Japanese early-EOS block grew from 2.48s to 10.00s; the German overlong block shortened from 13.12s to 4.24s; French Bonjour shortened from 14.00s to 1.04s. Switching French → English → Chinese → French preserved the French waveform, and all 302 chunk/whole recordings matched prior ASR evidence by WAV SHA, language and normalized text. Eighteen whole recordings remain identical to the original submission baseline. Tests cover 56 adapter/stopping/lexicon/language/lifecycle/fade unit tests plus normalization, text preservation and streaming PCM checks.
+
+Direct-adapter first PCM was 0.047–0.510s and RTF 0.354–0.574, including engine switching and diagnostic capture, excluding loading/ROS/MCP/network/playback. Other shared-host containers were unchanged. Japanese names remain inaccurate; the French digital-human paragraph's raw joined-chunk WER increased from 8.4% to 12.8%, and other French pauses remain. These diagnostics are not native listening or GSB. Artifacts: `outputs/eos-switch-r6-20261026-172022` in the project workspace. The candidate assets have 13 files, all verified through the competition HTTP service. No new complete image build, three-container or platform pass is claimed; the candidate is not committed or pushed yet.
+
+### 2026-10-27 未发布质量候选
+
+英文numbers前端增加限定简单公式读法（equals/minus/squared/pi）及明确温度/百分比的plus or minus；保留复杂表达式、路径与代码。西语guarded模式继续保护阈值为0.95，其余语种0.99；显式sample模式保持原采样。源于真实case250在继续概率0.9696时提前EOS，83→169帧后恢复4个术语，旧token前缀不变；Orin三种子定向测试及另外3条文本均正常结束，ASR无整段编辑数回退。仍有其他列表漏读、俄语长低音量、日语读音、法语回退及英文末尾重复，不能称质量已全面达标。详细本地证据在outputs/feedback12-r1-20261027-214530和outputs/feedback12-es-r2-20261027-215233；不是新平台评分。
+
+### 2026-10-28 质量候选更新（未提交）
+
+默认前端对独立俄语块末逗号使用句号送模，off绕过；英语增加V/A/W明确数量读法；法语guarded模式复用德语bounded EOS，EOS已更可能时不继续。法语标点改写经过回归发现内容回退，最终完全撤回。真实RU35长低幅22.8→1.9秒、FR154相对上一候选6.3→1.1秒，英文222末尾重复在本次ASR不再出现。ASR非母语/GSB，日语与专名等问题仍在，未声称全面通过。详见项目outputs/quality-update-20261028/findings.md及R3/R4/R5/R6原始结果；当前未commit/push/提交。
+
+### Chinese mathematics and terminology frontend, 2026-10-28
+
+The default `numbers` frontend now verbalizes bounded Chinese flat equations before the existing sentence/token-budget splitter. It preserves the square/cube scope and says implicit numeric coefficients explicitly: `y = 2x - 3` → `Y等于二乘以X减三`; `a² + b² = c²` → `A的平方加B的平方等于C的平方`; `S = πr²` → `S等于派乘以R的平方`. Decimal values, `×/÷/*//`, square/cube notation and simple comparisons are supported in this bounded grammar. Chinese explicit quantities are now enabled by default, with added V/A/W → 伏特/安培/瓦特 and ± temperature/percentage/electrical-unit readings. This supersedes earlier notes that Chinese quantities require `numbers_terms`. The `off` frontend still bypasses normalization.
+
+This first grammar requires whitespace on both sides of the equation/comparison operator. Unsupported parentheses, roots, scientific notation and higher powers are retained; unspaced assignments, dates, versions, paths, URLs, emails and inline code are protected. It is not a general LaTeX parser, evaluator or automatic formula simplifier. Variables remain Latin letters in the model text; text expansion alone cannot guarantee their pronunciation.
+
+The pronunciation JSON now covers the 27 AI terms in the translated feedback inventory. Chinese initialism candidates use separated letters; whole-word English names retain their identity, with selected casing/hyphen/spacing candidates. These are `trial` readings, requiring `numbers_terms`, until same-backend audio comparisons establish which ones help. No Chinese semantic translation is silently substituted for an English name. Pending/rejected entries remain disabled; the user's approved HAMi → 哈密 / vGPU → V G P U readings remain active. Changing this plaintext frontend needs no new ONNX export, TensorRT build, weights or second model.
+
+Public implementation references, inspected on 2026-10-28:
+
+- [WeTextProcessing Math](https://github.com/wenet-e2e/WeTextProcessing/blob/master/tn/chinese/rules/math.py), [operator mappings](https://github.com/wenet-e2e/WeTextProcessing/blob/master/tn/chinese/data/math/operator.tsv) and [Whitelist](https://github.com/wenet-e2e/WeTextProcessing/blob/master/tn/chinese/rules/whitelist.py): Apache-2.0, number/operator grammar and phrase substitution. Its inspected math rule does not establish support for our variable/power examples. Our existing lightweight frontend remains in use; no Pynini/FST dependency was added.
+- [PaddleSpeech Chinese frontend](https://github.com/PaddlePaddle/PaddleSpeech/blob/develop/docs/source/tts/zh_text_frontend.md) and [number rules](https://github.com/PaddlePaddle/PaddleSpeech/blob/develop/paddlespeech/t2s/frontend/zh_normalization/num.py): Apache-2.0, useful reference for fractions, percentages, decimal numbers and the TN/G2P separation. PaddleSpeech was not installed.
+- [phrase-pinyin-data](https://github.com/mozillazg/phrase-pinyin-data): Chinese phrase-to-pinyin data, useful for polyphone lookup rather than a complete technical-brand dictionary.
+- [CMUdict](https://github.com/cmusphinx/cmudict): public English pronunciation data, useful for checking ordinary English words rather than treating all acronyms as letter sequences. Neither pronunciation resource can directly control Nano through this adapter's plaintext-only input; importing phoneme strings would not create phoneme support.
+
+These projects are references, not evidence that our local AI terminology candidates have authoritative pronunciation approval. No external pronunciation dataset or code was vendored in this change.
+
+Chinese math output uses contiguous Chinese words, without inserting spaces between every operator, number and variable. Letter-hint, homophone-only and forced clause-boundary controls are retained as diagnostic recordings; they are not default pronunciation policies.
+
+### Public Chinese frontend coverage, 2026-10-28
+
+This update supersedes the initial flat-equation scope and the opt-in status of the accepted Chinese terminology candidate. The default `numbers` frontend uses `zh_math.py` and `zh_frontend_data.json`: a bounded parser for arithmetic, parentheses, implicit multiplication, fractions, percentages/per-mille, powers, square/nth roots, scientific notation, simple comparisons/chains, absolute values/factorials, common mathematical functions, Greek symbols, and explicit engineering quantities/ranges. Selected dollar-delimited or escaped LaTeX forms (`frac`, `sqrt`, powers and arithmetic/comparison/Greek commands) are accepted. It does not evaluate expressions. Unsupported syntax is retained; there is no Python `eval`, SymPy, FST, model or network dependency. The parser limits candidates to 512 characters, 128 tokens and 16 nested power/group levels.
+
+| Coverage | Inventory |
+|---|---:|
+| Independently specified text fixtures, including held-out values | 86 in 10 categories |
+| Case-sensitive unit spellings, including area/volume aliases and compound rates | 162 |
+| Function spellings | 15 |
+| Lower/uppercase Greek symbols | 48 |
+| Public AI/LLM glossary records imported in full | 148 in 12 categories |
+| Pronunciation-library entries, all languages | 342 |
+| Active Chinese token/phrase entries | 272 |
+
+The public inventory covers fundamentals, architecture, training, adaptation, inference/deployment, prompt engineering, retrieval, agents, multimodal, evaluation, safety, and ecosystem/engineering. Full names, explicitly listed initialisms and relevant acronym inventory are kept with their source category and immutable source URL. The previous 27 Chinese technical-term candidates were accepted in the user's listening feedback. New deterministic text readings use the same initialism/word-identity policy, without claiming per-term native pronunciation approval. Other-language trials/rejections and the Qwen version candidate retain their existing status. Existing approved personal names keep their selected readings.
+
+`numbers` enables approved Chinese term policies as well as the math grammar; `numbers_terms` additionally retains the older opt-in trials. `off` bypasses both. Dates, clocks, version strings, paths, longer identifiers, inline/fenced code, ambiguous slash-only fractions and unspaced assignments retain protection. Explicit mathematical context or math delimiters can disambiguate ordinary formulas such as `公式y=2x-3`. Unsupported summation/integral/matrix constructs are not partially interpreted as supported formulas. Scientific notation is spoken rather than evaluated. Source unit data is reviewed rather than lowercased wholesale: mW/MW and mV/MV have distinct readings; the upstream ds, ω and regional tl entries are excluded. Local SI additions and Chinese function/Greek readings are identified separately from upstream data.
+
+Sources and reproducibility:
+
+- WeTextProcessing @ `039007e6b819bd40c4c4a0644f3939da1da47e44`: Apache-2.0 operator/unit data and math/fraction/measure grammar references. The parser code is local.
+- AI/LLM glossary @ `abc74818e14884f0e28fe6465c2328c68f9aae53`: MIT, 148 term records across all 12 source pages; source names are imported without substituting definitions for spoken terms.
+- CMUdict @ `74790861f652b15e4ac49015a90074ad62a27690`: selected English word pronunciations are metadata, with its redistribution notice. They are not injected as Nano phonemes.
+- [NIST SI prefixes](https://www.nist.gov/pml/special-publication-330/sp-330-section-3): reference for symbol case and prefix distinctions; no runtime download.
+
+`docs/tts_frontend_resources/source_manifest.json` records every downloaded source-file SHA256 and revision. `terminology_catalog.json` preserves all 148 source records and their imported forms. `tools/import_tts_frontend_resources.py --sources <local-snapshot-directory>` checks those source hashes and rebuilds the data without network access; repeated imports are byte-idempotent. Keep the source snapshots outside Git. Runtime notices and the MIT/CMU licenses accompany the installed frontend. No model weights, full external dictionary, engine files or files over 1MB are introduced into Git.
+
+Validation: `tools/test_tts_zh_math.py`, `test_tts_text_normalization.py`, `test_tts_lexicon.py`, and `test_tts_frontend_adapter.py` check mathematical scope, all unit spellings, the full imported glossary, idempotence, protections and the actual threaded adapter. The new independently authored Jetson corpus covers every active Chinese term at least once, new math/engineering combinations and unchanged original feedback cases. Audio/ASR results remain diagnostic rather than a leaderboard GSB score or exhaustive human listening approval.
+
+The common grammar also normalizes full-width mathematical characters while preserving superscript meaning, and distinguishes explicit ratio context (`比例1:20`) from clock strings (`时间12:30`). Bare years/numbers are not globally treated as mathematical values; `计算机` is not a math-context trigger. Whole-word FLUX uses its CMUdict reference rather than initialism spelling.
+
+Math context is bounded by sentence boundaries; ratio labels apply to the current clause, so `比例：1:20，时间：12:30` retains the clock while verbalizing the ratio. Context checks do not propagate a ratio label into a following time clause.
+
+### Multilingual mathematics and quality release, 2026-10-28
+
+Relative to published 1.2 (`09256423`), this candidate includes the previously
+validated language-specific EOS handling, the French-only Nano frame profile,
+Russian fragment punctuation repair, approved Chinese terminology, and the new
+Chinese/English/Japanese/German/French/Russian/Spanish mathematics frontend.
+Thai behavior is preserved. New foreign initialism spellings remain opt-in
+`trial` entries: the default adapter frontend is still `numbers`. Rejected
+English GPU/NPU/DCU/MLU expansions stay disabled.
+
+Numbers use the installed ICU spellout library; locale unit tables and math
+labels retain their public-source versions, SHA256 records and licenses in
+`docs/tts_frontend_resources`. Russian mathematical Latin letters use MathCAT
+names separately from English-style initialism readings. The Docker build checks
+that the system ICU library exists; ICU70 was verified inside the actual ARM64
+inference container. These are text rules, without an additional speech model.
+
+The current runtime exactly matches the final frozen Orin test bundle. The
+latest three sequential single-container batches exercised 45 requests: 43
+returned normally, while two rejected Japanese candidate forms hit the frame
+limit. Normal return does not establish content completeness. The final source
+passes 75 frontend/adapter/stopping/lexicon checks; streaming PCM and text-chunk
+checks also pass. Source-data rebuilds are byte-identical, and all new repository
+resources are below 1MB. The 13 model-download URLs and sizes were checked again
+before publication; the five small downloadable files also matched SHA256.
+
+Math A/B ASR diagnostics improved on the small test corpus; they do not predict
+leaderboard scores. Japanese mathematics and pronunciation remain weak, with
+suspected missing content; Russian/French terms and quantities still need
+review. Foreign initialism expansion did not show stable gains and is not
+bulk-enabled. No new complete image build, platform run, or three-container
+validation is claimed for this final combination. It is a candidate for the
+next leaderboard evaluation, with the existing full-FP32 codec and accepted
+sentence-fade audio chain retained.

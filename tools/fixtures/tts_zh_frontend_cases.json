@@ -1,0 +1,518 @@
+[
+  {
+    "id": "arithmetic-01",
+    "category": "arithmetic",
+    "input": "计算3+5=8",
+    "expected": "计算三加五等于八"
+  },
+  {
+    "id": "arithmetic-02",
+    "category": "arithmetic",
+    "input": "计算9-4=5",
+    "expected": "计算九减四等于五"
+  },
+  {
+    "id": "arithmetic-03",
+    "category": "arithmetic",
+    "input": "8×7 = 56",
+    "expected": "八乘以七等于五十六"
+  },
+  {
+    "id": "arithmetic-04",
+    "category": "arithmetic",
+    "input": "12÷3 = 4",
+    "expected": "十二除以三等于四"
+  },
+  {
+    "id": "arithmetic-05",
+    "category": "arithmetic",
+    "input": "计算2+3×4=14",
+    "expected": "计算二加三乘以四等于十四"
+  },
+  {
+    "id": "arithmetic-06",
+    "category": "arithmetic",
+    "input": "数学 -2+5=3",
+    "expected": "数学 负二加五等于三"
+  },
+  {
+    "id": "arithmetic-07",
+    "category": "arithmetic",
+    "input": "计算±0.5",
+    "expected": "计算正负零点五"
+  },
+  {
+    "id": "algebra-01",
+    "category": "algebra",
+    "input": "y = 2x - 3",
+    "expected": "Y等于二乘以X减三"
+  },
+  {
+    "id": "algebra-02",
+    "category": "algebra",
+    "input": "公式y=2x-3",
+    "expected": "公式Y等于二乘以X减三"
+  },
+  {
+    "id": "algebra-03",
+    "category": "algebra",
+    "input": "a² + b² = c²",
+    "expected": "A的平方加B的平方等于C的平方"
+  },
+  {
+    "id": "algebra-04",
+    "category": "algebra",
+    "input": "S = πr²",
+    "expected": "S等于派乘以R的平方"
+  },
+  {
+    "id": "algebra-05",
+    "category": "algebra",
+    "input": "x = 4^2",
+    "expected": "X等于四的平方"
+  },
+  {
+    "id": "algebra-06",
+    "category": "algebra",
+    "input": "x = 2**3",
+    "expected": "X等于二的立方"
+  },
+  {
+    "id": "algebra-07",
+    "category": "algebra",
+    "input": "x = -1.25 + 2.5y",
+    "expected": "X等于负一点二五加二点五乘以Y"
+  },
+  {
+    "id": "algebra-08",
+    "category": "algebra",
+    "input": "x < y < z",
+    "expected": "X小于Y小于Z"
+  },
+  {
+    "id": "algebra-09",
+    "category": "algebra",
+    "input": "公式 αx = 3",
+    "expected": "公式 阿尔法乘以X等于三"
+  },
+  {
+    "id": "algebra-10",
+    "category": "algebra",
+    "input": "U = 5V",
+    "expected": "U等于五伏特"
+  },
+  {
+    "id": "fractions-01",
+    "category": "fractions",
+    "input": "分数为1/2",
+    "expected": "分数为二分之一"
+  },
+  {
+    "id": "fractions-02",
+    "category": "fractions",
+    "input": "分数为3/7",
+    "expected": "分数为七分之三"
+  },
+  {
+    "id": "fractions-03",
+    "category": "fractions",
+    "input": "½ + ¼ = ¾",
+    "expected": "二分之一加四分之一等于四分之三"
+  },
+  {
+    "id": "fractions-04",
+    "category": "fractions",
+    "input": "比例为3:2",
+    "expected": "比例为三比二"
+  },
+  {
+    "id": "fractions-05",
+    "category": "fractions",
+    "input": "比值为4∶3",
+    "expected": "比值为四比三"
+  },
+  {
+    "id": "fractions-06",
+    "category": "fractions",
+    "input": "公式 $\\frac{a+b}{c+d}$",
+    "expected": "公式 左括号C加D右括号分之左括号A加B右括号"
+  },
+  {
+    "id": "fractions-07",
+    "category": "fractions",
+    "input": "计算(a+b)/(c+d)",
+    "expected": "计算左括号C加D右括号分之左括号A加B右括号"
+  },
+  {
+    "id": "percentages-01",
+    "category": "percentages",
+    "input": "50%",
+    "expected": "百分之五十"
+  },
+  {
+    "id": "percentages-02",
+    "category": "percentages",
+    "input": "-0.5%",
+    "expected": "负百分之零点五"
+  },
+  {
+    "id": "percentages-03",
+    "category": "percentages",
+    "input": "15‰",
+    "expected": "千分之十五"
+  },
+  {
+    "id": "percentages-04",
+    "category": "percentages",
+    "input": "2‱",
+    "expected": "万分之二"
+  },
+  {
+    "id": "percentages-05",
+    "category": "percentages",
+    "input": "计算5%-3%=2%",
+    "expected": "计算百分之五减百分之三等于百分之二"
+  },
+  {
+    "id": "percentages-06",
+    "category": "percentages",
+    "input": "比例范围5%~10%",
+    "expected": "比例范围百分之五到百分之十"
+  },
+  {
+    "id": "powers_roots-01",
+    "category": "powers_roots",
+    "input": "公式(2+3)^2 = 25",
+    "expected": "公式左括号二加三右括号的平方等于二十五"
+  },
+  {
+    "id": "powers_roots-02",
+    "category": "powers_roots",
+    "input": "公式(-2)^2 = 4",
+    "expected": "公式左括号负二右括号的平方等于四"
+  },
+  {
+    "id": "powers_roots-03",
+    "category": "powers_roots",
+    "input": "x^5",
+    "expected": "X的五次方"
+  },
+  {
+    "id": "powers_roots-04",
+    "category": "powers_roots",
+    "input": "x^-3",
+    "expected": "X的负三次方"
+  },
+  {
+    "id": "powers_roots-05",
+    "category": "powers_roots",
+    "input": "x¹²",
+    "expected": "X的十二次方"
+  },
+  {
+    "id": "powers_roots-06",
+    "category": "powers_roots",
+    "input": "数学x₁₂",
+    "expected": "数学X下标十二"
+  },
+  {
+    "id": "powers_roots-07",
+    "category": "powers_roots",
+    "input": "√9 = 3",
+    "expected": "根号九等于三"
+  },
+  {
+    "id": "powers_roots-08",
+    "category": "powers_roots",
+    "input": "√(x+1)",
+    "expected": "根号左括号X加一右括号"
+  },
+  {
+    "id": "powers_roots-09",
+    "category": "powers_roots",
+    "input": "公式 $\\sqrt[3]{8}$",
+    "expected": "公式 八的立方根"
+  },
+  {
+    "id": "powers_roots-10",
+    "category": "powers_roots",
+    "input": "公式 $x^{n+1}$",
+    "expected": "公式 X的左括号N加一右括号次方"
+  },
+  {
+    "id": "numbers-01",
+    "category": "numbers",
+    "input": "1.2e-3",
+    "expected": "一点二乘以十的负三次方"
+  },
+  {
+    "id": "numbers-02",
+    "category": "numbers",
+    "input": "6.02e23",
+    "expected": "六点零二乘以十的二十三次方"
+  },
+  {
+    "id": "numbers-03",
+    "category": "numbers",
+    "input": "x = 1e-4",
+    "expected": "X等于一乘以十的负四次方"
+  },
+  {
+    "id": "numbers-04",
+    "category": "numbers",
+    "input": "数值10000000",
+    "expected": "数值一千万"
+  },
+  {
+    "id": "numbers-05",
+    "category": "numbers",
+    "input": "数值100000000",
+    "expected": "数值一亿"
+  },
+  {
+    "id": "numbers-06",
+    "category": "numbers",
+    "input": "数值10010",
+    "expected": "数值一万零一十"
+  },
+  {
+    "id": "relations-01",
+    "category": "relations",
+    "input": "x <= 2.5",
+    "expected": "X小于等于二点五"
+  },
+  {
+    "id": "relations-02",
+    "category": "relations",
+    "input": "x ≥ 3",
+    "expected": "X大于等于三"
+  },
+  {
+    "id": "relations-03",
+    "category": "relations",
+    "input": "x != 0",
+    "expected": "X不等于零"
+  },
+  {
+    "id": "relations-04",
+    "category": "relations",
+    "input": "π ≈ 3.14",
+    "expected": "派约等于三点一四"
+  },
+  {
+    "id": "relations-05",
+    "category": "relations",
+    "input": "数学|x| = 2",
+    "expected": "数学X的绝对值等于二"
+  },
+  {
+    "id": "relations-06",
+    "category": "relations",
+    "input": "阶乘5! = 120",
+    "expected": "阶乘五的阶乘等于一百二十"
+  },
+  {
+    "id": "functions-01",
+    "category": "functions",
+    "input": "sin(x)",
+    "expected": "正弦X"
+  },
+  {
+    "id": "functions-02",
+    "category": "functions",
+    "input": "cos(30°)",
+    "expected": "余弦三十度"
+  },
+  {
+    "id": "functions-03",
+    "category": "functions",
+    "input": "tan(x)",
+    "expected": "正切X"
+  },
+  {
+    "id": "functions-04",
+    "category": "functions",
+    "input": "ln(x)",
+    "expected": "自然对数X"
+  },
+  {
+    "id": "functions-05",
+    "category": "functions",
+    "input": "log_2(8) = 3",
+    "expected": "以二为底八的对数等于三"
+  },
+  {
+    "id": "functions-06",
+    "category": "functions",
+    "input": "max(3,5) = 5",
+    "expected": "三与五的最大值等于五"
+  },
+  {
+    "id": "functions-07",
+    "category": "functions",
+    "input": "min(2,4) = 2",
+    "expected": "二与四的最小值等于二"
+  },
+  {
+    "id": "functions-08",
+    "category": "functions",
+    "input": "abs(-3) = 3",
+    "expected": "负三的绝对值等于三"
+  },
+  {
+    "id": "units-01",
+    "category": "units",
+    "input": "5V、1.2A、6W",
+    "expected": "五伏特、一点二安培、六瓦特"
+  },
+  {
+    "id": "units-02",
+    "category": "units",
+    "input": "2mW、3MW",
+    "expected": "二毫瓦、三兆瓦"
+  },
+  {
+    "id": "units-03",
+    "category": "units",
+    "input": "5mV、2MV",
+    "expected": "五毫伏、二兆伏"
+  },
+  {
+    "id": "units-04",
+    "category": "units",
+    "input": "30m²、2m³",
+    "expected": "三十平方米、二立方米"
+  },
+  {
+    "id": "units-05",
+    "category": "units",
+    "input": "3.3kΩ、4.7μF",
+    "expected": "三点三千欧姆、四点七微法"
+  },
+  {
+    "id": "units-06",
+    "category": "units",
+    "input": "2mg/mL、8GB/s",
+    "expected": "二毫克每毫升、八吉字节每秒"
+  },
+  {
+    "id": "units-07",
+    "category": "units",
+    "input": "误差±0.5℃",
+    "expected": "误差正负零点五摄氏度"
+  },
+  {
+    "id": "units-08",
+    "category": "units",
+    "input": "电压范围3-5V",
+    "expected": "电压范围三到五伏特"
+  },
+  {
+    "id": "units-09",
+    "category": "units",
+    "input": "温度-5~10℃",
+    "expected": "温度负五到十摄氏度"
+  },
+  {
+    "id": "units-10",
+    "category": "units",
+    "input": "5m/s、60km/h",
+    "expected": "五米每秒、六十千米每小时"
+  },
+  {
+    "id": "units-11",
+    "category": "units",
+    "input": "32°F、300K",
+    "expected": "三十二华氏度、三百开尔文"
+  },
+  {
+    "id": "units-12",
+    "category": "units",
+    "input": "3MiB、2GiB",
+    "expected": "三兆二进制字节、二吉二进制字节"
+  },
+  {
+    "id": "powers_roots-11",
+    "category": "powers_roots",
+    "input": "∛8 = 2",
+    "expected": "八的立方根等于二"
+  },
+  {
+    "id": "powers_roots-12",
+    "category": "powers_roots",
+    "input": "∜16 = 2",
+    "expected": "十六的四次方根等于二"
+  },
+  {
+    "id": "functions-09",
+    "category": "functions",
+    "input": "max(100,200) = 200",
+    "expected": "一百与二百的最大值等于二百"
+  },
+  {
+    "id": "scope-1",
+    "category": "functions",
+    "input": "sin(x+y)",
+    "expected": "正弦左括号X加Y右括号"
+  },
+  {
+    "id": "scope-2",
+    "category": "functions",
+    "input": "sin(x)^2",
+    "expected": "左括号正弦X右括号的平方"
+  },
+  {
+    "id": "scope-3",
+    "category": "functions",
+    "input": "√x²",
+    "expected": "根号左括号X的平方右括号"
+  },
+  {
+    "id": "scope-4",
+    "category": "functions",
+    "input": "log_2(x+1)",
+    "expected": "以二为底左括号X加一右括号的对数"
+  },
+  {
+    "id": "scope-5",
+    "category": "functions",
+    "input": "abs(x+1)",
+    "expected": "左括号X加一右括号的绝对值"
+  },
+  {
+    "id": "width-01",
+    "category": "width",
+    "input": "公式（ｘ＋１）²＝９",
+    "expected": "公式左括号X加一右括号的平方等于九"
+  },
+  {
+    "id": "width-02",
+    "category": "width",
+    "input": "５Ｖ、３ｍＷ",
+    "expected": "五伏特、三毫瓦"
+  },
+  {
+    "id": "fractions-08",
+    "category": "fractions",
+    "input": "比例1:20",
+    "expected": "比例一比二十"
+  },
+  {
+    "id": "fractions-09",
+    "category": "fractions",
+    "input": "比例12:30",
+    "expected": "比例十二比三十"
+  },
+  {
+    "id": "fractions-10",
+    "category": "fractions",
+    "input": "比例1:20。时间为12:30。",
+    "expected": "比例一比二十。时间为12:30。"
+  },
+  {
+    "id": "fractions-11",
+    "category": "fractions",
+    "input": "比例：1:20，时间：12:30。",
+    "expected": "比例：一比二十，时间：12:30。"
+  }
+]

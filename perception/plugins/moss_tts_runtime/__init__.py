@@ -62,6 +62,12 @@ class MossAdapter:
             expected=dict(text_temperature=1.,audio_temperature=.8,audio_top_k=25,audio_top_p=.95,audio_repetition_penalty=1.2,repetition_history=True)
             if sampling!=expected:raise RuntimeError('Unsupported Nano frame sampling metadata')
             defaults.update({key:value for key,value in sampling.items() if key!='repetition_history'})
+        self.french_frame=root/'frame_fr.plan' if (root/'frame_fr.plan').exists() else None
+        self.legacy_frame=root/'frame.plan';self.frame_profile='legacy';self.cuda_graph=cuda_graph
+        if self.french_frame:
+            expected=dict(text_temperature=1.,audio_temperature=.8,audio_top_k=25,audio_top_p=.95,audio_repetition_penalty=1.2,repetition_history=True)
+            if json.loads((root/'frame_fr_sampling.json').read_text())!=expected:raise RuntimeError('Unsupported French frame sampling metadata')
+            if 'repetition_seen_mask' in frame_session.inputs:raise RuntimeError('French switching requires the legacy default frame')
         def fused_frame(self,global_hidden,*,previous_token_sets_by_channel):
             uniform=np.clip(self.rng.random((1,17)),0,.99999994).astype(np.float32)
             original_u=float(uniform[0,0]);session=self.sessions['local_fixed_sampled_frame']
@@ -81,16 +87,18 @@ class MossAdapter:
             if scores.shape!=(1,2) or not np.isfinite(scores).all():raise RuntimeError('Invalid continuation/EOS scores')
             probabilities=np.exp(scores[0].astype(np.float64)-scores.max());probabilities/=probabilities.sum()
             selected=bool(scores[0,0]>=scores[0,1]) if self.greedy_stop else bool(continuing[0,0])
+            forced_eos=getattr(self,'force_likely_eos',False) and selected and bool(scores[0,0]<scores[0,1])
+            if forced_eos:selected=False
             guarded=getattr(self,'guard_stop',False) and not self.greedy_stop
-            overridden=guarded and not selected and probabilities[0]>=.99
+            overridden=guarded and not selected and probabilities[0]>=getattr(self,'stop_guard_threshold',.99)
             if overridden:
                 # Recompute under the continuation embedding; EOS-conditioned audio cannot be reused.
                 uniform[:,0]=0
                 frame,=session.run(['frame_token_ids'],feeds)
                 selected=True
-            self.last_stop=dict(continue_probability=float(probabilities[0]),random_u=original_u,continuing=selected,mode='greedy' if self.greedy_stop else 'guarded' if guarded else 'sample',rare_eos_overridden=bool(overridden))
+            self.last_stop=dict(continue_probability=float(probabilities[0]),random_u=original_u,continuing=selected,mode='greedy' if self.greedy_stop else 'guarded' if guarded else 'sample',rare_eos_overridden=bool(overridden),likely_eos_forced=bool(forced_eos))
             return selected,frame.reshape(-1).tolist()
-        runtime.greedy_stop=False;runtime.guard_stop=False
+        runtime.greedy_stop=False;runtime.guard_stop=False;runtime.force_likely_eos=False
         runtime.run_local_fixed_sampled_frame=MethodType(fused_frame,runtime)
         codec_meta=json.loads((root/'codec_meta.json').read_text())
         self.codec=vendor.CodecStreamingDecodeSession(codec_meta,CodecGraphSession(root/'codec.plan',codec_meta) if cuda_graph else TrtSession(root/'codec.plan'))
@@ -98,6 +106,17 @@ class MossAdapter:
         self.voices={v['voice']:v['prompt_audio_codes'] for v in runtime.manifest['builtin_voices']}
         self.runtime=runtime;self.language=language;self.seed=int(seed);self.lock=threading.Lock()
         gc.collect();ctypes.CDLL('libc.so.6').malloc_trim(0)
+    def select_frame(self,language):
+        if self.french_frame is None:return
+        profile='fr' if language=='fr' else 'legacy'
+        if profile!=self.frame_profile:
+            from .trt_fused_session import FusedSession
+            # Retain one local frame engine; the global model and codec stay loaded.
+            self.runtime.sessions.pop('local_fixed_sampled_frame',None);self.frame_profile=None
+            frame=FusedSession(self.french_frame if profile=='fr' else self.legacy_frame,cuda_graph=self.cuda_graph)
+            self.runtime.sessions['local_fixed_sampled_frame']=frame;self.frame_profile=profile
+        values=(1.,.8,.95,1.2) if profile=='fr' else (1.5,1.7,.8,1.)
+        self.runtime.manifest['generation_defaults'].update(zip(('text_temperature','audio_temperature','audio_top_p','audio_repetition_penalty'),values))
     def reset_codec(self):
         import torch
         if all(isinstance(value,torch.Tensor) for value in self.codec.state_feeds.values()):
@@ -122,12 +141,19 @@ class MossAdapter:
             try:
                 with self.lock:
                     # Reset request stopping policy under the model lock.
-                    self.runtime.greedy_stop=self.stop_mode in ('greedy','guarded') and code=='en'
-                    self.runtime.guard_stop=self.stop_mode=='guarded' and code!='en'
+                    self.runtime.greedy_stop=self.stop_mode in ('greedy','guarded') and code=='en' or self.stop_mode=='guarded' and code=='ja'
+                    self.runtime.guard_stop=self.stop_mode=='guarded' and not self.runtime.greedy_stop
+                    self.runtime.force_likely_eos=self.stop_mode=='guarded' and code in ('de','fr')
+                    self.runtime.stop_guard_threshold=.95 if code=='es' else .99
+                    self.select_frame(code)
                     for chunk in text_chunks(text,self.tokenizer):
                         if cancel.is_set():return
+                        text_tokens=self.tokenizer.encode(chunk,out_type=int)
+                        # Independently generated Russian fragments can prolong a dangling comma.
+                        if self.text_frontend!='off' and code=='ru' and chunk.endswith(','):
+                            text_tokens=self.tokenizer.encode(chunk[:-1]+'.',out_type=int)
                         self.reset_codec();self.runtime.rng=np.random.default_rng(self.seed);converter=StreamingPCM();ending=SentenceEnding()
-                        request=self.runtime.build_voice_clone_request_rows(self.voices[VOICES[code]],self.tokenizer.encode(chunk,out_type=int))
+                        request=self.runtime.build_voice_clone_request_rows(self.voices[VOICES[code]],text_tokens)
                         prompt=len(request['inputIds'])
                         if prompt>512:raise ValueError('Text exceeds certified prefill profile (512 rows); use shorter utterances')
                         budget=min(375,768-prompt)
@@ -138,7 +164,7 @@ class MossAdapter:
                             audio,length=self.codec.run_frames([frame]);pcm=ending.process(converter.process(audio[0,:,:length]))
                             if pcm and not put(pcm):raise RuntimeError('Synthesis cancelled')
                         frames=self.runtime.generate_audio_frames(request,on_frame=on_frame)
-                        logging.getLogger(__name__).info('MOSS chunk: tokens=%s frames=%s budget=%s stop=%s',len(self.tokenizer.encode(chunk,out_type=int)),len(frames),budget,getattr(self.runtime,'last_stop',None))
+                        logging.getLogger(__name__).info('MOSS chunk: tokens=%s frames=%s budget=%s stop=%s',len(text_tokens),len(frames),budget,getattr(self.runtime,'last_stop',None))
                         if not frames:raise RuntimeError('Model produced no audio')
                         if len(frames)>=budget:raise RuntimeError('Frame/KV limit reached; audio may be incomplete')
                         pcm=ending.finish()
