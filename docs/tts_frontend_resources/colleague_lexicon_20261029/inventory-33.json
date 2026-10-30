@@ -1,0 +1,6656 @@
+[
+  {
+    "term": "YUNIKORN",
+    "forms": [
+      "YUNIKORN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Y",
+          "UW1",
+          "N",
+          "IH0",
+          "K",
+          "AO0",
+          "R",
+          "N"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "YUNJI",
+    "forms": [
+      "YUNJI",
+      "Yunji"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Y",
+          "UH1",
+          "N",
+          "JH",
+          "IY0"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Yunji"
+    }
+  },
+  {
+    "term": "YUNTIANSHU",
+    "forms": [
+      "YUNTIANSHU"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Y",
+          "AH1",
+          "N",
+          "T",
+          "Y",
+          "EH1",
+          "N",
+          "SH",
+          "UW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "YUXINLU",
+    "forms": [
+      "YUXINLU"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Y",
+          "UW1",
+          "SH",
+          "IH0",
+          "N",
+          "L",
+          "UW1"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "YXT",
+    "forms": [
+      "YXT"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "W",
+          "AY1",
+          "EH1",
+          "K",
+          "S",
+          "T",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "YXT.COM GROUP HOLDING",
+    "forms": [
+      "YXT.COM GROUP HOLDING"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Y X T 点 com GROUP HOLDING"
+    }
+  },
+  {
+    "term": "YYAI",
+    "forms": [
+      "YYAI"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "W",
+          "AY1",
+          "W",
+          "AY1",
+          "EY1",
+          "AY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "YYFORCE",
+    "forms": [
+      "YYFORCE",
+      "YYForce"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "W",
+          "AY1",
+          "W",
+          "AY1",
+          "F",
+          "AO1",
+          "R",
+          "S"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Y Y Force"
+    }
+  },
+  {
+    "term": "Z Squared",
+    "forms": [
+      "Z Squared"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Z Squared"
+    }
+  },
+  {
+    "term": "Z-PNN",
+    "forms": [
+      "Z-PNN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "P",
+          "IY1",
+          "EH1",
+          "N",
+          "EH1",
+          "N"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "Z-WAVE",
+    "forms": [
+      "Z-WAVE"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "W",
+          "EY1",
+          "V"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZAI",
+    "forms": [
+      "ZAI"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "AY1"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zai Lab",
+    "forms": [
+      "Zai Lab"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zai Lab"
+    }
+  },
+  {
+    "term": "ZAI-ORG",
+    "forms": [
+      "ZAI-ORG"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EY1",
+          "AY1",
+          "AO1",
+          "R",
+          "G"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZALANDO",
+    "forms": [
+      "ZALANDO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "AH0",
+          "L",
+          "AA1",
+          "N",
+          "D",
+          "OW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZBAO",
+    "forms": [
+      "ZBAO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "B",
+          "IY1",
+          "EY1",
+          "OW1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZBIO",
+    "forms": [
+      "ZBIO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "B",
+          "IY1",
+          "AY1",
+          "OW1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZBRA",
+    "forms": [
+      "ZBRA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "B",
+          "R",
+          "AH0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZCA",
+    "forms": [
+      "ZCA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "S",
+          "IY1",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZCMD",
+    "forms": [
+      "ZCMD"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "S",
+          "IY1",
+          "EH1",
+          "M",
+          "D",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZD",
+    "forms": [
+      "ZD"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "D",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZDAI",
+    "forms": [
+      "ZDAI"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "D",
+          "IY1",
+          "EY1",
+          "AY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "Zebra Technologies",
+    "forms": [
+      "Zebra Technologies"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zebra Technologies"
+    }
+  },
+  {
+    "term": "ZEISSCMM",
+    "forms": [
+      "ZEISSCMM"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "AY1",
+          "S",
+          "S",
+          "IY1",
+          "EH1",
+          "M",
+          "EH1",
+          "M"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZEISSMICROSCOPY",
+    "forms": [
+      "ZEISSMICROSCOPY"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "AY1",
+          "S",
+          "M",
+          "AY0",
+          "K",
+          "R",
+          "AH1",
+          "S",
+          "K",
+          "AH0",
+          "P",
+          "IY0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zenas BioPharma",
+    "forms": [
+      "Zenas BioPharma"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zenas BioPharma"
+    }
+  },
+  {
+    "term": "ZENATECH",
+    "forms": [
+      "ZENATECH",
+      "ZenaTech"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "N",
+          "AH0",
+          "T",
+          "EH2",
+          "K"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "ZenaTech"
+    }
+  },
+  {
+    "term": "ZENDESK",
+    "forms": [
+      "ZENDESK"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "N",
+          "D",
+          "EH2",
+          "S",
+          "K"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZENTA",
+    "forms": [
+      "ZENTA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "N",
+          "T",
+          "AH0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zenta Group",
+    "forms": [
+      "Zenta Group"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zenta Group"
+    }
+  },
+  {
+    "term": "ZENTALIS",
+    "forms": [
+      "ZENTALIS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH0",
+          "N",
+          "T",
+          "AE1",
+          "L",
+          "IH0",
+          "S"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zentalis Pharmaceuticals",
+    "forms": [
+      "Zentalis Pharmaceuticals"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zentalis Pharmaceuticals"
+    }
+  },
+  {
+    "term": "ZEO",
+    "forms": [
+      "ZEO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "IY1",
+          "OW1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "Zeo Energy",
+    "forms": [
+      "Zeo Energy"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zeo Energy"
+    }
+  },
+  {
+    "term": "ZEOWW",
+    "forms": [
+      "ZEOWW"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "IY1",
+          "OW1",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZEPHYRUS",
+    "forms": [
+      "ZEPHYRUS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "F",
+          "ER0",
+          "AH0",
+          "S"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZERO-BOUNDED",
+    "forms": [
+      "ZERO-BOUNDED"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "B",
+          "AW1",
+          "N",
+          "D",
+          "AH0",
+          "D"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZERO-INFINITY",
+    "forms": [
+      "ZERO-INFINITY"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "IH0",
+          "N",
+          "F",
+          "IH1",
+          "N",
+          "IH0",
+          "T",
+          "IY0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZERO-OFFLOAD",
+    "forms": [
+      "ZERO-OFFLOAD"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "AO1",
+          "F",
+          "L",
+          "OW2",
+          "D"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZERO-SHOT",
+    "forms": [
+      "ZERO-SHOT"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "R",
+          "OW0",
+          "SH",
+          "AA2",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZEROMQ",
+    "forms": [
+      "ZEROMQ"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "EH1",
+          "M",
+          "K",
+          "Y",
+          "UW1"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZEROSTACK",
+    "forms": [
+      "ZEROSTACK",
+      "ZeroStack"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "S",
+          "T",
+          "AE2",
+          "K"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "ZeroStack"
+    }
+  },
+  {
+    "term": "ZEROTRUST",
+    "forms": [
+      "ZEROTRUST"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "R",
+          "OW0",
+          "T",
+          "R",
+          "AH1",
+          "S",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zeta Network Group",
+    "forms": [
+      "Zeta Network Group"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zeta Network Group"
+    }
+  },
+  {
+    "term": "ZETTASET",
+    "forms": [
+      "ZETTASET"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "T",
+          "AH0",
+          "S",
+          "EH2",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZEVRA",
+    "forms": [
+      "ZEVRA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "V",
+          "R",
+          "AH0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zevra Therapeutics",
+    "forms": [
+      "Zevra Therapeutics"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zevra Therapeutics"
+    }
+  },
+  {
+    "term": "ZFNET",
+    "forms": [
+      "ZFNET"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "F",
+          "N",
+          "EH1",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZFS",
+    "forms": [
+      "ZFS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "F",
+          "EH1",
+          "S"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZG",
+    "forms": [
+      "ZG"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "JH",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZHAOXIN",
+    "forms": [
+      "ZHAOXIN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "JH",
+          "AW1",
+          "SH",
+          "IH0",
+          "N"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZHENGYE",
+    "forms": [
+      "ZHENGYE"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "JH",
+          "AH1",
+          "NG",
+          "Y",
+          "EH0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zhengye Biotechnology Holding",
+    "forms": [
+      "Zhengye Biotechnology Holding"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zhengye Biotechnology Holding"
+    }
+  },
+  {
+    "term": "ZHIBAO",
+    "forms": [
+      "ZHIBAO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "JH",
+          "IY1",
+          "B",
+          "AW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zhibao Technology",
+    "forms": [
+      "Zhibao Technology"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zhibao Technology"
+    }
+  },
+  {
+    "term": "ZHIHU",
+    "forms": [
+      "ZHIHU"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "ZH",
+          "IH1",
+          "HH",
+          "UW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZHIPU",
+    "forms": [
+      "ZHIPU"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "ZH",
+          "IH1",
+          "P",
+          "UW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZHOG",
+    "forms": [
+      "ZHOG"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EY1",
+          "CH",
+          "OW1",
+          "JH",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZHONGCHAO",
+    "forms": [
+      "ZHONGCHAO",
+      "Zhongchao"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "JH",
+          "AO1",
+          "NG",
+          "CH",
+          "AW0"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Zhongchao"
+    }
+  },
+  {
+    "term": "Ziff Davis",
+    "forms": [
+      "Ziff Davis"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Ziff Davis"
+    }
+  },
+  {
+    "term": "ZIGBEE",
+    "forms": [
+      "ZIGBEE"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "G",
+          "B",
+          "IY2"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZILLOW",
+    "forms": [
+      "ZILLOW"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "L",
+          "OW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zillow Group",
+    "forms": [
+      "Zillow Group"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zillow Group"
+    }
+  },
+  {
+    "term": "ZIONP",
+    "forms": [
+      "ZIONP"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "AY1",
+          "OW1",
+          "EH1",
+          "N",
+          "P",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "Zions Bancorporation N.A",
+    "forms": [
+      "Zions Bancorporation N.A"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zions Bancorporation N A"
+    }
+  },
+  {
+    "term": "ZITADEL",
+    "forms": [
+      "ZITADEL"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IH1",
+          "T",
+          "AH0",
+          "D",
+          "EH2",
+          "L"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZJK",
+    "forms": [
+      "ZJK"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "JH",
+          "EY1",
+          "K",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZJK Industrial",
+    "forms": [
+      "ZJK Industrial"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Z J K Industrial"
+    }
+  },
+  {
+    "term": "ZJYL",
+    "forms": [
+      "ZJYL"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "JH",
+          "EY1",
+          "W",
+          "AY1",
+          "EH1",
+          "L"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZK",
+    "forms": [
+      "ZK"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "K",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZK International Group",
+    "forms": [
+      "ZK International Group"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Z K International Group"
+    }
+  },
+  {
+    "term": "ZKIN",
+    "forms": [
+      "ZKIN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "K",
+          "EY1",
+          "AY1",
+          "EH1",
+          "N"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZKP",
+    "forms": [
+      "ZKP"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "K",
+          "EY1",
+          "P",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZKPU",
+    "forms": [
+      "ZKPU"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "K",
+          "EY1",
+          "P",
+          "IY1",
+          "Y",
+          "UW1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZKPW",
+    "forms": [
+      "ZKPW"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "K",
+          "EY1",
+          "P",
+          "IY1",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZLAB",
+    "forms": [
+      "ZLAB"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "L",
+          "EY1",
+          "B",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZLAP",
+    "forms": [
+      "ZLAP"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "L",
+          "EY1",
+          "P",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZLPR",
+    "forms": [
+      "ZLPR"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "L",
+          "P",
+          "IY1",
+          "AA1",
+          "R"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZM",
+    "forms": [
+      "ZM"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "M"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZMUN",
+    "forms": [
+      "ZMUN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "M",
+          "Y",
+          "UW1",
+          "EH1",
+          "N"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZNB",
+    "forms": [
+      "ZNB"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "N",
+          "B",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZNTL",
+    "forms": [
+      "ZNTL"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "N",
+          "T",
+          "IY1",
+          "EH1",
+          "L"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZOETIS",
+    "forms": [
+      "ZOETIS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "OW0",
+          "IY1",
+          "T",
+          "IH0",
+          "S"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZONEOUT",
+    "forms": [
+      "ZONEOUT"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "OW1",
+          "N",
+          "AW2",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZOOKEEPER",
+    "forms": [
+      "ZOOKEEPER"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "K",
+          "IY1",
+          "P",
+          "ER0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zoom Communications",
+    "forms": [
+      "Zoom Communications"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zoom Communications"
+    }
+  },
+  {
+    "term": "ZOOMINFO",
+    "forms": [
+      "ZOOMINFO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "M",
+          "IH1",
+          "N",
+          "F",
+          "OW0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZoomInfo Technologies",
+    "forms": [
+      "ZoomInfo Technologies"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "ZoomInfo Technologies"
+    }
+  },
+  {
+    "term": "ZOOMNET",
+    "forms": [
+      "ZOOMNET"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "M",
+          "N",
+          "EH1",
+          "T"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZOOMROOMS",
+    "forms": [
+      "ZOOMROOMS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "M",
+          "R",
+          "UW1",
+          "M",
+          "Z"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZOOX",
+    "forms": [
+      "ZOOX"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "K",
+          "S"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZOOZ",
+    "forms": [
+      "ZOOZ"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "OW1",
+          "OW1",
+          "Z",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZOOZ Strategy",
+    "forms": [
+      "ZOOZ Strategy"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "ZOOZ Strategy"
+    }
+  },
+  {
+    "term": "ZOOZW",
+    "forms": [
+      "ZOOZW"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "OW1",
+          "OW1",
+          "Z",
+          "IY1",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZS",
+    "forms": [
+      "ZS"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "S"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZSCALER",
+    "forms": [
+      "ZSCALER",
+      "Zscaler"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "S",
+          "K",
+          "EY2",
+          "L",
+          "ER0"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Zscaler"
+    }
+  },
+  {
+    "term": "ZSH",
+    "forms": [
+      "ZSH"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "EH1",
+          "SH"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "ZSQR",
+    "forms": [
+      "ZSQR"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "S",
+          "K",
+          "Y",
+          "UW1",
+          "AA1",
+          "R"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZSTK",
+    "forms": [
+      "ZSTK"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "EH1",
+          "S",
+          "T",
+          "IY1",
+          "K",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTE",
+    "forms": [
+      "ZTE"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTEN",
+    "forms": [
+      "ZTEN"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "IY1",
+          "EH1",
+          "N"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTG",
+    "forms": [
+      "ZTG"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "JH",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTNA",
+    "forms": [
+      "ZTNA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "EH1",
+          "N",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTOP",
+    "forms": [
+      "ZTOP"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "OW1",
+          "P",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTRE",
+    "forms": [
+      "ZTRE"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "AA1",
+          "R",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZTWO",
+    "forms": [
+      "ZTWO"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "T",
+          "IY1",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0",
+          "OW1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZUMIEZ",
+    "forms": [
+      "ZUMIEZ",
+      "Zumiez"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UW1",
+          "M",
+          "IY0",
+          "Z"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Zumiez"
+    }
+  },
+  {
+    "term": "ZUMZ",
+    "forms": [
+      "ZUMZ"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "Y",
+          "UW1",
+          "EH1",
+          "M",
+          "Z",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZURA",
+    "forms": [
+      "ZURA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "UH1",
+          "R",
+          "AH0"
+        ],
+        "mode": "fold"
+      }
+    }
+  },
+  {
+    "term": "Zura Bio",
+    "forms": [
+      "Zura Bio"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Zura Bio"
+    }
+  },
+  {
+    "term": "ZVRA",
+    "forms": [
+      "ZVRA"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "V",
+          "IY1",
+          "AA1",
+          "R",
+          "EY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZW",
+    "forms": [
+      "ZW"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "D",
+          "AH1",
+          "B",
+          "AH0",
+          "L",
+          "Y",
+          "UW0"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZW Data Action Technologies",
+    "forms": [
+      "ZW Data Action Technologies"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "legacy_vits2_replacement_reference_only": "Z W Data Action Technologies"
+    }
+  },
+  {
+    "term": "ZYBT",
+    "forms": [
+      "ZYBT"
+    ],
+    "category": "inherited_inventory",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "IY1",
+          "W",
+          "AY1",
+          "B",
+          "IY1",
+          "T",
+          "IY1"
+        ],
+        "mode": "exact"
+      }
+    }
+  },
+  {
+    "term": "ZYMEWORKS",
+    "forms": [
+      "ZYMEWORKS",
+      "Zymeworks"
+    ],
+    "category": "enterprise_and_named_entity",
+    "enabled": false,
+    "status": "pending_nano_validation",
+    "evidence": {
+      "vits2_arpabet_reference_only": {
+        "arpa": [
+          "Z",
+          "AY1",
+          "M",
+          "W",
+          "ER2",
+          "K",
+          "S"
+        ],
+        "mode": "fold"
+      },
+      "legacy_vits2_replacement_reference_only": "Zymeworks"
+    }
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "上下文窗口"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "上下文窗口"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "上下文缓存"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "上下文缓存"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "不良贷款"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "不良贷款"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "个性化推荐"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "个性化推荐"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "临床决策支持"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "临床决策支持"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "临床路径优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "临床路径优化"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "事故识别"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "事故识别"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "云原生"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "云原生"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "交易欺诈"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "交易欺诈"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "交易监测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "交易监测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "产品完工时间预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "产品完工时间预测"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "产品推荐"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "产品推荐"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "产线优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "产线优化"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "产能预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "产能预测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "人工反馈"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "人工反馈"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "人机协作"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "人机协作"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "价格弹性"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "价格弹性"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "任务队列"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "任务队列"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "仿真训练"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "仿真训练"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "会员运营"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "会员运营"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "传感器融合"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "传感器融合"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "住院风险预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "住院风险预测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "供应商风险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "供应商风险"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "供应链优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "供应链优化"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "促销优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "促销优化"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "保单管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "保单管理"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "保单续期"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "保单续期"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "保费定价"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "保费定价"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "保险代理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "保险代理"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "保险经纪"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "保险经纪"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "信用评分"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "信用评分"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "信贷审批"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "信贷审批"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "停机预警"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "停机预警"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "健康险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "健康险"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "储能优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "储能优化"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "储能调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "储能调度"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "元数据管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "元数据管理"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "光伏功率预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "光伏功率预测"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "全渠道运营"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "全渠道运营"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "关键工艺参数"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "关键工艺参数"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "具身智能"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "具身智能"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "内存带宽"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "内存带宽"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "再入院预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "再入院预测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "函数调用"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "函数调用"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "分布式存储"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "分布式存储"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "分布式训练"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "分布式训练"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "力控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "力控"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "动力学"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "动力学"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "动态定价"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "动态定价"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医保反欺诈"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医保反欺诈"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医学影像分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医学影像分析"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医疗数据治理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医疗数据治理"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医疗费用审核"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医疗费用审核"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医疗资源调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医疗资源调度"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "医院运营分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "医院运营分析"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "压力测试"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "压力测试"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "参数高效微调"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "参数高效微调"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "双臂协作"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "双臂协作"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "反欺诈"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "反欺诈"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "发电计划优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "发电计划优化"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "变电站巡检"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "变电站巡检"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "可疑交易识别"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "可疑交易识别"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "可观测性"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "可观测性"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "合理用药审核"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "合理用药审核"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "同时定位与建图"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "同时定位与建图"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "向量检索"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "向量检索"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "吞吐量"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "吞吐量"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "商品关联分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "商品关联分析"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "商品推荐"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "商品推荐"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "商品选品"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "商品选品"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "商品陈列"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "商品陈列"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "在线推理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "在线推理"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "在线评测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "在线评测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "块存储"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "块存储"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "基因组分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "基因组分析"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "基础模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "基础模型"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "增量同步"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "增量同步"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "多模态数据治理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "多模态数据治理"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "多模态模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "多模态模型"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "多租户"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "多租户"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "大语言模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "大语言模型"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "姿态估计"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "姿态估计"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "安全护栏"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "安全护栏"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "实时计算"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "实时计算"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客户分层"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客户分层"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客户尽职调查"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客户尽职调查"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客户流失预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客户流失预测"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客户生命周期"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客户生命周期"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客户画像"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客户画像"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "客流预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "客流预测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "容器编排"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "容器编排"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "容器运行时"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "容器运行时"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "容器镜像"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "容器镜像"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "对抗样本"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "对抗样本"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "对象存储"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "对象存储"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "工业质检"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "工业质检"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "工具调用"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "工具调用"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "工艺优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "工艺优化"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "市场风险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "市场风险"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "幻觉检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "幻觉检测"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "库存优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "库存优化"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "库存周转"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "库存周转"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "异常检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "异常检测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "异构算力"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "异构算力"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "弹性伸缩"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "弹性伸缩"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "强化学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "强化学习"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "影像定损"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "影像定损"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "微服务"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "微服务"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "患者风险预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "患者风险预测"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "批处理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "批处理"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "批量推理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "批量推理"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "抓取检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "抓取检测"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "投资组合优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "投资组合优化"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "指令微调"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "指令微调"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "指标监控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "指标监控"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "损失准备金"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "损失准备金"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "损失率预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "损失率预测"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "授信额度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "授信额度"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "推理加速"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "推理加速"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "推理吞吐"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "推理吞吐"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "推理成本管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "推理成本管理"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "推理服务"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "推理服务"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "提示注入"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "提示注入"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "提示词工程"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "提示词工程"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "操作风险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "操作风险"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "故障诊断"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "故障诊断"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "故障转移"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "故障转移"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数字孪生"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数字孪生"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据中台"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据中台"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据仓库"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据仓库"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据同步"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据同步"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据增强"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据增强"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据安全"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据安全"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据接入"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据接入"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据权限"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据权限"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据标注"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据标注"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据校验"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据校验"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据清洗"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据清洗"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据湖"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据湖"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据溯源"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据溯源"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据漂移"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据漂移"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据版本管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据版本管理"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据生命周期管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据生命周期管理"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据目录"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据目录"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据管道"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据管道"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据编排"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据编排"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据脱敏"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据脱敏"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据脱敏规则"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据脱敏规则"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据血缘"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据血缘"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据质量"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据质量"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据资产"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据资产"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据采样"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据采样"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据采集"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据采集"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据集划分"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据集划分"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "数据集成"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "数据集成"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "新能源功率预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "新能源功率预测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "无监督学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "无监督学习"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "日志采集"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "日志采集"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显卡利用率"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显卡利用率"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显卡虚拟化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显卡虚拟化"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显存共享"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显存共享"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显存带宽"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显存带宽"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显存碎片"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显存碎片"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "显存隔离"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "显存隔离"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能体"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能体"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能体编排"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能体编排"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能体评测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能体评测"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能定价"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能定价"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能投顾"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能投顾"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能排产"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能排产"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能排产派工"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能排产派工"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能查勘"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能查勘"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能核保"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能核保"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能线索评级"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能线索评级"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "智能补货"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "智能补货"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "服务发现"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "服务发现"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "服务网格"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "服务网格"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "末端执行器"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "末端执行器"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器人感知"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器人感知"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器人操作系统"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器人操作系统"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器人运动控制"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器人运动控制"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器人遥操作"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器人遥操作"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器学习"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机器视觉"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机器视觉"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "机械臂"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "机械臂"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "来料检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "来料检测"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "核保规则"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "核保规则"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "根因分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "根因分析"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "检索增强生成"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "检索增强生成"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "概念漂移"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "概念漂移"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型公平性"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型公平性"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型剪枝"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型剪枝"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型可解释性"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型可解释性"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型回滚"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型回滚"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型安全"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型安全"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型微调"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型微调"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型推理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型推理"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型注册"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型注册"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型版本管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型版本管理"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型监控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型监控"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型蒸馏"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型蒸馏"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型训练"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型训练"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型评估"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型评估"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型路由"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型路由"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型部署"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型部署"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "模型量化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "模型量化"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "洗钱风险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "洗钱风险"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "流动性风险"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "流动性风险"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "流处理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "流处理"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "消费需求预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "消费需求预测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "深度学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "深度学习"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "混合精度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "混合精度"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "湖仓一体"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "湖仓一体"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "滞销预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "滞销预测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "物料需求计划"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "物料需求计划"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "特征存储"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "特征存储"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "特征工程"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "特征工程"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "特征计算"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "特征计算"
+  },
+  {
+    "category": "data_platform",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "特征选择"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "特征选择"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "理赔审核"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "理赔审核"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "理赔欺诈"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "理赔欺诈"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "生产周期预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "生产周期预测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "生产调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "生产调度"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "生成式人工智能"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "生成式人工智能"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "用电异常检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "用电异常检测"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电价预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电价预测"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电力交易"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电力交易"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电力设备故障诊断"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电力设备故障诊断"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电力需求预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电力需求预测"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电子病历"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电子病历"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电池健康评估"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电池健康评估"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "电网调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "电网调度"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "疾病风险筛查"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "疾病风险筛查"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "病历质控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "病历质控"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "监督学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "监督学习"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "目标检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "目标检测"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "目标跟踪"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "目标跟踪"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "知识图谱"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "知识图谱"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "知识库"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "知识库"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "知识抽取"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "知识抽取"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "碳排放核算"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "碳排放核算"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "碳排放预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "碳排放预测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "离线评测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "离线评测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "端到端延迟"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "端到端延迟"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力池化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力池化"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力监控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力监控"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力纳管"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力纳管"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力调度"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力资源隔离"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力资源隔离"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "算力配额"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "算力配额"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "精准营销"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "精准营销"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "精算模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "精算模型"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "缺货预警"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "缺货预警"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "缺陷检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "缺陷检测"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "联邦学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "联邦学习"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "能效分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "能效分析"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "能源消耗预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "能源消耗预测"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "能源管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "能源管理"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "能耗优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "能耗优化"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "自主导航"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "自主导航"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "自动理赔"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "自动理赔"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "自监督学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "自监督学习"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "舆情监测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "舆情监测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "良率预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "良率预测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "节点调度"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "节点调度"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "芯片适配"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "芯片适配"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "药物研发"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "药物研发"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "药物筛选"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "药物筛选"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "营销归因"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "营销归因"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "营销转化率"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "营销转化率"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "蛋白质结构预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "蛋白质结构预测"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "视觉定位"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "视觉定位"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "视觉语言动作模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "视觉语言动作模型"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "视觉语言模型"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "视觉语言模型"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "视觉质检"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "视觉质检"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "计算图"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "计算图"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "订单异常检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "订单异常检测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "设备健康管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "设备健康管理"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "设备巡检"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "设备巡检"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "设备异常检测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "设备异常检测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "设备振动监测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "设备振动监测"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "设备预测性维护"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "设备预测性维护"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "证券研究"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "证券研究"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "语义检索"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "语义检索"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "负荷预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "负荷预测"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "负载均衡"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "负载均衡"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "财富管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "财富管理"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "账户盗用"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "账户盗用"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "质量追溯"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "质量追溯"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "购物篮分析"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "购物篮分析"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "贷中监控"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "贷中监控"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "贷前审核"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "贷前审核"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "贷后管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "贷后管理"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "资产质量"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "资产质量"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "资源配额"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "资源配额"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "赔付预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "赔付预测"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "路径规划"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "路径规划"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "车险定损"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "车险定损"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "轨迹规划"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "轨迹规划"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "辅助诊断"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "辅助诊断"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "输电线路巡检"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "输电线路巡检"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "迁移学习"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "迁移学习"
+  },
+  {
+    "category": "manufacturing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "过程控制"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "过程控制"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "运动学"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "运动学"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "运动规划"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "运动规划"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "违约概率"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "违约概率"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "退保预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "退保预测"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "逾期预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "逾期预测"
+  },
+  {
+    "category": "robotics",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "避障导航"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "避障导航"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "配电网规划"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "配电网规划"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "配送路径优化"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "配送路径优化"
+  },
+  {
+    "category": "ai_development_governance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "重排序"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "重排序"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "量化交易"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "量化交易"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "链路追踪"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "链路追踪"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "销量预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "销量预测"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "门店选址"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "门店选址"
+  },
+  {
+    "category": "healthcare",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "隐私保护"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "隐私保护"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "集群管理"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "集群管理"
+  },
+  {
+    "category": "retail",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "需求预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "需求预测"
+  },
+  {
+    "category": "energy",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "风电功率预测"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "风电功率预测"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "风险减量服务"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "风险减量服务"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "风险定价"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "风险定价"
+  },
+  {
+    "category": "finance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "风险敞口"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "风险敞口"
+  },
+  {
+    "category": "insurance",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "风险选择"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "风险选择"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "首字延迟"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "首字延迟"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "驱动适配"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "驱动适配"
+  },
+  {
+    "category": "cloud_computing",
+    "enabled": false,
+    "evidence": {
+      "origin": "manual_domain_candidate",
+      "scope": "General domain term; not an official product name or pronunciation claim."
+    },
+    "forms": [
+      "高可用"
+    ],
+    "status": "manual_domain_candidate_pending_review",
+    "term": "高可用"
+  }
+]

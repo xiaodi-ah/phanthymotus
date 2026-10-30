@@ -1,0 +1,1966 @@
+{
+  "source_file": "lexicon.candidates.json",
+  "source_sha256": "2cd9f38ec125fe436883623e78f09f4ac9979dfc45f01aca667141a03ffe32d4",
+  "candidate_terms": 44,
+  "inventory_terms": 16442,
+  "candidate_language_pairs": 352,
+  "new_pairs": [
+    {
+      "term": "PhancyGroup",
+      "language": "zh",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "en",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "ja",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "ru",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "es",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "fr",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "th",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhancyGroup",
+      "language": "de",
+      "candidate_reading": "Phancy Group"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "zh",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "en",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "ja",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "ru",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "es",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "fr",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "th",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "PhanthyMotus",
+      "language": "de",
+      "candidate_reading": "Phanthy Motus"
+    },
+    {
+      "term": "HAMi",
+      "language": "ja",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "HAMi",
+      "language": "ru",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "HAMi",
+      "language": "es",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "HAMi",
+      "language": "fr",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "HAMi",
+      "language": "th",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "HAMi",
+      "language": "de",
+      "candidate_reading": "HAMi"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "zh",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "en",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "ja",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "ru",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "es",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "fr",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "th",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "SageAIOS",
+      "language": "de",
+      "candidate_reading": "Sage A I O S"
+    },
+    {
+      "term": "ModelHub",
+      "language": "zh",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "en",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "ja",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "ru",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "es",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "fr",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "th",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub",
+      "language": "de",
+      "candidate_reading": "Model Hub"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "ja",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "ru",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "es",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "fr",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "th",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "de",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "zh",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "en",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "ja",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "ru",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "es",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "fr",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "th",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "ModelSphere",
+      "language": "de",
+      "candidate_reading": "Model Sphere"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "ja",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "ru",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "es",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "fr",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "th",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "de",
+      "candidate_reading": "Phan Router"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "zh",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "en",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "ja",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "ru",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "es",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "fr",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "th",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanClaw",
+      "language": "de",
+      "candidate_reading": "Phan Claw"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "zh",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "en",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "ja",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "ru",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "es",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "fr",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "th",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "PhanthyCloud",
+      "language": "de",
+      "candidate_reading": "Phanthy Cloud"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "zh",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "en",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "ja",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "ru",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "es",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "fr",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "th",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "language": "de",
+      "candidate_reading": "Phanthy Enterprise"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "zh",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "en",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "ja",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "ru",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "es",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "fr",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "th",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "HyperCircle",
+      "language": "de",
+      "candidate_reading": "Hyper Circle"
+    },
+    {
+      "term": "SHIFT",
+      "language": "zh",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "en",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "ja",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "ru",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "es",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "fr",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "th",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "SHIFT",
+      "language": "de",
+      "candidate_reading": "SHIFT"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "ja",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "ru",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "es",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "fr",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "th",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "de",
+      "candidate_reading": "4Paradigm"
+    },
+    {
+      "term": "CUDA",
+      "language": "ja",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "CUDA",
+      "language": "ru",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "CUDA",
+      "language": "es",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "CUDA",
+      "language": "fr",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "CUDA",
+      "language": "th",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "CUDA",
+      "language": "de",
+      "candidate_reading": "CUDA"
+    },
+    {
+      "term": "NVML",
+      "language": "zh",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "en",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "ja",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "ru",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "es",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "fr",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "th",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVML",
+      "language": "de",
+      "candidate_reading": "N V M L"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "th",
+      "candidate_reading": "NVIDIA"
+    },
+    {
+      "term": "vLLM",
+      "language": "en",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "ja",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "ru",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "es",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "fr",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "th",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "vLLM",
+      "language": "de",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "Ontology",
+      "language": "zh",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "en",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "ja",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "ru",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "es",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "fr",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "th",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "Ontology",
+      "language": "de",
+      "candidate_reading": "Ontology"
+    },
+    {
+      "term": "RISE",
+      "language": "zh",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "en",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "ja",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "ru",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "es",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "fr",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "th",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "RISE",
+      "language": "de",
+      "candidate_reading": "RISE"
+    },
+    {
+      "term": "EngineX",
+      "language": "ja",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "EngineX",
+      "language": "ru",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "EngineX",
+      "language": "es",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "EngineX",
+      "language": "fr",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "EngineX",
+      "language": "th",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "EngineX",
+      "language": "de",
+      "candidate_reading": "Engine X"
+    },
+    {
+      "term": "AutoML",
+      "language": "zh",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "en",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "ja",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "ru",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "es",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "fr",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "th",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "AutoML",
+      "language": "de",
+      "candidate_reading": "Auto M L"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "ja",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "ru",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "es",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "fr",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "th",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "de",
+      "candidate_reading": "Open M L D B"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "ja",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "ru",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "es",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "fr",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "th",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "de",
+      "candidate_reading": "Feat Insight"
+    },
+    {
+      "term": "SageGPT",
+      "language": "zh",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "en",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "ja",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "ru",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "es",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "fr",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "th",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageGPT",
+      "language": "de",
+      "candidate_reading": "Sage G P T"
+    },
+    {
+      "term": "SageOne",
+      "language": "zh",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "en",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "ja",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "ru",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "es",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "fr",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "th",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageOne",
+      "language": "de",
+      "candidate_reading": "Sage One"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "zh",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "en",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "ja",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "ru",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "es",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "fr",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "th",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageSHIFT",
+      "language": "de",
+      "candidate_reading": "Sage SHIFT"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "zh",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "en",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "ja",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "ru",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "es",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "fr",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "th",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "SageAIGS",
+      "language": "de",
+      "candidate_reading": "Sage A I G S"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "ja",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "ru",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "es",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "fr",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "th",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "de",
+      "candidate_reading": "Model Hub X C"
+    },
+    {
+      "term": "LLM",
+      "language": "th",
+      "candidate_reading": "L L M"
+    },
+    {
+      "term": "GPU",
+      "language": "th",
+      "candidate_reading": "G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "ja",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "ru",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "es",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "fr",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "th",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "de",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "NPU",
+      "language": "th",
+      "candidate_reading": "N P U"
+    },
+    {
+      "term": "CPU",
+      "language": "th",
+      "candidate_reading": "C P U"
+    },
+    {
+      "term": "API",
+      "language": "th",
+      "candidate_reading": "A P I"
+    },
+    {
+      "term": "SDK",
+      "language": "zh",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "en",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "ja",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "ru",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "es",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "fr",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "th",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "SDK",
+      "language": "de",
+      "candidate_reading": "S D K"
+    },
+    {
+      "term": "MCP",
+      "language": "th",
+      "candidate_reading": "M C P"
+    },
+    {
+      "term": "ROS2",
+      "language": "zh",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "en",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "ja",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "ru",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "es",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "fr",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "th",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "ROS2",
+      "language": "de",
+      "candidate_reading": "R O S two"
+    },
+    {
+      "term": "TensorRT",
+      "language": "ja",
+      "candidate_reading": "Tensor R T"
+    },
+    {
+      "term": "TensorRT",
+      "language": "th",
+      "candidate_reading": "Tensor R T"
+    },
+    {
+      "term": "TensorRT",
+      "language": "de",
+      "candidate_reading": "Tensor R T"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "zh",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "en",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "ja",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "ru",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "es",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "fr",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "th",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Kubernetes",
+      "language": "de",
+      "candidate_reading": "Kubernetes"
+    },
+    {
+      "term": "Docker",
+      "language": "zh",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "en",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "ja",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "ru",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "es",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "fr",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "th",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "Docker",
+      "language": "de",
+      "candidate_reading": "Docker"
+    },
+    {
+      "term": "PyTorch",
+      "language": "zh",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "en",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "ja",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "ru",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "es",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "fr",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "th",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "PyTorch",
+      "language": "de",
+      "candidate_reading": "PyTorch"
+    },
+    {
+      "term": "ONNX",
+      "language": "ja",
+      "candidate_reading": "ONNX"
+    },
+    {
+      "term": "ONNX",
+      "language": "th",
+      "candidate_reading": "ONNX"
+    },
+    {
+      "term": "ONNX",
+      "language": "de",
+      "candidate_reading": "ONNX"
+    },
+    {
+      "term": "NCCL",
+      "language": "zh",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "en",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "ja",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "ru",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "es",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "fr",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "th",
+      "candidate_reading": "N C C L"
+    },
+    {
+      "term": "NCCL",
+      "language": "de",
+      "candidate_reading": "N C C L"
+    }
+  ],
+  "same_reading_pairs": [
+    {
+      "term": "vLLM",
+      "language": "zh",
+      "candidate_reading": "V L L M"
+    },
+    {
+      "term": "LLM",
+      "language": "zh",
+      "candidate_reading": "L L M"
+    },
+    {
+      "term": "LLM",
+      "language": "en",
+      "candidate_reading": "L L M"
+    },
+    {
+      "term": "GPU",
+      "language": "zh",
+      "candidate_reading": "G P U"
+    },
+    {
+      "term": "GPU",
+      "language": "en",
+      "candidate_reading": "G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "zh",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "vGPU",
+      "language": "en",
+      "candidate_reading": "V G P U"
+    },
+    {
+      "term": "NPU",
+      "language": "zh",
+      "candidate_reading": "N P U"
+    },
+    {
+      "term": "NPU",
+      "language": "en",
+      "candidate_reading": "N P U"
+    },
+    {
+      "term": "CPU",
+      "language": "zh",
+      "candidate_reading": "C P U"
+    },
+    {
+      "term": "CPU",
+      "language": "en",
+      "candidate_reading": "C P U"
+    },
+    {
+      "term": "API",
+      "language": "zh",
+      "candidate_reading": "A P I"
+    },
+    {
+      "term": "API",
+      "language": "en",
+      "candidate_reading": "A P I"
+    },
+    {
+      "term": "MCP",
+      "language": "zh",
+      "candidate_reading": "M C P"
+    },
+    {
+      "term": "MCP",
+      "language": "en",
+      "candidate_reading": "M C P"
+    },
+    {
+      "term": "ONNX",
+      "language": "zh",
+      "candidate_reading": "ONNX"
+    }
+  ],
+  "conflicting_pairs": [
+    {
+      "term": "HAMi",
+      "language": "zh",
+      "candidate_reading": "HAMi",
+      "existing_reading": "哈密",
+      "existing_status": "approved",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "HAMi",
+      "language": "en",
+      "candidate_reading": "HAMi",
+      "existing_reading": "Hah mee",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "zh",
+      "candidate_reading": "Model Hub X C",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ModelHub XC",
+      "language": "en",
+      "candidate_reading": "Model Hub X C",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "zh",
+      "candidate_reading": "Phan Router",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "PhanRouter",
+      "language": "en",
+      "candidate_reading": "Phan Router",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "zh",
+      "candidate_reading": "4Paradigm",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "4Paradigm",
+      "language": "en",
+      "candidate_reading": "4Paradigm",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CUDA",
+      "language": "zh",
+      "candidate_reading": "CUDA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CUDA",
+      "language": "en",
+      "candidate_reading": "CUDA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "zh",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "en",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "ja",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "エヌビディア",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "ru",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "es",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "fr",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NVIDIA",
+      "language": "de",
+      "candidate_reading": "NVIDIA",
+      "existing_reading": "Envidia",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "EngineX",
+      "language": "zh",
+      "candidate_reading": "Engine X",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "EngineX",
+      "language": "en",
+      "candidate_reading": "Engine X",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "zh",
+      "candidate_reading": "Open M L D B",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "OpenMLDB",
+      "language": "en",
+      "candidate_reading": "Open M L D B",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "zh",
+      "candidate_reading": "Feat Insight",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "FeatInsight",
+      "language": "en",
+      "candidate_reading": "Feat Insight",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "zh",
+      "candidate_reading": "Model Hub X C",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "en",
+      "candidate_reading": "Model Hub X C",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "LLM",
+      "language": "ja",
+      "candidate_reading": "L L M",
+      "existing_reading": "エルエルエム",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "LLM",
+      "language": "ru",
+      "candidate_reading": "L L M",
+      "existing_reading": "эл эл эм",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "LLM",
+      "language": "es",
+      "candidate_reading": "L L M",
+      "existing_reading": "ele ele eme",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "LLM",
+      "language": "fr",
+      "candidate_reading": "L L M",
+      "existing_reading": "elle elle emme",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "LLM",
+      "language": "de",
+      "candidate_reading": "L L M",
+      "existing_reading": "El El Em",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "GPU",
+      "language": "ja",
+      "candidate_reading": "G P U",
+      "existing_reading": "ジーピーユー",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "GPU",
+      "language": "ru",
+      "candidate_reading": "G P U",
+      "existing_reading": "джи пи ю",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "GPU",
+      "language": "es",
+      "candidate_reading": "G P U",
+      "existing_reading": "ge pe u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "GPU",
+      "language": "fr",
+      "candidate_reading": "G P U",
+      "existing_reading": "gé pé u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "GPU",
+      "language": "de",
+      "candidate_reading": "G P U",
+      "existing_reading": "Ge Pe U",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NPU",
+      "language": "ja",
+      "candidate_reading": "N P U",
+      "existing_reading": "エヌピーユー",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NPU",
+      "language": "ru",
+      "candidate_reading": "N P U",
+      "existing_reading": "эн пи ю",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NPU",
+      "language": "es",
+      "candidate_reading": "N P U",
+      "existing_reading": "ene pe u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NPU",
+      "language": "fr",
+      "candidate_reading": "N P U",
+      "existing_reading": "enne pé u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "NPU",
+      "language": "de",
+      "candidate_reading": "N P U",
+      "existing_reading": "En Pe U",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CPU",
+      "language": "ja",
+      "candidate_reading": "C P U",
+      "existing_reading": "シーピーユー",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CPU",
+      "language": "ru",
+      "candidate_reading": "C P U",
+      "existing_reading": "си пи ю",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CPU",
+      "language": "es",
+      "candidate_reading": "C P U",
+      "existing_reading": "ce pe u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CPU",
+      "language": "fr",
+      "candidate_reading": "C P U",
+      "existing_reading": "cé pé u",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "CPU",
+      "language": "de",
+      "candidate_reading": "C P U",
+      "existing_reading": "Ze Pe U",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "API",
+      "language": "ja",
+      "candidate_reading": "A P I",
+      "existing_reading": "エーピーアイ",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "API",
+      "language": "ru",
+      "candidate_reading": "A P I",
+      "existing_reading": "эй пи ай",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "API",
+      "language": "es",
+      "candidate_reading": "A P I",
+      "existing_reading": "a pe i",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "API",
+      "language": "fr",
+      "candidate_reading": "A P I",
+      "existing_reading": "a pé i",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "API",
+      "language": "de",
+      "candidate_reading": "A P I",
+      "existing_reading": "A Pe I",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "MCP",
+      "language": "ja",
+      "candidate_reading": "M C P",
+      "existing_reading": "エムシーピー",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "MCP",
+      "language": "ru",
+      "candidate_reading": "M C P",
+      "existing_reading": "эм си пи",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "MCP",
+      "language": "es",
+      "candidate_reading": "M C P",
+      "existing_reading": "eme ce pe",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "MCP",
+      "language": "fr",
+      "candidate_reading": "M C P",
+      "existing_reading": "emme cé pé",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "MCP",
+      "language": "de",
+      "candidate_reading": "M C P",
+      "existing_reading": "Em Ze Pe",
+      "existing_status": "trial",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "TensorRT",
+      "language": "zh",
+      "candidate_reading": "Tensor R T",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "TensorRT",
+      "language": "en",
+      "candidate_reading": "Tensor R T",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "TensorRT",
+      "language": "ru",
+      "candidate_reading": "Tensor R T",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "TensorRT",
+      "language": "es",
+      "candidate_reading": "Tensor R T",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "TensorRT",
+      "language": "fr",
+      "candidate_reading": "Tensor R T",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ONNX",
+      "language": "en",
+      "candidate_reading": "ONNX",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ONNX",
+      "language": "ru",
+      "candidate_reading": "ONNX",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ONNX",
+      "language": "es",
+      "candidate_reading": "ONNX",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    },
+    {
+      "term": "ONNX",
+      "language": "fr",
+      "candidate_reading": "ONNX",
+      "existing_reading": "",
+      "existing_status": "pending",
+      "resolution": "Preserve existing; candidate pending validation"
+    }
+  ],
+  "production_enabled": false
+}

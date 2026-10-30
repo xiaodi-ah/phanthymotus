@@ -8,7 +8,7 @@ from .text_chunks import text_chunks
 from .text_normalization import normalize_text
 
 LANGUAGES=('zh','ja','ru','en','es','fr','th','de')
-VOICES={'zh':'Zhiming','ja':'Saki','ru':'Adam','en':'Adam','es':'Ava','fr':'Bella','th':'Ava','de':'Adam'}
+VOICES={'zh':'Zhiming','ja':'Saki','ru':'Adam','en':'Ava','es':'Ava','fr':'Bella','th':'Ava','de':'Adam'}
 _LATIN_CUES={
     'en':set('the this that these those is are was were and with for from please hello welcome your you of to'.split()),
     'de':set('der die das den dem des ein eine einer einen ist sind und nicht bitte guten morgen willkommen sie auf für zum zur mit wird werden'.split()),
@@ -146,7 +146,7 @@ class MossAdapter:
                     self.runtime.force_likely_eos=self.stop_mode=='guarded' and code in ('de','fr')
                     self.runtime.stop_guard_threshold=.95 if code=='es' else .99
                     self.select_frame(code)
-                    for chunk in text_chunks(text,self.tokenizer):
+                    for chunk in text_chunks(text,self.tokenizer,language=code):
                         if cancel.is_set():return
                         text_tokens=self.tokenizer.encode(chunk,out_type=int)
                         # Independently generated Russian fragments can prolong a dangling comma.

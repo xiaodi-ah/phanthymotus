@@ -13,12 +13,33 @@ class TTSPlugin:
     PREFIX='tts'
     def __init__(self,plugin_cfg,executor):
         self.cfg=dict(plugin_cfg);self.executor=executor;self.nodes={};self.load_lock=threading.RLock()
-    def get_tools(self):return TOOLS
+        self.routing=self.cfg.get('routing','moss')
+        if self.routing not in ('moss','moss_supertonic'):raise ValueError('Unknown TTS routing mode')
+        self.languages=LANGUAGES
+        if self.routing=='moss_supertonic':
+            from .routed_tts_runtime import LANGUAGES as routed_languages
+            self.languages=routed_languages
+    def get_tools(self):
+        tools=copy.deepcopy(TOOLS)
+        if self.routing=='moss_supertonic':tools[0]['description']='Local MOSS Chinese/Thai + Supertonic six-language TensorRT routing'
+        tools[0]['inputSchema']['properties']['language']['enum']=['auto',*self.languages]
+        tools[0]['configSchema']['properties']['language']['enum']=['auto',*self.languages]
+        return tools
+    def _language(self,text,language):
+        if self.routing=='moss_supertonic':
+            from .routed_tts_runtime import route_language
+            return route_language(text,language,self.cfg.get('language','auto'))
+        return language_for(text,language)
     def _node(self,key,input_topic=''):
         with self.load_lock:
             if key not in self.nodes:
                 # Each MCP instance owns separate engines, KV and codec state.
-                adapter=MossAdapter(self.cfg.get('model_dir','/models/moss-tts-trt-jp61-v2'),cuda_graph=bool(self.cfg.get('cuda_graph',True)),language=self.cfg.get('language','auto'),seed=self.cfg.get('seed',42))
+                kwargs=dict(cuda_graph=bool(self.cfg.get('cuda_graph',True)),language=self.cfg.get('language','auto'),seed=self.cfg.get('seed',42))
+                root=self.cfg.get('model_dir','/models/moss-tts-trt-jp61-v2')
+                if self.routing=='moss_supertonic':
+                    from .routed_tts_runtime import RoutedAdapter
+                    adapter=RoutedAdapter(root,self.cfg.get('supertonic_model_dir','/models/supertonic-3-trt-jp61'),**kwargs)
+                else:adapter=MossAdapter(root,**kwargs)
                 node=_TTSNode(input_topic or None,adapter,node_suffix=hashlib.sha256(key.encode()).hexdigest()[:12])
                 self.executor.add_node(node);self.nodes[key]=node
             elif input_topic and self.nodes[key]._input_topic!=input_topic:
@@ -39,7 +60,7 @@ class TTSPlugin:
                 states=[n._status_dict() for n in self.nodes.values()]
                 result={'state':'running' if any(n['state']=='running' for n in states) else 'idle','topic_in':[t for n in states for t in n['topic_in']],'topic_out':[t for n in states for t in n['topic_out']]}
             else:result={'state':'idle','topic_in':[],'topic_out':[]}
-            return {**result,'name':'TTS','manufacture':'Embodied','model':'MOSS-TTS-Nano-100M/TRT-frame-v2','independent_models':len(self.nodes),'languages':list(LANGUAGES),'desc':'JP6.1 experimental submission; quality and three-instance stability pending'}
+            return {**result,'name':'TTS','manufacture':'Embodied','model':'MOSS-TTS-Nano-100M + Supertonic-3/TRT' if self.routing=='moss_supertonic' else 'MOSS-TTS-Nano-100M/TRT-frame-v2','independent_models':len(self.nodes),'languages':list(self.languages),'routing':self.routing,'desc':'JP6.1 experimental submission; quality and three-instance stability pending'}
         if action=='start':return self._node(key,args.get('input_topic','')).start()
         if action=='stop':
             keys=[key] if args.get('instance_id') else list(self.nodes)
@@ -51,7 +72,7 @@ class TTSPlugin:
             return {'state':'idle'}
         if action=='config':
             language=args.get('language',args.get('tts_language',self.cfg.get('language','auto')))
-            language_for('test',language)
+            self._language('test',language)
             if float(args.get('speed',1.0))!=1.0 or int(args.get('speaker_id',0))!=0:raise ValueError('Trial supports speed=1 and default speaker only')
             self.cfg['language']=language
             for node in self.nodes.values():node._adapter.language=language
@@ -59,7 +80,7 @@ class TTSPlugin:
         if action=='speak':
             text=args.get('text','');language=args.get('language',args.get('lang','auto'))
             if not isinstance(text,str) or not text.strip():raise ValueError('text must be a nonempty string')
-            language_for(text,language)
+            self._language(text,language)
             if not args.get('instance_id') and not args.get('input_topic') and key not in self.nodes and self.nodes:
                 if len(self.nodes)!=1:raise ValueError('Specify instance_id or input_topic when multiple TTS instances are running')
                 key=next(iter(self.nodes))

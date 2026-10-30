@@ -6,11 +6,14 @@ import torch
 import tensorrt as trt
 
 class TrtSession:
- def __init__(self,path):
+ def __init__(self,path,workspace=None):
   self.logger=trt.Logger(trt.Logger.WARNING);self.runtime=trt.Runtime(self.logger)
   self.engine=self.runtime.deserialize_cuda_engine(Path(path).read_bytes())
   if self.engine is None:raise RuntimeError('Cannot load TensorRT engine: '+str(path))
-  self.context=self.engine.create_execution_context();self.stream=torch.cuda.Stream()
+  self.workspace=workspace
+  self.context=self.engine.create_execution_context() if workspace is None else self.engine.create_execution_context_without_device_memory()
+  if self.context is None:raise RuntimeError('Cannot create TensorRT context: '+str(path))
+  self.stream=torch.cuda.Stream()
   self.names=[self.engine.get_tensor_name(i) for i in range(self.engine.num_io_tensors)]
   self.inputs=[n for n in self.names if self.engine.get_tensor_mode(n)==trt.TensorIOMode.INPUT]
   self.outputs=[n for n in self.names if n not in self.inputs];self.buffers={};self.parity=0;self.input_shapes={};self.addresses={}
@@ -54,6 +57,13 @@ class TrtSession:
     self.bind(name,tensor)
    missing=self.context.infer_shapes()
    if missing:raise RuntimeError('Unresolved shape inputs: '+str(missing))
+   if self.workspace is not None:
+    # Only callers with serialized, synchronized execution may share this scratch.
+    required=max(256,self.context.update_device_memory_size_for_shapes())
+    scratch=self.workspace.get('buffer')
+    if scratch is None or scratch.numel()<required:
+     scratch=torch.empty(required,dtype=torch.uint8,device='cuda');self.workspace['buffer']=scratch
+    self.context.device_memory=scratch.data_ptr()
    for name in self.outputs:
     shape=tuple(self.context.get_tensor_shape(name))
     if any(d<0 for d in shape):raise RuntimeError('Data-dependent output needs allocator: '+name)

@@ -3,11 +3,13 @@ ARG BASE_IMAGE=bj-warehouse.tencentcloudcr.com/phanthy-motus/perception:release.
 FROM ${BASE_IMAGE}
 ENV PYTHONDONTWRITEBYTECODE=1 TTS_PLUGIN=moss_tts
 COPY perception/moss_assets.json /opt/moss_assets.json
+COPY perception/supertonic_assets.json /opt/supertonic_assets.json
 COPY tools/download_moss_assets.py /opt/download_moss_assets.py
 RUN python3 /opt/download_moss_assets.py --manifest /opt/moss_assets.json --destination /models/moss-tts-trt-jp61-v2 && \
     PIP_CONFIG_FILE=/dev/null python3 -m pip install --no-cache-dir --no-index --no-deps --ignore-installed \
       /models/moss-tts-trt-jp61-v2/wheels/*.whl && \
     python3 -B -c "import ctypes.util, numpy, scipy, sentencepiece, onnxruntime; assert numpy.__version__=='1.26.4'; assert ctypes.util.find_library('icui18n'), 'System ICU required for multilingual number spellout'"
+RUN python3 /opt/download_moss_assets.py --manifest /opt/supertonic_assets.json --destination /models/supertonic-3-trt-jp61
 WORKDIR /work
 COPY perception/main.py /work/main.py
 COPY perception/plugins/ /work/plugins/

@@ -11,3 +11,11 @@
 边界：这是常见表达式的保守文本前端，未实现任意 LaTeX、矩阵、积分求解或整段自然语言的格变化。俄语单位使用独立计量短语的形式，未推断外部句子的全部语法格。ASR 对照只能定位疑似错漏，不能代替母语评审或证明外语自然度。展开后文本可能变长，因此还需检查真实断句、漏读、首音频和 RTF。
 
 离线重建：在项目根目录运行 `.venv/bin/python -B phanthymotus/tools/import_tts_multilingual_resources.py --sources tmp/multilingual-sources-20261028`。输入是已有的公开源码快照；脚本不下载模型、构建引擎或提交榜单。
+
+### Explicit everyday years (local update, 2026-10-29)
+
+`daily_years.py` expands four-digit years from 1000 through 2999 only in selected German and Russian contexts. German uses installed ICU `%spellout-numbering-year` after explicit contexts such as `im Jahr`, `in`, `Ende`, `Anfang`, and `seit`. Russian `в … году` uses the masculine locative ordinal; `… года` uses the genitive ordinal. These rules run inside the frontend's protected-text handling before mathematical normalization. Bare numbers, versions, paths, date strings and unsupported contexts remain unchanged. Japanese/French year candidates were tested but are not enabled.
+
+Source: existing pinned Unicode CLDR `common/rbnf/de.xml` and `ru.xml` (revision recorded in `multilingual_sources.json`), executed through the installed ICU library. ICU70/72 exposes the Russian rule under `locative`, not the newer `prepositional` name. Its locative output for a year ending in forty can incorrectly end in `сороковой`; the compatibility correction uses `сороковом`, matching the pinned CLDR rule `40: сорок[ >>|овом];`. No additional model, dependency or engine compilation is introduced.
+
+First screening: four languages × six development texts × A/B = 48 requests. Only DE/RU proceeded. Confirmation used the remaining nine eligible development texts (one DE, eight RU), two seeds and A/B = 36 requests. Two additional Orin requests checked the corrected Russian forty ending. These 86 requests include controls and discarded candidates, not 86 tests of one final version. Current DE/RU inputs and chunks match 30 target-tested candidate requests after replacing the two old forty-ending cases with corrected runs. Russian confirmation raw ASR edits decreased/equaled/increased in 15/0/1 pairs; German in 1/1/0. Orthographic year matches in Russian rose from 0/16 to 16/16, which is an ASR diagnostic, not native-speaker acceptance or a leaderboard score. Artifacts remain in the project-local `outputs/daily-years*-20261029/` directories.

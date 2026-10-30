@@ -1,7 +1,7 @@
 """Spoken quantities and bounded, language-specific pronunciation candidates."""
 import re
 from .lexicon import rewrite_terms,version_reading
-from . import zh_math, multilingual_math, icu_numbers
+from . import zh_math, multilingual_math, icu_numbers, daily_years
 
 _EN=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
 _ZH='零一二三四五六七八九'
@@ -18,6 +18,7 @@ def normalize_text(text,language,*,terms=True):
     if not isinstance(text,str):raise TypeError('text must be a string')
     if language not in ('zh','en','ja','de','fr','ru','es'):return text
     def segment(value):
+        value=daily_years.normalize(value,language)
         if language=='zh':value=zh_math.normalize(value)
         else:value=multilingual_math.normalize(value,language)
         if terms and language in ('zh','en'):

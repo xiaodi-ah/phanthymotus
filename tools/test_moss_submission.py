@@ -21,6 +21,14 @@ def main():
     assert text_chunks('J. Smith uses the U.S. office. Next.',tokenizer)==['J. Smith uses the U.S. office.','Next.']
     assert text_chunks('数字是3. 下一句。',tokenizer)==['数字是3.','下一句。']
     assert text_chunks('他说：“你好！” 然后离开。',tokenizer)==['他说：“你好！”','然后离开。']
+    for quote in ('」','』'):
+        text='これは説明です。'+quote+'と語った。'
+        assert text_chunks(text,tokenizer,language='ja')==[text]
+        assert text_chunks(text,tokenizer,language='zh')==['これは説明です。',quote+'と語った。']
+    assert text_chunks('説明です。よく聞いてください。',tokenizer,language='ja')==['説明です。','よく聞いてください。']
+    text='あ'*74+'。」'
+    assert text_chunks(text,tokenizer,language='ja')==['あ'*74+'。','」']
+    assert text_chunks('説明です。」と表現しています。',tokenizer,language='ja')==['説明です。','」と表現しています。']
     for paragraph in ['长句没有标点'*50,'word '*100,'这是长句，'*40,english,paragraph]:
         chunks=text_chunks(paragraph,tokenizer)
         assert chunks and all(0<len(tokenizer.encode(chunk))<=75 for chunk in chunks)

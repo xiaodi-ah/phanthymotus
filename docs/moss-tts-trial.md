@@ -292,3 +292,19 @@ bulk-enabled. No new complete image build, platform run, or three-container
 validation is claimed for this final combination. It is a candidate for the
 next leaderboard evaluation, with the existing full-FP32 codec and accepted
 sentence-fade audio chain retained.
+
+### English reference selection (2026-10-29)
+
+English now uses the pinned built-in Ava reference instead of Adam, following the user's listening preference. This also applies when auto language resolution selects English. Other language mappings are unchanged. Ava's prompt codes already exist in the shipped browser manifest, so no model download, reference encoding or TensorRT rebuild is needed.
+
+The reference-only Orin comparison used six English development sentences at different lengths, fixed seed42 and unchanged frontend/sampling/codec. Adam, Bella and Ava all completed six requests; raw ASR WER was 6.1%, 3.1% and 2.3% respectively. These are small-sample content diagnostics, not a naturalness or leaderboard score. The user preferred Ava in listening. Full evidence remains in the project-local `outputs/voice-natural-20261029/` report and `outputs/voice-natural-20261029-215148/` recordings. The new mapping has not yet received a leaderboard evaluation or a three-container performance retest.
+
+### Japanese detached closing-quote fragments (local quality update)
+
+The adapter now passes the resolved language into text splitting. For Japanese only, a fragment beginning with `」` or `』` and containing fewer than eight text tokens is joined to the preceding block if the combined block remains within 75 tokens. Punctuation and text are retained. This avoids independent synthesis of tiny closing-quote/attribution fragments; ordinary short sentences and other languages keep their existing splitting.
+
+The broader under-12-token experiment restored EOS in three failed development sentences across seeds42/7/2026, but also increased raw ASR edits on one previously normal sentence. The accepted rule is narrower: checking 2,100 development inputs changed only four Japanese cases, whose model chunks exactly match the already tested candidate chunks; the normal regression case stays unchanged. Three cases recovered from frame-limit failures, while a fourth still fails in an earlier long block. This does not establish that all Japanese content or stopping issues are fixed. Local evidence: `outputs/ja-short-dev-20261029/` and `tmp/ja-quote-fix-20261029/checks.json`.
+
+### German and Russian everyday years (local quality update)
+
+Explicit year contexts now use the existing ICU/CLDR spellout rules before model tokenization. Russian distinguishes `в … году` and `… года`, including a compatibility correction for the old ICU locative forty ending. Bare numbers and ambiguous identifiers are preserved. Japanese/French year experiments did not show consistent benefit and are not enabled. See `docs/tts_frontend_resources/multilingual.md` for scope, validation and remaining ASR/listening limitations.

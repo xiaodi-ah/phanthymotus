@@ -1,0 +1,56 @@
+{
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/supertonic-3-trt-jp61-fp32-f1-20261030/",
+  "architecture": "aarch64",
+  "gpu": "Jetson Orin sm_87",
+  "jetpack": "6.1",
+  "tensorrt": "10.4.0",
+  "model": "supertone-oss-archive/supertonic-3",
+  "revision": "aafc6e32416a594460b32413efc49d7fe4ce6d46",
+  "license": "OpenRAIL-M",
+  "precision": "FP32; TF32 disabled",
+  "voice": "F1",
+  "steps": 8,
+  "speed": 1.05,
+  "files": [
+    {
+      "path": "duration_predictor.plan",
+      "bytes": 5805580,
+      "sha256": "9f40ab71e214c7b6b7365d05f9bd94df8ae36d1dcdda24dff68aba4930b90c4a"
+    },
+    {
+      "path": "text_encoder.plan",
+      "bytes": 40895388,
+      "sha256": "df7a20fd17302a3fcd454339da71415e7ae2afa1715911c0b4acc919ea2bb587"
+    },
+    {
+      "path": "vector_estimator.plan",
+      "bytes": 266034260,
+      "sha256": "1a1bc01b5ab5de9b37aae9f692214ad5c88de96a6e79b2173e81407ba82e0c5e"
+    },
+    {
+      "path": "vocoder.plan",
+      "bytes": 102610156,
+      "sha256": "7db2067eda72c36bcc302ae55d0c23790ef7e893bf506560e4e2b50638ae275f"
+    },
+    {
+      "path": "tts.json",
+      "bytes": 8253,
+      "sha256": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09"
+    },
+    {
+      "path": "unicode_indexer.json",
+      "bytes": 277676,
+      "sha256": "9bf7346e43883a81f8645c81224f786d43c5b57f3641f6e7671a7d6c493cb24f"
+    },
+    {
+      "path": "F1.json",
+      "bytes": 292046,
+      "sha256": "bbdec6ee00231c2c742ad05483df5334cab3b52fda3ba38e6a07059c4563dbc2"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 15007,
+      "sha256": "0d944a9110fed9a9602d60e0423a272903e7bd21ab060490774efc77c2275e9f"
+    }
+  ]
+}

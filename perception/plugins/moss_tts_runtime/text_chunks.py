@@ -5,7 +5,7 @@ _END=re.compile(r'[。！？!?；;]+[”’"）)]*|\.[”’"）)]*(?=\s|$)|\n+'
 _ABBREVIATIONS={'mr','mrs','ms','dr','prof','sr','jr','vs','etc','e.g','i.e','no','fig','inc'}
 
 
-def text_chunks(text,tokenizer):
+def text_chunks(text,tokenizer,language=None):
     sentences=[];start=0
     for match in _END.finditer(text):
         if match.group().startswith('.'):
@@ -50,4 +50,12 @@ def text_chunks(text,tokenizer):
             piece=sentence[:cut].strip()
             if piece:chunks.append(piece)
             sentence=sentence[cut:].strip()
+    if language=='ja':
+        merged=[]
+        for block in chunks:
+            # Detached closing quotes/tiny attribution fragments can run to the frame limit.
+            if merged and block.startswith(('」','』')) and len(tokenizer.encode(block,out_type=int))<8 and len(tokenizer.encode(merged[-1]+block,out_type=int))<=75:
+                merged[-1]+=block
+            else:merged.append(block)
+        return merged
     return chunks

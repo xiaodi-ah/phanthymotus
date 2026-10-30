@@ -1,0 +1,4250 @@
+{
+  "format": "multilingual-tts-english-terms-candidates.v2",
+  "languages": [
+    "zh",
+    "en",
+    "ja",
+    "ru",
+    "es",
+    "fr",
+    "th",
+    "de"
+  ],
+  "policy": {
+    "english_terms": "English proper names retain English readings in every host language.",
+    "no_cross_script_phonetic_substitution": true,
+    "model_does_not_accept_arpabet_dictionary": true,
+    "runtime_api_required": false,
+    "automatic_enable": false,
+    "limitation": "English text in the model input does not guarantee correct English phonetics; validate standalone and in eight-language sentences before enabling.",
+    "candidate_scope": "44 disabled text candidates; manual domain inventory additions are pending review. Naming sources do not verify pronunciation. Not loaded by production."
+  },
+  "entries": [
+    {
+      "term": "PhancyGroup",
+      "spoken_text_en": "Phancy Group",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "User-confirmed English compound boundary; preserve the brand.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "PhanthyMotus",
+      "spoken_text_en": "Phanthy Motus",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Existing reviewed frontend compound boundary; exact Nano pronunciation still requires audio validation. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "HAMi",
+      "spoken_text_en": "HAMi",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English product-name reading; no Chinese or other-script phonetic spelling. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SageAIOS",
+      "spoken_text_en": "Sage A I O S",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "User-confirmed English Sage followed by A I O S; retain A.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "synthesis_strategy": {
+        "mode": "isolated_term",
+        "language": "en",
+        "enabled": false,
+        "status": "requested_by_user_pending_stitch_and_pronunciation_validation"
+      },
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "ModelHub",
+      "spoken_text_en": "Model Hub",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "ModelHub XC",
+      "spoken_text_en": "Model Hub X C",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound and letter names. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "ModelSphere",
+      "spoken_text_en": "Model Sphere",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound, distinct from ModelScope. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "PhanRouter",
+      "spoken_text_en": "Phan Router",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound; brand vowel remains pending Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "PhanClaw",
+      "spoken_text_en": "Phan Claw",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound; brand vowel remains pending Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "PhanthyCloud",
+      "spoken_text_en": "Phanthy Cloud",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound; no translated product name. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "Phanthy Enterprise",
+      "spoken_text_en": "Phanthy Enterprise",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Retain the English product name.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "HyperCircle",
+      "spoken_text_en": "Hyper Circle",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English compound, distinct from HyperCycle. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SHIFT",
+      "spoken_text_en": "SHIFT",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English word, not five separate letters.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "4Paradigm",
+      "spoken_text_en": "4Paradigm",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Retain the English brand. A localized company alias requires separate explicit approval.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "CUDA",
+      "spoken_text_en": "CUDA",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English word as a whole; no 库达, kooda, or per-letter expansion.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "synthesis_strategy": {
+        "mode": "isolated_term",
+        "language": "en",
+        "enabled": false,
+        "status": "requested_by_user_pending_stitch_and_pronunciation_validation"
+      },
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "NVML",
+      "spoken_text_en": "N V M L",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English letter names; all four letters preserved.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "NVIDIA",
+      "spoken_text_en": "NVIDIA",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Retain the English company name.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "vLLM",
+      "spoken_text_en": "V L L M",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "English letter names; retain the leading V. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "proposal_kind": "Preserve English spelling or verified compound/acronym boundary; not a phoneme override.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "Ontology",
+      "spoken_text_en": "Ontology",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://ir.4paradigm.com/en/upload/file/20260331/20260331095826_22603.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "RISE",
+      "spoken_text_en": "RISE",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://ir.4paradigm.com/en/upload/file/20260331/20260331095826_22603.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "EngineX",
+      "spoken_text_en": "Engine X",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1112/2025111200423.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "AutoML",
+      "spoken_text_en": "Auto M L",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://github.com/4paradigm"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "OpenMLDB",
+      "spoken_text_en": "Open M L D B",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://github.com/4paradigm"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "FeatInsight",
+      "spoken_text_en": "Feat Insight",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://arxiv.org/abs/2504.00786"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SageGPT",
+      "spoken_text_en": "Sage G P T",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://www.4paradigm.com/product/4ParadigmSage.html"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SageOne",
+      "spoken_text_en": "Sage One",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://www.4paradigm.com/product/4ParadigmSage.html"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SageSHIFT",
+      "spoken_text_en": "Sage SHIFT",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://www.phancy.ai/products/"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation.",
+      "source_review": "Exact spelling not established by cited product page; name and association pending independent review."
+    },
+    {
+      "term": "SageAIGS",
+      "spoken_text_en": "Sage A I G S",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://www.phancy.ai/products/"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation.",
+      "source_review": "Exact spelling not established by cited product page; name and association pending independent review."
+    },
+    {
+      "term": "ModelHubXC",
+      "spoken_text_en": "Model Hub X C",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [
+        "https://www.phancy.ai/products/"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation.",
+      "source_review": "Exact spelling not established by cited product page; name and association pending independent review."
+    },
+    {
+      "term": "LLM",
+      "spoken_text_en": "L L M",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "GPU",
+      "spoken_text_en": "G P U",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "vGPU",
+      "spoken_text_en": "V G P U",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://ir.4paradigm.com/en/upload/file/20260331/20260331095826_22603.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "NPU",
+      "spoken_text_en": "N P U",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://ir.4paradigm.com/en/upload/file/20260331/20260331095826_22603.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "CPU",
+      "spoken_text_en": "C P U",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "API",
+      "spoken_text_en": "A P I",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://ir.4paradigm.com/en/upload/file/20260331/20260331095826_22603.pdf"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "SDK",
+      "spoken_text_en": "S D K",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "MCP",
+      "spoken_text_en": "M C P",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://github.com/4paradigm/phanthymotus"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "ROS2",
+      "spoken_text_en": "R O S two",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [
+        "https://github.com/4paradigm/phanthymotus"
+      ],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "TensorRT",
+      "spoken_text_en": "Tensor R T",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "Kubernetes",
+      "spoken_text_en": "Kubernetes",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "Docker",
+      "spoken_text_en": "Docker",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "PyTorch",
+      "spoken_text_en": "PyTorch",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "ONNX",
+      "spoken_text_en": "ONNX",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    },
+    {
+      "term": "NCCL",
+      "spoken_text_en": "N C C L",
+      "language_contexts": [
+        "zh",
+        "en",
+        "ja",
+        "ru",
+        "es",
+        "fr",
+        "th",
+        "de"
+      ],
+      "pronunciation_language": "en",
+      "enabled": false,
+      "status": "pending_real_tts_validation",
+      "review_basis": "Candidate English spelling/boundary only; not a certified phonetic reading. Company names require source review and Nano listening. Proposed pronunciation or boundary requires authoritative review and listening; source does not establish pronunciation.",
+      "sources": [],
+      "proposal_kind": "English spelling or acronym expansion; never cross-script phonetic substitution.",
+      "pronunciation_review": "pending_listening; English text/boundary is a hypothesis, not verified pronunciation."
+    }
+  ],
+  "draft_source_model": "deepseek-v4.1-flash-1017",
+  "draft_status": "Generated transliterations rejected by user; no runtime changes made.",
+  "inventory_sources": [
+    {
+      "path": "evaluation/当前中英文词库修复/外置词库迁移/SINGLE/chinese-externalization/external_lexicon.json",
+      "sha256": "796d950fb703d63352aba8e5a2ac7d28492cc5e01cf9f44b81dca51a2e8193ef",
+      "source_gold_entries": 13192,
+      "source_text_replacements": 3558,
+      "source_business_catalog": 265,
+      "source_computing_catalog": 124
+    }
+  ],
+  "inventory_summary": {
+    "unique_terms": 16442,
+    "category_counts": {
+      "inherited_inventory": 12381,
+      "enterprise_and_named_entity": 3555,
+      "computing": 136,
+      "fourth_paradigm": 27,
+      "computing_new": 16,
+      "ai_development_governance": 55,
+      "finance": 32,
+      "retail": 29,
+      "healthcare": 21,
+      "insurance": 23,
+      "cloud_computing": 48,
+      "manufacturing": 30,
+      "robotics": 27,
+      "energy": 23,
+      "data_platform": 39
+    },
+    "active_in_nano": 0,
+    "text_candidates": 44,
+    "manual_domain_candidates": 343,
+    "scope": "Inventory includes inherited general/industry names. It is not a claim that every item is a Fourth Paradigm product, reviewed pronunciation, or enabled Nano rule.",
+    "phone_scope": "ARPAbet/Chinese VITS2 substitutions are archival review evidence only. Nano has no native phoneme lexicon API; do not pass these values as model text."
+  },
+  "validation_queue": {
+    "evidence_states": {
+      "asr_match_pending_listening": "Normalized ASR spelling matches; pronunciation and audio quality not accepted.",
+      "asr_discrepancy_pending_listening": "ASR differs; spelling differences do not establish a pronunciation error.",
+      "incomplete_frame_limit": "Generation incomplete at frame limit; requires further testing."
+    },
+    "items": [
+      {
+        "enabled": false,
+        "evidence": "load-test/asr-quality.json: ASR discrepancy; not a pronunciation judgment. SageAIOS also has term-chunks ASR discrepancies.",
+        "input_text": "Sage A I O S",
+        "status": "asr_discrepancy_pending_listening",
+        "strategy": "isolated_term_candidate_pending_stitch_and_listening",
+        "term": "SageAIOS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-001-None-baseline",
+          "recognized": "This platform supports CJIO SaaS.",
+          "frames": 40,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-001-None-baseline_en.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-001-None-eos-guard",
+            "frames": 39,
+            "recognized": "This platform supports CJIO SaaS.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-001-None-eos-guard_en.wav",
+            "audio_file_retained": true
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "evidence": "load-test/asr-quality.json: ASR discrepancy; not a pronunciation judgment. SageAIOS also has term-chunks ASR discrepancies.",
+        "input_text": "CUDA",
+        "status": "asr_discrepancy_pending_listening",
+        "strategy": "isolated_term_candidate_pending_stitch_and_listening",
+        "term": "CUDA",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-002-None-baseline",
+          "recognized": "This platform supports SIDIA.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-002-None-baseline_en.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-002-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports SIDIA.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-002-None-eos-guard_en.wav",
+            "audio_file_retained": true
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "evidence": "load-test/asr-quality.json: ASR discrepancy; not a pronunciation judgment. SageAIOS also has term-chunks ASR discrepancies.",
+        "input_text": "Phancy Group",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "PhancyGroup",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-003-None-baseline",
+          "recognized": "This platform supports Fancy Group.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-003-None-baseline_en.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-003-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports Fancy Group.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-003-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Phanthy Motus",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "PhanthyMotus",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-004-None-baseline",
+          "recognized": "This platform supports Fancy Modus.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-004-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-004-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports Fancy Modus.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-004-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "HAMi",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "HAMi",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-005-None-baseline",
+          "recognized": "This platform supports Heimi.",
+          "frames": 29,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-005-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-005-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports Heimi.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-005-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Model Hub",
+        "status": "asr_match_pending_listening",
+        "term": "ModelHub",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-006-None-baseline",
+          "recognized": "This platform supports Model Hub,",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-006-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-006-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports Model Hub,",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-006-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Model Hub X C",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "ModelHub XC",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-007-None-baseline",
+          "recognized": "This platform supports Model Hub XZ. See.",
+          "frames": 61,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-007-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-007-None-eos-guard",
+            "frames": 48,
+            "recognized": "This platform supports Model Hug XZ.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-007-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Model Sphere",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "ModelSphere",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-008-None-baseline",
+          "recognized": "This platform supports Model Sear.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-008-None-baseline_en.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-008-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports Model Sear.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-008-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Phan Router",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "PhanRouter",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-009-None-baseline",
+          "recognized": "This platform supports fan router.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-009-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-009-None-eos-guard",
+            "frames": 27,
+            "recognized": "This platform supports fan router.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-009-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Phan Claw",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "PhanClaw",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-010-None-baseline",
+          "recognized": "This platform supports Fanclaw.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-010-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-010-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports Fanclaw.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-010-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Phanthy Cloud",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "PhanthyCloud",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-011-None-baseline",
+          "recognized": "This platform supports Fintech Cloud.",
+          "frames": 37,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-011-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-011-None-eos-guard",
+            "frames": 37,
+            "recognized": "This platform supports Fintech Cloud.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-011-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Phanthy Enterprise",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "Phanthy Enterprise",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-012-None-baseline",
+          "recognized": "This platform supports Fenty Enterprise.",
+          "frames": 41,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-012-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-012-None-eos-guard",
+            "frames": 41,
+            "recognized": "This platform supports Fenty Enterprise.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-012-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Hyper Circle",
+        "status": "asr_match_pending_listening",
+        "term": "HyperCircle",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-013-None-baseline",
+          "recognized": "This platform supports HyperCircle.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-013-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-013-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports HyperCircle.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-013-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "SHIFT",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "SHIFT",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-014-None-baseline",
+          "recognized": "This platform supports SIFT.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-014-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-014-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports SIFT.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-014-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "4Paradigm",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "4Paradigm",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-015-None-baseline",
+          "recognized": "This platform supports 4Paradise.",
+          "frames": 40,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-015-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-015-None-eos-guard",
+            "frames": 40,
+            "recognized": "This platform supports 4Paradise.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-015-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "evidence": "load-test/asr-quality.json: ASR discrepancy; not a pronunciation judgment. SageAIOS also has term-chunks ASR discrepancies.",
+        "input_text": "N V M L",
+        "status": "asr_match_pending_listening",
+        "term": "NVML",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-016-None-baseline",
+          "recognized": "This platform supports NVML.",
+          "frames": 33,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-016-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-016-None-eos-guard",
+            "frames": 33,
+            "recognized": "This platform supports NVML.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-016-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "NVIDIA",
+        "status": "asr_match_pending_listening",
+        "term": "NVIDIA",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-017-None-baseline",
+          "recognized": "This platform supports NVIDIA.",
+          "frames": 30,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-017-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-017-None-eos-guard",
+            "frames": 27,
+            "recognized": "This platform supports NVIDIA.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-017-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "V L L M",
+        "status": "incomplete_frame_limit",
+        "term": "vLLM",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-018-None-baseline",
+          "recognized": "This platform supports ELM, eSIMG, and CSGO. You can share them in the chat. Thank you for watching.",
+          "frames": 375,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-018-None-baseline_en.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-018-None-eos-guard",
+            "frames": 49,
+            "recognized": "This platform supports ELM.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-018-None-eos-guard_en.wav",
+            "audio_file_retained": true
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Ontology",
+        "status": "asr_match_pending_listening",
+        "term": "Ontology",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-019-None-baseline",
+          "recognized": "This platform supports ontology.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-019-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-019-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports ontology.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-019-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "RISE",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "RISE",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-020-None-baseline",
+          "recognized": "This platform supports RAS.",
+          "frames": 30,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-020-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-020-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports RAS.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-020-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Engine X",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "EngineX",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-021-None-baseline",
+          "recognized": "This platform supports NGINX.",
+          "frames": 33,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-021-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-021-None-eos-guard",
+            "frames": 33,
+            "recognized": "This platform supports NGINX.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-021-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Auto M L",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "AutoML",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-022-None-baseline",
+          "recognized": "This platform supports auto and all.",
+          "frames": 31,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-022-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-022-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports auto and all.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-022-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Open M L D B",
+        "status": "asr_match_pending_listening",
+        "term": "OpenMLDB",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-023-None-baseline",
+          "recognized": "This platform supports OpenMLDB.",
+          "frames": 45,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-023-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-023-None-eos-guard",
+            "frames": 45,
+            "recognized": "This platform supports OpenMLDB.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-023-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Feat Insight",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "FeatInsight",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-024-None-baseline",
+          "recognized": "This platform supports V-Insight.",
+          "frames": 33,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-024-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-024-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports V-Insight.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-024-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Sage G P T",
+        "status": "asr_match_pending_listening",
+        "term": "SageGPT",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-025-None-baseline",
+          "recognized": "This platform supports SageGPT.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-025-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-025-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports SageGPT.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-025-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Sage One",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "SageOne",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-026-None-baseline",
+          "recognized": "This platform supports Stage 1.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-026-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-026-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports Stage 1.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-026-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Sage SHIFT",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "SageSHIFT",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-027-None-baseline",
+          "recognized": "This platform supports Sage SIFT.",
+          "frames": 43,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-027-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-027-None-eos-guard",
+            "frames": 43,
+            "recognized": "This platform supports Sage SIFT.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-027-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Sage A I G S",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "SageAIGS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-028-None-baseline",
+          "recognized": "This platform supports CJIGS.",
+          "frames": 36,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-028-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-028-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports CJIGS.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-028-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Model Hub X C",
+        "status": "asr_match_pending_listening",
+        "term": "ModelHubXC",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-029-None-baseline",
+          "recognized": "This platform supports Model Hub XC.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-029-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-029-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports Model Hub XC.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-029-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "L L M",
+        "status": "asr_match_pending_listening",
+        "term": "LLM",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-030-None-baseline",
+          "recognized": "This platform supports LLM.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-030-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-030-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports LLM.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-030-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "G P U",
+        "status": "asr_match_pending_listening",
+        "term": "GPU",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-031-None-baseline",
+          "recognized": "This platform supports GPU.",
+          "frames": 37,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-031-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-031-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports GPU.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-031-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "V G P U",
+        "status": "asr_match_pending_listening",
+        "term": "vGPU",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-032-None-baseline",
+          "recognized": "This platform supports VGPU.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-032-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-032-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports VGPU.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-032-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "N P U",
+        "status": "asr_match_pending_listening",
+        "term": "NPU",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-033-None-baseline",
+          "recognized": "This platform supports NPU.",
+          "frames": 38,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-033-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-033-None-eos-guard",
+            "frames": 38,
+            "recognized": "This platform supports NPU.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-033-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "C P U",
+        "status": "asr_match_pending_listening",
+        "term": "CPU",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-034-None-baseline",
+          "recognized": "This platform supports CPU.",
+          "frames": 31,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-034-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-034-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports CPU.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-034-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "A P I",
+        "status": "asr_match_pending_listening",
+        "term": "API",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-035-None-baseline",
+          "recognized": "This platform supports API.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-035-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-035-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports API.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-035-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "S D K",
+        "status": "asr_match_pending_listening",
+        "term": "SDK",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-036-None-baseline",
+          "recognized": "This platform supports SDK.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-036-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-036-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports SDK.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-036-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "M C P",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "MCP",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-037-None-baseline",
+          "recognized": "This platform supports NCP.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-037-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-037-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports NCP.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-037-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "R O S two",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "ROS2",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-038-None-baseline",
+          "recognized": "This platform supports ROS2.",
+          "frames": 51,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-038-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-038-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports ROS2.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-038-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Tensor R T",
+        "status": "asr_match_pending_listening",
+        "term": "TensorRT",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-039-None-baseline",
+          "recognized": "This platform supports TensorRT.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-039-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-039-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports TensorRT.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-039-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Kubernetes",
+        "status": "asr_match_pending_listening",
+        "term": "Kubernetes",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-040-None-baseline",
+          "recognized": "This platform supports Kubernetes.",
+          "frames": 31,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-040-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-040-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports Kubernetes.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-040-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Docker",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "Docker",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-041-None-baseline",
+          "recognized": "This platform supports DACA.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-041-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-041-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports DACA.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-041-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "PyTorch",
+        "status": "asr_match_pending_listening",
+        "term": "PyTorch",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-042-None-baseline",
+          "recognized": "This platform supports PyTorch.",
+          "frames": 28,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-042-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-042-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports PyTorch.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-042-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "ONNX",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "ONNX",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-043-None-baseline",
+          "recognized": "This platform supports ONX.",
+          "frames": 39,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-043-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-043-None-eos-guard",
+            "frames": 39,
+            "recognized": "This platform supports ONX.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-043-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "N C C L",
+        "status": "asr_match_pending_listening",
+        "term": "NCCL",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-044-None-baseline",
+          "recognized": "This platform supports NCCL.",
+          "frames": 33,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-044-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-044-None-eos-guard",
+            "frames": 33,
+            "recognized": "This platform supports NCCL.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-044-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Transformer",
+        "status": "asr_match_pending_listening",
+        "term": "Transformer",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-045-None-baseline",
+          "recognized": "This platform supports Transformer.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-045-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-045-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports Transformer.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-045-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "RAG",
+        "status": "asr_match_pending_listening",
+        "term": "RAG",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-046-None-baseline",
+          "recognized": "This platform supports RAG.",
+          "frames": 31,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-046-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-046-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports RAG.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-046-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "LoRA",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "LoRA",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-047-None-baseline",
+          "recognized": "This platform supports low RA.",
+          "frames": 33,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-047-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-047-None-eos-guard",
+            "frames": 33,
+            "recognized": "This platform supports low RA.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-047-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "QLoRA",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "QLoRA",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-048-None-baseline",
+          "recognized": "This platform supports QRS.",
+          "frames": 38,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-048-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-048-None-eos-guard",
+            "frames": 38,
+            "recognized": "This platform supports QRS.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-048-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "KV",
+        "status": "asr_match_pending_listening",
+        "term": "KV",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-049-None-baseline",
+          "recognized": "This platform supports KV.",
+          "frames": 37,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-049-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-049-None-eos-guard",
+            "frames": 37,
+            "recognized": "This platform supports KV.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-049-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "FlashAttention",
+        "status": "asr_match_pending_listening",
+        "term": "FlashAttention",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-050-None-baseline",
+          "recognized": "This platform supports flash attention.",
+          "frames": 29,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-050-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-050-None-eos-guard",
+            "frames": 29,
+            "recognized": "This platform supports flash attention.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-050-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Triton",
+        "status": "asr_match_pending_listening",
+        "term": "Triton",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-051-None-baseline",
+          "recognized": "This platform supports Triton.",
+          "frames": 24,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-051-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-051-None-eos-guard",
+            "frames": 24,
+            "recognized": "This platform supports Triton.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-051-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "DeepSpeed",
+        "status": "asr_match_pending_listening",
+        "term": "DeepSpeed",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-052-None-baseline",
+          "recognized": "This platform supports DeepSpeed.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-052-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-052-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports DeepSpeed.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-052-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Ray",
+        "status": "asr_match_pending_listening",
+        "term": "Ray",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-053-None-baseline",
+          "recognized": "This platform supports Ray.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-053-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-053-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports Ray.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-053-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "MLflow",
+        "status": "asr_match_pending_listening",
+        "term": "MLflow",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-054-None-baseline",
+          "recognized": "This platform supports MLflow.",
+          "frames": 37,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-054-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-054-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports MLflow.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-054-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Kubeflow",
+        "status": "asr_match_pending_listening",
+        "term": "Kubeflow",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-055-None-baseline",
+          "recognized": "This platform supports Kubeflow.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-055-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-055-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports Kubeflow.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-055-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Kafka",
+        "status": "asr_match_pending_listening",
+        "term": "Kafka",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-056-None-baseline",
+          "recognized": "This platform supports Kafka.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-056-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-056-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports Kafka.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-056-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Spark",
+        "status": "asr_match_pending_listening",
+        "term": "Spark",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-057-None-baseline",
+          "recognized": "This platform supports Spark.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-057-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-057-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports Spark.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-057-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Flink",
+        "status": "asr_match_pending_listening",
+        "term": "Flink",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-058-None-baseline",
+          "recognized": "This platform supports Flink.",
+          "frames": 30,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-058-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-058-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports Flink.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-058-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "PostgreSQL",
+        "status": "asr_match_pending_listening",
+        "term": "PostgreSQL",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-059-None-baseline",
+          "recognized": "This platform supports PostgreSQL.",
+          "frames": 30,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-059-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-059-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports PostgreSQL.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-059-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Redis",
+        "status": "asr_match_pending_listening",
+        "term": "Redis",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-060-None-baseline",
+          "recognized": "This platform supports Redis.",
+          "frames": 33,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-060-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-060-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports Redis.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-060-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Elasticsearch",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "Elasticsearch",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-061-None-baseline",
+          "recognized": "This platform supports ElastiSearch.",
+          "frames": 32,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-061-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-061-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports ElastiSearch.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-061-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Milvus",
+        "status": "asr_match_pending_listening",
+        "term": "Milvus",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-062-None-baseline",
+          "recognized": "This platform supports Milvus.",
+          "frames": 38,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-062-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-062-None-eos-guard",
+            "frames": 38,
+            "recognized": "This platform supports Milvus.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-062-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "FAISS",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "FAISS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-063-None-baseline",
+          "recognized": "This platform supports VSS.",
+          "frames": 27,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-063-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-063-None-eos-guard",
+            "frames": 27,
+            "recognized": "This platform supports VSS.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-063-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Prometheus",
+        "status": "asr_match_pending_listening",
+        "term": "Prometheus",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-064-None-baseline",
+          "recognized": "This platform supports Prometheus.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-064-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-064-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports Prometheus.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-064-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "OpenTelemetry",
+        "status": "asr_match_pending_listening",
+        "term": "OpenTelemetry",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-065-None-baseline",
+          "recognized": "This platform supports OpenTelemetry.",
+          "frames": 40,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-065-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-065-None-eos-guard",
+            "frames": 40,
+            "recognized": "This platform supports OpenTelemetry.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-065-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "TensorFlow",
+        "status": "asr_match_pending_listening",
+        "term": "TensorFlow",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-066-None-baseline",
+          "recognized": "This platform supports TensorFlow.",
+          "frames": 30,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-066-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-066-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports TensorFlow.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-066-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "JAX",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "JAX",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-067-None-baseline",
+          "recognized": "This platform support to eJaxx.",
+          "frames": 28,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-067-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-067-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform support to eJaxx.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-067-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "NumPy",
+        "status": "asr_match_pending_listening",
+        "term": "NumPy",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-068-None-baseline",
+          "recognized": "This platform supports NumPy.",
+          "frames": 29,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-068-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-068-None-eos-guard",
+            "frames": 29,
+            "recognized": "This platform supports NumPy.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-068-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "Linux",
+        "status": "asr_match_pending_listening",
+        "term": "Linux",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-069-None-baseline",
+          "recognized": "This platform supports Linux.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-069-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-069-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports Linux.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-069-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "GitHub",
+        "status": "asr_match_pending_listening",
+        "term": "GitHub",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-070-None-baseline",
+          "recognized": "This platform supports GitHub.",
+          "frames": 29,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-070-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-070-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports GitHub.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-070-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "HTTP",
+        "status": "asr_match_pending_listening",
+        "term": "HTTP",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-071-None-baseline",
+          "recognized": "This platform supports HTTP.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-071-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-071-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports HTTP.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-071-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "HTTPS",
+        "status": "asr_match_pending_listening",
+        "term": "HTTPS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-072-None-baseline",
+          "recognized": "This platform supports HTTPS.",
+          "frames": 34,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-072-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-072-None-eos-guard",
+            "frames": 33,
+            "recognized": "This platform supports HTTPS.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-072-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "TCP",
+        "status": "asr_match_pending_listening",
+        "term": "TCP",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-073-None-baseline",
+          "recognized": "This platform supports TCP.",
+          "frames": 31,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-073-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-073-None-eos-guard",
+            "frames": 28,
+            "recognized": "This platform supports TCP.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-073-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "UDP",
+        "status": "asr_match_pending_listening",
+        "term": "UDP",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-074-None-baseline",
+          "recognized": "This platform supports UDP.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-074-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-074-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports UDP.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-074-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "DNS",
+        "status": "asr_match_pending_listening",
+        "term": "DNS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-075-None-baseline",
+          "recognized": "This platform supports DNS.",
+          "frames": 38,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-075-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-075-None-eos-guard",
+            "frames": 38,
+            "recognized": "This platform supports DNS.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-075-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "TLS",
+        "status": "asr_match_pending_listening",
+        "term": "TLS",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-076-None-baseline",
+          "recognized": "This platform supports TLS.",
+          "frames": 40,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-076-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-076-None-eos-guard",
+            "frames": 40,
+            "recognized": "This platform supports TLS.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-076-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "JSON",
+        "status": "asr_match_pending_listening",
+        "term": "JSON",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-077-None-baseline",
+          "recognized": "This platform supports JSON.",
+          "frames": 32,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-077-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-077-None-eos-guard",
+            "frames": 31,
+            "recognized": "This platform supports JSON.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-077-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "YAML",
+        "status": "asr_match_pending_listening",
+        "term": "YAML",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-078-None-baseline",
+          "recognized": "This platform supports YAML.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-078-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-078-None-eos-guard",
+            "frames": 36,
+            "recognized": "This platform supports YAML.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-078-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "SQL",
+        "status": "asr_match_pending_listening",
+        "term": "SQL",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-079-None-baseline",
+          "recognized": "This platform supports SQL.",
+          "frames": 24,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-079-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-079-None-eos-guard",
+            "frames": 24,
+            "recognized": "This platform supports SQL.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-079-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "MLOps",
+        "status": "asr_match_pending_listening",
+        "term": "MLOps",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-080-None-baseline",
+          "recognized": "This platform supports MLOps.",
+          "frames": 35,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-080-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-080-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports MLOps.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-080-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "LLMOps",
+        "status": "asr_match_pending_listening",
+        "term": "LLMOps",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-081-None-baseline",
+          "recognized": "This platform supports LLM Ops.",
+          "frames": 29,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-081-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-081-None-eos-guard",
+            "frames": 29,
+            "recognized": "This platform supports LLM Ops.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-081-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "gRPC",
+        "status": "asr_match_pending_listening",
+        "term": "gRPC",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-082-None-baseline",
+          "recognized": "This platform supports gRPC.",
+          "frames": 36,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-082-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-082-None-eos-guard",
+            "frames": 35,
+            "recognized": "This platform supports gRPC.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-082-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "PCIe",
+        "status": "asr_match_pending_listening",
+        "term": "PCIe",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-083-None-baseline",
+          "recognized": "This platform supports PCIe.",
+          "frames": 42,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-083-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-083-None-eos-guard",
+            "frames": 40,
+            "recognized": "This platform supports PCIe.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-083-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "NVLink",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "NVLink",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-084-None-baseline",
+          "recognized": "This platform supports NV-Link. This is NV-Link.",
+          "frames": 109,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-084-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-084-None-eos-guard",
+            "frames": 32,
+            "recognized": "This platform supports NVLink.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-084-None-eos-guard_en.wav",
+            "audio_file_retained": true
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "RDMA",
+        "status": "asr_match_pending_listening",
+        "term": "RDMA",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-085-None-baseline",
+          "recognized": "This platform supports RDMA.",
+          "frames": 26,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-085-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-085-None-eos-guard",
+            "frames": 26,
+            "recognized": "This platform supports RDMA.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-085-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "InfiniBand",
+        "status": "asr_match_pending_listening",
+        "term": "InfiniBand",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-086-None-baseline",
+          "recognized": "This platform supports InfiniBand.",
+          "frames": 52,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-086-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-086-None-eos-guard",
+            "frames": 30,
+            "recognized": "This platform supports InfiniBand.",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-086-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "ROCm",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "ROCm",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-087-None-baseline",
+          "recognized": "This platform supports all machines.",
+          "frames": 40,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-087-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-087-None-eos-guard",
+            "frames": 40,
+            "recognized": "This platform supports all machines.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-087-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "cuDNN",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "cuDNN",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-088-None-baseline",
+          "recognized": "This platform supports QDNN.",
+          "frames": 34,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-088-None-baseline_en.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-088-None-eos-guard",
+            "frames": 34,
+            "recognized": "This platform supports QDNN.",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-088-None-eos-guard_en.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "智能排产派工",
+        "status": "asr_match_pending_listening",
+        "term": "智能排产派工",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-089-None-baseline",
+          "recognized": "这里介绍的是智能排产派工。",
+          "frames": 38,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-089-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-089-None-eos-guard",
+            "frames": 38,
+            "recognized": "这里介绍的是智能排产派工。",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-089-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "缺陷检测",
+        "status": "asr_match_pending_listening",
+        "term": "缺陷检测",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-090-None-baseline",
+          "recognized": "这里介绍的是缺陷检测。",
+          "frames": 30,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-090-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-090-None-eos-guard",
+            "frames": 29,
+            "recognized": "这里介绍的是缺陷检测。",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-090-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "精准营销",
+        "status": "asr_match_pending_listening",
+        "term": "精准营销",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-091-None-baseline",
+          "recognized": "这里介绍的是精准营销",
+          "frames": 34,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-091-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-091-None-eos-guard",
+            "frames": 34,
+            "recognized": "这里介绍的是精准营销",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-091-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "数据血缘",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "数据血缘",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-092-None-baseline",
+          "recognized": "这里介绍的是数据血源",
+          "frames": 35,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-092-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-092-None-eos-guard",
+            "frames": 35,
+            "recognized": "这里介绍的是数据血源",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-092-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "特征工程",
+        "status": "asr_match_pending_listening",
+        "term": "特征工程",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-093-None-baseline",
+          "recognized": "这里介绍的是特征工程",
+          "frames": 34,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-093-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-093-None-eos-guard",
+            "frames": 34,
+            "recognized": "这里介绍的是特征工程",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-093-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "检索增强生成",
+        "status": "asr_match_pending_listening",
+        "term": "检索增强生成",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-094-None-baseline",
+          "recognized": "这里介绍的是检索增强生成",
+          "frames": 39,
+          "normalized_exact_match": true,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-094-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-094-None-eos-guard",
+            "frames": 38,
+            "recognized": "这里介绍的是检索增强生成",
+            "normalized_exact_match": true,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-094-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "异构算力",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "异构算力",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-095-None-baseline",
+          "recognized": "这里介绍的是益构酸粒。",
+          "frames": 38,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-095-None-baseline_zh.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-095-None-eos-guard",
+            "frames": 37,
+            "recognized": "这里介绍的是益构酸粒。",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-095-None-eos-guard_zh.wav",
+            "audio_file_retained": true
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "算力调度",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "算力调度",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-096-None-baseline",
+          "recognized": "这里介绍的是蒜梨调度",
+          "frames": 29,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-096-None-baseline_zh.wav",
+          "audio_file_retained": false,
+          "eos_guard_verification": {
+            "case_id": "term-096-None-eos-guard",
+            "frames": 29,
+            "recognized": "这里介绍的是蒜梨调度",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-096-None-eos-guard_zh.wav",
+            "audio_file_retained": false
+          }
+        }
+      },
+      {
+        "enabled": false,
+        "input_text": "具身智能",
+        "status": "asr_discrepancy_pending_listening",
+        "term": "具身智能",
+        "validation": {
+          "report_path": "progress/multilingual-lexicon-20261029/validation-batch/report.json",
+          "asr_path": "progress/multilingual-lexicon-20261029/validation-batch/asr-quality.json",
+          "case_id": "term-097-None-baseline",
+          "recognized": "这里介绍的是巨神智能。",
+          "frames": 32,
+          "normalized_exact_match": false,
+          "quality_accepted": false,
+          "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+          "audio_archive_member": "validation-batch/term-097-None-baseline_zh.wav",
+          "audio_file_retained": true,
+          "eos_guard_verification": {
+            "case_id": "term-097-None-eos-guard",
+            "frames": 31,
+            "recognized": "这里介绍的是巨神智能",
+            "normalized_exact_match": false,
+            "acoustic_tokens_exact_baseline_prefix": true,
+            "quality_accepted": false,
+            "report_path": "progress/multilingual-lexicon-20261029/queue-guard/report.json",
+            "asr_path": "progress/multilingual-lexicon-20261029/queue-guard/asr-quality.json",
+            "audio_archive": "progress/multilingual-lexicon-20261029/词条批测待复听.zip",
+            "audio_archive_member": "queue-guard/term-097-None-eos-guard_zh.wav",
+            "audio_file_retained": true
+          }
+        }
+      }
+    ],
+    "purpose": "Prioritized batch inference candidates; all disabled. Standalone and contextual listening required; ASR is diagnostic only.",
+    "summary": {
+      "items": 97,
+      "natural_completion": 96,
+      "incomplete_frame_limit": 1,
+      "normalized_exact_matches": 60,
+      "status_counts": {
+        "asr_discrepancy_pending_listening": 36,
+        "asr_match_pending_listening": 60,
+        "incomplete_frame_limit": 1
+      },
+      "quality_accepted": false,
+      "scope": "Native FP32 batch and blind ASR; no human listening acceptance."
+    }
+  },
+  "inventory_files": [
+    {
+      "file": "inventory-01.json",
+      "bytes": 197938,
+      "sha256": "d54f1f56dad4900bcda6b9a9340851b174467d11f034af18a272a4faf4127984",
+      "entries": 500
+    },
+    {
+      "file": "inventory-02.json",
+      "bytes": 196341,
+      "sha256": "7145b4f15b18d9ef9be52cef5b75103c6baa24532fa466fb1cad6b8e5a789e88",
+      "entries": 500
+    },
+    {
+      "file": "inventory-03.json",
+      "bytes": 203371,
+      "sha256": "799ce5f3d273e44eeb703652a8f4c7bef72fab6def3708d389c240ac25cf1d83",
+      "entries": 500
+    },
+    {
+      "file": "inventory-04.json",
+      "bytes": 217221,
+      "sha256": "4c17281279912f08a32559f4ac1dbc3d892d2637ebf58ad0dea0cad1c8038789",
+      "entries": 500
+    },
+    {
+      "file": "inventory-05.json",
+      "bytes": 201399,
+      "sha256": "eb64eb80d4812ff6ee00c53fd5859976ed6fa08cc485e046735e362705e8d7c6",
+      "entries": 500
+    },
+    {
+      "file": "inventory-06.json",
+      "bytes": 200790,
+      "sha256": "fae081e9e085701f2dfec443ab73ee1d2743e32fa8e0bc256366f407c79873a1",
+      "entries": 500
+    },
+    {
+      "file": "inventory-07.json",
+      "bytes": 213491,
+      "sha256": "90a493c100a3571b445e5bcc2cd203f032babd589440d432e86f9f933a88f604",
+      "entries": 500
+    },
+    {
+      "file": "inventory-08.json",
+      "bytes": 210175,
+      "sha256": "d11dce7ab4832295cd35bb803bff27637d8f9028787e048f7f1af8ea843908ad",
+      "entries": 500
+    },
+    {
+      "file": "inventory-09.json",
+      "bytes": 207897,
+      "sha256": "056d258ec7570c9e682b68cfde225e09aebb8c03344d61a5c6fe1604f0ea3b41",
+      "entries": 500
+    },
+    {
+      "file": "inventory-10.json",
+      "bytes": 203048,
+      "sha256": "a3c4719ff8db8895a025ad904b90860e482354ff09c84571e0de1349633c3293",
+      "entries": 500
+    },
+    {
+      "file": "inventory-11.json",
+      "bytes": 201076,
+      "sha256": "9d948820d1b4bcd2c2697a978d0814f47bbadae429bd15b9ff4e432266480741",
+      "entries": 500
+    },
+    {
+      "file": "inventory-12.json",
+      "bytes": 203704,
+      "sha256": "d75cea0b7a1dd836882932d5e5b521f4323a3d6e1c6b8677a121fb4dce0715cb",
+      "entries": 500
+    },
+    {
+      "file": "inventory-13.json",
+      "bytes": 201693,
+      "sha256": "16f8c43648ce71194d2a48e54dbd6c7fb28a28014530da58b65a1a3d1457b21c",
+      "entries": 500
+    },
+    {
+      "file": "inventory-14.json",
+      "bytes": 201536,
+      "sha256": "20833576551fed09b3f540e4b8ed0e02c6df01a48f5b9f94cc6afaf6755b2270",
+      "entries": 500
+    },
+    {
+      "file": "inventory-15.json",
+      "bytes": 205902,
+      "sha256": "4c92228e68dc7f458e2b40e78f7121351b8c283ec3de4a319177827813331e8e",
+      "entries": 500
+    },
+    {
+      "file": "inventory-16.json",
+      "bytes": 195727,
+      "sha256": "ae5a1a2b33fe1c2bbc5734460c6c6bd8b6f37f6df922cf84f11417267afe33ec",
+      "entries": 500
+    },
+    {
+      "file": "inventory-17.json",
+      "bytes": 200802,
+      "sha256": "32e3cb820d3c5127bc769a0ba2e3571e73a585493483c4cb01a007bd17cd3469",
+      "entries": 500
+    },
+    {
+      "file": "inventory-18.json",
+      "bytes": 204958,
+      "sha256": "156bb7a6d98a52e6bdeaeeaf8f8271cb07328513515840b5cf14cf5c499511f3",
+      "entries": 500
+    },
+    {
+      "file": "inventory-19.json",
+      "bytes": 208966,
+      "sha256": "f85b6261e0ef9ad97751caf1d373cdd60e0ecc790d52dab6305df7273ac86952",
+      "entries": 500
+    },
+    {
+      "file": "inventory-20.json",
+      "bytes": 206988,
+      "sha256": "381b87c6b4bd9981adbea51262651d92dd8e87b1c4e2545128cbcde1acb74b1e",
+      "entries": 500
+    },
+    {
+      "file": "inventory-21.json",
+      "bytes": 204693,
+      "sha256": "f96d49a1858ce5389bf5b5b2a817326563a1539a28f28fa82cd2bd86552531b8",
+      "entries": 500
+    },
+    {
+      "file": "inventory-22.json",
+      "bytes": 206210,
+      "sha256": "08d7f8c7a500fb14cfcacf8e852cba7542a22c0d0b704c1234540d75c7d683b4",
+      "entries": 500
+    },
+    {
+      "file": "inventory-23.json",
+      "bytes": 204885,
+      "sha256": "26bbc28963d92ee77c87ab4ee4d081d9de2f171b5e4596eff5013cc2e7db669d",
+      "entries": 500
+    },
+    {
+      "file": "inventory-24.json",
+      "bytes": 208403,
+      "sha256": "58d5a15b781190ea1f8f7edeb2a0e32470d7aa3bfc7c74cee9ccc1bf935d3113",
+      "entries": 500
+    },
+    {
+      "file": "inventory-25.json",
+      "bytes": 198584,
+      "sha256": "bf12ebee40eebfc6b78b85c2c3d11f77d0c8c3d5a5574c8b1aa5a962f8315e2b",
+      "entries": 500
+    },
+    {
+      "file": "inventory-26.json",
+      "bytes": 205277,
+      "sha256": "01e2bc1a144bf3a72479ec7772c76fe0d67a1fb5f8087e7c3ec1fe8334be381d",
+      "entries": 500
+    },
+    {
+      "file": "inventory-27.json",
+      "bytes": 198915,
+      "sha256": "9170c9db4f957cc4b0ae33b4fea0f5ad5d896b9d38a292524b1b89b0abbc990c",
+      "entries": 500
+    },
+    {
+      "file": "inventory-28.json",
+      "bytes": 204590,
+      "sha256": "ef05e19779a1189c2de44a39c27cd6a18916faee3566aa7b9c9b1afdd840e91d",
+      "entries": 500
+    },
+    {
+      "file": "inventory-29.json",
+      "bytes": 200980,
+      "sha256": "cd2cbf07027e4ca782bb4f34c2995d6eebd52638f2857c9a1b61be0853ec37ca",
+      "entries": 500
+    },
+    {
+      "file": "inventory-30.json",
+      "bytes": 198056,
+      "sha256": "67827eafd9f916d1dace3fb46a70932586c56c616290382926824d9c1dbd67ad",
+      "entries": 500
+    },
+    {
+      "file": "inventory-31.json",
+      "bytes": 207205,
+      "sha256": "dd12a7bea9064058dc59305de39bd1c04990c234dbb053a733dc5c23bf1951d2",
+      "entries": 500
+    },
+    {
+      "file": "inventory-32.json",
+      "bytes": 209011,
+      "sha256": "1fb6dfbbd5ab2be374e88b826bd9f0825ca12c50b3d3a09a769b0c96366a47f2",
+      "entries": 500
+    },
+    {
+      "file": "inventory-33.json",
+      "bytes": 159413,
+      "sha256": "7c18180e65a19912bf3e15509bc6c3a4b3fdde626e5a4e1511a9dd95948571e8",
+      "entries": 442
+    }
+  ]
+}
