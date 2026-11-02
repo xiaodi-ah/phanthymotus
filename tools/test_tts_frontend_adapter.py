@@ -23,6 +23,7 @@ class FrontendTests(unittest.TestCase):
                 self.assertEqual([model.runtime.manifest['generation_defaults'][k] for k in ('text_temperature','audio_temperature','audio_top_p','audio_repetition_penalty')],expected)
             frame=[0]*16;on_frame([frame],0,frame);return [frame]
         model=MossAdapter.__new__(MossAdapter)
+        model.release_temporary=lambda:None
         model.french_frame=None
         model.text_frontend=frontend;model.stop_mode=stop_mode;model.language='auto';model.seed=42;model.lock=threading.Lock();model.reset_codec=lambda:None
         model.tokenizer=SimpleNamespace(encode=encode);model.voices={name:[[0]*16] for name in VOICES.values()}

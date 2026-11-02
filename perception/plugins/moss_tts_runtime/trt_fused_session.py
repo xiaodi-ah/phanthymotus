@@ -1,14 +1,14 @@
 """Static fused-frame execution with fixed addresses and optional CUDA Graph."""
-from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 import torch
 import tensorrt as trt
+from .trt_session import load_engine
 
 class FusedSession:
  def __init__(self,path,cuda_graph=False):
   self.logger=trt.Logger(trt.Logger.WARNING);self.runtime=trt.Runtime(self.logger)
-  self.engine=self.runtime.deserialize_cuda_engine(Path(path).read_bytes())
+  self.engine=load_engine(self.runtime,path)
   if self.engine is None:raise RuntimeError('Fused engine deserialization failed')
   self.context=self.engine.create_execution_context();self.stream=torch.cuda.Stream();self.graph=None
   self.inputs=[];self.outputs=[];self.buffers={};self.host={}

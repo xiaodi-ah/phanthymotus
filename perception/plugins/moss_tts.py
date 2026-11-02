@@ -88,6 +88,7 @@ class TTSPlugin:
             if node.state!='running':
                 status=node.start()
                 if status.get('state')!='running':return status
+            if hasattr(node._adapter,'validate_text'):node._adapter.validate_text(text,language)
             node.enqueue(text,trace_id=args.get('_trace_id',''),language=language)
             return {'status':'queued','text':text}
         return None

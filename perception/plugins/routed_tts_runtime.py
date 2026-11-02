@@ -39,5 +39,10 @@ class RoutedAdapter:
     def synthesize_stream(self, text):
         yield from self.synthesize_stream_language(text)
 
+    def validate_text(self, text, language=None):
+        code = route_language(text, language, self.language)
+        if code not in ('zh', 'th'):
+            self.supertonic.validate_text(text, code)
+
     def synthesize(self, text, language=None):
         return b''.join(self.synthesize_stream_language(text, language))

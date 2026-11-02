@@ -77,6 +77,7 @@ class RoutingTests(unittest.TestCase):
         seen = []
         adapter = SupertonicAdapter.__new__(SupertonicAdapter)
         adapter.seed = 42; adapter.lock = threading.Lock(); adapter.style = object()
+        adapter.release_temporary = lambda: None
         model = SimpleNamespace(text_processor=lambda *a: (np.zeros((1, 10)), None))
         def infer(text, language, style, steps, speed):
             self.assertEqual((steps, speed), (8, 1.05))

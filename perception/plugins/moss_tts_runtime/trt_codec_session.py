@@ -1,16 +1,20 @@
 """Fixed-shape streaming codec with GPU recurrence and one graph/sync per frame."""
-from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 import torch
 import tensorrt as trt
+from .trt_session import load_engine
 
 class CodecGraphSession:
     def __init__(self,path,meta):
         self.logger=trt.Logger(trt.Logger.WARNING);self.runtime=trt.Runtime(self.logger)
-        self.engine=self.runtime.deserialize_cuda_engine(Path(path).read_bytes())
+        self.engine=load_engine(self.runtime,path)
         if self.engine is None:raise RuntimeError('Codec engine deserialization failed')
-        self.context=self.engine.create_execution_context();self.stream=torch.cuda.Stream()
+        self.meta=meta;self.stream=torch.cuda.Stream();self.context=self.engine.create_execution_context();self.graph=None
+        self.initialize()
+    def initialize(self):
+        if self.graph is not None:return
+        meta=self.meta
         self.inputs=[];self.outputs=[];self.buffers={};self.host={};self.np_dtype={}
         self.state_outputs={}
         for spec in meta['streaming_decode']['transformer_offsets']:
@@ -55,6 +59,10 @@ class CodecGraphSession:
         with torch.cuda.stream(self.stream):
             for name in self.state_outputs.values():self.buffers[name].fill_(-1 if name in positions else 0)
         self.stream.synchronize()
+    def release_temporary(self):
+        self.stream.synchronize()
+        self.graph=None
+        self.buffers.clear();self.host.clear()
     def enqueue(self):
         if not self.context.execute_async_v3(self.stream.cuda_stream):raise RuntimeError('Codec TensorRT enqueue failed')
         # Returned recurrent values alias this input bank after the captured copy.

@@ -55,7 +55,9 @@ class MossAdapter:
         runtime.tts_meta=json.loads((root/'tts_meta.json').read_text())
         defaults=runtime.manifest['generation_defaults']
         defaults.update(max_new_frames=375,sample_mode=vendor.SAMPLE_MODE_FIXED,do_sample=True,text_temperature=1.5,text_top_p=1.,text_top_k=50,audio_temperature=1.7,audio_top_p=.8,audio_top_k=25,audio_repetition_penalty=1.)
-        runtime.sessions={'prefill':TrtSession(root/'prefill.plan'),'decode':TrtSession(root/'decode.plan'),'local_fixed_sampled_frame':FusedSession(root/'frame.plan',cuda_graph=cuda_graph)}
+        # Prefill/decode are serialized and synchronized; graph sessions keep private storage.
+        self.workspace={}
+        runtime.sessions={'prefill':TrtSession(root/'prefill.plan',workspace=self.workspace),'decode':TrtSession(root/'decode.plan',workspace=self.workspace),'local_fixed_sampled_frame':FusedSession(root/'frame.plan',cuda_graph=cuda_graph)}
         frame_session=runtime.sessions['local_fixed_sampled_frame']
         if 'repetition_seen_mask' in frame_session.inputs:
             sampling=json.loads((root/'frame_sampling.json').read_text())
@@ -119,6 +121,9 @@ class MossAdapter:
         self.runtime.manifest['generation_defaults'].update(zip(('text_temperature','audio_temperature','audio_top_p','audio_repetition_penalty'),values))
     def reset_codec(self):
         import torch
+        if self.cuda_graph:
+            self.codec.session.initialize()
+            self.codec.state_feeds={name:self.codec.session.buffers[name] for name in self.codec.session.state_outputs.values()}
         if all(isinstance(value,torch.Tensor) for value in self.codec.state_feeds.values()):
             positions={str(spec['cached_positions_input_name']) for spec in self.codec.attention_specs}
             # Queue reset on the codec stream before it reads its recurrent state.
@@ -126,6 +131,16 @@ class MossAdapter:
                 for name,value in self.codec.state_feeds.items():value.fill_(-1 if name in positions else 0)
         else:self.codec.reset()
     def synthesize(self,text,language=None):return b''.join(self.synthesize_stream_language(text,language))
+    def release_temporary(self):
+        # Keep model weights, but release request KV and idle codec graph/state storage.
+        import torch
+        for name in ('prefill','decode'):
+            self.runtime.sessions[name].release_temporary()
+        self.workspace.clear()
+        if self.cuda_graph:
+            self.codec.state_feeds.clear()
+            self.codec.session.release_temporary()
+        gc.collect();torch.cuda.empty_cache();ctypes.CDLL('libc.so.6').malloc_trim(0)
     def synthesize_stream(self,text):yield from self.synthesize_stream_language(text,self.language)
     def synthesize_stream_language(self,text,language=None):
         if not isinstance(text,str) or not text.strip():raise ValueError('text must be a nonempty string')
@@ -181,3 +196,5 @@ class MossAdapter:
                 yield value
         finally:
             cancel.set();worker.join(timeout=5)
+            if not worker.is_alive():
+                with self.lock:self.release_temporary()

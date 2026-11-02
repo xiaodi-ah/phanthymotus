@@ -21,13 +21,13 @@ supertonic_model_dir: /models/supertonic-3-trt-jp61
 ## 模型与接口
 
 Supertonic 目录必须包含 `duration_predictor.plan`、`text_encoder.plan`、`vector_estimator.plan`、`vocoder.plan`、`tts.json`、`unicode_indexer.json`、`F1.json`。
-当前引擎只在 JP6.1 / TensorRT 10.4.0 上验证，来源为 Supertonic 3 revision `aafc6e32` 的本项目 FP32 TRT 构建结果；不能直接用于其他 TRT 版本或 GPU。
+当前引擎只在 JP6.1 / TensorRT 10.4.0 上验证，来源为 Supertonic 3 revision `aafc6e32` 的本项目 TRT 构建结果；文本编码器和向量估计器使用混合 FP16（归约等敏感算子保留 FP32），时长预测器和声码器保持 FP32。不能直接用于其他 TRT 版本或 GPU。
 代码来源、许可证及原 helper 校验值见 `perception/plugins/supertonic_runtime/NOTICE.md`。
-模型不得提交到 Git。`perception/supertonic_assets.json` 记录不可变 JuiceFS 路径、大小和 SHA256；Dockerfile 使用现有下载器校验安装。8 个资产共 415,938,366 字节，已从比赛 HTTP 服务完整取回验证。
+模型不得提交到 Git。`perception/supertonic_assets.json` 记录不可变 JuiceFS 路径、大小和 SHA256；Dockerfile 使用现有下载器校验安装。2026-11-02 包含 8 个资产、共 270,337,902 字节，旧 FP32 包为 415,938,366 字节。
 
-Supertonic 按官方句子块生成，日语目标长度 120 字符、其他语言 300 字符，块间停顿 0.3 秒。
+Supertonic 首块字符预算为日语 40、其他语言 120，后续块为日语 80、其他语言 160；优先在标点和词间空白切分，再使用实际文本处理器校验含语言标签的 token 数不超过 384。块间停顿保持 0.3 秒。
 这不是句内增量声码器流式：首 PCM 要等待第一文本块生成完毕。
-当前 TRT profile 支持至多 512 个文本 token、512 个 latent 帧；超限明确报错，不截断内容。无标点超长文本仍需后续完善切分。
+旧 FP32 TRT profile 支持至多 512 个文本 token、512 个 latent 帧；当前混合精度文本/向量引擎上限收紧到 384 token / 192 latent 帧，适配器使用相同上限。时长预测超限时在分配音频缓冲前重新切分文本，不丢弃后半段。更小分块可能改变停顿和韵律，仍需听感验收。
 
 现有 ROS 音频通道固定为 16 kHz 单声道 PCM16；Supertonic 原生 44.1 kHz 通过多相滤波重采样接入，不能直接改采样率标签。
 实机试验同时保存原生和交付版 WAV，便于对照。ASR、听感以及完整 MCP/ROS 时延不能由适配器测试替代。
@@ -73,8 +73,47 @@ MOSS 调用不传 workspace，保持原分配与 CUDA Graph 路径。权重、�
 
 两次实测仅完成两个独立容器的双后端加载与预热，没有启动第三个，也没有执行计划的 72 个同步请求。首次宿主最少可用 1204 MiB；按实际形状复用 Supertonic 临时空间后为 1252 MiB，仍不足以安全增加一个实例。两次由资源预测保护主动停止自有容器，非 OOM。停止后 exit137 是自有容器停止超时后的结束结果，`OOMKilled=false`；四个其他容器 ID/PID 均未变。
 
-当前已安排 MemAvailable≥6400 MiB、CPU<35%、GPU<10% 连续两次后重试；运行时保留1024 MiB宿主内存。日志 `logs/routed-three-container.log`，本地采集 `logs/routed-three-collect-wait6400.log`。资源不足时不启动容器，不停止任何其他任务。
+当时安排 MemAvailable≥6400 MiB、CPU<35%、GPU<10% 连续两次后重试；该旧轮询已于 2026-11-02 停止，未启动测试容器。后续修复使用新的测试目录与审计记录，运行时仍保留1024 MiB宿主内存。资源不足时不启动容器，不停止任何其他任务。
 
 代码、Supertonic不可变模型包及Docker下载逻辑已准备；中文1.3模型包未变，泰语走MOSS。用户随后要求先 commit/push，因此本提交启用 routing 配置并准备更新 submission.yaml；没有代用户创建平台任务。三容器性能、泰语本轮完整链路、最终镜像构建仍未验证，不能标记为提交就绪。汇总 `outputs/routed-submission-preflight-20261030/status.json`。
 
 提交 YAML 中 `TTS_PLUGIN=tts` 是平台 MCP 工具名，保持不变；推理镜像内部 `TTS_PLUGIN=moss_tts` 选择路由插件，二者不是同一用途。
+
+## 026dc7f4 失败修复（2026-11-02）
+
+该日志中构建及三个 MCP 实例 readiness 均成功；可见实例完成 82 条、6 条等待首音频 60 秒超时，随后容器 exit137。日志没有 OOMKilled 或内核记录，因此不能把 exit137 单独当作 OOM 证据。超时 case 的文本约 600–718 字符；原 helper 的目标长度不是硬上限，无句号长句可超过 512-token 引擎 profile。
+
+本次修改：
+
+- 实际 token 校验与硬分块；首块 120 字符（日语 40），后续 160（日语 80）。时长预测超过 192 latent 帧时递归细分，不分配超大缓冲、不丢弃后文。
+- 请求提交前校验文本分块，取消/结束时关闭生成器；清理 Supertonic 输入输出及临时工作空间、MOSS 请求 KV 缓冲。MOSS prefill/decode 按实际形状共享工作空间，帧与 codec 的 CUDA Graph 空间保留。
+- Supertonic 文本编码器和向量估计器混合 FP16；与官方 ORT 的相对 RMSE 分别不超过约 0.00423 / 0.00632。声码器 FP16 误差约 0.0386，超过 0.02 门槛，已拒绝采用。F1、8 步、speed=1.05 未变。
+
+最终单实例产物 `outputs/routed-hybrid-v3-20261102/`：29 条均成功，首 PCM 0.052–0.292 秒，RTF 0.025–0.533（包含中文和泰语 MOSS）；不是完整平台计时。中文 WAV 与已发布版本逐字节相同；工作空间复用前后全部 55 个 WAV 相同。中英文等前端/路由/交付/分块 39 项回归通过；此前六语种各 500 条文本校验无内容丢失，不代表 3000 条音频重生成。
+
+ASR 对照位于 `outputs/routed-hybrid-v2-20261102/asr.json`，对应波形与 v3 相同：18 条固定样本的各语种错误数与旧版一致（en 0/58、ja 19/161、de 1/58、fr 2/99、ru 1/58、es 0/76；日语 CER，其余 WER）。新增约 700 字符长句：德语 0/103、俄语 3/92，没有明显整段漏读。ASR 不替代母语试听或榜单质量评分。80 字符首块曾导致法西短语切分退化，已改为 120 后复测消除，不采用该中间版本。
+
+第一轮混合精度三容器尝试仍只完成两个独立实例加载：宿主最低可用 1552 MiB，预测不足以保留 1024 MiB并加载第三个，因此主动保护退出；没有请求压测、没有 OOM，其他四个容器未变。工作空间复用后单实例宿主峰值未见明显改善，尚不能宣称三容器稳定性或平台 OOM 已解决。后续完整镜像构建、平台复测及母语听感仍待验证。平台提交使用个人仓库已推送的完整 commit ID；本地 submission.yaml 以实际填写版本为准。
+
+最终源码再测三容器（`outputs/routed-hybrid-final-three-container-20261102-105817/`）同样仅加载两个实例，最低可用 1710 MiB，资源预测保护拒绝第三个。两个自有容器均已清理，OOMKilled=false；其他四个容器 ID/PID 未变。新模型包 8 个文件已通过比赛 HTTP 全量下载大小与 SHA256 校验。
+
+## 内存回收补充（2026-11-02）
+
+进一步实测后采用三项修改：纯 TensorRT 路径延迟导入 ONNX Runtime；引擎通过只读 mmap 反序列化，避免 Python 整文件副本；通用 IO 缓冲的扩容余量限制在旧容量的 25% / 64 KiB 两者较小值，不再每次翻倍。
+MOSS 在请求结束后还释放 codec 的 CUDA Graph、输入输出及状态缓冲；保留 codec 引擎权重和执行上下文，下次请求重建图和绑定。帧图保留。销毁 codec 执行上下文的版本更省少量 RSS，但首 PCM 约 0.34–0.39 秒；保留上下文后中泰语首 PCM 约 0.25–0.29 秒，因此采用后者。进程内复用 TensorRT Runtime 的试验没有明显收益，已撤回。
+
+同一测试机、同一混合精度模型包、相同 60 条顺序请求（20 条 × 3 轮）的对照：
+
+| 请求结束后的指标 | 本轮修改前 | 本轮最终版 |
+| --- | ---: | ---: |
+| 进程 RSS | 1026.94 MiB | 1013.79 MiB |
+| 进程 PSS | 1009.06 MiB | 995.91 MiB |
+| PyTorch CUDA allocated | 49.06 MiB | 0.01 MiB |
+| PyTorch CUDA reserved | 58 MiB | 4 MiB |
+
+这些指标相互重叠，不能相加，也不是完整显存或宿主峰值。cgroup 读数还受文件缓存归属影响，不把其约 100 MiB 的下降全当成模型常驻收益。宿主可用内存在不同轮次有波动，未观察到与分配器下降等量的系统可用内存提升。
+
+60 条 PCM SHA256 均与修改前相同，三轮输出一致；取消中文流后再次生成的 PCM 也与完整请求相同。最终首 PCM 最大 0.286 秒、RTF 最大 0.568，均为预热后适配器计时，不含完整 MCP/ROS。新增 5 项内存生命周期/加载测试通过，原前端、路由、分块和音频交付回归保持通过。
+基线 `outputs/routed-memory-baseline-20261102/`，最终版 `outputs/routed-memory-final-20261102/`，对照 `comparison.json`。模型权重与音色未变。本轮减少了空闲分配器保留量，但常驻模型/运行库仍是主要占用，不能据此宣称三实例资源问题已解决。
+
+最终三容器复测（`outputs/routed-memory-final-three-container-20261102-115010/`）加载并预热两个实例后，宿主最低可用 1777 MiB；预测无法保留 1024 MiB并加载第三个，保护退出，未启动第三个。没有执行并发推理压测；两个自有容器已清理，OOMKilled=false，其他四个容器 ID/PID 未变。相比上一轮的 1710 MiB有所改善，但测试间后台波动存在，不把差值全部归因于本轮优化。

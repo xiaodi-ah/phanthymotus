@@ -262,6 +262,7 @@ class _TTSNode(Node):
                 language = 'auto'
             try:
                 import time as _time
+                stream = None
                 t_start = _time.monotonic()
                 t_start_wall = _time.time()  # wall-clock for perf span
                 t0_wall = None  # wall-clock when playback starts (prebuf complete)
@@ -368,6 +369,12 @@ class _TTSNode(Node):
                     pass
             except Exception as e:
                 log.error(f"[tts] synthesis error: {e}", exc_info=True)
+            finally:
+                if stream is not None and hasattr(stream, 'close'):
+                    try:
+                        stream.close()
+                    except Exception:
+                        log.exception('[tts] stream cleanup failed')
 
     def _status_dict(self) -> dict:
         return {

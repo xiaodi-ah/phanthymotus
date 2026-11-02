@@ -1,12 +1,15 @@
+from __future__ import annotations
+
 import json
 import os
 import time
 from contextlib import contextmanager
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from unicodedata import normalize
 
 import numpy as np
-import onnxruntime as ort
+if TYPE_CHECKING:
+    import onnxruntime as ort
 
 import re
 
@@ -283,6 +286,7 @@ def get_latent_mask(
 def load_onnx(
     onnx_path: str, opts: ort.SessionOptions, providers: list[str]
 ) -> ort.InferenceSession:
+    import onnxruntime as ort
     return ort.InferenceSession(onnx_path, sess_options=opts, providers=providers)
 
 
@@ -320,6 +324,7 @@ def load_text_processor(onnx_dir: str) -> UnicodeProcessor:
 
 
 def load_text_to_speech(onnx_dir: str, use_gpu: bool = False) -> TextToSpeech:
+    import onnxruntime as ort
     opts = ort.SessionOptions()
     if use_gpu:
         raise NotImplementedError("GPU mode is not fully tested")

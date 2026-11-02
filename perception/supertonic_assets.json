@@ -1,5 +1,5 @@
 {
-  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/supertonic-3-trt-jp61-fp32-f1-20261030/",
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/supertonic-3-trt-jp61-mixed-f1-20261102/",
   "architecture": "aarch64",
   "gpu": "Jetson Orin sm_87",
   "jetpack": "6.1",
@@ -7,7 +7,7 @@
   "model": "supertone-oss-archive/supertonic-3",
   "revision": "aafc6e32416a594460b32413efc49d7fe4ce6d46",
   "license": "OpenRAIL-M",
-  "precision": "FP32; TF32 disabled",
+  "precision": "Mixed FP16 text_encoder/vector_estimator with FP32 reductions; FP32 duration_predictor/vocoder; TF32 disabled",
   "voice": "F1",
   "steps": 8,
   "speed": 1.05,
@@ -19,13 +19,13 @@
     },
     {
       "path": "text_encoder.plan",
-      "bytes": 40895388,
-      "sha256": "df7a20fd17302a3fcd454339da71415e7ae2afa1715911c0b4acc919ea2bb587"
+      "bytes": 22935524,
+      "sha256": "e1ee2ad277ea0491479dfec61675050940e7e8bf54a1decafb0701b0c5b69e84"
     },
     {
       "path": "vector_estimator.plan",
-      "bytes": 266034260,
-      "sha256": "1a1bc01b5ab5de9b37aae9f692214ad5c88de96a6e79b2173e81407ba82e0c5e"
+      "bytes": 138393660,
+      "sha256": "8c29e0dd53644404d5d4bc07c125238fbe423bdbc43e088b1967373c62f016a1"
     },
     {
       "path": "vocoder.plan",

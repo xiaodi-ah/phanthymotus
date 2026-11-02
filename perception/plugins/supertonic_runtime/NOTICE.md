@@ -1,6 +1,8 @@
-`vendor.py` is the unmodified official Supertonic Python helper, copied from
+`vendor.py` is derived from the official Supertonic Python helper, copied from
 https://github.com/supertone-oss-archive/supertonic/blob/main/py/helper.py.
-SHA256: `b14b1da8a018aa4db6ca8cbb927c32590bfc889b49116ea344c56e8351d94279`.
+Original SHA256: `b14b1da8a018aa4db6ca8cbb927c32590bfc889b49116ea344c56e8351d94279`.
+Local change: defer ONNX Runtime imports until an ONNX loader is called, and
+postpone type annotations. The TensorRT route needs no ONNX Runtime native library.
 Its MIT license is included in LICENSE. The adapter subclasses only latent sampling
 to preserve the validated RNG sequence without global RNG interference and enforce
 the certified TensorRT profile bound.

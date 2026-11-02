@@ -1,14 +1,21 @@
 """ORT-shaped adapter with GPU-resident recurrent state and bounded buffers."""
 from pathlib import Path
 from types import SimpleNamespace
+import mmap
 import numpy as np
 import torch
 import tensorrt as trt
 
+def load_engine(runtime,path):
+ # Deserialize read-only file pages without a temporary Python copy of all weights.
+ with Path(path).open('rb') as source:
+  with mmap.mmap(source.fileno(),0,access=mmap.ACCESS_READ) as data:
+   return runtime.deserialize_cuda_engine(data)
+
 class TrtSession:
  def __init__(self,path,workspace=None):
   self.logger=trt.Logger(trt.Logger.WARNING);self.runtime=trt.Runtime(self.logger)
-  self.engine=self.runtime.deserialize_cuda_engine(Path(path).read_bytes())
+  self.engine=load_engine(self.runtime,path)
   if self.engine is None:raise RuntimeError('Cannot load TensorRT engine: '+str(path))
   self.workspace=workspace
   self.context=self.engine.create_execution_context() if workspace is None else self.engine.create_execution_context_without_device_memory()
@@ -26,10 +33,15 @@ class TrtSession:
    self.info[name]=(npdtype,dtype,device)
   self.output_info=[SimpleNamespace(name=n) for n in self.outputs]
  def get_outputs(self):return self.output_info
+ def release_temporary(self):
+  self.stream.synchronize()
+  self.buffers.clear();self.addresses.clear();self.input_shapes.clear()
  def buffer(self,key,count,dtype,device):
   old=self.buffers.get(key)
   if old is None or old.numel()<count:
-   old=torch.empty(max(1,count if old is None else max(count,old.numel()*2)),dtype=dtype,device=device);self.buffers[key]=old
+   # Bound spare capacity; doubling every growing KV bank needlessly raises the peak.
+   capacity=count if old is None else max(count,old.numel()+min(old.numel()//4,(64<<10)//old.element_size()))
+   old=torch.empty(max(1,capacity),dtype=dtype,device=device);self.buffers[key]=old
   return old[:count]
  def bind(self,name,tensor):
   address=tensor.data_ptr()

@@ -9,6 +9,10 @@ from scipy.signal import resample_poly
 LANGUAGES = ('en', 'ja', 'de', 'fr', 'ru', 'es')
 
 
+class DurationLimitError(ValueError):
+    """Split the text before allocating a large predicted latent/audio buffer."""
+
+
 def pcm16(audio):
     audio = np.asarray(audio)
     if audio.ndim != 1 or not audio.size or not np.isfinite(audio).all():
@@ -45,8 +49,8 @@ class SupertonicAdapter:
                     raise RuntimeError('Invalid predicted speech duration')
                 size = self.base_chunk_size * self.chunk_compress_factor
                 length = int((duration.max() * self.sample_rate + size - 1) / size)
-                if not 1 <= length <= 512:
-                    raise ValueError('Speech exceeds the certified 512-frame profile; shorten the text')
+                if not 1 <= length <= 192:
+                    raise DurationLimitError('Predicted duration exceeds the bounded inference block')
                 lengths = (duration * self.sample_rate).astype(np.int64)
                 mask = vendor.get_latent_mask(lengths, self.base_chunk_size, self.chunk_compress_factor)
                 latent = self.rng.randn(len(duration), self.ldim * self.chunk_compress_factor, length).astype(np.float32)
@@ -60,9 +64,27 @@ class SupertonicAdapter:
         self.style = vendor.load_voice_style([str(root / 'F1.json')])
         self.seed = int(seed)
         self.lock = threading.Lock()
+        self.sessions = [self.model.dp_ort, self.model.text_enc_ort,
+                         self.model.vector_est_ort, self.model.vocoder_ort]
+        self.workspace = workspace
+
+    def release_temporary(self):
+        import ctypes
+        import gc
+        import torch
+        for session in self.sessions:
+            session.release_temporary()
+        self.workspace.clear()
+        gc.collect()
+        torch.cuda.empty_cache()
+        ctypes.CDLL('libc.so.6').malloc_trim(0)
+
+    def validate_text(self, text, language):
+        from .text_chunks import text_chunks
+        list(text_chunks(text, language, self.model.text_processor))
 
     def native_blocks(self, text, language):
-        from .vendor import chunk_text
+        from .text_chunks import text_chunks, split_point
         if not isinstance(text, str) or not text.strip():
             raise ValueError('text must be a nonempty string')
         if language not in LANGUAGES:
@@ -71,16 +93,28 @@ class SupertonicAdapter:
             # Legacy RandomState matches the validated np.random.seed(42) baseline,
             # while keeping each instance independent of all other requests.
             self.model.rng = np.random.RandomState(self.seed)
-            for chunk in chunk_text(text, max_len=120 if language == 'ja' else 300):
-                ids, _ = self.model.text_processor([chunk], [language])
-                if ids.shape[-1] > 512:
-                    raise ValueError('Text exceeds the certified 512-token profile; shorten the text')
-                wav, _ = self.model._infer([chunk], [language], self.style, 8, 1.05)
+            def infer(chunk):
+                rng = self.model.rng.get_state()
+                try:
+                    wav, _ = self.model._infer([chunk], [language], self.style, 8, 1.05)
+                except DurationLimitError:
+                    self.model.rng.set_state(rng)
+                    if len(chunk) <= 8:
+                        raise
+                    cut = split_point(chunk, len(chunk) // 2)
+                    yield from infer(chunk[:cut].strip())
+                    yield from infer(chunk[cut:].strip())
+                    return
                 audio = wav.reshape(-1)
                 if not audio.size or not np.isfinite(audio).all():
                     raise RuntimeError('Supertonic returned invalid audio')
                 logging.getLogger(__name__).info('Supertonic block: language=%s chars=%s samples=%s', language, len(chunk), len(audio))
                 yield audio
+            try:
+                for chunk in text_chunks(text, language, self.model.text_processor):
+                    yield from infer(chunk)
+            finally:
+                self.release_temporary()
 
     def synthesize_stream_language(self, text, language):
         blocks = self.native_blocks(text, language)

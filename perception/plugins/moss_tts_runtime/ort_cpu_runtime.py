@@ -5,10 +5,11 @@ import math
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Callable, TYPE_CHECKING
 
 import numpy as np
-import onnxruntime as ort
+if TYPE_CHECKING:
+    import onnxruntime as ort
 
 SAMPLE_MODE_GREEDY = "greedy"
 SAMPLE_MODE_FIXED = "fixed"
@@ -44,6 +45,7 @@ def _resolve_ort_providers(execution_provider: str) -> list[Any]:
     normalized = _normalize_execution_provider(execution_provider)
     if normalized == EXECUTION_PROVIDER_CPU:
         return ["CPUExecutionProvider"]
+    import onnxruntime as ort
     available_providers = set(ort.get_available_providers())
     if "CUDAExecutionProvider" not in available_providers:
         available = ", ".join(ort.get_available_providers()) or "none"
@@ -377,6 +379,7 @@ class OrtCpuRuntime:
         return resolved
 
     def _session(self, path_value: Path) -> ort.InferenceSession:
+        import onnxruntime as ort
         options = ort.SessionOptions()
         options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
         options.intra_op_num_threads = self.thread_count
