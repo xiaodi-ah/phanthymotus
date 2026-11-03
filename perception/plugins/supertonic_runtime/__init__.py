@@ -81,29 +81,32 @@ class SupertonicAdapter:
 
     def validate_text(self, text, language):
         from .text_chunks import text_chunks
-        list(text_chunks(text, language, self.model.text_processor))
+        from ..tts_text_frontend import supertonic_text
+        list(text_chunks(supertonic_text(text,language), language, self.model.text_processor))
 
     def native_blocks(self, text, language):
-        from .text_chunks import text_chunks, split_point
+        from .text_chunks import text_chunks, split_point, continuation_text
         if not isinstance(text, str) or not text.strip():
             raise ValueError('text must be a nonempty string')
         if language not in LANGUAGES:
             raise ValueError('Unsupported Supertonic route: ' + str(language))
+        from ..tts_text_frontend import supertonic_text
+        prepared=supertonic_text(text,language)
         with self.lock:
             # Legacy RandomState matches the validated np.random.seed(42) baseline,
             # while keeping each instance independent of all other requests.
             self.model.rng = np.random.RandomState(self.seed)
-            def infer(chunk):
+            def infer(chunk,final):
                 rng = self.model.rng.get_state()
                 try:
-                    wav, _ = self.model._infer([chunk], [language], self.style, 8, 1.05)
+                    wav, _ = self.model._infer([continuation_text(chunk,final)], [language], self.style, 8, 1.05)
                 except DurationLimitError:
                     self.model.rng.set_state(rng)
                     if len(chunk) <= 8:
                         raise
                     cut = split_point(chunk, len(chunk) // 2)
-                    yield from infer(chunk[:cut].strip())
-                    yield from infer(chunk[cut:].strip())
+                    yield from infer(chunk[:cut].strip(),False)
+                    yield from infer(chunk[cut:].strip(),final)
                     return
                 audio = wav.reshape(-1)
                 if not audio.size or not np.isfinite(audio).all():
@@ -111,17 +114,22 @@ class SupertonicAdapter:
                 logging.getLogger(__name__).info('Supertonic block: language=%s chars=%s samples=%s', language, len(chunk), len(audio))
                 yield audio
             try:
-                for chunk in text_chunks(text, language, self.model.text_processor):
-                    yield from infer(chunk)
+                chunks=iter(text_chunks(prepared, language, self.model.text_processor))
+                current=next(chunks,None)
+                for following in chunks:
+                    yield from infer(current,False)
+                    current=following
+                if current is not None:yield from infer(current,True)
             finally:
                 self.release_temporary()
 
     def synthesize_stream_language(self, text, language):
+        from .audio_join import INTER_BLOCK_PAUSE_SECONDS, trim_zero_padding
         blocks = self.native_blocks(text, language)
         try:
             for index, audio in enumerate(blocks):
                 if index:
-                    yield bytes(4800 * 2)  # Preserve the official 0.3 s inter-block pause.
-                yield pcm16(resample_poly(audio, 160, 441))
+                    yield bytes(round(16000 * INTER_BLOCK_PAUSE_SECONDS) * 2)
+                yield trim_zero_padding(pcm16(resample_poly(audio, 160, 441)))
         finally:
             blocks.close()

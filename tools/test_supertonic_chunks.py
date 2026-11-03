@@ -4,7 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'perception'))
-from plugins.supertonic_runtime.text_chunks import text_chunks
+from plugins.supertonic_runtime.text_chunks import text_chunks,split_point,continuation_text
 from plugins.supertonic_runtime import SupertonicAdapter,DurationLimitError
 
 def processor(texts,languages):
@@ -42,7 +42,28 @@ class Tests(unittest.TestCase):
     def test_duration_retry_preserves_content_and_cleans_up(self):
         a,seen,released=self.adapter(True);text='The system manages graphics processors and provides models to users.'
         blocks=list(a.native_blocks(text,'en'));self.assertGreater(len(blocks),1)
-        self.assertEqual(''.join(''.join(seen).split()),''.join(text.split()));self.assertEqual(released,[True])
+        self.assertEqual(''.join(''.join(seen).split()).replace(',',''),''.join(text.split()));self.assertEqual(released,[True])
+    def test_complete_sentence_beats_later_comma(self):
+        text='The first sentence is complete. The following sentence, with an extra clause, continues here.'
+        self.assertEqual(text[:split_point(text,76)],'The first sentence is complete.')
+    def test_decimal_abbreviation_and_word_are_not_sentence_cuts(self):
+        text='Dr. Smith measured 3.14 volts and described the architecture carefully.'
+        cut=split_point(text,22)
+        self.assertNotEqual(text[:cut].rstrip(),'Dr.')
+        self.assertFalse(text[:cut].rstrip().endswith('3.'))
+        self.assertEqual(split_point('測定したエックスマイナスの値を確認。',8),4)
+    def test_continuation_does_not_acquire_a_native_period(self):
+        from plugins.supertonic_runtime.vendor import UnicodeProcessor
+        processor=UnicodeProcessor.__new__(UnicodeProcessor)
+        for language,text in [('en','the generic mouth shapes'),('ja','続けて、')]:
+            prepared=continuation_text(text,False)
+            self.assertTrue(processor._preprocess_text(prepared,language).endswith(',</'+language+'>'))
+            self.assertEqual(continuation_text(text,True),text)
+    def test_extra_continuation_comma_is_in_token_budget(self):
+        text='an exceptionally long sentence without punctuation '*30
+        chunks=list(text_chunks(text,'en',processor))
+        for index,chunk in enumerate(chunks):
+            self.assertLessEqual(processor([continuation_text(chunk,index==len(chunks)-1)],['en'])[0].shape[-1],384)
     def test_cancellation_and_failure_release_temporary(self):
         a,_,released=self.adapter();g=a.native_blocks('Hello. '*100,'en');next(g);g.close();self.assertEqual(released,[True]);self.assertFalse(a.lock.locked())
         def fail(*args):raise RuntimeError('inference failure')

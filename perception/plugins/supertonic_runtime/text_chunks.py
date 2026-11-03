@@ -2,17 +2,39 @@
 import re
 import unicodedata
 
+_SENTENCE=re.compile(r'[。！？!?]+[”’"）)]*|\.[”’"）)]*(?=\s|$)|\n+')
+_CLAUSE=re.compile(r'[；，、：]|[;,:](?=\s|$)')
+_ATOMIC=re.compile(r'[A-Za-z0-9]+(?:[._+@/\-][A-Za-z0-9]+)*|[ァ-ヶー]+')
+_ABBREVIATIONS={'mr','mrs','ms','dr','prof','sr','jr','vs','etc','e.g','i.e','no','fig','inc'}
+
+
+def continuation_text(text,final):
+    if final:return text
+    if text.endswith(('、','，','；','：')):return text[:-1]+{'、':',','，':',','；':';','：':':'}[text[-1]]
+    if not re.search(r'''[.!?;:,'"')\]}…。」』】〉》›»]$''',text):
+        return text+','
+    return text
+
 
 def split_point(text, limit):
     end = min(len(text), limit)
     if end == len(text):
         return end
-    prefix = text[:end]
-    punctuation = [m.end() for m in re.finditer(r'[。！？；，、：]|[!?;,:.](?=\s)', prefix)]
-    for boundaries in (punctuation, [m.end() for m in re.finditer(r'\s+', prefix)]):
-        if boundaries and boundaries[-1] >= end // 2:
-            end = boundaries[-1]
-            break
+    sentences=[]
+    for match in _SENTENCE.finditer(text):
+        if match.end()>end:break
+        if match[0].startswith('.'):
+            word=re.search(r'([^\W\d_]+(?:\.[^\W\d_]+)*)\.$',text[:match.start()+1])
+            if word and (word[1].casefold() in _ABBREVIATIONS or re.fullmatch(r'(?:[A-Za-z]\.)*[A-Za-z]',word[1])):continue
+        sentences.append(match.end())
+    clauses=[m.end() for m in _CLAUSE.finditer(text) if m.end()<=end and m.end()>=min(20,end//2)]
+    spaces=[m.end() for m in re.finditer(r'\s+',text) if m.end()<=end]
+    if sentences:end=sentences[-1]
+    elif clauses:end=clauses[-1]
+    elif spaces:end=spaces[-1]
+    else:
+        for match in _ATOMIC.finditer(text):
+            if 0<match.start()<end<match.end():end=match.start();break
     while end > 1 and end < len(text) and unicodedata.combining(text[end]):
         end -= 1
     return end
@@ -27,7 +49,7 @@ def text_chunks(text, language, processor):
         end = split_point(remaining, limit)
         while True:
             chunk = remaining[:end].strip()
-            ids, _ = processor([chunk], [language])
+            ids, _ = processor([continuation_text(chunk,end==len(remaining))], [language])
             if chunk and ids.shape[-1] <= 384:
                 break
             if end <= 1:

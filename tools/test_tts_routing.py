@@ -56,6 +56,22 @@ class RoutingTests(unittest.TestCase):
         for text, code in [('Hello', 'xx')]:
             with self.assertRaises(ValueError): route_language(text, code)
 
+    def test_numeric_input_uses_documented_default_and_preserves_explicit_language(self):
+        for text in ['13800138000','005917','１２３４５６７','12 34 56']:
+            self.assertEqual(route_language(text),'zh')
+            self.assertEqual(route_language(text,'en'),'en')
+            self.assertEqual(route_language(text,'auto','fr'),'fr')
+        for text in ['GPU 123','version 2026','192.0.2.10','x = 2']:
+            self.assertEqual(route_language(text),'en')
+        seen=[];adapter=RoutedAdapter.__new__(RoutedAdapter);adapter.language='auto'
+        def stream(text,language):seen.append((text,language));yield b'pcm'
+        adapter.moss=SimpleNamespace(synthesize_stream_language=stream)
+        adapter.supertonic=SimpleNamespace(synthesize_stream_language=stream)
+        self.assertEqual(adapter.synthesize('005917'),b'pcm')
+        self.assertEqual(seen,[('零零五九一七','zh')])
+        self.assertEqual(adapter.synthesize('18610223345'),b'pcm')
+        self.assertEqual(seen[-1],('一八六，一零二二，三三四五。','zh'))
+
     def test_routes_reused_and_warmup_hits_both_backends(self):
         seen = []
         def backend(name):
@@ -97,7 +113,7 @@ class RoutingTests(unittest.TestCase):
         audio = (.1 * np.sin(2 * np.pi * 440 * np.arange(44100) / 44100)).astype(np.float32)
         adapter.native_blocks = lambda *args: (x for x in (audio, audio))
         pieces = list(adapter.synthesize_stream_language('test', 'en'))
-        self.assertEqual([len(p) for p in pieces], [32000, 9600, 32000])
+        self.assertEqual([len(p) for p in pieces], [32000, 2560, 32000])
         self.assertEqual(pieces[0], pcm16(resample_poly(audio, 160, 441)))
         self.assertGreater(np.max(np.abs(np.frombuffer(pieces[0], '<i2'))), 100)
         for invalid in ([], [np.nan], [[0.1]]):
