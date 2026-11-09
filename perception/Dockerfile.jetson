@@ -1,15 +1,17 @@
 # JP6.1 trial: engines were built on Orin / CUDA12.6 / TensorRT10.4.0.
-ARG BASE_IMAGE=bj-warehouse.tencentcloudcr.com/phanthy-motus/perception:release.261010.37994d2-jetson-jp6.1
+ARG BASE_IMAGE=bj-warehouse.tencentcloudcr.com/phanthy-motus/perception@sha256:0c8d533b94a858fd6c8571c188ead15b95645ead0f79f589272db40dff662f3a
 FROM ${BASE_IMAGE}
 ENV PYTHONDONTWRITEBYTECODE=1 TTS_PLUGIN=moss_tts
-COPY perception/moss_assets.json /opt/moss_assets.json
+COPY perception/zipvoice_assets.json /opt/zipvoice_assets.json
 COPY perception/supertonic_assets.json /opt/supertonic_assets.json
 COPY tools/download_moss_assets.py /opt/download_moss_assets.py
-RUN python3 /opt/download_moss_assets.py --manifest /opt/moss_assets.json --destination /models/moss-tts-trt-jp61-v2 && \
-    PIP_CONFIG_FILE=/dev/null python3 -m pip install --no-cache-dir --no-index --no-deps --ignore-installed \
-      /models/moss-tts-trt-jp61-v2/wheels/*.whl && \
-    python3 -B -c "import ctypes.util, numpy, scipy, sentencepiece, onnxruntime; assert numpy.__version__=='1.26.4'; assert ctypes.util.find_library('icui18n'), 'System ICU required for multilingual number spellout'"
+RUN python3 /opt/download_moss_assets.py --manifest /opt/zipvoice_assets.json --destination /models/zipvoice-distill-junhao && \
+    python3 -B -c "import ctypes.util, numpy, scipy, sherpa_onnx; assert numpy.__version__=='1.26.4'; assert sherpa_onnx.__version__=='1.13.6+cuda'; assert hasattr(sherpa_onnx, 'OfflineTtsZipvoiceModelConfig'); assert ctypes.util.find_library('icui18n'), 'System ICU required for multilingual number spellout'"
 RUN python3 /opt/download_moss_assets.py --manifest /opt/supertonic_assets.json --destination /models/supertonic-3-trt-jp61
+COPY perception/tts_dependencies.json /opt/tts_dependencies.json
+RUN python3 /opt/download_moss_assets.py --manifest /opt/tts_dependencies.json --destination /opt/tts-wheels && \
+    PIP_CONFIG_FILE=/dev/null python3 -m pip install --no-cache-dir --no-index --no-deps --ignore-installed /opt/tts-wheels/wheels/*.whl && \
+    python3 -B -W error -c "import numpy, scipy; from scipy.signal import resample_poly; assert numpy.__version__=='1.26.4' and scipy.__version__=='1.15.3'; assert len(resample_poly(numpy.ones(240), 2, 3))==160"
 WORKDIR /work
 COPY perception/main.py /work/main.py
 COPY perception/plugins/ /work/plugins/

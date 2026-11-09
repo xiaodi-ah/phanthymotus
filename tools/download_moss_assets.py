@@ -2,6 +2,7 @@
 import argparse,hashlib,json,re
 from pathlib import Path,PurePosixPath
 import urllib.request
+import urllib.parse
 
 def digest(path):
     value=hashlib.sha256()
@@ -19,7 +20,7 @@ def download(manifest,target):
         path=target/str(name);path.parent.mkdir(parents=True,exist_ok=True)
         if path.exists() and path.stat().st_size==item['bytes'] and digest(path)==item['sha256']:continue
         temporary=path.with_suffix(path.suffix+'.part')
-        with opener.open(base+str(name),timeout=30) as source,temporary.open('wb') as output:
+        with opener.open(base+urllib.parse.quote(str(name),safe='/'),timeout=30) as source,temporary.open('wb') as output:
             for block in iter(lambda:source.read(1<<20),b''):output.write(block)
         if temporary.stat().st_size!=item['bytes'] or digest(temporary)!=item['sha256']:raise RuntimeError('Asset size/SHA mismatch: '+str(name))
         temporary.replace(path);print('Verified '+str(name),flush=True)

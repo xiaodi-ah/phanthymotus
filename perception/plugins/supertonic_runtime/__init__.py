@@ -22,14 +22,13 @@ def pcm16(audio):
 
 class SupertonicAdapter:
     def __init__(self, model_dir, seed=42):
-        import torch
         import tensorrt as trt
         from . import vendor
-        from ..moss_tts_runtime.trt_session import TrtSession
+        from .direct_trt_session import TrtSession, cuda
 
-        if trt.__version__ != '10.4.0' or not torch.cuda.is_available():
+        if trt.__version__ != '10.4.0':
             raise RuntimeError('Supertonic engines require Jetson TensorRT 10.4.0 and CUDA')
-        torch.set_num_threads(1)
+        cuda()
         # The four stages run serially under native_blocks' lock; run() synchronizes
         # each stream. Share shape-sized scratch instead of four profile maxima.
         workspace = {}
@@ -71,12 +70,10 @@ class SupertonicAdapter:
     def release_temporary(self):
         import ctypes
         import gc
-        import torch
         for session in self.sessions:
             session.release_temporary()
         self.workspace.clear()
         gc.collect()
-        torch.cuda.empty_cache()
         ctypes.CDLL('libc.so.6').malloc_trim(0)
 
     def validate_text(self, text, language):
@@ -104,7 +101,7 @@ class SupertonicAdapter:
                     self.model.rng.set_state(rng)
                     if len(chunk) <= 8:
                         raise
-                    cut = split_point(chunk, len(chunk) // 2)
+                    cut = split_point(chunk, len(chunk) // 2, language)
                     yield from infer(chunk[:cut].strip(),False)
                     yield from infer(chunk[cut:].strip(),final)
                     return

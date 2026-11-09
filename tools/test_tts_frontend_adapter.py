@@ -8,7 +8,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'perception'))
 from plugins.moss_tts_runtime import MossAdapter,VOICES
 
 class FrontendTests(unittest.TestCase):
-    def exercise(self,text,language,frontend,next_request=None,stop_mode='greedy',audio_value=0.,resolved_language=None,switching=False):
+    def exercise(self,text,language,frontend,next_request=None,stop_mode='greedy',audio_value=0.,resolved_language=None,switching=False,expected_chunks=1):
         encoded=[]
         def encode(text,out_type=int):encoded.append(text);return [1,2]
         def generate(request,on_frame):
@@ -37,7 +37,7 @@ class FrontendTests(unittest.TestCase):
             self.enterContext(patch.dict(sys.modules,{'plugins.moss_tts_runtime.trt_fused_session':SimpleNamespace(FusedSession=load)}))
         model.codec=SimpleNamespace(run_frames=lambda frames:(np.full((1,2,3840),audio_value,np.float32),3840))
         result=model.synthesize(text,language)
-        self.assertEqual(len(result),2560);self.assertTrue(encoded)
+        self.assertEqual(len(result),2560*expected_chunks);self.assertTrue(encoded)
         self.assertEqual(result[-2:],b'\0\0')
         if audio_value:self.assertGreater(np.max(np.abs(np.frombuffer(result,dtype='<i2').astype(int))),0)
         if next_request:
@@ -57,6 +57,11 @@ class FrontendTests(unittest.TestCase):
     def test_numbers_are_spoken_before_tokenization(self):
         encoded=self.exercise('GPU: 23°C','en','numbers')
         self.assertTrue(encoded);self.assertTrue(all(x=='GPU: twenty-three degrees Celsius' for x in encoded))
+    def test_structured_email_and_following_math_reach_the_model(self):
+        encoded=self.exercise('ab_07@example.org; x = 4².','en','numbers',expected_chunks=2)
+        self.assertIn('A B underscore zero seven at example dot org;',encoded)
+        self.assertIn('X equals four squared.',encoded)
+        self.assertTrue(all(x=='Python 3.12.' for x in self.exercise('Python 3.12.','en','numbers')))
     def test_terms_are_separate_from_number_only_mode(self):
         encoded=self.exercise('ID: 0012.','en','numbers_terms')
         self.assertTrue(all(x=='I D: zero zero one two.' for x in encoded))

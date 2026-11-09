@@ -1,0 +1,14 @@
+{
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts/models/moss-tts-trt-jp61-v2-frnano-20261026/",
+  "python": "3.10",
+  "architecture": "aarch64",
+  "numpy": "1.26.4 (base image)",
+  "scipy": "1.15.3",
+  "files": [
+    {
+      "path": "wheels/scipy-1.15.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 35547617,
+      "sha256": "263961f658ce2165bbd7b99fa5135195c3a12d9bef045345016b8b50c315cb82"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 """Conservative spoken forms for prose decimals, explicit identifiers and email."""
 import re
 from functools import lru_cache
+from dataclasses import dataclass
 from .moss_tts_runtime import multilingual_math,zh_math
 from .moss_tts_runtime.text_normalization import integer_words
 
@@ -57,6 +58,20 @@ def identifier_pattern(language):
         r'(?P<value>\+?[0-9][0-9 -]{0,46}[0-9])(?![A-Za-z0-9_/-]|\.[A-Za-z0-9_])',re.I)
 
 
+@lru_cache(maxsize=7)
+def spoken_identifier_pattern(language):
+    digit='(?:'+'|'.join(re.escape(w) for w in sorted(digit_words(language),key=len,reverse=True))+')'
+    if language!='zh':digit+=r'(?![A-Za-zА-Яа-яЁёァ-ヶー])'
+    separator=r'[ \t,，、]+'
+    prefix=r'(?<![A-Za-z])(?:'+_CUES[language]+r')[ \t]*(?:(?:fictif|ficticio|ficticia|is|ist|est|es|为|是|は)[ \t]*)?[:：#]?[ \t]*'
+    return re.compile(prefix+digit+'(?:'+(separator if language!='zh' else r'[ \t,，、]*')+digit+'){1,31}',re.I)
+
+
+def spoken_identifier_spans(text,language):
+    if language not in _CUES:return []
+    return [m.span() for m in spoken_identifier_pattern(language).finditer(text)]
+
+
 def email_reading(address,language):
     # Keep lowercase word runs natural; spell short codes, digits and every separator.
     letters=multilingual_math.DATA['en' if language=='zh' else language]['letters']
@@ -72,33 +87,59 @@ def email_reading(address,language):
     return ' '.join(tokens)
 
 
-def spoken_entities(text,language):
+@dataclass(frozen=True)
+class TextSegment:
+    kind: str
+    start: int
+    end: int
+    raw: str
+    spoken: str
+
+
+def identifier_reading(match,language):
+    raw=match['value'];digits=re.sub(r'[^0-9]','',raw)
+    if len(digits)>32 or re.search(r'-\s*-',raw):return match[0]
+    phone=bool(re.search(r'phone|telephone|mobile|手机|电话|携帯|Telefon|Mobil|téléphone|телефон|teléfono',match['cue'],re.I))
+    prefix=_SYMBOLS[language]['+']+' ' if raw.startswith('+') else ''
+    if '-' in raw and not phone:
+        reading=(' '+_SYMBOLS[language]['-']+' ').join(spell_digits(part.replace(' ',''),language) for part in raw.lstrip('+').split('-'))
+    else:reading=spell_digits(digits,language,phone)
+    return match['cue']+match['space']+prefix+reading
+
+
+def entity_segments(text,language):
+    """Partition raw input before rewriting; opaque spans never enter another grammar."""
+    if not isinstance(text,str):raise TypeError('text must be a string')
+    if language not in _CUES:
+        return [TextSegment('text',0,len(text),text,text)] if text else []
+    def scan(start,end,rules):
+        if not rules:
+            if start<end:yield TextSegment('text',start,end,text[start:end],text[start:end])
+            return
+        kind,pattern,render=rules[0];position=start
+        for match in pattern.finditer(text,start,end):
+            yield from scan(position,match.start(),rules[1:])
+            yield TextSegment(kind,match.start(),match.end(),match[0],render(match))
+            position=match.end()
+        yield from scan(position,end,rules[1:])
+    # URLs/code/versions own their contents; email owns its digits, then labelled IDs.
+    rules=[('protected',_PROTECTED,lambda m:m[0]),
+           ('email',_EMAIL,lambda m:email_reading(m[0],language)),
+           ('identifier',identifier_pattern(language),lambda m:identifier_reading(m,language))]
+    return list(scan(0,len(text),rules))
+
+
+def prose_decimals(text,language):
     if language not in _CUES:return text
-    def prose(value):
-        def identifier(match):
-            raw=match['value'];digits=re.sub(r'[^0-9]','',raw)
-            if len(digits)>32 or re.search(r'-\s*-',raw):return match[0]
-            phone=bool(re.search(r'phone|telephone|mobile|手机|电话|携帯|Telefon|Mobil|téléphone|телефон|teléfono',match['cue'],re.I))
-            prefix=_SYMBOLS[language]['+']+' ' if raw.startswith('+') else ''
-            if '-' in raw and not phone:
-                reading=(' '+_SYMBOLS[language]['-']+' ').join(spell_digits(part.replace(' ',''),language) for part in raw.lstrip('+').split('-'))
-            else:reading=spell_digits(digits,language,phone)
-            return match['cue']+match['space']+prefix+reading
-        value=identifier_pattern(language).sub(identifier,value)
-        def decimal(match):
-            raw=match[0];whole,tail=re.split('[.,]',raw)
-            if language=='zh' and zh_math._UNIT_RE.match(match.string[match.end():].lstrip()):return raw
-            if ',' in raw and (language in ('en','ja','zh') or len(tail)==3):return raw
-            if '.' in raw and language in ('de','es') and len(tail)==3:return raw
-            return zh_math.number(raw) if language=='zh' else multilingual_math.speech(language).number(raw)
-        return _DECIMAL.sub(decimal,value)
-    def segment(value):
-        pieces=[];start=0
-        for match in _EMAIL.finditer(value):
-            pieces.extend([prose(value[start:match.start()]),email_reading(match[0],language)])
-            start=match.end()
-        pieces.append(prose(value[start:]));return ''.join(pieces)
-    pieces=[];start=0
-    for match in _PROTECTED.finditer(text):
-        pieces.extend([segment(text[start:match.start()]),match[0]]);start=match.end()
-    pieces.append(segment(text[start:]));return ''.join(pieces)
+    def decimal(match):
+        raw=match[0];whole,tail=re.split('[.,]',raw)
+        if language=='zh' and zh_math._UNIT_RE.match(match.string[match.end():].lstrip()):return raw
+        if ',' in raw and (language in ('en','ja','zh') or len(tail)==3):return raw
+        if '.' in raw and language in ('de','es') and len(tail)==3:return raw
+        return zh_math.number(raw) if language=='zh' else multilingual_math.speech(language).number(raw)
+    return _DECIMAL.sub(decimal,text)
+
+
+def spoken_entities(text,language):
+    return ''.join(prose_decimals(s.raw,language) if s.kind=='text' else s.spoken
+                   for s in entity_segments(text,language))

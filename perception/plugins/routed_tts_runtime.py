@@ -3,7 +3,6 @@ import logging
 from .moss_tts_runtime import MossAdapter, language_for
 from .supertonic_runtime import SupertonicAdapter, LANGUAGES as SUPER_LANGUAGES
 from .tts_text_frontend import standalone_digits, spoken_identifier
-from .tts_entities import spoken_entities
 
 LANGUAGES = ('zh', 'th', *SUPER_LANGUAGES)
 
@@ -37,7 +36,7 @@ class RoutedAdapter:
         code = route_language(text, language, self.language)
         backend = self.moss if code in ('zh', 'th') else self.supertonic
         logging.getLogger(__name__).info('TTS route: language=%s backend=%s', code, 'moss' if code in ('zh', 'th') else 'supertonic')
-        prepared=spoken_entities(spoken_identifier(text,code),code) if code=='zh' else text
+        prepared=spoken_identifier(text,code) if code=='zh' else text
         yield from backend.synthesize_stream_language(prepared, code)
 
     def synthesize_stream(self, text):

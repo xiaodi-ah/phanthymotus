@@ -2,7 +2,7 @@
 import re,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'perception'))
-from plugins.tts_entities import spoken_entities,spell_digits,digit_words,email_reading,_SYMBOLS
+from plugins.tts_entities import spoken_entities,spell_digits,digit_words,email_reading,spoken_identifier_spans,_SYMBOLS
 from plugins.tts_text_frontend import supertonic_text
 
 LANGS=('zh','en','ja','de','fr','ru','es')
@@ -71,6 +71,16 @@ class Tests(unittest.TestCase):
         self.assertEqual(spoken_entities('3.6 a@b.com','th'),'3.6 a@b.com')
         for language,text in [('zh','哈密管理计算资源。'),('en','Please close the window.'),('fr','Le robot est prêt.')]:
             self.assertEqual(spoken_entities(text,language),text)
+
+    def test_spoken_identifier_spans_stop_before_next_field(self):
+        prefixes={'zh':'订单号','en':'order number ','ja':'注文番号','de':'Bestellnummer ',
+                  'fr':'numéro de commande ','ru':'номер заказа ','es':'número de pedido '}
+        for language,prefix in prefixes.items():
+            value=prefix+spell_digits('70300912682450',language)
+            text='prefix '+value+', suffix'
+            spans=spoken_identifier_spans(text,language)
+            self.assertEqual([text[a:b] for a,b in spans],[value])
+        self.assertEqual(spoken_identifier_spans('ordinary text three one four','en'),[])
 
 
 if __name__=='__main__':unittest.main()

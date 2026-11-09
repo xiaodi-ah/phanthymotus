@@ -14,18 +14,25 @@ class TTSPlugin:
     def __init__(self,plugin_cfg,executor):
         self.cfg=dict(plugin_cfg);self.executor=executor;self.nodes={};self.load_lock=threading.RLock()
         self.routing=self.cfg.get('routing','moss')
-        if self.routing not in ('moss','moss_supertonic'):raise ValueError('Unknown TTS routing mode')
+        if self.routing not in ('moss','moss_supertonic','zipvoice_supertonic'):raise ValueError('Unknown TTS routing mode')
         self.languages=LANGUAGES
         if self.routing=='moss_supertonic':
             from .routed_tts_runtime import LANGUAGES as routed_languages
             self.languages=routed_languages
+        elif self.routing=='zipvoice_supertonic':
+            from .zipvoice_tts_runtime import LANGUAGES as routed_languages
+            self.languages=routed_languages
     def get_tools(self):
         tools=copy.deepcopy(TOOLS)
         if self.routing=='moss_supertonic':tools[0]['description']='Local MOSS Chinese/Thai + Supertonic six-language TensorRT routing'
+        elif self.routing=='zipvoice_supertonic':tools[0]['description']='Local ZipVoice Chinese + Supertonic six-language routing'
         tools[0]['inputSchema']['properties']['language']['enum']=['auto',*self.languages]
         tools[0]['configSchema']['properties']['language']['enum']=['auto',*self.languages]
         return tools
     def _language(self,text,language):
+        if self.routing=='zipvoice_supertonic':
+            from .zipvoice_tts_runtime import route_language
+            return route_language(text,language,self.cfg.get('language','auto'))
         if self.routing=='moss_supertonic':
             from .routed_tts_runtime import route_language
             return route_language(text,language,self.cfg.get('language','auto'))
@@ -36,7 +43,10 @@ class TTSPlugin:
                 # Each MCP instance owns separate engines, KV and codec state.
                 kwargs=dict(cuda_graph=bool(self.cfg.get('cuda_graph',True)),language=self.cfg.get('language','auto'),seed=self.cfg.get('seed',42))
                 root=self.cfg.get('model_dir','/models/moss-tts-trt-jp61-v2')
-                if self.routing=='moss_supertonic':
+                if self.routing=='zipvoice_supertonic':
+                    from .zipvoice_tts_runtime import ZipSupertonicAdapter
+                    adapter=ZipSupertonicAdapter(self.cfg.get('zipvoice_model_dir','/models/zipvoice-distill-junhao'),self.cfg.get('supertonic_model_dir','/models/supertonic-3-trt-jp61'),language=kwargs['language'],seed=kwargs['seed'])
+                elif self.routing=='moss_supertonic':
                     from .routed_tts_runtime import RoutedAdapter
                     adapter=RoutedAdapter(root,self.cfg.get('supertonic_model_dir','/models/supertonic-3-trt-jp61'),**kwargs)
                 else:adapter=MossAdapter(root,**kwargs)
@@ -60,7 +70,8 @@ class TTSPlugin:
                 states=[n._status_dict() for n in self.nodes.values()]
                 result={'state':'running' if any(n['state']=='running' for n in states) else 'idle','topic_in':[t for n in states for t in n['topic_in']],'topic_out':[t for n in states for t in n['topic_out']]}
             else:result={'state':'idle','topic_in':[],'topic_out':[]}
-            return {**result,'name':'TTS','manufacture':'Embodied','model':'MOSS-TTS-Nano-100M + Supertonic-3/TRT' if self.routing=='moss_supertonic' else 'MOSS-TTS-Nano-100M/TRT-frame-v2','independent_models':len(self.nodes),'languages':list(self.languages),'routing':self.routing,'desc':'JP6.1 experimental submission; quality and three-instance stability pending'}
+            model={'zipvoice_supertonic':'ZipVoice-Distill/ORT-CUDA + Supertonic-3/TRT','moss_supertonic':'MOSS-TTS-Nano-100M + Supertonic-3/TRT','moss':'MOSS-TTS-Nano-100M/TRT-frame-v2'}[self.routing]
+            return {**result,'name':'TTS','manufacture':'Embodied','model':model,'independent_models':len(self.nodes),'languages':list(self.languages),'routing':self.routing,'desc':'JP6.1 experimental submission; quality and three-instance stability pending'}
         if action=='start':return self._node(key,args.get('input_topic','')).start()
         if action=='stop':
             keys=[key] if args.get('instance_id') else list(self.nodes)

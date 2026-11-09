@@ -555,10 +555,10 @@
     {
       "term": "4Paradigm",
       "language": "en",
-      "reading": "",
-      "status": "pending",
-      "source": "Product cases 7/11/210 and PR341 f14e38d3d2b596809eaf8d2368323448c1b33562 (text-rule reference only)",
-      "evidence": "Keep original spelling until reading is selected and tested with this MOSS model; VITS/CMU phonemes cannot be reused as MOSS text."
+      "reading": "four paradigm",
+      "status": "rejected",
+      "source": "1.5 product feedback case218; foreign-terms-20261105",
+      "evidence": "foreign-terms-20261105: do not adopt; matched independent/feedback synthesis and unprompted ASR did not show stable benefit; no native pronunciation validation."
     },
     {
       "term": "Agentic",
@@ -9959,6 +9959,45 @@
         "https://github.com/NVIDIA/NeMo-text-processing",
         "https://github.com/speech-rule-engine/speech-rule-engine"
       ]
+    },
+    {
+      "term": "4Paradigm",
+      "language": "ja",
+      "reading": "フォーパラダイム",
+      "status": "trial",
+      "source": "1.5 product feedback 多语种TTS榜分析1104.pdf; local foreign-terms-20261105 experiment",
+      "evidence": "foreign-terms-20261105: retained local candidate only; Japanese brand identity improved in independent and long contexts, French isolated gains remain uneven. Default numbers frontend remains unchanged; native pronunciation not confirmed.",
+      "case_sensitive": true
+    },
+    {
+      "term": "ModelHub",
+      "language": "fr",
+      "reading": "Model Hub",
+      "status": "trial",
+      "source": "1.5 product feedback 多语种TTS榜分析1104.pdf; local foreign-terms-20261105 experiment",
+      "evidence": "foreign-terms-20261105: retained local candidate only; Japanese brand identity improved in independent and long contexts, French isolated gains remain uneven. Default numbers frontend remains unchanged; native pronunciation not confirmed.",
+      "case_sensitive": true
+    },
+    {
+      "term": "ModelHubXC",
+      "language": "fr",
+      "reading": "Model Hub ixe cé",
+      "status": "rejected",
+      "source": "1.5 product feedback 多语种TTS榜分析1104.pdf; local foreign-terms-20261105 experiment",
+      "evidence": "foreign-terms-20261105: do not adopt; matched independent/feedback synthesis and unprompted ASR did not show stable benefit; no native pronunciation validation.",
+      "case_sensitive": true,
+      "aliases": [
+        "ModelHub XC"
+      ]
+    },
+    {
+      "term": "Qianfan",
+      "language": "en",
+      "reading": "Chyen fan",
+      "status": "rejected",
+      "source": "1.5 product feedback 多语种TTS榜分析1104.pdf; local foreign-terms-20261105 experiment",
+      "evidence": "foreign-terms-20261105: do not adopt; matched independent/feedback synthesis and unprompted ASR did not show stable benefit; no native pronunciation validation.",
+      "case_sensitive": true
     }
   ]
 }

@@ -5,7 +5,6 @@ from types import MethodType
 import numpy as np
 from .resample import StreamingPCM,SentenceEnding
 from .text_chunks import text_chunks
-from .text_normalization import normalize_text
 
 LANGUAGES=('zh','ja','ru','en','es','fr','th','de')
 VOICES={'zh':'Zhiming','ja':'Saki','ru':'Adam','en':'Ava','es':'Ava','fr':'Bella','th':'Ava','de':'Adam'}
@@ -145,7 +144,9 @@ class MossAdapter:
     def synthesize_stream_language(self,text,language=None):
         if not isinstance(text,str) or not text.strip():raise ValueError('text must be a nonempty string')
         code=language_for(text,language if language not in (None,'auto') else self.language)
-        if self.text_frontend!='off':text=normalize_text(text,code,terms=self.text_frontend=='numbers_terms')
+        if self.text_frontend!='off':
+            from ..tts_text_frontend import prepare_text
+            text=prepare_text(text,code,terms=self.text_frontend=='numbers_terms')
         channel=queue.Queue(maxsize=8);cancel=threading.Event();end=object()
         def put(value):
             while not cancel.is_set():

@@ -9,8 +9,8 @@ plugins:
     enabled: false
   tts:
     enabled: true
-    model_dir: /models/moss-tts-trt-jp61-v2
-    routing: moss_supertonic
+    zipvoice_model_dir: /models/zipvoice-distill-junhao
+    routing: zipvoice_supertonic
     supertonic_model_dir: /models/supertonic-3-trt-jp61
     language: auto
     cuda_graph: true
