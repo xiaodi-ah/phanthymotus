@@ -20,8 +20,29 @@ def spoken_identifier(text,language):
     return ' '.join(integer_words(int(c),language) for c in digits)
 
 
+def frontend_segments(text,language,*,terms=False):
+    from .tts_entities import entity_segments,prose_decimals,TextSegment
+    if not isinstance(text,str):raise TypeError('text must be a string')
+    if language in ('zh','en','ja','de','fr','ru','es'):
+        standalone=spoken_identifier(text,language)
+        if standalone!=text:return [TextSegment('identifier',0,len(text),text,standalone)]
+    segments=[]
+    for part in entity_segments(text,language):
+        # Only prose reaches math/quantity/term rules; replacement speech is final.
+        spoken=part.spoken
+        if part.kind=='text':
+            # A separator left after an entity is not the start of a math expression.
+            prefix=re.match(r'^[\s;；]+',part.raw)
+            prefix=prefix[0] if prefix else ''
+            spoken=prefix+prose_decimals(normalize_text(part.raw[len(prefix):],language,terms=terms),language)
+        segments.append(TextSegment(part.kind,part.start,part.end,part.raw,spoken))
+    return segments
+
+
+def prepare_text(text,language,*,terms=False):
+    return ''.join(part.spoken for part in frontend_segments(text,language,terms=terms))
+
+
 def supertonic_text(text,language):
-    from .tts_entities import spoken_entities
     # Expand powers before the native NFKD frontend loses superscript information.
-    # Let the existing quantity grammar handle units and percentages first.
-    return spoken_entities(normalize_text(spoken_identifier(text,language),language,terms=False),language)
+    return prepare_text(text,language)

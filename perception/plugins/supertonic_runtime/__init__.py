@@ -104,7 +104,7 @@ class SupertonicAdapter:
                     self.model.rng.set_state(rng)
                     if len(chunk) <= 8:
                         raise
-                    cut = split_point(chunk, len(chunk) // 2)
+                    cut = split_point(chunk, len(chunk) // 2, language)
                     yield from infer(chunk[:cut].strip(),False)
                     yield from infer(chunk[cut:].strip(),final)
                     return

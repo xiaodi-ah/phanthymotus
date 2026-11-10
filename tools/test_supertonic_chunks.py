@@ -64,6 +64,16 @@ class Tests(unittest.TestCase):
         chunks=list(text_chunks(text,'en',processor))
         for index,chunk in enumerate(chunks):
             self.assertLessEqual(processor([continuation_text(chunk,index==len(chunks)-1)],['en'])[0].shape[-1],384)
+    def test_spoken_order_identifier_is_kept_whole_when_it_fits(self):
+        from plugins.tts_entities import spoken_entities,spoken_identifier_spans
+        plain=lambda texts,languages:(np.zeros((1,len(texts[0])+20)),None)
+        for language,text in [('en','Please check the verification code 009314, order number 70300912682450, and confirm that every digit is correct.'),
+                              ('fr','Vérifiez le code de vérification 009314, le numéro de commande 70300912682450, puis confirmez les chiffres.'),
+                              ('ru','Проверьте проверочный код 009314, номер заказа 70300912682450, и подтвердите правильность цифр.')]:
+            prepared=spoken_entities(text,language);chunks=list(text_chunks(prepared,language,plain))
+            self.assertEqual(''.join(''.join(chunks).split()),''.join(prepared.split()))
+            for a,b in spoken_identifier_spans(prepared,language):
+                if b-a<=120:self.assertTrue(any(prepared[a:b] in chunk for chunk in chunks),(language,prepared[a:b],chunks))
     def test_cancellation_and_failure_release_temporary(self):
         a,_,released=self.adapter();g=a.native_blocks('Hello. '*100,'en');next(g);g.close();self.assertEqual(released,[True]);self.assertFalse(a.lock.locked())
         def fail(*args):raise RuntimeError('inference failure')
