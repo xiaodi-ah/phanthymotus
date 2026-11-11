@@ -1,0 +1,38 @@
+{
+  "model": "Kokoro-Xiaoyou-A",
+  "format": "kokoro-native-gpu-v1",
+  "precision": "FP32",
+  "sample_rate": 24000,
+  "voice": "A",
+  "global_step": 9696,
+  "base_model": "hexgrad/Kokoro-82M@f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts_xiaoyou/models/kokoro-xiaoyou-a-fp32-9696-v1/",
+  "files": [
+    {
+      "path": "config.json",
+      "role": "Kokoro architecture and phoneme vocabulary",
+      "bytes": 2351,
+      "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f"
+    },
+    {
+      "path": "A.pt",
+      "role": "Trained A voice vector, common to Chinese/English/mixed",
+      "bytes": 523583,
+      "sha256": "566b6bda6da0580d9463420bed3df434d2f8bdec8fd8f9954bc08d0bd6b6c69b"
+    },
+    {
+      "path": "kokoro.pth",
+      "role": "Native FP32 inference weights",
+      "bytes": 327213067,
+      "sha256": "3526b4d32554ec64a82dce4356345c5d368461af629ed12b6b3c2f99e7020593"
+    }
+  ],
+  "ready_for_submission": false,
+  "quality_listening_complete": false,
+  "jetson_validated": false,
+  "voice_file": "A.pt",
+  "max_duration_frames": 200,
+  "seed": 42,
+  "frontend": "Misaki0.9.4 with the exact training frontend span handling",
+  "cpu_fallback": false
+}

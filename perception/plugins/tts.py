@@ -239,13 +239,13 @@ TOOLS = [
                 # without rebuilding the image. Mirrors asr_model in asr.py.
                 "tts_engine": {"type": "string",
                                "enum": ["vits2-zh-en", "matcha-zh-en", "mms-th",
-                                        "kokoro-multi"],
+                                        "kokoro-multi", "kokoro-xiaoyou-zh-en"],
                                "description": "TTS engine, named <model>-<languages> to match "
                                               "asr_model (vits2-zh-en = VITS2 on TensorRT, "
                                               "matcha-zh-en = Matcha-icefall, "
                                               "mms-th = MMS Thai, "
                                               "kokoro-multi = Kokoro-82M v1.0)",
-                               "default": "vits2-zh-en", "scope": "shared"},
+                               "default": "kokoro-xiaoyou-zh-en", "scope": "shared"},
                 # matcha-zh-en, mms-th and kokoro-multi only — vits2-zh-en is a
                 # TensorRT engine and never touches ONNX Runtime, so this field does
                 # nothing for it. Matcha's weights are fp32, so both devices load the
@@ -1355,6 +1355,13 @@ def _build_tts_adapter(cfg: dict, on_status=None) -> TTSAdapter:
         cfg.get('device') or ENGINE_DEVICE_DEFAULTS.get(engine),
         cfg.get('hw_provider'),
     )
+    if engine == 'kokoro-xiaoyou-zh-en':
+        if device not in ('gpu', 'cuda'):
+            raise ValueError('Xiaoyou requires GPU inference')
+        if speaker_id != 0:
+            raise ValueError('Each release contains one trained voice (speaker_id=0)')
+        from plugins.xiaoyou_kokoro.adapter import XiaoyouKokoroAdapter
+        return XiaoyouKokoroAdapter(model_dir, speed, on_status=on_status)
     if engine == 'mms-th':
         return MmsThaiTTSAdapter(
             model_dir, speaker_id, speed, device,
@@ -1565,6 +1572,8 @@ class _TTSNode(Node):
             # finally can always reach it.
             utterance_abort = threading.Event()
             try:
+                frame_interval = getattr(self._adapter, 'frame_interval_s', FRAME_INTERVAL_S)
+                assert 0 < frame_interval <= PCM_FRAME_S
                 t_start = _time.monotonic()
                 t_start_wall = _time.time()  # wall-clock for perf span
                 t0_wall = None  # wall-clock when playback starts (prebuf complete)
@@ -1575,7 +1584,26 @@ class _TTSNode(Node):
                 prebuf = []   # pre-buffer queue
 
                 def publish(frame: bytes) -> None:
-                    nonlocal frames_sent
+                    nonlocal frames_sent, t0, t0_wall
+                    if frames_sent == 0 and getattr(self._adapter, 'requires_subscriber_wait', False):
+                        deadline = _time.monotonic() + 5.5
+                        matched_at = None
+                        while True:
+                            now = _time.monotonic()
+                            if self._stop_event.is_set() or self._interrupt_flag.is_set():
+                                raise RuntimeError('TTS cancelled before subscriber matched')
+                            if self._pub.get_subscription_count() > 0:
+                                if matched_at is None:
+                                    matched_at = now
+                                if now - matched_at >= .5:
+                                    break
+                            else:
+                                matched_at = None
+                            if now >= deadline:
+                                raise TimeoutError('No stable matched audio subscriber')
+                            _time.sleep(.01)
+                        t0 = _time.monotonic() - max(0, len(prebuf) - 1) * frame_interval
+                        t0_wall = _time.time()
                     msg = AudioChunk()
                     msg.header.stamp = self.get_clock().now().to_msg()
                     msg.format = "audio/pcm-16k"
@@ -1591,10 +1619,10 @@ class _TTSNode(Node):
                         # of them are due in the past and go out in one burst —
                         # the consumer then starts holding PREBUF_FRAMES of audio.
                         now = _time.monotonic()
-                        t0 = now - max(0, len(prebuf) - 1) * FRAME_INTERVAL_S
+                        t0 = now - max(0, len(prebuf) - 1) * frame_interval
                         t0_wall = _time.time()
                         fire_hook("on_speaking")
-                    target = t0 + frames_sent * FRAME_INTERVAL_S
+                    target = t0 + frames_sent * frame_interval
                     now = _time.monotonic()
                     if now < target:
                         _time.sleep(target - now)
@@ -1693,7 +1721,7 @@ class _TTSNode(Node):
                 # flush remainder
                 if buf and not cancelled:
                     if t0 is not None:
-                        target = t0 + frames_sent * FRAME_INTERVAL_S
+                        target = t0 + frames_sent * frame_interval
                         now = _time.monotonic()
                         if now < target:
                             _time.sleep(target - now)
@@ -1727,12 +1755,12 @@ class _TTSNode(Node):
                                       "meta": {"chars": len(text)}})
                         spans.append({**_span_base, "span": "tts_playback",
                                       "start_ts": t0_wall, "end_ts": t_end_wall,
-                                      "meta": {"frames": frames_sent}})
+                                      "meta": {"frames": frames_sent, "pcm_bytes": total}})
                     else:
                         # 没有 prebuf（极短文本），合并为一个 span
                         spans.append({**_span_base, "span": "tts_generate",
                                       "start_ts": t_start_wall, "end_ts": t_end_wall,
-                                      "meta": {"chars": len(text), "frames": frames_sent}})
+                                      "meta": {"chars": len(text), "frames": frames_sent, "pcm_bytes": total}})
                     for sp in spans:
                         perf_msg = String()
                         perf_msg.data = _json.dumps(sp)
@@ -2151,7 +2179,7 @@ class SherpaOnnxTTSPlugin:
         return self._adapter.synthesize(text)
 
 
-DEFAULT_TTS_ENGINE = "vits2-zh-en"
+DEFAULT_TTS_ENGINE = "kokoro-xiaoyou-zh-en"
 # `<model>-<languages>`, the shape `asr_model` in plugins/asr.py already uses
 # (x-asr-zh-en, parakeet-en, sensevoice-small). Two reasons to match it rather
 # than invent a second convention: the dashboard renders the raw enum string, so
@@ -2160,13 +2188,14 @@ DEFAULT_TTS_ENGINE = "vits2-zh-en"
 # `matcha` and `mms-th` both run on sherpa-onnx.
 #
 # Language codes, not country codes: `zh`, not `cn`.
-TTS_ENGINES = ("vits2-zh-en", "matcha-zh-en", "mms-th", "kokoro-multi")
+TTS_ENGINES = ("vits2-zh-en", "matcha-zh-en", "mms-th", "kokoro-multi", "kokoro-xiaoyou-zh-en")
 # What each engine can speak, in the codes the rest of this file uses. Answered
 # by action=support_language straight from the facade: it is a property of the
 # engine, not of a loaded model, so it works while an engine is still loading.
 # For vits2-zh-en these are also the values speak's reading_language accepts
 # besides "auto"; kokoro-multi's are its tts_language setting.
 ENGINE_LANGUAGES = {
+    "kokoro-xiaoyou-zh-en": ("zh", "en"),
     "vits2-zh-en": ("zh", "en"),
     "matcha-zh-en": ("zh", "en"),
     "mms-th": ("th",),
@@ -2189,6 +2218,7 @@ ENGINE_ALIASES = {
 # Where each engine keeps its own model files. Used for any engine other than
 # the one config.yaml was written for; see TTSPlugin._model_dir_for.
 ENGINE_MODEL_DIRS = {
+    "kokoro-xiaoyou-zh-en": "/models/kokoro-xiaoyou-e",
     "vits2-zh-en": "/models/vits2",
     # Kept at the old path: it is already populated on deployed robots and
     # renaming it would force every one of them to re-download the Matcha pair.
@@ -2212,6 +2242,7 @@ ENGINE_MODEL_DIRS = {
 # device field would be worse — the value is stated in the field description
 # instead.
 ENGINE_DEVICE_DEFAULTS = {
+    "kokoro-xiaoyou-zh-en": "gpu",
     "kokoro-multi": "gpu",
 }
 # How long an `action=config` engine switch waits for the new engine before

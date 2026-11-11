@@ -1,0 +1,32 @@
+{
+  "model": "Kokoro-Xiaoyou-E",
+  "format": "kokoro-native-gpu-v1",
+  "precision": "FP32",
+  "sample_rate": 24000,
+  "voice": "E",
+  "voice_file": "E.pt",
+  "global_step": 10244,
+  "base_model": "hexgrad/Kokoro-82M@f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "seed": 42,
+  "max_duration_frames": 200,
+  "cpu_fallback": false,
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts_xiaoyou/models/kokoro-xiaoyou-e-fp32-10244-v1/",
+  "files": [
+    {
+      "path": "config.json",
+      "bytes": 2351,
+      "sha256": "5abb01e2403b072bf03d04fde160443e209d7a0dad49a423be15196b9b43c17f"
+    },
+    {
+      "path": "E.pt",
+      "bytes": 523583,
+      "sha256": "23d36e4fe82f35b779d85d29f4769a94a8194cf0861ae281bb0c944e01095d96"
+    },
+    {
+      "path": "kokoro.pth",
+      "bytes": 327213067,
+      "sha256": "19c79de9aa135f3e7e83e73cb2fa4f31c1eca2757185a25bd23bec29b0482d31"
+    }
+  ],
+  "jetson_validated": false
+}

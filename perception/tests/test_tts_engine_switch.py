@@ -28,6 +28,36 @@ import plugins.tts as tts  # noqa: E402
 _REAL_SHERPA_PLUGIN = tts.SherpaOnnxTTSPlugin
 
 
+def test_xiaoyou_engine_is_advertised():
+    schema = tts.TOOLS[0]['configSchema']['properties']['tts_engine']
+    assert 'kokoro-xiaoyou-zh-en' in schema['enum']
+    assert 'kokoro-xiaoyou-zh-en' in tts.TTS_ENGINES
+    assert tts.ENGINE_LANGUAGES['kokoro-xiaoyou-zh-en'] == ('zh', 'en')
+
+
+@pytest.mark.parametrize('config', [
+    {'engine': 'kokoro-xiaoyou-zh-en', 'device': 'cpu'},
+    {'engine': 'kokoro-xiaoyou-zh-en', 'device': 'gpu', 'speaker_id': 1},
+])
+def test_xiaoyou_rejects_invalid_device_or_voice(config):
+    with pytest.raises(ValueError):
+        tts._build_tts_adapter(config)
+
+
+def test_xiaoyou_builder_selects_own_model_and_gpu_default(monkeypatch):
+    from plugins.xiaoyou_kokoro import adapter
+    calls = []
+    marker = object()
+
+    def build(directory, speed, on_status=None):
+        calls.append((directory, speed))
+        return marker
+
+    monkeypatch.setattr(adapter, 'XiaoyouKokoroAdapter', build)
+    assert tts._build_tts_adapter({'engine': 'kokoro-xiaoyou-zh-en', 'speed': 1.1}) is marker
+    assert calls == [('/models/kokoro-xiaoyou-e', 1.1)]
+
+
 class _FakeEngine:
     """Stands in for one engine implementation behind the facade."""
 
@@ -361,8 +391,8 @@ def test_engines_are_named_after_the_model_not_the_runtime():
     visible.
     """
     assert set(tts.TTS_ENGINES) == {"vits2-zh-en", "matcha-zh-en", "mms-th",
-                                    "kokoro-multi"}
-    assert tts.DEFAULT_TTS_ENGINE == "vits2-zh-en"
+                                    "kokoro-multi", "kokoro-xiaoyou-zh-en"}
+    assert tts.DEFAULT_TTS_ENGINE == "kokoro-xiaoyou-zh-en"
     for engine in tts.TTS_ENGINES:
         assert "_" not in engine, "asr_model uses hyphens; do not mix separators"
         assert "cn" not in engine.split("-"), "zh is the language code; cn is a country"
@@ -775,17 +805,17 @@ def test_no_implementation_declares_its_own_engine_name():
         "the engine name belongs to plugins/tts.py's facade, not to an engine")
 
 
-def test_the_default_engine_is_vits2_zh_en():
+def test_the_default_engine_is_the_trained_e_release():
     """The ZH/EN TensorRT engine is the default everywhere it is declared."""
     import pathlib
 
     import yaml
 
-    assert tts.DEFAULT_TTS_ENGINE == "vits2-zh-en"
+    assert tts.DEFAULT_TTS_ENGINE == "kokoro-xiaoyou-zh-en"
     props = tts.TOOLS[0]["configSchema"]["properties"]
-    assert props["tts_engine"]["default"] == "vits2-zh-en"
+    assert props["tts_engine"]["default"] == "kokoro-xiaoyou-zh-en"
     config = yaml.safe_load(
         (pathlib.Path(__file__).resolve().parents[1] / "config.yaml").read_text())
     # config.yaml and the schema must agree, or the card shows one default while
     # the process boots another.
-    assert config["plugins"]["tts"]["engine"] == "vits2-zh-en"
+    assert config["plugins"]["tts"]["engine"] == "kokoro-xiaoyou-zh-en"

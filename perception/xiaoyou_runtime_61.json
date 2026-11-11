@@ -1,0 +1,307 @@
+{
+  "base_url": "http://172.28.4.81:34567/i-wangaodi/tts_xiaoyou/models/kokoro-runtime-jp61-v1/",
+  "python_abi": "3.10",
+  "numpy_version": "1.26.4",
+  "files": [
+    {
+      "path": "frontend-jp61.tar.gz",
+      "bytes": 63663558,
+      "sha256": "7e47ad121806ef9605126533dd8302056cd6c02af20ffce56c071d156d487774"
+    },
+    {
+      "path": "en_core_web_sm-3.8.0.tar.gz",
+      "bytes": 12807834,
+      "sha256": "9f08addfd13de7989348cf7a25dfddd9e00e3a17a8f3eb2d2294920c6408020e"
+    }
+  ],
+  "packages": {
+    "packages": [
+      {
+        "name": "addict",
+        "version": "2.4.0"
+      },
+      {
+        "name": "annotated-doc",
+        "version": "0.0.5"
+      },
+      {
+        "name": "annotated-types",
+        "version": "0.8.0"
+      },
+      {
+        "name": "attrs",
+        "version": "26.1.0"
+      },
+      {
+        "name": "babel",
+        "version": "2.18.0"
+      },
+      {
+        "name": "blis",
+        "version": "0.7.11"
+      },
+      {
+        "name": "catalogue",
+        "version": "2.0.10"
+      },
+      {
+        "name": "certifi",
+        "version": "2024.8.30"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.3.2"
+      },
+      {
+        "name": "cloudpathlib",
+        "version": "0.26.0"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2"
+      },
+      {
+        "name": "cn2an",
+        "version": "0.5.24"
+      },
+      {
+        "name": "confection",
+        "version": "0.1.5"
+      },
+      {
+        "name": "csvw",
+        "version": "4.1.1"
+      },
+      {
+        "name": "cymem",
+        "version": "2.0.16"
+      },
+      {
+        "name": "dlinfo",
+        "version": "2.0.0"
+      },
+      {
+        "name": "docopt",
+        "version": "0.6.2"
+      },
+      {
+        "name": "espeakng-loader",
+        "version": "0.2.4"
+      },
+      {
+        "name": "idna",
+        "version": "3.10"
+      },
+      {
+        "name": "isodate",
+        "version": "0.7.2"
+      },
+      {
+        "name": "jieba",
+        "version": "0.42.1"
+      },
+      {
+        "name": "jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "jsonschema",
+        "version": "4.26.0"
+      },
+      {
+        "name": "jsonschema-specifications",
+        "version": "2025.9.1"
+      },
+      {
+        "name": "langcodes",
+        "version": "3.5.1"
+      },
+      {
+        "name": "language-tags",
+        "version": "1.3.2"
+      },
+      {
+        "name": "markdown-it-py",
+        "version": "3.0.0"
+      },
+      {
+        "name": "markupsafe",
+        "version": "3.0.3"
+      },
+      {
+        "name": "mdurl",
+        "version": "0.1.2"
+      },
+      {
+        "name": "misaki",
+        "version": "0.9.4"
+      },
+      {
+        "name": "murmurhash",
+        "version": "1.0.16"
+      },
+      {
+        "name": "num2words",
+        "version": "0.5.14"
+      },
+      {
+        "name": "ordered-set",
+        "version": "4.1.0"
+      },
+      {
+        "name": "packaging",
+        "version": "24.1"
+      },
+      {
+        "name": "phonemizer-fork",
+        "version": "3.3.2"
+      },
+      {
+        "name": "preshed",
+        "version": "3.0.15"
+      },
+      {
+        "name": "proces",
+        "version": "0.1.7"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.14.2"
+      },
+      {
+        "name": "pydantic-core",
+        "version": "2.50.2"
+      },
+      {
+        "name": "pygments",
+        "version": "2.18.0"
+      },
+      {
+        "name": "pyparsing",
+        "version": "2.4.7"
+      },
+      {
+        "name": "pypinyin",
+        "version": "0.55.0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.8.1"
+      },
+      {
+        "name": "rdflib",
+        "version": "7.6.0"
+      },
+      {
+        "name": "referencing",
+        "version": "0.37.0"
+      },
+      {
+        "name": "regex",
+        "version": "2026.9.29"
+      },
+      {
+        "name": "requests",
+        "version": "2.32.3"
+      },
+      {
+        "name": "rfc3986",
+        "version": "1.5.0"
+      },
+      {
+        "name": "rich",
+        "version": "13.9.1"
+      },
+      {
+        "name": "rpds-py",
+        "version": "0.30.0"
+      },
+      {
+        "name": "segments",
+        "version": "2.4.0"
+      },
+      {
+        "name": "setuptools",
+        "version": "75.1.0"
+      },
+      {
+        "name": "shellingham",
+        "version": "1.5.4"
+      },
+      {
+        "name": "smart-open",
+        "version": "7.7.1"
+      },
+      {
+        "name": "spacy",
+        "version": "3.7.5"
+      },
+      {
+        "name": "spacy-legacy",
+        "version": "3.0.12"
+      },
+      {
+        "name": "spacy-loggers",
+        "version": "1.0.5"
+      },
+      {
+        "name": "srsly",
+        "version": "2.5.6"
+      },
+      {
+        "name": "termcolor",
+        "version": "3.3.0"
+      },
+      {
+        "name": "thinc",
+        "version": "8.2.5"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.0"
+      },
+      {
+        "name": "typer",
+        "version": "0.27.3"
+      },
+      {
+        "name": "typer-slim",
+        "version": "0.24.0"
+      },
+      {
+        "name": "typing-extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.5"
+      },
+      {
+        "name": "uritemplate",
+        "version": "4.2.0"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.2.3"
+      },
+      {
+        "name": "wasabi",
+        "version": "1.1.3"
+      },
+      {
+        "name": "weasel",
+        "version": "0.4.3"
+      },
+      {
+        "name": "wrapt",
+        "version": "2.5.2"
+      }
+    ],
+    "files": 5675,
+    "numpy_from_base": "1.26.4"
+  }
+}
