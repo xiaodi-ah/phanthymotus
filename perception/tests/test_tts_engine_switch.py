@@ -55,7 +55,7 @@ def test_xiaoyou_builder_selects_own_model_and_gpu_default(monkeypatch):
 
     monkeypatch.setattr(adapter, 'XiaoyouKokoroAdapter', build)
     assert tts._build_tts_adapter({'engine': 'kokoro-xiaoyou-zh-en', 'speed': 1.1}) is marker
-    assert calls == [('/models/kokoro-xiaoyou-e', 1.1)]
+    assert calls == [('/models/kokoro-xiaoyou-a', 1.1)]
 
 
 class _FakeEngine:
@@ -805,8 +805,9 @@ def test_no_implementation_declares_its_own_engine_name():
         "the engine name belongs to plugins/tts.py's facade, not to an engine")
 
 
-def test_the_default_engine_is_the_trained_e_release():
-    """The ZH/EN TensorRT engine is the default everywhere it is declared."""
+def test_the_default_engine_is_the_trained_a_release():
+    """The A release uses its own model directory and manifest everywhere."""
+    import json
     import pathlib
 
     import yaml
@@ -819,3 +820,10 @@ def test_the_default_engine_is_the_trained_e_release():
     # config.yaml and the schema must agree, or the card shows one default while
     # the process boots another.
     assert config["plugins"]["tts"]["engine"] == "kokoro-xiaoyou-zh-en"
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    assets = json.loads((root / 'xiaoyou_a_assets.json').read_text())
+    assert config['plugins']['tts']['model_dir'] == '/models/kokoro-xiaoyou-a'
+    assert assets['voice'] == 'A' and assets['voice_file'] == 'A.pt'
+    assert assets['global_step'] == 9696
+    assert {row['path'] for row in assets['files']} == {'kokoro.pth', 'config.json', 'A.pt'}

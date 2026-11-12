@@ -2212,7 +2212,7 @@ ENGINE_ALIASES = {
 # Where each engine keeps its own model files. Used for any engine other than
 # the one config.yaml was written for; see TTSPlugin._model_dir_for.
 ENGINE_MODEL_DIRS = {
-    "kokoro-xiaoyou-zh-en": "/models/kokoro-xiaoyou-e",
+    "kokoro-xiaoyou-zh-en": "/models/kokoro-xiaoyou-a",
     "vits2-zh-en": "/models/vits2",
     # Kept at the old path: it is already populated on deployed robots and
     # renaming it would force every one of them to re-download the Matcha pair.

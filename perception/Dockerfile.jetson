@@ -1,4 +1,4 @@
-# E release. Existing public platform bases supply CUDA PyTorch, ROS and AudioChunk.
+# A release. Existing public platform bases supply CUDA PyTorch, ROS and AudioChunk.
 ARG JP_VERSION=61
 FROM bj-warehouse.tencentcloudcr.com/phanthy-motus/perception@sha256:7de48bf82849c3bc402fa1d2b79469932473b452a0455f78d0da551682143854 AS jp61
 FROM bj-warehouse.tencentcloudcr.com/phanthy-motus/perception@sha256:c4e652a9e0cbba466006c3adddab5bdc01c45ebabdb89f1f95c76757245c3410 AS jp511
@@ -14,9 +14,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
     FASTRTPS_DEFAULT_PROFILES_FILE=/opt/xiaoyou-fastdds.xml ROS_LOCALHOST_ONLY=0 RCUTILS_COLORIZED_OUTPUT=0 ROS_LOG_DIR=/tmp/ros-log ROS_HOME=/tmp/ros-home CONFIG_PATH=/work/config.yaml
 COPY tools/download_xiaoyou_assets.py tools/install_xiaoyou_runtime.py /opt/
 COPY perception/xiaoyou_runtime_*.json /opt/runtime-manifests/
-COPY perception/xiaoyou_e_assets.json /opt/xiaoyou_e_assets.json
+COPY perception/xiaoyou_a_assets.json /opt/xiaoyou_a_assets.json
 RUN python3 -B /opt/install_xiaoyou_runtime.py --jp-version ${JP_VERSION} && \
-    python3 -B /opt/download_xiaoyou_assets.py --manifest /opt/xiaoyou_e_assets.json --destination /models/kokoro-xiaoyou-e
+    python3 -B /opt/download_xiaoyou_assets.py --manifest /opt/xiaoyou_a_assets.json --destination /models/kokoro-xiaoyou-a
 WORKDIR /work
 COPY perception/main.py /work/main.py
 COPY perception/plugins/ /work/plugins/
@@ -24,7 +24,7 @@ COPY perception/utils/ /work/utils/
 COPY perception/config.yaml /work/config.yaml
 COPY perception/deploy/xiaoyou-fastdds.xml /opt/xiaoyou-fastdds.xml
 COPY tools/test_xiaoyou_mcp.py tools/check_xiaoyou_frontend.py /opt/
-RUN python3 -B -c "from importlib.metadata import version; from plugins.xiaoyou_kokoro.runtime import verify_assets; assert version('misaki') == '0.9.4'; assert version('en-core-web-sm') == '3.8.0'; assert verify_assets('/models/kokoro-xiaoyou-e')['voice'] == 'E'"
+RUN python3 -B -c "from importlib.metadata import version; from plugins.xiaoyou_kokoro.runtime import verify_assets; assert version('misaki') == '0.9.4'; assert version('en-core-web-sm') == '3.8.0'; assert verify_assets('/models/kokoro-xiaoyou-a')['voice'] == 'A'"
 ARG SOURCE_SHA
 LABEL owner="wangaodi" project="tts_xiaoyou" io.4pd.source_sha256="${SOURCE_SHA}"
 EXPOSE 15720 15721
