@@ -31,7 +31,8 @@ class XiaoyouKokoroAdapter:
         return b''.join(self.synthesize_stream(text))
 
     def warmup(self):
-        return len(self.synthesize(self.dry_run_text))
+        return sum(len(self.synthesize(text)) for text in (
+            self.dry_run_text, 'Hello, there are 1,000 items.'))
 
     def set_speed(self, speed):
         self.runtime.set_speed(speed)

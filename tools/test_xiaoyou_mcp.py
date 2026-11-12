@@ -14,6 +14,11 @@ from std_msgs.msg import String
 SAMPLES=[('zh','你好，我是小优，很高兴见到你。'),('en','Hello, I am Xiaoyou. It is nice to meet you.'),('mixed','今天的 meeting 已经安排好了，请点击 Start 按钮开始。'),('long','欢迎来到这里，我会帮你安排今天的工作。'*8)]
 EOF=b'\x01\x00\xff\xff\x01\x00\xff\xff'
 
+def timing_verdict(rows):
+ ttft=bool(rows) and all(0<=r['first_pcm_seconds']<=1.0 for r in rows)
+ rtf=bool(rows) and all(0<r['rtf_to_last_pcm']<1.0 for r in rows)
+ return dict(ttft_limit_seconds=1.0,rtf_limit=1.0,all_ttft_qualified=ttft,all_rtf_below_one=rtf,passed=ttft and rtf)
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--ports',required=True);p.add_argument('--output',required=True);p.add_argument('--rounds',type=int,default=3);p.add_argument('--late-subscriber-ms',type=int,default=0);a=p.parse_args()
  ports=[int(x) for x in a.ports.split(',')];assert len(ports) in (1,3) and len(set(ports))==len(ports) and 1<=a.rounds<=20
@@ -91,7 +96,7 @@ def main():
    assert ttft<60
    path=folder/f'{index}-r{round_id}-{name}.wav'
    with wave.open(str(path),'wb') as w:w.setparams((1,2,16000,0,'NONE','not compressed'));w.writeframes(pcm)
-   row=dict(instance=index,round=round_id,case=name,text=text,pcm_bytes=len(pcm),seconds=seconds,first_pcm_seconds=ttft,rtf_to_last_pcm=rtf,pcm_complete=True)
+   row=dict(instance=index,round=round_id,case=name,text=text,pcm_bytes=len(pcm),seconds=seconds,first_pcm_seconds=ttft,rtf_to_last_pcm=rtf,pcm_complete=True,max_arrival_gap_seconds=max((b-a for a,b in zip(arrivals,arrivals[1:])),default=0),max_playback_deficit_seconds=max(0,max((stamp-arrivals[0])-i*.1 for i,stamp in enumerate(arrivals))))
    with lock:rows.append(row)
   for round_id in range(a.rounds):
    for case in SAMPLES:
@@ -102,9 +107,8 @@ def main():
    stopped=call(port,'stop');assert stopped['state']=='idle',stopped
    restarted=call(port,'start',input_topic=topics[i]);assert restarted['state']=='running',restarted
    call(port,'stop')
-  result=dict(passed=True,transport='real MCP to ROS AudioChunk',containers=len(ports),requests=len(rows),rows=rows,all_pcm_complete=True,late_subscriber_ms=a.late_subscriber_ms,all_rtf_below_one=all(r['rtf_to_last_pcm']<1 for r in rows))
-  result['passed']=result['all_rtf_below_one']
-  (folder/'summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False));assert result['passed'],'Transport RTF must remain below one'
+  result=dict(functional_passed=True,transport='real MCP to ROS AudioChunk',containers=len(ports),requests=len(rows),rows=rows,all_pcm_complete=True,late_subscriber_ms=a.late_subscriber_ms,**timing_verdict(rows))
+  (folder/'summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False));assert result['passed'],'Board timing requires TTFT<=1.0s and RTF<1.0; see summary.json'
  finally:
   executor.shutdown(timeout_sec=3);node.destroy_node();rclpy.shutdown()
 if __name__=='__main__':main()

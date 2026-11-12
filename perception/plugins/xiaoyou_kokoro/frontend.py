@@ -6,6 +6,10 @@ import unicodedata
 from pathlib import Path
 import importlib.util
 from importlib.metadata import version
+from .text import prepare_text
+
+
+LATIN = r'A-Za-zÀ-ÖØ-öø-ÿ\u0100-\u024f\u1e00-\u1eff'
 
 
 class Frontend:
@@ -20,25 +24,38 @@ class Frontend:
         self.zh = zh.ZHG2P(version=None, unk='❓')
         self.vocab = json.loads(Path(config_path).read_text())['vocab']
 
+    @staticmethod
+    def prepare(text, language=None):
+        return prepare_text(text, language)
+
     def __call__(self, text, language):
+        return self.phonemize(self.prepare(text, language), language)
+
+    def _english(self, text):
+        if re.fullmatch(r'[A-Za-z]', text.strip()):
+            return self.en.lexicon.get_NNP(text.strip())[0]
+        # The formula's A is a letter; Misaki otherwise tags it as an article.
+        text = re.sub(r'\ba(?=\s+(?:squared|cubed|equals|plus|minus|times|divided)\b)',
+                      '[a](/ˈA/)', text, flags=re.IGNORECASE)
+        return self.en(text)[0]
+
+    def phonemize(self, text, language):
         normalized = unicodedata.normalize('NFKC', text).strip()
         normalized = re.sub(r'\s+', ' ', normalized)
         # Explicit punctuation equivalences; never remove phonetic content.
         normalized = normalized.replace('·', ' ').replace('–', '—')
-        if re.search(r'[À-ÖØ-öø-ÿ]', normalized):
-            raise ValueError('unsupported_nonEnglish_Latin_from_dataset')
         if language == 'en':
-            phonemes = self.en(normalized)[0]
+            phonemes = self._english(normalized)
         else:
             # Misaki v1.0's legacy Chinese frontend leaves Latin words raw,
             # even when en_callable is supplied. Explicitly route those spans.
-            spans = re.split(r"([A-Za-z][A-Za-z0-9_'’\-]*(?:[ \t]+[A-Za-z][A-Za-z0-9_'’\-]*)*)", normalized)
+            spans = re.split(rf"([{LATIN}][{LATIN}0-9_'’\-]*(?:[ \t]+[{LATIN}][{LATIN}0-9_'’\-]*)*)", normalized)
             result = []
             for span in spans:
                 if not span.strip():
                     continue
-                if re.match('[A-Za-z]', span):
-                    result.append(self.en(span)[0])
+                if re.match(f'[{LATIN}]', span):
+                    result.append(self._english(span))
                 else:
                     result.append(self.zh(span)[0])
             phonemes = ' '.join(result)

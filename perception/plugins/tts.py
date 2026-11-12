@@ -1587,20 +1587,14 @@ class _TTSNode(Node):
                     nonlocal frames_sent, t0, t0_wall
                     if frames_sent == 0 and getattr(self._adapter, 'requires_subscriber_wait', False):
                         deadline = _time.monotonic() + 5.5
-                        matched_at = None
                         while True:
                             now = _time.monotonic()
                             if self._stop_event.is_set() or self._interrupt_flag.is_set():
                                 raise RuntimeError('TTS cancelled before subscriber matched')
                             if self._pub.get_subscription_count() > 0:
-                                if matched_at is None:
-                                    matched_at = now
-                                if now - matched_at >= .5:
-                                    break
-                            else:
-                                matched_at = None
+                                break
                             if now >= deadline:
-                                raise TimeoutError('No stable matched audio subscriber')
+                                raise TimeoutError('No matched audio subscriber')
                             _time.sleep(.01)
                         t0 = _time.monotonic() - max(0, len(prebuf) - 1) * frame_interval
                         t0_wall = _time.time()

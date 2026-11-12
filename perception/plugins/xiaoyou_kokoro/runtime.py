@@ -8,20 +8,23 @@ import threading
 
 import numpy as np
 
-from .frontend import Frontend
+from .frontend import Frontend, LATIN
 
 
-ASCII_TOKEN = re.compile(r'[A-Za-z0-9_@:/.-]')
+WORD_TOKEN = re.compile(rf'[{LATIN}0-9_@:/.-]')
 
 
 def split_once(text):
     """Keep punctuation and complete Latin/number spans when dividing a long input."""
     center = len(text) / 2
     lo, hi = len(text) * .2, len(text) * .8
-    punctuation = [i + 1 for i, c in enumerate(text) if c in ',，;；。！？!?' and lo <= i + 1 <= hi]
+    numeric = {i for m in re.finditer(r'[0-9]+(?:[.,][0-9]+)+', text)
+               for i in range(m.start() + 1, m.end())}
+    punctuation = [i + 1 for i, c in enumerate(text) if c in ',，;；。！？!?'
+                   and lo <= i + 1 <= hi and i + 1 not in numeric]
     spaces = [i + 1 for i, c in enumerate(text) if c.isspace() and lo <= i + 1 <= hi]
     boundaries = [i for i in range(1, len(text)) if lo <= i <= hi and
-                  not (ASCII_TOKEN.fullmatch(text[i - 1]) and ASCII_TOKEN.fullmatch(text[i]))]
+                  i not in numeric and not (WORD_TOKEN.fullmatch(text[i - 1]) and WORD_TOKEN.fullmatch(text[i]))]
     choices = punctuation or spaces or boundaries
     if not choices:
         raise ValueError('Input has a single unsplittable token over the inference budget')
@@ -125,8 +128,9 @@ class NativeKokoro:
 
     def _generate(self, text):
         language = 'mixed' if re.search(r'[\u3400-\u9fff]', text) else 'en'
-        _, ids = self.frontend(text, language)
-        if len(ids) <= 510:
+        _, ids = self.frontend.phonemize(text, language)
+        # Every token, including both boundaries, gets at least one duration frame.
+        if len(ids) <= 510 and len(ids) + 2 <= self.max_frames:
             cache = self._encode(ids)
             if int(cache[-1].sum().item()) <= self.max_frames:
                 yield text, self._decode(cache)
@@ -139,4 +143,4 @@ class NativeKokoro:
         if not isinstance(text, str) or not text.strip() or len(text) > 16000:
             raise ValueError('text must contain 1 to 16000 characters')
         with self.lock, self.torch.inference_mode():
-            yield from self._generate(text.strip())
+            yield from self._generate(self.frontend.prepare(text.strip()))
