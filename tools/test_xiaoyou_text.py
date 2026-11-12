@@ -7,6 +7,8 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock
 
+import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'perception'))
 from plugins.xiaoyou_kokoro.text import prepare_text
 from plugins.xiaoyou_kokoro.runtime import NativeKokoro, split_once
@@ -92,7 +94,7 @@ class TextTests(unittest.TestCase):
             prepare=Mock(side_effect=prepare_text),
             phonemize=lambda text, language: ('', list(text)))
         runtime._encode = lambda ids: [SimpleNamespace(sum=lambda: SimpleNamespace(item=lambda: len(ids) * 10))]
-        runtime._decode = lambda cache: b'audio'
+        runtime._decode = lambda cache: np.ones(24000, dtype=np.float32)
         text = 'The verification code is 005917 and the order number is 20260810009173.'
         segments = list(runtime.generate(text))
         self.assertGreater(len(segments), 1)
@@ -111,7 +113,7 @@ class TextTests(unittest.TestCase):
             calls.append(ids)
             return [SimpleNamespace(sum=lambda: SimpleNamespace(item=lambda: len(ids) + 2))]
         runtime._encode = encode
-        runtime._decode = lambda cache: b'audio'
+        runtime._decode = lambda cache: np.ones(24000, dtype=np.float32)
         text = 'one two three four five six seven eight nine ten'
         chunks = list(runtime._generate(text))
         self.assertTrue(calls)

@@ -110,5 +110,8 @@ def main():
   result=dict(functional_passed=True,transport='real MCP to ROS AudioChunk',containers=len(ports),requests=len(rows),rows=rows,all_pcm_complete=True,late_subscriber_ms=a.late_subscriber_ms,**timing_verdict(rows))
   (folder/'summary.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));print(json.dumps(result,ensure_ascii=False));assert result['passed'],'Board timing requires TTFT<=1.0s and RTF<1.0; see summary.json'
  finally:
-  executor.shutdown(timeout_sec=3);node.destroy_node();rclpy.shutdown()
+  executor.shutdown(timeout_sec=3)
+  if spin.ident is not None:spin.join(timeout=3)
+  assert not spin.is_alive(),'ROS spin thread must stop before destroying its node'
+  node.destroy_node();rclpy.shutdown()
 if __name__=='__main__':main()

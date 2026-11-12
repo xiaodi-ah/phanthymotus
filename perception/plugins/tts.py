@@ -1661,14 +1661,16 @@ class _TTSNode(Node):
                 def synthesize_into_queue() -> None:
                     pending = b''
                     try:
-                        for seg in segments:
-                            for raw_chunk in self._adapter.synthesize_stream(seg):
-                                pending += raw_chunk
-                                synth_state["total"] += len(raw_chunk)
-                                while len(pending) >= CHUNK_BYTES:
-                                    frame, pending = pending[:CHUNK_BYTES], pending[CHUNK_BYTES:]
-                                    if not enqueue_frame(frame):
-                                        return
+                        synthesize_segments = getattr(self._adapter, 'synthesize_segments', None)
+                        chunks = (synthesize_segments(segments) if synthesize_segments else
+                                  (chunk for seg in segments for chunk in self._adapter.synthesize_stream(seg)))
+                        for raw_chunk in chunks:
+                            pending += raw_chunk
+                            synth_state["total"] += len(raw_chunk)
+                            while len(pending) >= CHUNK_BYTES:
+                                frame, pending = pending[:CHUNK_BYTES], pending[CHUNK_BYTES:]
+                                if not enqueue_frame(frame):
+                                    return
                         if pending:
                             enqueue_frame(pending)
                     except BaseException as exc:  # surfaced on the worker thread
