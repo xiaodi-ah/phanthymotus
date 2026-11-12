@@ -26,3 +26,14 @@ docker build --network=host --build-arg JP_VERSION=61 -f perception/Dockerfile.j
 JP6 验证镜像 `local/xiaoyou-kokoro-a:jp61-20261112-8db752a5`，ID `sha256:e0580f4a48da993c65480f791a4bde229108e785d242c43e6c14cc3606a0547d`。它从既有JP6缓存镜像构建源码层和A模型层，构建时完成A权重的HTTP下载及完整SHA校验，推理端不挂载源码或模型。构建上下文SHA256：`64a266ccdcdd9a622c2cb9bd618ef582da06dd43c99ec75a7aafbd83bdfab9e1`。缓存基础镜像中保留的E资产未被本配置加载；正式Dockerfile仅下载A资产。
 
 本次是JP6试提交；未重新执行正式Dockerfile的完整基础镜像构建，JP5及三独立GPU容器的1秒门槛仍待验证。共享JP6资源不足以安全启动三个模型，不停止他人服务。性能记录不是榜单评分，未逐条人工听审。代码push不代表已创建平台任务，也无需push Harbor镜像。
+
+后续平台反馈（log-evaluation-56fcb3c1.zip）：cfdb65b的正式JP61构建和三实例90请求已完成，失败0、RTF不达标0；汇总TTFT不达标数15，可见且用于标注的实例2有18/30超过1秒，仅12条进入标注。后续接缝/首包候选及验证范围见[候选说明](xiaoyou-streaming-candidate.md)。
+
+
+## 接缝与首包优化重试
+
+本次更新保留A权重、A.pt及FP32 CUDA，将可安全拆分的首段设为80帧软预算、后续保持200帧；按标点压缩接缝近静音，覆盖内部及外层分段。详细行为、音频影响和E/A日志诊断见[共用优化说明](xiaoyou-streaming-candidate.md)。
+
+JP6真实MCP→ROS基础5条首包0.383–0.525秒；原平台缺19200字节的case1、25逐条新建DDS话题、各重复两次，首包0.455–0.505秒，4次PCM及EOF完整、RTF<1、探针正常退出。同文重复PCM一致。结合已有21项音频/文本与69项交付回归；本次推理源码与上述实测文件SHA一致。
+
+这些是缓存镜像的只读源码挂载及单容器证据。平台三容器的TTFT与丢包原因尚未验证，原问题不能宣称已全部解决；本次允许按JP6重新试评测，最终准入以平台反馈为准。模型不进Git，无需push Harbor。

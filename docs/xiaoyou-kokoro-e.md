@@ -72,3 +72,12 @@ JP6 / Orin-8G、默认 DDS 接收端、1536MiB 模型容器的真实 MCP→ROS �
 验证镜像仅保存在JP6：`local/xiaoyou-kokoro-e:jp61-ttft-20261112-fe778a43`，ID `sha256:a06dd221490db78e43492d94862f4e10b7af1c950fa0a648fb8765df410c7ec1`。它基于既有固定GPU镜像添加源码层，125个烘焙文件逐一核对SHA；模型、运行依赖及启动方式沿用已验镜像，推理端不再挂载源码。构建上下文SHA256为`60b508aaca01423b347b82347afe9638e13409d1ed9664de2892b28a2a03fdaa`。这是缓存基础镜像的增量验证构建，未重新执行正式`perception/Dockerfile.jetson`；JP6磁盘仅余约1.8GiB，且JP5基础镜像未缓存，未拉取大型镜像或清理他人资源。
 
 证据在项目`outputs/kokoro-e-ttft-opt-20261112/status.json`及同目录源码快照、构建日志、指标和WAV；这些本地产物不进入Git。全部自有测试容器已清理。本次commit包含文本修复、首包优化及回归测试，发布分支为个人fork的`feat/xiaoyou-tts`；平台须从本次完整commit按正式Dockerfile构建，不需要push Harbor镜像。单容器32次达标不能证明三容器并发达标；仍需空闲Orin窗口及本小优榜实际30条文本，正式Dockerfile重建、JP5及人工听审也尚未完成。代码push不代表已创建榜单评测任务。
+
+后续平台反馈（log-evaluation-685543bd.zip）：28b248d的正式JP61构建和三推理实例启动已完成；平台记录的直接失败点为评测容器robot-tts-evaluation-0退出139，随后清理全部任务。缺少该评测容器的详细日志，具体崩溃根因未确认；不能据此判成推理模型OOM。可见实例2收到12条首包，其中10条超过1秒。后续接缝/首包候选及验证范围见[候选说明](xiaoyou-streaming-candidate.md)。
+
+
+## 接缝与首包优化重试
+
+本次更新保留E权重、E.pt及FP32 CUDA，共用A/E首段80帧软预算、后续200帧硬预算与接缝近静音裁剪；详见[共用优化说明](xiaoyou-streaming-candidate.md)。JP6默认DDS真实MCP→ROS，正式日志前12条逐条新建话题，首包0.320–0.584秒、RTF0.504–0.517，PCM及EOF完整、探针正常退出，包含原中断时正在处理的第12条。另有基础5条首包0.374–0.576秒通过。
+
+测试使用缓存镜像的只读源码挂载，文件SHA与本次发布一致。evaluation-0退出139的内部根因仍缺原生栈，单容器未复现不能当成崩溃修复证据；三容器准入、当前整镜像和JP5仍待验证。本次按JP6重试，平台反馈单独记录。

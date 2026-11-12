@@ -14,6 +14,27 @@ from .frontend import Frontend, LATIN
 WORD_TOKEN = re.compile(rf'[{LATIN}0-9_@:/.-]')
 
 
+def trim_join_silence(wave, text, first, last):
+    """Shorten only near-silent join edges, keeping the utterance's outer edges."""
+    if first and last:
+        return wave
+    active = np.abs(wave) > 1e-4
+    if not active.any():
+        return wave
+    head = int(active.argmax())
+    tail = wave.size - int(active[::-1].argmax())
+    ending = text.rstrip().rstrip('\"\'”’）)]】」』')
+    pause = .30 if ending.endswith(('.', '。', '!', '！', '?', '？', ';', '；')) else (
+        .18 if ending.endswith((',', '，', ':', '：')) else .12)
+    # Multiples of three preserve the 24k -> 16k resampler's phase.
+    start = 0 if first else max(0, head - 960) // 3 * 3
+    end = wave.size if last else min(wave.size, (tail + round((pause - .04) * 24000) + 2) // 3 * 3)
+    # Keep the first 500 ms available without waiting for another synthesis chunk.
+    if first:
+        end = max(end, min(wave.size, 12000))
+    return wave[start:end]
+
+
 def split_once(text):
     """Keep punctuation and complete Latin/number spans when dividing a long input."""
     center = len(text) / 2
@@ -126,21 +147,30 @@ class NativeKokoro:
             raise RuntimeError('Invalid native waveform or duration')
         return wave
 
-    def _generate(self, text):
+    def _generate(self, text, first=True, last=True):
         language = 'mixed' if re.search(r'[\u3400-\u9fff]', text) else 'en'
         _, ids = self.frontend.phonemize(text, language)
+        budget = min(self.max_frames, 80) if first else self.max_frames
+        pieces = None
+        if first and budget < self.max_frames:
+            try:
+                pieces = split_once(text)
+            except ValueError:
+                budget = self.max_frames  # Keep long indivisible words within the original hard limit.
         # Every token, including both boundaries, gets at least one duration frame.
-        if len(ids) <= 510 and len(ids) + 2 <= self.max_frames:
+        if len(ids) <= 510 and len(ids) + 2 <= budget:
             cache = self._encode(ids)
-            if int(cache[-1].sum().item()) <= self.max_frames:
-                yield text, self._decode(cache)
+            if int(cache[-1].sum().item()) <= budget:
+                yield text, trim_join_silence(self._decode(cache), text, first, last)
                 return
             del cache
-        for piece in split_once(text):
-            yield from self._generate(piece)
+        if pieces is None:
+            pieces = split_once(text)
+        for i, piece in enumerate(pieces):
+            yield from self._generate(piece, first and i == 0, last and i == len(pieces) - 1)
 
-    def generate(self, text):
+    def generate(self, text, *, first=True, last=True):
         if not isinstance(text, str) or not text.strip() or len(text) > 16000:
             raise ValueError('text must contain 1 to 16000 characters')
         with self.lock, self.torch.inference_mode():
-            yield from self._generate(self.frontend.prepare(text.strip()))
+            yield from self._generate(self.frontend.prepare(text.strip()), first, last)

@@ -15,15 +15,19 @@ class XiaoyouKokoroAdapter:
         self.runtime = NativeKokoro(directory, speed=speed)
 
     def synthesize_stream(self, text):
+        yield from self.synthesize_segments([text])
+
+    def synthesize_segments(self, texts):
         pending = b''
-        for _, wave in self.runtime.generate(text):
-            if not np.isfinite(wave).all():
-                raise RuntimeError('Invalid native audio')
-            pcm = downsample_24k_to_16k(wave)
-            pending += pcm
-            while len(pending) >= 3200:
-                yield pending[:3200]
-                pending = pending[3200:]
+        for i, text in enumerate(texts):
+            for _, wave in self.runtime.generate(text, first=i == 0, last=i == len(texts) - 1):
+                if not np.isfinite(wave).all():
+                    raise RuntimeError('Invalid native audio')
+                pcm = downsample_24k_to_16k(wave)
+                pending += pcm
+                while len(pending) >= 3200:
+                    yield pending[:3200]
+                    pending = pending[3200:]
         if pending:
             yield pending
 
